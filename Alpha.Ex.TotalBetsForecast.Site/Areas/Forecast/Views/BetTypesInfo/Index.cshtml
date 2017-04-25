@@ -1,0 +1,72 @@
+﻿@using System.Collections.Generic;
+@using Fanex.Razorbill.Module.Forecast.Models;
+@model IList<ScoreMapBetTypeInfo>[]
+@helper RenderBetTypeInfo(IList<ScoreMapBetTypeInfo> bettypes, bool isLive)
+{
+    int bettypesCount;
+    <div class="bettype-container">
+        <div class="header" onclick="toggleScoreMap(this);">
+            <span class="iconBox @(isLive ? "collapse-icon" : "expand-icon")"></span>@(isLive ? ForecastLang.Live : ForecastLang.DeadBall)
+        </div>
+        <div class="@(isLive ? string.Empty : "hide")">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="group-bettype-col">@ForecastLang.Group</th>
+                        <th>@ForecastLang.BetTypes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var group in bettypes)
+                    {
+                        bettypesCount = group.FollowedBetTypes == null ? 0 : group.FollowedBetTypes.Count;
+                        <tr>
+                            <td class="bettype" rowspan="@bettypesCount">@group.BetType</td>
+                            <td>@(bettypesCount == 0 ? string.Empty : group.FollowedBetTypes[0])</td>
+                        </tr>
+                        for (int i = 1; i < bettypesCount; i++)
+                        {
+                            <tr><td>@group.FollowedBetTypes[i]</td></tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ForecastLang.ScoreMapInformation</title>
+    <link href="@Url.Content("~/App_Themes/Apo/Forecast/BetTypesInfo/style.min.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="note-box">
+            <div class="note">@ForecastLang.Note</div>
+            <div class="text-note">@ForecastLang.NoteContent</div>
+        </div>
+        <div class="content">
+            <div class="title">@ForecastLang.ScoreMapInformation</div>
+            <p>@ForecastLang.ScoreMapInformationDescription</p>
+            @RenderBetTypeInfo(Model[0], true)
+            @RenderBetTypeInfo(Model[1], false)
+        </div>
+    </div>
+    <script type="text/javascript">
+        function toggleScoreMap(e) {
+            var t = e.nextElementSibling;
+            if (t.className.length === 0) {
+                t.className = "hide";
+                e.children[0].className = "iconBox expand-icon";
+            } else {
+                t.className = "";
+                e.children[0].className = "iconBox collapse-icon";
+            }
+        }
+    </script>
+</body>
+</html>

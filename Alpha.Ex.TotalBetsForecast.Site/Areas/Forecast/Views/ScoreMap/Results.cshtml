@@ -1,0 +1,69 @@
+﻿@using System.Collections.Generic;
+@using Fanex.Razorbill.Module.Forecast.Models;
+@model IList<ForecastScoreMap>
+@helper RenderMatrix(int rowNumber, int columnNumber, int[,] matrix, string tableId)
+{
+    <table cellspacing="1" cellpadding="0" border="0" id="@tableId" class="tblScoreMap">
+        <thead>
+            <tr align="center" class="vsmHomeWay">
+                <td class="smTitle" rowspan="2">@ForecastLang.Away</td>
+                <td class="smTitle" colspan="@columnNumber">@ForecastLang.Home</td>
+            </tr>
+            <tr align="center" class="vsm">
+                @for (int i = 0; i < columnNumber; i++)
+                {
+                    <td width="13%">@i</td>
+                }
+            </tr>
+        </thead>
+        @if (matrix != null)
+        {
+            int score;
+            <tbody>
+            @for (int i = 0; i < rowNumber; i++)
+            {
+                <tr class="vScoreMap" align="center">
+                    <td class="vsm">@i</td>
+                @for (int j = 0; j < columnNumber; j++)
+                {
+                    score = matrix[i, j];
+                    <td class="csm @(score > 0 ? "red-color" : string.Empty)">@score</td>
+                }
+                </tr>
+            }
+            </tbody>    
+        }    
+    </table>
+}
+
+@if (Model != null)
+{
+    bool isRefresh = (bool)ViewBag.IsRefresh;
+    int matchId, rowNumber, columnNumber, score;
+    foreach (var item in Model)
+    {
+        matchId = item.MatchId;
+        rowNumber = item.RowNumber;
+        columnNumber = item.ColumnNumber;
+        if (!isRefresh)
+        {
+        @:<div class="paddingTopMatch" id="RefreshContent@(item.MatchId)"> 
+        }
+            <div class="button_mid" data-matchid="@matchId">
+                <span id="lnkGroupscoreMap@(matchId)" class="lnkGroup">@item.HomeName-vs-@item.AwayName</span>
+                <span id="lnkRefresh@(matchId)" class="lnkRefresh" title="@Resources.Lang.refresh" data-matchid="@matchId"></span>
+            </div>
+            <div style="clear:both"></div>
+            <div id="scoreMap@(matchId)" class="scoreMap">
+                <div class="round haft-time">@ForecastLang.HT</div>
+                @RenderMatrix(rowNumber, columnNumber, item.HaftTime, "tblht" + matchId)
+
+                <div class="round full-time">@ForecastLang.FT</div>
+                @RenderMatrix(rowNumber, columnNumber, item.FullTime, "tblft" + matchId)
+            </div>
+        if (!isRefresh)
+        {
+        @:</div>
+        }
+    }
+}

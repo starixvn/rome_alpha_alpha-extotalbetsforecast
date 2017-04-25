@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Alpha.Ex.TotalBetsForecast.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Alpha.Ex.TotalBetsForecast.Site.Global" Language="C#" %>

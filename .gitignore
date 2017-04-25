@@ -3,3 +3,5 @@
 packages/*
 *.suo
 .vs/config/applicationhost.config
+*.user
+BuildSolution.log

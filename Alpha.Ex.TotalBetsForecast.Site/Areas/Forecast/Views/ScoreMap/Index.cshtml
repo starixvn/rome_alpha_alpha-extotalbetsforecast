@@ -1,0 +1,176 @@
+﻿@using System.Collections.Generic;
+@using Fanex.Razorbill.Module.Forecast.Models;
+@using Fanex.Razorbill.Module.Forecast.Resources;
+@model IList<ForecastScoreMap>
+@helper RenderLiveDeadBalls(IList<ScoreMapBetType> bettypes, bool isLive, string checkedId)
+{
+    ScoreMapBetType bettype;
+    int bettypeCount = bettypes.Count;
+    int haftBettypeCount = bettypeCount / 2;
+    if (bettypeCount % 2 != 0)
+    {
+        haftBettypeCount++;
+    }
+
+    string checkAllId, checkAllText, checkClass;
+    if (isLive)
+    {
+        checkAllId = "allBettypeLive";
+        checkAllText = ForecastLang.LiveBall;
+        checkClass = "liveBettype";
+    }
+    else
+    {
+        checkAllId = "allBettypeDead";
+        checkAllText = ForecastLang.DeadBall;
+        checkClass = "deadBettype";
+    }
+    <tr>
+        <td rowspan="2" class="even_row">
+            <input type="checkbox" id="@checkAllId" class="hand" @(checkedId == null ? "checked" : string.Empty) />
+            <label title="@checkAllText" for="@checkAllId" class="hand bold">@checkAllText</label>
+        </td>
+        @for (int i = 0; i < haftBettypeCount; i++)
+        {
+            bettype = bettypes[i];
+            <td>
+                <input type="checkbox" id="@(checkClass + bettype.BetTypeId)" class="hand @checkClass" @(checkedId == null || bettype.FollowedBetTypes.Contains(checkedId) ? "checked" : string.Empty)
+                    data-ids="@string.Join(",", bettype.FollowedBetTypes)"/>
+                <label for="@(checkClass + bettype.BetTypeId)" title="@bettype.BetType" class="hand">@bettype.BetType</label>
+            </td>
+        }
+    </tr>
+    <tr>
+        @for (int i = haftBettypeCount; i < bettypeCount; i++)
+        {
+            bettype = bettypes[i];
+            <td>
+                <input type="checkbox" id="@(checkClass + bettype.BetTypeId)" class="hand @checkClass" @(checkedId == null || bettype.FollowedBetTypes.Contains(checkedId) ? "checked" : string.Empty)
+                    data-ids="@string.Join(",", bettype.FollowedBetTypes)"/>
+                <label for="@(checkClass + bettype.BetTypeId)" title="@bettype.BetType" class="hand">@bettype.BetType</label>
+            </td>
+        }
+    </tr>
+}
+@{ 
+    string matchIds = Request["matchIds"];
+    string bettypesLive = Request["bettypes_live"];
+    string bettypesDead = Request["bettypes_dead"];
+
+    bool fromBetList = !string.IsNullOrEmpty(matchIds);
+    var bettypes = (IList<ScoreMapBetType>[])ViewBag.Bettypes;
+    var leagues = (IList<SelectListItem>)ViewBag.Leagues;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ForecastLang.ScoreMap</title>
+    <link href="@Url.Content("~/App_Themes/Apo/Common/Agent.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/App_Themes/Apo/Forecast/ScoreMap/style.min.css")?v=1" rel="stylesheet" type="text/css" />
+</head>
+<body class="@(fromBetList ? "from-betlist" : "")">
+    <div id="page_main">
+        @if (!fromBetList)
+        {
+            <div id="header_main">
+                @ForecastLang.ScoreMap
+        
+                <div class="pull-right">
+                    <a title="@ForecastLang.ClickToViewScoreMapInfo" class="infoIco" href="javascript:;"></a>
+                </div>
+            </div>
+            if (leagues == null || leagues.Count == 0)
+            {
+                <div class="msgerr tbl-nodata">@ForecastLang.NoDataFound</div>
+                return;
+            }
+        }
+        <div id="sContent">
+            <div class="header-box">
+                @if (!fromBetList)
+            {
+                    <table class="tbl-filter">
+                        <tr class="row-league">
+                            <td>@ForecastLang.League</td>
+                            <td>
+                                @Html.DropDownList("League", new System.Web.Mvc.SelectList(leagues, "Value", "Text"))
+                            </td>
+                            <td><div title="@ForecastLang.RefreshLeagues" class="refresh" id="RefreshLeagues">&nbsp;</div></td>
+                            <td><button type="button" class="btn" id="dSelMatch">@ForecastLang.SelectMatch</button></td>
+                            <td valign="top"><div class="" id="loading"></div></td>
+                        </tr>
+                    </table>
+                }
+                <div class="@(fromBetList ? string.Empty : "hide")" id="tblLiveDead">
+                    @if (fromBetList)
+                    {
+                        <div class="pull-right"><a href="javascript:;" class="infoIco from-betlist" title="@ForecastLang.ClickToViewScoreMapInfo"></a></div>
+                    }
+                    <table class="tblLiveDead">
+                        <tbody>
+                            @RenderLiveDeadBalls(bettypes[0], true, fromBetList ? bettypesLive : null)
+                            @RenderLiveDeadBalls(bettypes[1], false, fromBetList ? bettypesDead : null)
+                        </tbody>
+                    </table>
+                    <table class="tbl-action">
+                        <tbody>
+                            <tr class="row-action">
+                                <td><button class="btn" id="dSubmit">@ForecastLang.Submit</button></td>
+                                <td valign="middle"><div id="loadingSubmit"></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="mainContent">
+                @if (fromBetList)
+            {
+                    @Html.Partial("~/Areas/Forecast/Views/ScoreMap/Results.cshtml", Model);
+            }
+            </div>
+            <div class="hide" id="tblMsgBettype">
+                <div class="msgerr" id="msgBettypeErr"></div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="match-box hide" id="match-box">
+        <div class="title">
+            <div class="title-header">@ForecastLang.SelectMatch</div>
+            <div class="notification">
+                <div class="hide" id="tblMsgMatch">
+                    <div class="msgerr" id="msgMatchErr"></div>
+
+                </div>
+            </div>
+            <div class="icon-close"></div>
+        </div>
+        <div class="content">
+            <div id="match-list" class="clearfix"></div>
+        </div>
+        <div class="footer"><button type="button" class="btn" id="dSubmitInMatch">@ForecastLang.Select</button></div>
+    </div>
+    <input type="hidden" id="requestMatchids" value="@matchIds" />
+    <input type="hidden" id="requestBettypesLive" value="@bettypesLive" />
+    <input type="hidden" id="requestBettypesDead" value="@bettypesDead" />
+
+    <script type="text/javascript">
+        var rootUrl = '@Url.Content("~")';
+        var scoreMapResources = {
+            SelectMatch: '@ForecastLang.SelectMatch',
+            HideMatch: '@ForecastLang.HideMatch',
+            MatchEmptyError: '@ForecastLang.MatchEmptyError',
+            BettypeEmptyError: '@ForecastLang.BettypeEmptyError',
+            All: '@ForecastLang.All'
+        };
+    </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/_Libs/jQuery/jquery-1.8.2.min.js")"></script>
+    <script src="@Url.Content("~/Areas/Forecast/Views/ScoreMap/Scripts/scoreMap.js")" type="text/javascript"></script>
+
+    @Alpha.Web.Helpers.GoogleAnalyticHepler.Render()
+</body>
+</html>

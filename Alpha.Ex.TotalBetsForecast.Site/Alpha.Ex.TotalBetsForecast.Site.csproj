@@ -103,6 +103,10 @@
       <HintPath>..\packages\Fanex.Razorbill.Security.3.0.0.1\lib\net40\Fanex.Razorbill.Security.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Fanex.Security.SpamFilter, Version=1.0.1.13, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Security.SpamFilter.1.0.1.13\lib\net40\Fanex.Security.SpamFilter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="IBCFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.File.1.0.0\lib\net40\IBCFile.dll</HintPath>
       <Private>True</Private>
@@ -130,6 +134,10 @@
     </Reference>
     <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\EnterpriseLibrary.Unity.5.0.414.0\lib\net40\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RemotingRef, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
@@ -173,6 +181,30 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -665,10 +697,53 @@
     <Content Include="App_Themes\Apo\Voidbridge\HandHistory_API\HandHistory.css" />
     <Content Include="App_Themes\Apo\Voidbridge\HandHistory_API\HandHistory.min.css" />
     <Content Include="App_Themes\Apo\Voidbridge\HandHistory_API\Images\error.gif" />
+    <Content Include="Areas\Forecast\Views\ScoreMap\Scripts\scoreMap.js" />
     <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="favico.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\_Libs\jQuery\classList.js" />
+    <Content Include="Scripts\_Libs\jQuery\Core\jquery.js" />
+    <Content Include="Scripts\_Libs\jQuery\Countdown\jquery.countdown.css" />
+    <Content Include="Scripts\_Libs\jQuery\Countdown\jquery.countdown.min.js" />
+    <None Include="Scripts\_Libs\jQuery\jquery-1.7.1-vsdoc.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery-migrate-1.0.0.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery-ui-1.9.1.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery-ui-1.9.1.min.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.cookie.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.fixedsortable.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.form.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.formattyping.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.jqprint-0.3.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\_Libs\jQuery\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.validate.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.validate.min.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\_Libs\jQuery\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\_Libs\jQuery\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\_Libs\jQuery\knockout-2.1.0.js" />
+    <Content Include="Scripts\_Libs\jQuery\modernizr-2.5.3.js" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-bg_flat_60_4264ac_40x100.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-bg_flat_75_5476bb_40x100.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-bg_flat_90_466bb9_40x100.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-bg_flat_90_aaaaaa_40x100.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-bg_glass_45_f4f3f1_1x400.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-bg_highlight-soft_90_999999_1x100.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-icons_4264ac_256x240.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-icons_c6cddc_256x240.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-icons_cbd4e6_256x240.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-icons_d0d9ec_256x240.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\jquery-ui-1.9.1.custom.css" />
+    <Content Include="Scripts\_Libs\jQuery\Styles\jquery-ui-1.9.1.custom.min.css" />
+    <None Include="Scripts\_Libs\jQuery\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Configuration\StoreProcedure.Internal\DBACC.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb02.xml" />
@@ -1248,6 +1323,10 @@
     <Content Include="App_Themes\Web.config" />
     <Content Include="packages.config" />
     <Content Include="SecurityCode.config" />
+    <Content Include="Areas\Forecast\Views\BetTypesInfo\Index.cshtml" />
+    <Content Include="Areas\Forecast\Views\ScoreMap\Index.cshtml" />
+    <Content Include="Areas\Forecast\Views\ScoreMap\Results.cshtml" />
+    <Content Include="Areas\Forecast\Views\Web.config" />
     <None Include="Web.AppSettings.config" />
     <Content Include="Web.Configuration\AuthenticationSection.config" />
     <Content Include="Web.Configuration\CockFightingSection.config" />
@@ -1344,6 +1423,10 @@
     <ProjectReference Include="..\Fanex.Age.UI.Totalbets\Fanex.Age.UI.TotalBets.csproj">
       <Project>{4eeee9b8-03de-47f4-a7fd-b8f9da4cc1ee}</Project>
       <Name>Fanex.Age.UI.TotalBets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fanex.Razorbill.Module.Forecast\Fanex.Razorbill.Module.Forecast.csproj">
+      <Project>{198dad45-b04e-4c2c-838e-c0b080ac7b8b}</Project>
+      <Name>Fanex.Razorbill.Module.Forecast</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resources\_Resources.csproj">
       <Project>{78cc9560-f36b-4e05-a65c-57ce732dc8e1}</Project>
