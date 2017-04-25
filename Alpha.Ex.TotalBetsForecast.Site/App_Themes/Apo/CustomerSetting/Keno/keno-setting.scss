@@ -1,0 +1,373 @@
+﻿@import "../../Common/_Variables.scss";
+@import "../../Common/_Mixins.scss";
+@import "_Common.scss";
+@import url($roboto-fonts);
+@import url($icon-alpha-fonts);
+@include keyframes-ripple;
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+body {
+    font:{
+        family: $font-family;
+        size: $font-size;
+    }
+    color: $text-color;
+}
+
+input, select, button {
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+}
+
+input[type=text], input[type=password] {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 120px;
+    -webkit-appearance: none;
+    @include box-sizing;
+}
+
+select {
+    color: $text-color;
+    font-size: 11px;
+    padding: 4px 4px;
+
+    option {
+        padding: 4px;
+    }
+
+    &:disabled {
+        border-color: lighten($border-color-dark, 3%);
+        color: rgba(0,0,0,.3);
+    }
+}
+
+select, input[type="text"] {
+	border: 1px solid $border-color-dark;
+    height: $pt-component-height;
+    line-height: $pt-component-height;
+}
+
+input[type='button'], button {
+    &[disabled] {
+       opacity: .4;
+       cursor: default;
+    }
+
+    &.btnUpdate, &.btnUpdateDisabled {
+        background: $btn-submit-bg;
+        color: $btn-submit-color;
+        border: none;
+        cursor: pointer;
+        font-weight: normal;
+        height: $height-normal;
+        outline: none;
+        margin-right: 8px;
+        padding-left: 16px;
+	    padding-right: 16px;
+        -webkit-appearance: none;
+        @include effect-button;
+        @include box-sizing;
+
+        &:hover, &:focus {
+            background: $btn-submit-bg-hover;
+            color: $btn-submit-color-hover;
+        }
+    }
+}
+
+#header_main {
+	color: $text-red-color;
+	font-weight: 700;
+	height: 38px;
+	line-height: 40px;
+	min-width: 650px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #cecece;
+}
+
+#customerInfo {
+    margin-top: 12px;
+
+    .tableColor .header span[ng-show="multipleEdit.isMultipleEdit"] {
+        background-color: $pt-bg;
+        color: $text-color;
+        margin-left: -8px;
+        margin-right: -8px;
+        display: block;
+        padding: 3px 8px;
+    }
+}
+
+.content {
+	.header {
+        background: $table-header-bg-color;
+        color: $table-header-color;        
+		height: $pt-col-height ;
+		line-height: 27px;
+        padding: 0 8px;
+        text-align: left !important;
+	}
+    
+    table[ng-controller="betSettingController"] .header{
+        text-align: center !important;
+    }
+
+	.formatCol {
+		border-top: none;
+        font-weight: normal !important;
+		height: $pt-col-height;
+        line-height: $pt-col-height;
+	    padding: 0 4px;		                
+	}
+
+    .header, .formatCol {
+	    border: 1px solid $pt-border-color;
+    }
+
+	.dailyCol {
+		padding: 1px 0;
+	}
+
+	.lastCol {
+		border-right: none;
+	}	
+
+	.chb {
+		position: relative;
+		top: 2px;
+	}
+
+	label {
+		.chbAuto {
+			margin-top: 1px;
+		}
+	}
+
+	#numberLimit {
+		margin-left: 165px;
+	}
+
+	.divInline {
+		display: inline-block;	
+	}
+
+	.textHeader {
+		float: left;
+	}
+
+	.invalidValue {
+		background-color: $msg-error-bg;
+        border: 1px solid #fe8989 !important;
+	}
+
+	.betTypeInactive {
+		background-color: #DDD !important;
+		cursor: default;
+	}
+
+    .betSetting {
+        background-color: $pt-bg;
+        @include box-sizing;
+
+        .btnUnCopyAll, .btnUnCopyAll:hover {
+            background-position: -48px 0;
+        }
+
+        .btnCopyAll, .btnCopyAll:hover {
+            background-position: 0 0;
+        }
+
+        input[type='text'] {
+            margin-right: 4px;
+        }
+    
+        * {
+            vertical-align: middle;
+        }
+    }
+
+}
+
+table {
+    border-collapse: collapse;
+	background-color: $pt-bg ;
+}
+
+.maincontent_header {
+	height: $pt-col-height;
+	border: none !important;
+}
+
+/***********************************/
+/* Icons */
+/***********************************/
+%icon {
+    font:{
+        family: Iconalpha;
+        size: 16px;
+    }
+    position: relative;
+    top: 2px;
+}
+
+input[type='button'] {
+    background: none;
+    border: none;
+}
+
+%icon-image {
+    background: url(../../Images/sprites.png) no-repeat;    
+    cursor: pointer;
+    height: 16px !important;
+    width: 16px !important;
+    display: inline-block;
+    margin-right: 0;
+    padding: 0;
+    position: relative;
+    top: 6px;
+    @include border-radius(0);
+}
+
+input.btnSave, input.btnSaveDisabled {
+    float: right;
+}
+
+input.btnSave, input.btnSave:hover {
+    @extend %icon-image;    
+    background-position: -72px -26px;
+}
+
+input.btnSaveDisabled, input.btnSaveDisabled:hover {
+	@extend %icon-image;
+    cursor: default;
+    background-position: -48px -26px;
+}
+
+input.btnUnCopyAll, input.btnCopyAll, input.btnUnCopyAll:hover, input.btnCopyAll:hover {
+    float: left; 
+    margin-right: 4px;
+}
+
+input.btnUnCopyAll, input.btnUnCopyAll:hover {
+    @extend %icon-image;
+    background-position: -72px 0;	  
+     
+}
+
+input.btnCopyAll, input.btnCopyAll:hover {
+	@extend %icon-image;
+    background-position: -24px 0;
+}
+
+/***********************************/
+/* Message */
+/***********************************/
+%msg {
+    line-height: 20px;
+    padding: 4px 8px 4px 42px;
+    text-align: left;
+    position: relative;
+    vertical-align: middle;
+    @include box-sizing;
+
+    &:before {
+        position: absolute;
+        top: 3px;
+        left: 16px;
+    }
+}
+
+.errMsg {
+    @extend %msg;
+    color: $msg-warning-color !important;
+    clear: both;
+    max-height: 180px;
+    margin-bottom: 8px;
+    overflow: auto;
+    width: 890px !important;
+
+    &:before {
+        @extend %icon;
+        content: '\e93d'; 
+        font-size: 20px;        
+    }
+}
+
+.maincontent_box {
+    background-color: #fdfbec;
+    border: 1px solid #d9d9d9;
+	margin-bottom: 8px;
+    max-height: 200px;
+    overflow: auto;
+	width: 836px;
+    @include border-radius(2px);
+
+    .alerterror, .alertsuccess {
+        border: none;
+        margin-top: 0;
+    }
+
+    .multipleedit {
+	    margin-left: 2px;
+	    font-weight: normal;
+    }
+}
+
+.alertsuccessgroup, .alerterrorgroup {
+	font-weight: bold;
+    padding: 0 20px;
+    color: $text-color;
+    line-height: 28px;    
+}
+
+.alerterror {
+	@extend %msg;
+	color: $msg-error-color;
+
+    &:before {
+        @extend %icon;
+        content: '\e93e';
+        font-size: 20px; 
+    }
+}
+
+.alertsuccess {
+	@extend %msg;
+	color: $msg-success-color;
+
+    &:before {
+        @extend %icon;
+        content: '\e93b';
+        font-size: 20px;
+    }
+}
+
+/***********************************/
+/* Loading */
+/***********************************/
+.MaskLoadingDiv {
+    background: url("../../Images/loader3.gif") no-repeat center center;
+}
+
+/***********************************/
+/* tipsy tooltip */
+/***********************************/
+.tipsy-inner {
+    background: $hint-warning-bg;
+    border-color: $hint-warning-border-color;
+    color: $hint-warning-color;
+    font-size: $font-size;
+    min-width: 300px;
+    padding: 8px;
+    @include border-radius($hint-warning-border-radius);
+}
+
+.tipsy-arrow {
+    top: 42px;
+}

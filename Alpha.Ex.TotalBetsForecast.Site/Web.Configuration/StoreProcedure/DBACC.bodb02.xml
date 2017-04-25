@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="Customer information">
+    <Setting Key="Age_CustomerSelCheckBelonging_OLD" SpName="Age_CustomerSelCheckBelonging_OLD" DbName="DBACC.bodb02.BODBDownlineNet" Plain="0" />
+  </Function>
+  <Function Name="Statement Report">
+    <Setting Key="Statement_Report_GetList" SpName="Acc_StatementSel" DbName="DBACC.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Statement_Report_TransferDetails" SpName="Acc_StatementSelTransfer" DbName="DBACC.bodb02.BODBDownlineNet" Plain="0" />
+  </Function>
+  <Function Name="Status">
+    <Setting Key="Acc_CustomerSelStatus" SpName="Acc_CustomerSelStatus" DbName="DBACC.bodb02.BODBDownlineNet" Plain="0" />
+  </Function>
+</Functions>

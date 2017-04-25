@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TotalBets</title>
+    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/TotalBets/TotalBets.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page_main">
+        <div id="header_main">
+            {static:LocalResources.TotalBetsLang.htft}
+        </div>
+        {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,90,"HTFT")}
+        <div id="sContent">
+            <!--Contents-->
+            <table class="tblRpt tbl-HTFT">
+                <tr class="RptHeader">
+                    <td class="col-number">
+                        {static:LocalResources.TotalBetsLang.no}
+                    </td>
+                    <td class="col-homeAway">
+                        {static:LocalResources.TotalBetsLang.home}
+                    </td>
+                    <td class="col-homeAway">
+                        {static:LocalResources.TotalBetsLang.away}
+                    </td>
+                    <td class="width-50">
+                        {static:LocalResources.TotalBetsLang.hh}
+                    </td>
+                    <td class="width-50">
+                        {static:LocalResources.TotalBetsLang.hd}
+                    </td>
+                    <td class="width-50">
+                        {static:LocalResources.TotalBetsLang.ha}
+                    </td>
+                    <td class="width-50">
+                        {static:LocalResources.TotalBetsLang.dh}
+                    </td>
+                    <td class="width-50">
+                        {static:LocalResources.TotalBetsLang.dd}
+                    </td>
+                    <td class="width-50">
+                        {static:LocalResources.TotalBetsLang.da}
+                    </td>
+                    <td class="width-50">
+                        {static:LocalResources.TotalBetsLang.ah}
+                    </td>
+                    <td class="width-50">
+                        {static:LocalResources.TotalBetsLang.ad}
+                    </td>
+                    <td class="width-50">
+                        {static:LocalResources.TotalBetsLang.aa}
+                    </td>
+                </tr>
+                <!--HTFTContents-->
+                <tr class="r" style="background-color: {ColorClass}" onmouseover="bgColor='{ColorOver}'" onmouseout="bgColor='{ColorClass}'">
+                    <td class="w-order">
+                        {NoValue}
+                    </td>
+                    <td class="l">
+                        <a href="javascript:doViewBetList({MatchId}, 16, '{BetType}')">{HomeValue}</a>
+                    </td>
+                    <td class="l">
+                        {AwayValue}
+                    </td>
+                    <td class="fcnum">
+                        {HHValue}
+                    </td>
+                    <td class="fcnum">
+                        {HDValue}
+                    </td>
+                    <td class="fcnum">
+                        {HAValue}
+                    </td>
+                    <td class="fcnum">
+                        {DHValue}
+                    </td>
+                    <td class="fcnum">
+                        {DDValue}
+                    </td>
+                    <td class="fcnum">
+                        {DAValue}
+                    </td>
+                    <td class="fcnum">
+                        {AHValue}
+                    </td>
+                    <td class="fcnum">
+                        {ADValue}
+                    </td>
+                    <td class="fcnum">
+                        {AAValue}
+                    </td>
+                </tr>
+                <!--/HTFTContents-->
+                <!--NotFoundContent-->
+                <tr class="bg_white">
+                    <td colspan="12" class="c nobold">
+                        {static:LocalResources.TotalBetsLang.noInfo}
+                    </td>
+                </tr>
+                <!--/NotFoundContent-->
+            </table>
+            <!--/Contents-->
+        </div>
+    </div>
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+    <script src="Resources/TotalBets.js" type="text/javascript"></script>
+
+    <!--Piwik-->
+    <script type="text/javascript">
+        var _pkUrl = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl}',
+            _pkScript = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript}',
+            _pkSiteId = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId}';
+    </script>
+    <script src="../_GlobalResources/Js/piwikLoader.js" type="text/javascript"></script>
+    <noscript><p><img src='{PiwikUrl}' style="border:0;" alt="" /></p></noscript>
+    <!--/Piwik-->
+</body>
+</html>

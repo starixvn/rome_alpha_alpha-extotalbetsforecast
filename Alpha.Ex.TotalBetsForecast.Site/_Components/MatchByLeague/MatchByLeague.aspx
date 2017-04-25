@@ -1,0 +1,1 @@
+<%@ Page Language="C#" EnableSessionState="ReadOnly" AutoEventWireup="false" CodeFile="MatchByLeague.aspx.cs" Inherits="Fanex.Age.UI.Components.MatchByLeague.MatchByLeague_Page" %>

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha.Ex.TotalBetsForecast.Site", "Alpha.Ex.TotalBetsForecast.Site\Alpha.Ex.TotalBetsForecast.Site.csproj", "{43446356-0B44-4875-AC06-AE5403C3AD3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Age.UI.Forecast", "Fanex.Age.UI.Forecast\Fanex.Age.UI.Forecast.csproj", "{F5A64151-9580-4878-A3D1-F737E391A702}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Age.UI.TotalBets", "Fanex.Age.UI.Totalbets\Fanex.Age.UI.TotalBets.csproj", "{4EEEE9B8-03DE-47F4-A7FD-B8F9DA4CC1EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sunplus.Agent.Model.Forecast", "Sunplus.Agent.Model.Forecast\Sunplus.Agent.Model.Forecast.csproj", "{DFCC1F18-0C93-415E-A932-E81D648254B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sunplus.Agent.Model.TotalBets", "Sunplus.Agent.Model.TotalBets\Sunplus.Agent.Model.TotalBets.csproj", "{F75C0D34-F5CA-4825-BA4F-F1048E3F4A1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Resources", "Resources\_Resources.csproj", "{78CC9560-F36B-4E05-A65C-57CE732DC8E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sunplus.Agent.Model", "Sunplus.Agent.Model\Sunplus.Agent.Model.csproj", "{8831EE6F-7EF9-48F3-9DA2-82C6C5EB6E47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Description = EnableTplcore
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43446356-0B44-4875-AC06-AE5403C3AD3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43446356-0B44-4875-AC06-AE5403C3AD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43446356-0B44-4875-AC06-AE5403C3AD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43446356-0B44-4875-AC06-AE5403C3AD3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A64151-9580-4878-A3D1-F737E391A702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A64151-9580-4878-A3D1-F737E391A702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A64151-9580-4878-A3D1-F737E391A702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A64151-9580-4878-A3D1-F737E391A702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EEEE9B8-03DE-47F4-A7FD-B8F9DA4CC1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EEEE9B8-03DE-47F4-A7FD-B8F9DA4CC1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EEEE9B8-03DE-47F4-A7FD-B8F9DA4CC1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EEEE9B8-03DE-47F4-A7FD-B8F9DA4CC1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFCC1F18-0C93-415E-A932-E81D648254B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFCC1F18-0C93-415E-A932-E81D648254B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFCC1F18-0C93-415E-A932-E81D648254B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFCC1F18-0C93-415E-A932-E81D648254B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F75C0D34-F5CA-4825-BA4F-F1048E3F4A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F75C0D34-F5CA-4825-BA4F-F1048E3F4A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F75C0D34-F5CA-4825-BA4F-F1048E3F4A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F75C0D34-F5CA-4825-BA4F-F1048E3F4A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CC9560-F36B-4E05-A65C-57CE732DC8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CC9560-F36B-4E05-A65C-57CE732DC8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CC9560-F36B-4E05-A65C-57CE732DC8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CC9560-F36B-4E05-A65C-57CE732DC8E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8831EE6F-7EF9-48F3-9DA2-82C6C5EB6E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8831EE6F-7EF9-48F3-9DA2-82C6C5EB6E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8831EE6F-7EF9-48F3-9DA2-82C6C5EB6E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8831EE6F-7EF9-48F3-9DA2-82C6C5EB6E47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

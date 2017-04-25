@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{static:LocalResources.UIForecastLang.lblForecast}</title>
+    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/Forecast/FC.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!--TitleHeader-->
+    <div id="page_main">
+        <div id="header_main">
+            <span id="leagueName">{static:LocalResources.UIForecastLang.lbl1x2}</span>
+        </div>
+        <!--/TitleHeader-->
+        {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,15,"FC1X2","RefreshFC")}
+        <div id="sContent">
+            <!--Content-->
+            <!--LimitLeagueList-->
+            <div id="box_header" style="width: {TableWidth}">
+                <table class="tbl-filter">
+                    <tr>
+                        <td>
+                            {static:LocalResources.UIForecastLang.league}
+                        </td>
+                        <td id="selLeague">
+                            <select id='ddlLeague' name='ddlLeague' onchange='GetForecastByLeague();'>
+                                {LeagueList}
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--/LimitLeagueList-->
+            <table class="tblRpt tbl-fc1x2" style="width: {TableWidth};">
+                <tr class="RptHeader">
+                    <td colspan="2">
+                        {static:LocalResources.UIForecastLang.lblTeam}
+                    </td>
+                    <td colspan="3">
+                        {static:LocalResources.UIForecastLang.lbl1x2}
+                    </td>
+                </tr>
+                <!--RowContent-->
+                <tr align="center">
+                    <td class="l league" colspan="5">
+                        {Home}-vs-{Away}
+                    </td>
+                </tr>
+                <tr class="even_row" align="center">
+                    <td colspan="2" class="col-time">
+                        <span>{Time}</span>
+                    </td>
+                    <td class="bold">
+                        <span>1</span>
+                    </td>
+                    <td class="bold col-x">
+                        <span>X</span>
+                    </td>
+                    <td class="bold">
+                        <span>2</span>
+                    </td>
+                </tr>
+                <tr class="even_row" align="center">
+                    <td class="col-fulltime">
+                        <font>{static:LocalResources.UIForecastLang.fulltime}</font>
+                    </td>
+                    <td width="1%">
+                        <a href="javascript:openForecast('{MatchId}','1')" class="btnInfo"></a>
+                    </td>
+                    <td class="bold col-winlose">
+                        <span>{HomeWinLose}</span>
+                    </td>
+                    <td class="bold col-winlose">
+                        <span>{DrawWinLose}</span>
+                    </td>
+                    <td class="bold col-winlose">
+                        <span>{AwayWinLose}</span>
+                    </td>
+                </tr>
+                <tr class="even_row" align="center">
+                    <td class="col-halftime">
+                        <font>{static:LocalResources.UIForecastLang.halftime}</font>
+                    </td>
+                    <td class="col-btnInfo">
+                        <a href="javascript:openForecast('{MatchId}','7')" class="btnInfo"></a>
+                    </td>
+                    <td class="bold col-winlose">
+                        <span>{HTHomeWinLose}</span>
+                    </td>
+                    <td class="bold col-winlose">
+                        <span>{HTDrawWinLose}</span>
+                    </td>
+                    <td class="bold col-winlose">
+                        <span>{HTAwayWinLose}</span>
+                    </td>
+                </tr>
+                <!--/RowContent-->
+                <!--NotFoundContent-->
+                <tr class="bg_white">
+                    <td colspan="5" class="c nobold">
+                        {static:LocalResources.UIForecastLang.noInfo}
+                    </td>
+                </tr>
+                <!--/NotFoundContent-->
+            </table>
+            <!--/Content-->
+        </div>
+        <!--TitleFooter-->
+    </div>
+    <!--/TitleFooter-->
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+    <script src="Resources/FC.js" type="text/javascript"></script>
+
+    <!--Piwik-->
+    <script type="text/javascript">
+        var _pkUrl = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl}',
+            _pkScript = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript}',
+            _pkSiteId = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId}';
+    </script>
+    <script src="../_GlobalResources/Js/piwikLoader.js" type="text/javascript"></script>
+    <noscript><p><img src='{PiwikUrl}' style="border:0;" alt="" /></p></noscript>
+    <!--/Piwik-->
+</body>
+</html>

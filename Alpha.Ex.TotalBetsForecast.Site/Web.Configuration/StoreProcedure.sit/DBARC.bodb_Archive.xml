@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="Bet list">
+    <Setting Key="Age_BetList_SelByDayAll_Mem_Old" SpName="Age_BetList_SelByDayAll_Mem_Old" DbName="DBARC.bodb_Archive.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_BettransSelBetSlip_Old" SpName="Age_BettransSelBetSlip_Old" DbName="DBARC.bodb_Archive.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_BetList_SelWinLossByDate_Mem_Old" SpName="Age_BetList_SelWinLossByDate_Mem_Old" DbName="DBARC.bodb_Archive.BODBDownlineNet" Plain="0" />
+  </Function>
+  <Function Name="Statement Report">
+    <Setting Key="Statement_Report_TransferDetails_WH" SpName="Acc_StatementSelTransfer_Old" DbName="DBARC.bodb_Archive.BODBDownlineNet" Plain="0" />
+  </Function>
+</Functions>

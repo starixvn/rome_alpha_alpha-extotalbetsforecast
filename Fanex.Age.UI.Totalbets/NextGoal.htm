@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TotalBets</title>
+    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/TotalBets/TotalBets.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page_main">
+        <div id="header_main">
+            {static:LocalResources.TotalBetsLang.nextGoal}
+        </div>
+        {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,15,"NextGoal")}
+        <div id="sContent">
+            <!--Contents-->
+            <table class="tblRpt tbl-nextgoal">
+                <tr class="RptHeader">
+                    <td class="col-number">
+                        #
+                    </td>
+                    <td class="col-time">
+                        {static:LocalResources.TotalBetsLang.time}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.events}
+                    </td>
+                    <td colspan="5">
+                        {static:LocalResources.TotalBetsLang.turnoverWinlost}
+                    </td>
+                </tr>
+                <!--LeagueContents-->
+                <tr class="league">
+                    <td colspan="8" class="col-league">
+                        {LeagueName}
+                    </td>
+                </tr>
+                <!--MatchContents-->
+                <tr style="background-color: {ColorClass}" onmouseover="bgColor='{ColorOver}'" onmouseout="bgColor='{ColorClass}'">
+                    <td class="w-order c col-novalue">
+                        {NoValue}
+                    </td>
+                    <td class="c bl_time col-time">
+                        {TimeValue}
+                    </td>
+                    <td class="nowrap c">
+                        <a href="javascript:doViewBetList({MatchId}, 22, '{BetType}')">{Home} -vs- {Away}</a>
+                    </td>
+                    <td colspan="5" class="line_n" style="padding: 0;">
+                        <table class="width-100per">
+                            <!--ScoreContents-->
+                            <tr>
+                                <!--BetScores-->
+                                <td class="col-betScores" align="center">
+                                    <!--BetScoreContents-->
+                                    <table class="tbl-betScoreContent">
+                                        <tr>
+                                            <td class="blue col-homeaway">
+                                                {HomeScore} - {AwayScore}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" class="col-lastScore">
+                                                <!--LastScoreContents-->
+                                                <table class="tbl-lastScore">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="right">
+                                                                {SubGoal}/0
+                                                            </td>
+                                                            <td align="right" class="col-info">
+                                                                <a href="javascript:openForecast('{MatchId}','22')" class="btnInfo"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <!--/LastScoreContents-->
+                                                <!--NextScoreContents-->
+                                                {SubGoal}/{WinLost}
+                                                <!--/NextScoreContents-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!--/BetScoreContents-->
+                                </td>
+                                <!--/BetScores-->
+                            </tr>
+                            <!--/ScoreContents-->
+                        </table>
+                    </td>
+                </tr>
+                <!--/MatchContents-->
+                <!--/LeagueContents-->
+                <!--NotFoundContent-->
+                <tr class="bg_white">
+                    <td colspan="8" class="c nobold">
+                        {static:LocalResources.TotalBetsLang.noInfo}
+                    </td>
+                </tr>
+                <!--/NotFoundContent-->
+            </table>
+            <!--/Contents-->
+        </div>
+    </div>
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+
+    <script src="Resources/TotalBets.js" type="text/javascript"></script>
+
+    <script src="../_Components/AGEWnd/AGEWnd.js" type="text/javascript"></script>
+
+</body>
+</html>

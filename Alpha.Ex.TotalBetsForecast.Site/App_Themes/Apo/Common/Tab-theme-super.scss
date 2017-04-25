@@ -1,0 +1,15 @@
+﻿@import "../Common/_Variables.scss";
+@import "../Common/_Mixins.scss";
+
+#tab_hr {
+
+    .current a, #current a, a:hover, .selectedBetType a {
+        span {
+            color: $theme-super-tab-focused-color;
+        }
+
+        &:after {
+            background: $theme-super-tab-focused-border;                
+        }
+    }
+ }

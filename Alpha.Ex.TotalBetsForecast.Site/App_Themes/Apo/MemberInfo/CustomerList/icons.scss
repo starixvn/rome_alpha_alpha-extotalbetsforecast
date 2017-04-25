@@ -1,0 +1,132 @@
+﻿@import '../../Common/_Variables.scss';
+@import '../../Common/_Mixins.scss';
+@import url($icon-alpha-fonts);
+
+@include keyframes-ripple;
+
+%icon {
+    cursor: pointer;
+    display: inline-block;    
+
+    &:before { position: relative; }
+}
+
+/*********************************/
+/* IcoEditMulti_Control */
+/*********************************/
+.btnEditMult {
+    @extend %icon;
+    font: 16px;
+
+     &:before {
+         color: $customer-icon-edit-multi;
+     }
+
+     &:hover:before {
+         color: $customer-icon-edit-multi-hover;
+     }
+}
+
+/*********************************/
+/* IcoStatus_Control */
+/*********************************/
+.arrow {
+    float: right;
+    width: 16px; 
+    @extend %icon;       
+    @include ripple-effect-icon($top: 0px, $margin-left: -4px);
+
+     &:before {
+         color: $customer-icon-arrow;
+         font-size: 19px;
+     }
+}
+
+/*********************************/
+/* IcoViewDownline_Control */
+/*********************************/
+.view {
+    .icon-viewdown {
+	     @extend %icon;
+         @include ripple-effect-icon;
+
+         &:before {
+             color: $customer-icon-view;
+             font-size: 16px;
+             top: 2px;
+             left: 2px;
+         }
+    }
+
+    &:hover {
+        color: $customer-icon-view-hover;
+        .icon-viewdown:before {
+            color: $customer-icon-view-hover;
+        }
+    }
+}
+
+
+/*********************************/
+/* IcoOther_Control */
+/*********************************/
+
+.divOther {
+	@extend %icon;
+    @include ripple-effect-icon($top: 2px, $margin-left: -5px, $margin-right: -5px);
+
+     &:before {
+         color: $customer-icon-other;
+         font-size: 18px;
+         top: 2px;
+     }
+     &:hover:before {
+         color: $customer-icon-other-hover;
+     }
+}
+
+/*********************************/
+/* IcoDcomm_Control */
+/*********************************/
+
+.chkMemDcomm {
+    display: none;
+}
+
+%iconDcomm {
+    background: url('Images/switch.png') no-repeat;
+    width: 81px;
+    height: 20px;
+    margin: auto;
+
+    a {
+        cursor: pointer;
+        display: block;
+        font-size: 11px;
+        line-height: 19px;
+        text-align: left;
+    }
+
+    a[onclick=''] {
+        cursor: default;  
+    }
+}
+
+.bkgDcommAllowed {
+    @extend %iconDcomm;
+
+    a {
+        color: #fff;
+        padding-left: 10px;
+    }
+}
+
+.bkgDcommDisallowed {
+    @extend %iconDcomm;
+    background-position: 0 -31px;
+
+    a {
+        color: #666;
+        padding-left: 23px;
+    }
+}

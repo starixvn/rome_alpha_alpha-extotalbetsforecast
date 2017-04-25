@@ -1,0 +1,23 @@
+﻿html {
+  touch-action: manipulation; }
+
+.alertboxerr {
+  background: #f6f5f2;
+  border: solid 1px #f40000;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: bold; }
+  .alertboxerr div {
+    background: #f6f5f2 url(Images/error.gif) no-repeat center left;
+    color: #f40000;
+    padding: 2px 4px 2px 21px;
+    margin-left: 5px;
+    text-align: left; }
+
+.display-none {
+  display: none; }
+
+#handhistory-result iframe {
+  width: 800px;
+  height: 600px; }
+

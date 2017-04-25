@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="agent" xml:space="preserve">
+    <value>エージェント</value>
+  </data>
+	<data name="agentdownline" xml:space="preserve">
+    <value>Agent's Downlines</value>
+  </data>
+	<data name="agentpositiontaking" xml:space="preserve">
+    <value>Agent Position Taking</value>
+  </data>
+	<data name="applymastertoallmember" xml:space="preserve">
+    <value>Apply Master Preset PT to all members</value>
+  </data>
+	<data name="applysupertoallmember" xml:space="preserve">
+    <value>Apply Super Preset PT to all members</value>
+  </data>
+	<data name="automasterpreset" xml:space="preserve">
+    <value>Auto Master Preset</value>
+  </data>
+	<data name="autosuperpreset" xml:space="preserve">
+    <value>Auto Super Preset Position</value>
+  </data>
+	<data name="autote" xml:space="preserve">
+    <value>Aust Tote</value>
+  </data>
+	<data name="betsetting" xml:space="preserve">
+    <value>Bet Setting</value>
+  </data>
+	<data name="commission" xml:space="preserve">
+    <value>手数料</value>
+  </data>
+	<data name="copyallfromuktotewin" xml:space="preserve">
+    <value>Copy all Commission and Position Taking from UK/Irish Tote - Win</value>
+  </data>
+	<data name="copyallfromuktotewin1" xml:space="preserve">
+    <value>Copy all Bet Setting from UK/Irish Tote - Win</value>
+  </data>
+	<data name="copyfromwin" xml:space="preserve">
+    <value>Copy From Win</value>
+  </data>
+	<data name="edithorseracing" xml:space="preserve">
+    <value>Edit Racing</value>
+  </data>
+	<data name="enable" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+	<data name="fax" xml:space="preserve">
+    <value>ファックス</value>
+  </data>
+	<data name="firstname" xml:space="preserve">
+    <value>名</value>
+  </data>
+	<data name="greyhound" xml:space="preserve">
+    <value>Greyhound</value>
+  </data>
+	<data name="harness" xml:space="preserve">
+    <value>Harness</value>
+  </data>
+	<data name="horseracing" xml:space="preserve">
+    <value>Racing</value>
+  </data>
+	<data name="lastname" xml:space="preserve">
+    <value>氏</value>
+  </data>
+	<data name="master" xml:space="preserve">
+    <value>マスター</value>
+  </data>
+	<data name="masterdownline" xml:space="preserve">
+    <value>Master's Downlines</value>
+  </data>
+	<data name="masterpositiontaking" xml:space="preserve">
+    <value>Master Position Taking</value>
+  </data>
+	<data name="masterpreset" xml:space="preserve">
+    <value>Master Preset Position</value>
+  </data>
+	<data name="maxbet" xml:space="preserve">
+    <value>最大ベット</value>
+  </data>
+	<data name="maxpermatch" xml:space="preserve">
+    <value>1 試合毎の最大</value>
+  </data>
+	<data name="member" xml:space="preserve">
+    <value>メンバー</value>
+  </data>
+	<data name="minbet" xml:space="preserve">
+    <value>Min Bet</value>
+  </data>
+	<data name="mobilephone" xml:space="preserve">
+    <value>携帯電話番号</value>
+  </data>
+	<data name="phone" xml:space="preserve">
+    <value>電話番号</value>
+  </data>
+	<data name="place" xml:space="preserve">
+    <value>Place</value>
+  </data>
+	<data name="positiontaking" xml:space="preserve">
+    <value>Position Taking</value>
+  </data>
+	<data name="satote" xml:space="preserve">
+    <value>SA Tote</value>
+  </data>
+	<data name="submit" xml:space="preserve">
+    <value>送信</value>
+  </data>
+	<data name="superpositiontaking" xml:space="preserve">
+    <value>Super Position Taking</value>
+  </data>
+	<data name="superpreset" xml:space="preserve">
+    <value>Super Preset Position</value>
+  </data>
+	<data name="ukirishtote" xml:space="preserve">
+    <value>UK/Irish Tote</value>
+  </data>
+	<data name="username" xml:space="preserve">
+    <value>ユーザー名
+</value>
+  </data>
+	<data name="win" xml:space="preserve">
+    <value>Win</value>
+  </data>
+	<data name="mastercomm" xml:space="preserve">
+    <value>Master Commission</value>
+  </data>
+	<data name="agentcomm" xml:space="preserve">
+    <value>Agent Commission</value>
+  </data>
+	<data name="membercomm" xml:space="preserve">
+    <value>メンバー手数料</value>
+  </data>
+	<data name="super" xml:space="preserve">
+    <value>Super</value>
+  </data>
+	<data name="autosuper" xml:space="preserve">
+    <value>Super Auto</value>
+  </data>
+	<data name="copyallptfromuktotewin" xml:space="preserve">
+    <value>Copy all Position Taking from UK/Irish Tote - Win</value>
+  </data>
+	<data name="GreyhoundAU" xml:space="preserve">
+    <value>Aust Greyhound</value>
+  </data>
+	<data name="GreyhoundUK" xml:space="preserve">
+    <value>UK/Irish Greyhounds</value>
+  </data>
+	<data name="HarnessAU" xml:space="preserve">
+    <value>Aust Harness</value>
+  </data>
+	<data name="hrAUTote" xml:space="preserve">
+    <value>Aust Racing Tote</value>
+  </data>
+	<data name="hrSaTote" xml:space="preserve">
+    <value>SA Racing Tote</value>
+  </data>
+	<data name="hrUkTote" xml:space="preserve">
+    <value>UK/Irish Racing Tote</value>
+  </data>
+	<data name="lblalertMaxBetNegative" xml:space="preserve">
+    <value>Max Bet must be greater than zero.</value>
+  </data>
+	<data name="lblalertMaxPerMatchNegative" xml:space="preserve">
+    <value>Max per Match must be greater than zero.</value>
+  </data>
+	<data name="lblalertMinBetNegative" xml:space="preserve">
+    <value>Min Bet must be greater than zero.</value>
+  </data>
+	<data name="lblalerMaxbetCompare" xml:space="preserve">
+    <value>一回当たりのマックスベットポイントは表示されていますので、再確認してください</value>
+  </data>
+	<data name="lblalertMaxPerMatchCompare" xml:space="preserve">
+    <value>Max Per Match must be less than or equal to</value>
+  </data>
+	<data name="lblalertMinbetCompare" xml:space="preserve">
+    <value>一回当たりのミニマムベットポイントは表示されていますので、再確認してください</value>
+  </data>
+	<data name="alertMaxPerMatchLessMaxBet" xml:space="preserve">
+    <value>Max Bet cannot be greater than Max Per Match</value>
+  </data>
+	<data name="alertMaxBetLessMinBet" xml:space="preserve">
+    <value>Min Bet cannot be greater than Max Bet.</value>
+  </data>
+	<data name="alertIncorrectMaxBet" xml:space="preserve">
+    <value>最大ベットが正しくありません</value>
+  </data>
+	<data name="alertIncorrectMaxPerMatch" xml:space="preserve">
+    <value>1試合のマックスベットポイントを再確認してください</value>
+  </data>
+	<data name="alertIncorrectMinBet" xml:space="preserve">
+    <value>最小ベットが正しくありません</value>
+  </data>
+	<data name="enableRacing" xml:space="preserve">
+    <value>Enable Racing</value>
+  </data>
+	<data name="alertUpdRacingStatus" xml:space="preserve">
+    <value>Are you sure you want to disable Racing on this customer and all downlines?</value>
+  </data>
+	<data name="editminpt" xml:space="preserve">
+    <value>Edit Racing Min PT</value>
+  </data>
+	<data name="editmultpt" xml:space="preserve">
+    <value>Edit Multiple Racing</value>
+  </data>
+	<data name="memberdownline">
+		<value>Member's Downlines</value>
+	</data>
+	<data name="copyallfromuktotewin2">
+		<value>从英国/爱尔兰彩池复制所有佣金设置/占成（独赢</value>
+	</data>
+</root>

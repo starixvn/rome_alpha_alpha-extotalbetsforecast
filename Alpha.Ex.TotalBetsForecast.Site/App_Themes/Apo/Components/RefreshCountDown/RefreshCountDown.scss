@@ -1,0 +1,78 @@
+﻿@import '../../Common/_Variables.scss';
+@import '../../Common/_Mixins.scss';
+
+.btnRefresh, .btnLoading {
+    background-image: url("../../Images/btRefresh-large.png");
+    height: 24px;
+    line-height: 24px;
+    padding: 0 0 0 17px;
+    width: 49px;    
+    float: left;
+    font-size: 12px;
+    @include border-radius(2px);
+}
+
+.btnDown {
+    background-image: url("../../Images/btDown-large.png");
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+    float: right;
+    position: relative;
+    left: -4px;
+    @include border-radius(2px);
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.panelDown {
+    list-style: none;
+    border: solid 1px $border-color-dark;
+    background-color: $dropdown-bg;
+    width: 84px;
+    top: 24px;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    cursor: default;
+}
+
+.menuitem {
+    padding: 4px 0 4px 15px;
+
+    &:hover {
+        background-color: $dropdown-bg-hover;
+        color: $dropdown-color;
+    }
+}
+
+.menuitemcheck {
+    background: url(../../Images/check.png) no-repeat 3px center;
+}
+
+.miniloading {
+    font-size: 9px;
+    margin-left: -10px;
+}
+
+.dropdown-refresh {
+    position: relative;
+}
+
+.btnCountDown {
+    display: table;
+    margin: 8px 0;
+    width: 90px;
+    overflow: hidden;
+}
+
+.div_min_bottom {
+    border-bottom: solid 1px white;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+       
+}

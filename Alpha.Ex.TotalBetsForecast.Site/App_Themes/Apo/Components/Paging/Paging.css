@@ -1,0 +1,164 @@
+﻿/*******************************************/
+/* Common */
+/*******************************************/
+/*******************************************/
+/* Themes */
+/*******************************************/
+/*******************************************/
+/* Buttons */
+/*******************************************/
+/*******************************************/
+/* Icons */
+/*******************************************/
+/*******************************************/
+/* Table */
+/*******************************************/
+/*******************************************/
+/* Popup */
+/*******************************************/
+/*******************************************/
+/* Tooltip */
+/*******************************************/
+/*******************************************/
+/* Tab */
+/*******************************************/
+/*******************************************/
+/* Dropdown */
+/*******************************************/
+/*******************************************/
+/* Message */
+/*******************************************/
+/*******************************************/
+/* Note */
+/*******************************************/
+/*******************************************/
+/* PT setting */
+/*******************************************/
+/*******************************************/
+/* Paging */
+/*******************************************/
+/*******************************************/
+/* Customer List */
+/*******************************************/
+/*******************************************/
+/* Status */
+/*******************************************/
+/*******************************************/
+/* hint tooltip */
+/*******************************************/
+/*******************************************/
+/* Effect of dropdownlist */
+/*******************************************/
+/*******************************************/
+/* Effect of dropdownlist */
+/*******************************************/
+/*******************************************/
+/* Effect of texbox */
+/*******************************************/
+/*******************************************/
+/* Effect of button */
+/*******************************************/
+/*******************************************/
+/* font-smoothing */
+/*******************************************/
+/*******************************************/
+/* Ripple Effect */
+/*******************************************/
+@import url("/assets/styles/base/icon-fonts.css");
+#btnFirstpaging, #btnPrevpaging, #btnNextpaging, #btnLastpaging {
+  opacity: 1; }
+
+#_PagingTop {
+  text-align: center; }
+
+.icon {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #979797;
+  cursor: pointer;
+  outline: none;
+  margin: 0 4px;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+  .icon:hover {
+    background-color: #676767; }
+  .icon:before {
+    font-family: Iconalpha;
+    font-size: 15px;
+    color: #fff; }
+  .icon.pagingDisable, .icon.pagingDisable:hover {
+    cursor: default;
+    filter: alpha(opacity=35);
+    -moz-opacity: .35;
+    opacity: 0.35; }
+  .icon.pagingFirst:before {
+    content: '\e940'; }
+  .icon.pagingPrev:before {
+    content: '\e93f'; }
+  .icon.pagingLast:before {
+    content: '\e941'; }
+  .icon.pagingNext:before {
+    content: '\e942'; }
+
+span[disabled] {
+  background-color: #979797;
+  filter: alpha(opacity=35);
+  -moz-opacity: .35;
+  opacity: 0.35;
+  cursor: default; }
+  span[disabled]:hover {
+    background-color: #979797; }
+
+input.pagingCurrent {
+  border: 1px solid #dfdfdf;
+  width: 48px;
+  margin: 0 4px;
+  white-space: nowrap;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 8px;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  -khtml-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none; }
+
+div.pagingContainer {
+  text-align: center;
+  padding: 2px 0;
+  vertical-align: middle; }
+  div.pagingContainer * {
+    vertical-align: middle; }
+
+div.pagingHiden {
+  display: none;
+  width: 100%; }
+
+span.pagingSeperator {
+  border-left: 1px solid #666;
+  filter: alpha(opacity=35);
+  -moz-opacity: .35;
+  opacity: 0.35;
+  margin: 0 6px;
+  width: 1px; }
+
+#selpaging {
+  height: 24px; }
+

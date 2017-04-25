@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="agent" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="agentcomm" xml:space="preserve">
+    <value>Hoa hồng của Agent</value>
+  </data>
+  <data name="agentdownline" xml:space="preserve">
+    <value>Cấp dưới trực thuộc Agent</value>
+  </data>
+  <data name="agentpositiontaking" xml:space="preserve">
+    <value>PT của Agent</value>
+  </data>
+  <data name="alertIncorrectMaxBet" xml:space="preserve">
+    <value>Tiền đặt cược tối đa không đúng</value>
+  </data>
+  <data name="alertIncorrectMaxPerMatch" xml:space="preserve">
+    <value>Tiền đặt cược tối đa cho mỗi trận đấu không đúng</value>
+  </data>
+  <data name="alertIncorrectMinBet" xml:space="preserve">
+    <value>Tiền đặt cược  tối thiểu không đúng</value>
+  </data>
+  <data name="alertMaxBetLessMinBet" xml:space="preserve">
+    <value>Tiền cược nhỏ nhất không thể lớn hơn Tiền cược lớn nhất</value>
+  </data>
+  <data name="alertMaxPerMatchLessMaxBet" xml:space="preserve">
+    <value>Tiền đặt cược lớn nhất không thể lớn hơn Tiền đặt cược tối đa cho mỗi trận đấu</value>
+  </data>
+  <data name="alertUpdRacingStatus" xml:space="preserve">
+    <value>Bạn có chắc muốn chặn thành viên này chơi Racing và tất cả những thành viên cấp dưới trực thuộc thành viên đó?</value>
+  </data>
+  <data name="applymastertoallmember" xml:space="preserve">
+    <value>Áp dụng PT trước đó của Master cho tất cả những thành viên trực thuộc</value>
+  </data>
+  <data name="applysupertoallmember" xml:space="preserve">
+    <value>Áp dụng PT trước đó của Super cho tất cả những thành viên trực thuộc</value>
+  </data>
+  <data name="automasterpreset" xml:space="preserve">
+    <value>Auto Master Preset</value>
+  </data>
+  <data name="autosuper" xml:space="preserve">
+    <value>Super Auto</value>
+  </data>
+  <data name="autosuperpreset" xml:space="preserve">
+    <value>Auto Super Preset</value>
+  </data>
+  <data name="autote" xml:space="preserve">
+    <value>Aust Tote</value>
+  </data>
+  <data name="betsetting" xml:space="preserve">
+    <value>Giới hạn cược</value>
+  </data>
+  <data name="commission" xml:space="preserve">
+    <value>Hoa hồng</value>
+  </data>
+  <data name="copyallfromuktotewin" xml:space="preserve">
+    <value>Sao chép tất cả thiết lập về PT và hoa hồng của  UK/Irish Tote - Win</value>
+  </data>
+  <data name="copyallfromuktotewin1" xml:space="preserve">
+    <value>Sao chép tất cả thiết lập về giới hạn cược của UK/Irish Tote - Win</value>
+  </data>
+  <data name="copyallptfromuktotewin" xml:space="preserve">
+    <value>Sao chép tất cả thiết lập về PT của UK/Irish Tote - Win</value>
+  </data>
+  <data name="copyfromwin" xml:space="preserve">
+    <value>Sao chép từ  Win</value>
+  </data>
+  <data name="edithorseracing" xml:space="preserve">
+    <value>Tùy chỉnh  Racing</value>
+  </data>
+  <data name="editminpt" xml:space="preserve">
+    <value>Tùy chỉnh PT nhỏ nhất của Racing</value>
+  </data>
+  <data name="editmultpt" xml:space="preserve">
+    <value>Tùy chỉnh đồng loạt cho Racing</value>
+  </data>
+  <data name="enable" xml:space="preserve">
+    <value>Cho phép</value>
+  </data>
+  <data name="enableRacing" xml:space="preserve">
+    <value>Cho phép Racing</value>
+  </data>
+  <data name="fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="firstname" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="greyhound" xml:space="preserve">
+    <value>Greyhound</value>
+  </data>
+  <data name="GreyhoundAU" xml:space="preserve">
+    <value>Aust Greyhound</value>
+  </data>
+  <data name="GreyhoundUK" xml:space="preserve">
+    <value>UK/Irish Greyhounds</value>
+  </data>
+  <data name="harness" xml:space="preserve">
+    <value>Harness</value>
+  </data>
+  <data name="HarnessAU" xml:space="preserve">
+    <value>Aust Harness</value>
+  </data>
+  <data name="horseracing" xml:space="preserve">
+    <value>Racing</value>
+  </data>
+  <data name="hrAUTote" xml:space="preserve">
+    <value>Aust Racing Tote</value>
+  </data>
+  <data name="hrSaTote" xml:space="preserve">
+    <value>SA Racing Tote</value>
+  </data>
+  <data name="hrUkTote" xml:space="preserve">
+    <value>UK/Irish Racing Tote</value>
+  </data>
+  <data name="lastname" xml:space="preserve">
+    <value>Họ</value>
+  </data>
+  <data name="lblalerMaxbetCompare" xml:space="preserve">
+    <value>Tiền cược lớn nhất phải nhỏ hơn hoặc bằng</value>
+  </data>
+  <data name="lblalertMaxBetNegative" xml:space="preserve">
+    <value>Tiền cược tối đa phải lớn hơn 0</value>
+  </data>
+  <data name="lblalertMaxPerMatchCompare" xml:space="preserve">
+    <value>Tiền cược tối đa cho mỗi trận đấu phải nhỏ hơn hoặc bằng</value>
+  </data>
+  <data name="lblalertMaxPerMatchNegative" xml:space="preserve">
+    <value>Tiền cược tối đa cho mỗi trận đấu phải lớn hơn 0</value>
+  </data>
+  <data name="lblalertMinbetCompare" xml:space="preserve">
+    <value>Tiền cược nhỏ nhất phải lớn hơn hoặc bằng</value>
+  </data>
+  <data name="lblalertMinBetNegative" xml:space="preserve">
+    <value>Tiền cược nhỏ nhất phải lớn hơn 0</value>
+  </data>
+  <data name="master" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <data name="mastercomm" xml:space="preserve">
+    <value>Hoa hồng của Master</value>
+  </data>
+  <data name="masterdownline" xml:space="preserve">
+    <value>Cấp dưới trực thuộc Master</value>
+  </data>
+  <data name="masterpositiontaking" xml:space="preserve">
+    <value>PT của Master</value>
+  </data>
+  <data name="masterpreset" xml:space="preserve">
+    <value>Những thiết lập trước đó của Master</value>
+  </data>
+  <data name="maxbet" xml:space="preserve">
+    <value>Cược lớn nhất</value>
+  </data>
+  <data name="maxpermatch" xml:space="preserve">
+    <value>Cược tối đa cho 1 trận</value>
+  </data>
+  <data name="member" xml:space="preserve">
+    <value>Member</value>
+  </data>
+  <data name="membercomm" xml:space="preserve">
+    <value>Hoa hồng của Member</value>
+  </data>
+  <data name="minbet" xml:space="preserve">
+    <value>Cược nhỏ nhất</value>
+  </data>
+  <data name="mobilephone" xml:space="preserve">
+    <value>Điện thoại di động</value>
+  </data>
+  <data name="phone" xml:space="preserve">
+    <value>Điện thoại </value>
+  </data>
+  <data name="place" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="positiontaking" xml:space="preserve">
+    <value>Position Taking</value>
+  </data>
+  <data name="satote" xml:space="preserve">
+    <value>SA Tote</value>
+  </data>
+  <data name="submit" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="super" xml:space="preserve">
+    <value>Super</value>
+  </data>
+  <data name="superpositiontaking" xml:space="preserve">
+    <value>PT của Super</value>
+  </data>
+  <data name="superpreset" xml:space="preserve">
+    <value>Những thiết lập trước đó của Super</value>
+  </data>
+  <data name="ukirishtote" xml:space="preserve">
+    <value>UK/Irish Tote</value>
+  </data>
+  <data name="username" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="win" xml:space="preserve">
+    <value>Win</value>
+  </data>
+  <data name="copyallfromuktotewin2" xml:space="preserve">
+    <value>从英国/爱尔兰彩池复制所有佣金设置/占成（独赢</value>
+  </data>
+  <data name="memberdownline" xml:space="preserve">
+    <value>Thành viên cấp dưới trực thuộc Member</value>
+  </data>
+</root>

@@ -1,0 +1,309 @@
+﻿@import '../Common/_Variables.scss';
+@import '../Common/_Mixins.scss';
+@import url($roboto-fonts);
+@import url($icon-alpha-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+/****************************************/
+/* Common */
+/****************************************/
+body {
+    font:{
+        family: $font-family;
+        size: $font-size;
+    }
+    color: $text-color;    
+}
+
+input, select {
+    font-family: inherit;
+
+    &[disabled] {
+        opacity: 0.4;
+    }
+}
+
+input[type=text], input[type=password] {
+    border: 1px solid $border-color-dark;
+	width: 120px;    
+    height: $pt-component-height;
+    line-height: $pt-component-height;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-appearance: none;
+    @include box-sizing;
+
+    &.hasBorder {
+        border: 1px solid $border-color;
+    }
+}
+
+input[type=text] {
+    font-size: $font-size;
+}
+
+input[type='checkbox'] {
+    margin-top: 0;
+    vertical-align: middle;
+} 
+
+.text-left {
+    text-align: left;
+}
+
+.R, .text-right {
+    text-align: right;
+}
+
+.C, .text-center {
+    text-align: center;
+}
+
+select,.select {
+    border: 1px solid $border-color-dark;
+    font-size: 11px;
+    height: $pt-component-height;
+    line-height: $pt-component-height;
+    margin-right: 0;
+    margin-left: 0;
+    width: 52px;
+    @include box-sizing;
+
+    option {
+        padding: 4px;
+    }
+
+    &:disabled {
+        border-color: rgb(169, 169, 169);
+        color: rgba(0,0,0,.3);
+    }
+}
+
+.noneBorderLR {
+    border-left: none;
+    border-right: none;
+}
+.noneBorderR {
+    border-right: none;
+}
+.noneBorderL {
+    border-left: none;    
+}
+.noneBorderT {
+    border-top: none;
+}
+.noneBorderB {
+    border-bottom: none;
+}
+.noneBorderTop {
+    border-top: 0;
+}
+.noneBorderRight {
+    border-right: 0;
+
+    div {
+        line-height: 24px;
+    }
+}
+.noneBorderLeft {
+    border-left: 0;
+}
+.noneBorderBottom {
+    border-bottom: 0;
+    padding: 0 !important;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.bold {
+    font-weight: bold;
+}
+.hidden {
+    display: none;
+}
+
+.loading {
+    background: url("../Images/loader3.gif") no-repeat center center;
+    width: 54px;
+    height: 55px;
+    line-height: 50px;
+    display: block;
+    border: none;
+    margin: auto;
+}
+/* End common */
+
+/************************************/
+/* Buttons */
+/************************************/
+.list-button {
+    margin-top: 8px;
+}
+
+.btnLef {
+    margin: 12px 0;
+}
+
+%btn {
+    border: none;
+    cursor: pointer;
+    height: $height-normal;
+    -webkit-appearance: none;
+    outline: none;
+    margin-right: 8px;
+    padding-left: 16px;
+	padding-right: 16px;
+    @include effect-button;
+    @include box-sizing;
+
+    &[disabled] {
+        opacity: 0.4;
+        cursor: default;
+    }
+}
+
+.btn-submit, .ui-button, button[type=button] {
+    @extend %btn;
+    background-color: $btn-submit-bg;
+    color: $btn-submit-color;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-submit-bg-hover;
+    }
+
+}
+
+.btn-cancel, .btnCancel {
+    @extend %btn;
+    background-color: $btn-cancel-bg;
+    color: $btn-cancel-color;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-cancel-bg-hover;
+    }
+
+}
+
+.btn-refresh{
+    @extend %btn;
+    background-color: $btn-refresh-bg;
+    color: $btn-refresh-color;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-refresh-bg-hover;
+        color: $btn-refresh-color-hover;
+    }
+}
+
+input[type=button]#dSubmit, input[type=button].btnSubmit,
+input[type=submit]#dSubmit, input[type=submit].btnSubmit, .buttonSubmit, .btnUpdate {
+    @extend %btn;
+    background: $btn-submit-bg;
+    color: $btn-submit-color;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-submit-bg-hover;
+    }
+}
+
+/* End buttons */
+
+/***************************************/
+/* Table */
+/***************************************/
+.tableInfo {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed auto; 
+    
+    td {
+        height: $pt-col-height;
+        line-height: $pt-component-height;
+        padding: 0 4px;
+        @include box-sizing(border-box);
+    }   
+}
+
+table {
+    font-size: $font-size;
+}
+
+td {
+    border: 1px solid $pt-border-color;
+}
+
+.tdTitleLeft {
+    width: 15%;
+    text-align: right;
+    border-left: none;
+}
+
+.tdTitleRight {
+    width: 15%;
+    text-align: right;
+}
+
+.tdWidth {
+    width: 154px;
+}
+
+.innerTD {
+    border-top: 0;
+    border-right: 1px !important;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.gameTitle {
+    text-align: center;
+    font-weight: bold;
+    width: 70px;
+    border-left: none;
+}
+
+.ptTitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+.autoPtWidth {
+    width: 169px;
+}
+
+.gameGroupWidth {
+    width: 80px;
+}
+
+.gameTypeWidth {
+    width: 152px;
+}
+
+.maxPtAgentWidth {
+    width: 170px;
+}
+.memberWidth {
+    width: 395px;
+}
+.superAutoPtWidth {
+    width: 166px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width : 1024px) 
+{
+   
+}

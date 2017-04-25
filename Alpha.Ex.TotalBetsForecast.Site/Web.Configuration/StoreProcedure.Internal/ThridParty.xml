@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="Live Casino - Stake Level Setting">
+    <Setting Key="TP_Admin_StakeLevel_GetGameTypeStakeLevel" SpName="TP_Admin_StakeLevel_GetGameTypeStakeLevel" DbName="LiveCasinoAdmin" Plain="1">
+      <Mapping DataField="GameTypeID" ObjectProperty="Id" />
+      <Mapping DataField="IBCBetTypeID" ObjectProperty="BetTypeId" />
+      <Mapping DataField="StakeLevelID" ObjectProperty="Id" />
+      <Mapping DataField="StakeLevelName" ObjectProperty="Range" />
+    </Setting>
+    <Setting Key="TP_Admin_StakeLevel_GetCustStakeLevelMulti" SpName="TP_Admin_StakeLevel_GetCustStakeLevelMulti" DbName="LiveCasinoAdmin" Plain="1">
+      <Mapping DataField="GameTypeID" ObjectProperty="Id" />
+      <Mapping DataField="IBCBetTypeID" ObjectProperty="BetTypeId" />
+      <Mapping DataField="StakeLevelID" ObjectProperty="Id" />
+      <Mapping DataField="StakeLevelName" ObjectProperty="Range" />
+    </Setting>
+    <Setting Key="TP_Admin_StakeLevel_GetCustStakeLevel" SpName="TP_Admin_StakeLevel_GetCustStakeLevel" DbName="LiveCasinoAdmin" />
+    <Setting Key="TP_User_CustGameType_UpdStakeLevel" SpName="TP_User_CustGameType_UpdStakeLevel" DbName="LiveCasinoAdmin" />
+    <Setting Key="TP_User_Customer_AutoInsertAccount" SpName="TP_User_Customer_AutoInsertAccount" DbName="LiveCasinoAdmin" />
+    <Setting Key="TP_User_Customer_ManualInsertAccount" SpName="TP_User_Customer_ManualInsertAccount" DbName="LiveCasinoAdmin" />
+    <Setting Key="TP_User_Customer_AutoInsertAccountFromExisting" SpName="TP_User_Customer_AutoInsertAccountFromExisting" DbName="LiveCasinoAdmin" />
+  </Function>  
+</Functions>

@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TotalBets</title>
+    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/TotalBets/TotalBets.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page_main">
+        <div id="header_main">
+            {static:LocalResources.TotalBetsLang.hr}
+        </div>
+        {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,30,"HorseRacing")}
+        <div id="sContent">
+            <!--Contents-->
+            <table class="tblRpt tbl-racing">
+                <tr class="RptHeader">
+                    <td rowspan="3" class="col-race">
+                        {static:LocalResources.TotalBetsLang.lblRace}
+                    </td>
+                    <td rowspan="3" class="col-noHR nowrap">
+                        {static:LocalResources.TotalBetsLang.noHR}
+                    </td>
+                    <td rowspan="3" class="col-runner">
+                        {static:LocalResources.TotalBetsLang.runner}
+                    </td>
+                    <td colspan="6">
+                        {static:LocalResources.TotalBetsLang.tote}
+                    </td>
+                </tr>
+                <tr class="RptHeader">
+                    <td colspan="2">
+                        {static:LocalResources.TotalBetsLang.WinHR}
+                    </td>
+                    <td colspan="2">
+                        {static:LocalResources.TotalBetsLang.Place}
+                    </td>
+                    <td colspan="2">
+                        {static:LocalResources.TotalBetsLang.EachWay}
+                    </td>
+                </tr>
+                <tr class="RptHeader02">
+                    <td class="nowrap col-total">
+                        {static:LocalResources.TotalBetsLang.total}
+                    </td>
+                    <td class="nowrap col-winloss">
+                        {static:LocalResources.TotalBetsLang.lblWinLoss}
+                    </td>
+                    <td class="nowrap col-total">
+                        {static:LocalResources.TotalBetsLang.total}
+                    </td>
+                    <td class="nowrap col-winloss">
+                        {static:LocalResources.TotalBetsLang.lblWinLoss}
+                    </td>
+                    <td class="nowrap col-total">
+                        {static:LocalResources.TotalBetsLang.total}
+                    </td>
+                    <td class="nowrap col-winloss">
+                        {static:LocalResources.TotalBetsLang.lblWinLoss}
+                    </td>
+                </tr>
+                <!--LeagueContents-->
+                <tr align="center">
+                    <td colspan="{TotalCols}" class="league col-league">
+                        {LeagueName}
+                    </td>
+                </tr>
+                <!--MatchContents-->
+                <tr class="r" style="background-color: {ColorClass}" onmouseover="bgColor='{ColorOver}'" onmouseout="bgColor='{ColorClass}'">
+                    <!--RaceTime-->
+                    <td class="c b" title="{HRStatusTip}" style="background-color: {ColorStatus}" onmouseover="bgColor='{ColorOver}'"
+                        onmouseout="bgColor='{ColorStatus}'" {RaceRowspan}>
+                        <span class="raceNo">{RaceVal}</span><br />
+                        <div style="margin-top: 5px;" class="bl_time">
+                            {KickOffDay}<br />
+                            {KickOffTime}
+                        </div>
+                    </td>
+                    <!--/RaceTime-->
+                    <td class="c b">
+                        {No}
+                    </td>
+                    <td class="l">
+                        {Horse}
+                    </td>
+                    <td class="b">
+                        <!--WinTote-->
+                        <a href="javascript:doViewBetListRacing({MatchId},31,'{BetType}')">{WinToteTotal}</a>
+                        <!--/WinTote-->
+                        <!--WinToteValue-->
+                        {WinToteTotal}<!--/WinToteValue-->
+                    </td>
+                    <td class="b">
+                        {WinToteWinloss}
+                    </td>
+                    <td class="b">
+                        <!--PlaceTote-->
+                        <a href="javascript:doViewBetListRacing({MatchId},32,'{BetType}')">{PlaceToteTotal}</a>
+                        <!--/PlaceTote-->
+                        <!--PlaceToteValue-->
+                        {PlaceToteTotal}<!--/PlaceToteValue-->
+                    </td>
+                    <td class="b">
+                        {PlaceToteWinloss}
+                    </td>
+                    <td class="b">
+                        <!--WinplaceTote-->
+                        <a href="javascript:doViewBetListRacing({MatchId},33,'{BetType}')">{WinplaceToteTotal}</a>
+                        <!--/WinplaceTote-->
+                        <!--WinplaceToteValue-->
+                        {WinplaceToteTotal}<!--/WinplaceToteValue-->
+                    </td>
+                    <td class="b">
+                        {WinplaceToteWinloss}
+                    </td>
+                </tr>
+                <!--/MatchContents-->
+                <!--/LeagueContents-->
+                <!--TotalContents-->
+                <tr class="RptFooter r">
+                    <td colspan="3">
+                        {static:LocalResources.TotalBetsLang.total}
+                    </td>
+                    <td>
+                        {SumWinTotal}
+                    </td>
+                    <td>
+                        {SumWinWinloss}
+                    </td>
+                    <td>
+                        {SumPlaceTotal}
+                    </td>
+                    <td>
+                        {SumPlaceWinloss}
+                    </td>
+                    <td>
+                        {SumWinplaceTotal}
+                    </td>
+                    <td>
+                        {SumWinplaceWinloss}
+                    </td>
+                </tr>
+                <!--/TotalContents-->
+                <!--NotFoundContent-->
+                <tr class="bg_white">
+                    <td colspan="{NoFoundColSpan}" class="c nobold">
+                        {static:LocalResources.TotalBetsLang.noInfo}
+                    </td>
+                </tr>
+                <!--/NotFoundContent-->
+            </table>
+            <!--/Contents-->
+        </div>
+    </div>
+
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+    <script src="Resources/TotalBets.js" type="text/javascript"></script>
+
+    <!--Piwik-->
+    <script type="text/javascript">
+        var _pkUrl = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl}',
+            _pkScript = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript}',
+            _pkSiteId = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId}';
+    </script>
+    <script src="../_GlobalResources/Js/piwikLoader.js" type="text/javascript"></script>
+    <noscript><p><img src='{PiwikUrl}' style="border:0;" alt="" /></p></noscript>
+    <!--/Piwik-->
+</body>
+</html>

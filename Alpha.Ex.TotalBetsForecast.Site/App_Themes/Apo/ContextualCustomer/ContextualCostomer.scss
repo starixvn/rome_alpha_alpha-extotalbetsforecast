@@ -1,0 +1,99 @@
+﻿@import '../Common/_Variables.scss';
+@import '../Common/_Mixins.scss';
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+.title-page {
+    border-bottom: none;
+    height: 40px;
+}
+
+input[type='radio'], input[type='checkbox'] {
+    position: relative;
+    top: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+#loading {
+    //display: none;
+    top: 8px;
+}
+
+.note {
+    font-style: italic;
+    color: $note-color;
+    line-height: 18px;
+    margin: 8px 0;
+}
+
+/***************************************/
+/* Profile Picture */
+/***************************************/
+#uploadForm {
+    margin: 12px 0;
+}
+
+.avatar-container {
+    background-color: #fff;
+    height: 120px;
+    width: 120px;
+    margin-bottom: 8px;
+    margin-left: 4px;
+    text-align: center;
+    @include box-shadow(0, 0, 4px, rgba(0, 0, 0, 0.4));
+    
+    .avatar {
+        height: 100%;
+        width: 100%;
+        padding: 4px;
+        @include box-sizing;
+    }
+}
+
+.upload-img {
+    margin: 8px 0 12px;
+
+    .change-picture {
+        margin-top: 8px;
+    }
+
+    .check-upload {
+        display: inline-block;
+    }    
+}
+
+/***************************************/
+/* Login Option */
+/***************************************/
+
+.nicknameblock {
+    margin-top: 12px;
+
+    .nicknamebox {
+        margin-bottom: 8px;
+    }
+}
+
+.lbl-nickname {
+  margin-bottom: 8px;  
+}
+
+#textNickName {
+    margin-left: 0;
+    width: 271px;
+}
+
+.check-username {
+    line-height: 24px;
+}
+
+/***************************************/
+/* Message */
+/***************************************/
+#diverrmsg {
+    max-width: 500px !important;
+}

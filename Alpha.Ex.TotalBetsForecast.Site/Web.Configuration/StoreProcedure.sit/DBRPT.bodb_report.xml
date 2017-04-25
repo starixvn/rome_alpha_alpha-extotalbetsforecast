@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="Statement Report">
+    <Setting Key="Statement_Report_GetList_14" SpName="Acc_StatementSel_14" DbName="DBRPT.bodb_report.BODBDownlineNet" Plain="0" />
+    <Setting Key="Statement_Report_GetList_WH" SpName="Acc_StatementSel_Old" DbName="DBRPT.bodb_report.BODBDownlineNet" Plain="0" />
+  </Function>
+</Functions>

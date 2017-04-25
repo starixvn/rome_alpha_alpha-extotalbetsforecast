@@ -1,0 +1,32 @@
+﻿@import '../Common/_Variables.scss';
+
+/***************************************/
+/* Tabs */
+/***************************************/
+.tab_menu01AC {
+	color: $theme-super-color;
+}
+
+a.tab_menu02 {
+	background-color: $theme-super-bg;
+
+    &:hover {
+	    background-color: darken($theme-super-bg, 5%);
+    }
+}
+
+
+/***************************************/
+/* Menu */
+/***************************************/
+a.Bleft_Sub:hover {
+	color: $theme-super-link-color-hover;
+}
+
+
+/***************************************/
+/* Header Anouncement Popup */
+/***************************************/
+#popup_container_text .popup-header {
+    background: $theme-super-bg;
+}

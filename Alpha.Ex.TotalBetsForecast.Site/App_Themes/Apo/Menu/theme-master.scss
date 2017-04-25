@@ -1,0 +1,32 @@
+﻿@import '../Common/_Variables.scss';
+
+/***************************************/
+/* Tabs */
+/***************************************/
+.tab_menu01AC {
+	color: $theme-master-color;
+}
+
+a.tab_menu02 {
+	background-color: $theme-master-bg;
+
+    &:hover {
+	    background-color: darken($theme-master-bg, 5%);
+    }
+}
+
+/***************************************/
+/* Menu */
+/***************************************/
+
+a.Bleft_Sub:hover {
+	color: $theme-master-link-color-hover;
+}
+
+
+/***************************************/
+/* Header Anouncement Popup */
+/***************************************/
+#popup_container_text .popup-header {
+    background: $theme-master-bg;
+}

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" EnableSessionState="ReadOnly" AutoEventWireup="false" CodeFile="LiveCasino.aspx.cs" Inherits="Fanex.Age.UI.TotalBets.LiveCasino_Page" %>

@@ -1,0 +1,87 @@
+﻿@import '../../Common/_Variables.scss';
+@import '../../Common/_Mixins.scss';
+@import url($icon-alpha-fonts);
+
+#tblHeader {
+	border: 0;
+	width: 100%;
+
+    tr {
+	    /*height: 55px;*/
+	    height: 40px;
+    }
+
+    .bgleft {
+	    text-align: left;
+        width: 159px;
+
+        a {
+	        color: $text-color;
+	        font-weight: bold;
+	        text-decoration: none;
+
+            &:hover, &:active {
+	            color: $link-color;
+            }
+        }        
+    }
+
+    .bgcenter {
+	    text-align: center; /*padding-top: 13px;*/
+    }
+
+    .bgright {
+	    width: 159px;
+	    text-align: right;
+    }
+
+    .btnSubmit {
+	    background-color: $btn-bg;
+        border: none;
+        color: $btn-color;
+        cursor: pointer;
+        float: left;
+        height: $compopent-height;
+        line-height: $compopent-height;
+        padding-left: 16px;
+	    padding-right: 8px;
+        margin-bottom: 4px;
+        -webkit-appearance: none;
+        @include effect-button;
+
+        &:hover {
+            background-color: $btn-bg-hover;
+            color: $btn-color-hover;
+        }
+    }
+
+    .btnSubmitDisable {
+        @extend .btnSubmit;
+	    opacity: 0.5;
+    }
+
+    .arrowIco {
+        display: inline;
+        float: right;
+
+        &:after
+        {
+	        font-family: 'Iconalpha';
+            content: '\e928';
+            font-size: 21px;
+            color: #212121;
+
+            &:hover {
+                color: $icon-hover-color;
+            }
+        }
+    }
+}
+
+#sel_PagingTop {
+    height: $height-normal;
+    line-height: $height-normal;
+    padding: 4px;
+    margin-left: 4px;
+    margin-right: 0;
+}

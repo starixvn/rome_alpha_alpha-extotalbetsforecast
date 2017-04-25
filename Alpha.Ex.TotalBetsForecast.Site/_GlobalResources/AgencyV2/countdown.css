@@ -1,0 +1,15 @@
+﻿.btnRefresh, .btnLoading{width:50px; height:22px; padding:0px 0px 0px 17px; cursor:pointer; font-size:11px; line-height:18px}
+          
+.btnRefresh{float:left; background:url(Images/btRefresh.png) no-repeat left top}
+.btnLoading{background:url(Images/btLoading.gif) no-repeat left top}
+.btnDown{float:right; position:relative; left:-4px; background:url(Images/btDown.png) no-repeat left top; width:12px; height:22px; font-size:11px; line-height:18px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); opacity:1}
+.btnDown:hover{filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60); opacity:0.6}
+.panelDown{border:solid 1px #d4d4d4; background-color:#dfdfdf; width:73px; /*32*/position:absolute; text-align:left; cursor:default}
+.menuitem{padding:1px 0 1px 15px}
+.menuitem:hover{background-color:#a0a0a0; color:White}
+
+.menuitemcheck{background:url(Images/check.png) no-repeat 3px 4px}
+
+.miniloading{font-size:9px; margin-left:-10px}
+
+.btnCountDown{width:79px; margin-top:2px}

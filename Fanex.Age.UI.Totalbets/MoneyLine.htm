@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TotalBets</title>
+    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/TotalBets/TotalBets.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page_main">
+        <div id="header_main">
+            {static:LocalResources.TotalBetsLang.moneyline}
+        </div>
+        {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,90,"MoneyLine")}
+        <div id="sContent">
+            <!--Contents-->
+            <table class="tblRpt c width-100per">
+                <tr class="RptHeader">
+                    <td rowspan="2">
+                        {static:LocalResources.TotalBetsLang.no}
+                    </td>
+                    <td rowspan="2">
+                        {static:LocalResources.TotalBetsLang.time}
+                    </td>
+                    <td rowspan="2">
+                        {static:LocalResources.TotalBetsLang.events}
+                    </td>
+                    <td colspan="4">
+                        {static:LocalResources.TotalBetsLang.fulltime}
+                    </td>
+                    <td colspan="4">
+                        {static:LocalResources.TotalBetsLang.lbl1sthalf}
+                    </td>
+                </tr>
+                <tr class="RptHeader02">
+                    <td>
+                        {static:LocalResources.TotalBetsLang.totalhome}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.totalaway}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.forecasthome}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.forecastaway}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.totalhome}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.totalaway}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.forecasthome}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.forecastaway}
+                    </td>
+                </tr>
+                <!--LeagueContents-->
+                <tr class="league">
+                    <td colspan="11" class="col-league">
+                        {LeagueName}
+                    </td>
+                </tr>
+                <!--MatchContents-->
+                <tr class="r" style="background-color: {ColorClass}" onmouseover="bgColor='{ColorOver}'" onmouseout="bgColor='{ColorClass}'">
+                    <td class="w-order">
+                        {NoValue}
+                    </td>
+                    <td class="c bl_time">
+                        {TimeValue}
+                    </td>
+                    <td class="l">
+                        {Home} -vs- {Away}
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId}, 20, '{BetType}')">{TotalHomeFullTime}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId}, 20, '{BetType}')">{TotalAwayFullTime}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId}, 20, '{BetType}')">{ForecastHomeFullTime}</a>
+                    </td>
+                    <td class="fcnum">
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId}, 20, '{BetType}')">{ForecastAwayFullTime}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId}, 21, '{BetType}')">{TotalHomeHalfTime}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId}, 21, '{BetType}')">{TotalAwayHalfTime}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId}, 21, '{BetType}')">{ForecastHomeHalfTime}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId}, 21, '{BetType}')">{ForecastAwayHalfTime}</a>
+                    </td>
+                </tr>
+                <!--/MatchContents-->
+                <!--/LeagueContents-->
+                <!--MoneyLineNotFoundContent-->
+                <tr class="bg_white">
+                    <td colspan="11" class="c nobold">
+                        {static:LocalResources.TotalBetsLang.noInfo}
+                    </td>
+                </tr>
+                <!--/MoneyLineNotFoundContent-->
+            </table>
+            <!--/Contents-->
+        </div>
+    </div>
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+    <script src="Resources/TotalBets.js" type="text/javascript"></script>
+
+    <!--Piwik-->
+    <script type="text/javascript">
+        var _pkUrl = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl}',
+            _pkScript = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript}',
+            _pkSiteId = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId}';
+    </script>
+    <script src="../_GlobalResources/Js/piwikLoader.js" type="text/javascript"></script>
+    <noscript><p><img src='{PiwikUrl}' style="border:0;" alt="" /></p></noscript>
+    <!--/Piwik-->
+</body>
+</html>

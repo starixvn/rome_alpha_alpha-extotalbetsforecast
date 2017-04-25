@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TotalBets</title>
+    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/TotalBets/TotalBets.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page_main">
+        <div id="header_main">
+            {static:LocalResources.TotalBetsLang.lblOutRight}
+        </div>
+        {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,90,"OutRight")}
+        <div id="sContent">
+            <!--Contents-->
+            <table class="tblRpt tbl-outRight c">
+                <tr class="RptHeader">
+                    <td class="col-number">
+                        #
+                    </td>
+                    <td class="col-team">
+                        {static:LocalResources.TotalBetsLang.lblTeam}
+                    </td>
+                    <td class="col-balance">
+                        {static:LocalResources.TotalBetsLang.lblBalance}
+                    </td>
+                    <td class="col-forecast">
+                        {static:LocalResources.TotalBetsLang.lblForecast}
+                    </td>
+                </tr>
+                <!--LeagueContents-->
+                <tr align="center">
+                    <td colspan="4" class="league col-league">
+                        {LeagueName}
+                    </td>
+                </tr>
+                <!--MatchContents-->
+                <tr class="r" style="background-color: {ColorClass}" onmouseover="bgColor='{ColorOver}'" onmouseout="bgColor='{ColorClass}'">
+                    <td class="w-order">
+                        {NoValue}
+                    </td>
+                    <td class="l">
+                        <a href="javascript:doViewBetList({MatchId}, 10, '{BetType}')">{TeamsValue}</a>
+                    </td>
+                    <td>
+                        {BalanceValue}
+                    </td>
+                    <td class="fcnum">
+                        {ForecastValue}
+                    </td>
+                </tr>
+                <!--/MatchContents-->
+                <!--/LeagueContents-->
+                <!--NotFoundContent-->
+                <tr class="bg_white">
+                    <td colspan="4" class="c nobold">
+                        {static:LocalResources.TotalBetsLang.noInfo}
+                    </td>
+                </tr>
+                <!--/NotFoundContent-->
+            </table>
+            <!--/Contents-->
+        </div>
+    </div>
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+    <script src="Resources/TotalBets.js" type="text/javascript"></script>
+
+    <!--Piwik-->
+    <script type="text/javascript">
+        var _pkUrl = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl}',
+            _pkScript = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript}',
+            _pkSiteId = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId}';
+    </script>
+    <script src="../_GlobalResources/Js/piwikLoader.js" type="text/javascript"></script>
+    <noscript><p><img src='{PiwikUrl}' style="border:0;" alt="" /></p></noscript>
+    <!--/Piwik-->
+</body>
+</html>

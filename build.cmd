@@ -1,0 +1,4 @@
+start BuildSolution
+
+
+exit

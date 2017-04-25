@@ -1,0 +1,81 @@
+﻿@import '_Variables.scss';
+@import '_Mixins.scss';
+@import url($icon-alpha-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+#reportProductsFilter {
+    padding: 0;
+    margin-right: 12px;
+    white-space: nowrap;
+}
+
+.fanex-multiselect-widget input[type="text"] {  
+	height: $height-normal!important;
+	line-height: $height-normal;
+	padding: 0 7px;
+}
+
+.fanex-multiselect {
+    border: none;
+    position: relative;
+    @include effect-tetxbox;
+
+    span {
+        margin-top: 0;
+        float: none;
+    }
+
+    .fanex-multiselect-state-default {
+        @include box-shadow(0, 0, 0, transparent);
+    }
+}
+
+.fanex-multiselect-options {
+    padding: 0;
+}
+
+.fanex-multiselect-icon {
+    background: none;
+
+    &:after {
+        content: '\e91e';
+        font-family: Iconalpha;
+        font-size: 14px;
+        color: $icon-color;
+        position: relative;
+        top: 2px;
+        right: 8px;
+    }
+}
+
+.fanex-multiselect-treeview {
+    font-family: $font-family;
+
+    .custom-ui-widget-header {
+	    padding: 4px 10px;
+        border-bottom-color: $border-color-dark;
+    }
+
+    ul li {
+	    padding: 6px 0;
+    }
+
+    .fanex-multiselect-ul-group li:hover {
+        background-color: $dropdown-bg-hover;
+    }
+
+    input[type='checkbox'] {
+        position: relative;
+        top: 2px;
+        margin-right: 4px;
+    }
+
+    .fanex-multiselect-div label:hover {
+        color: $dropdown-color;
+        font-weight: normal !important;
+    }
+}

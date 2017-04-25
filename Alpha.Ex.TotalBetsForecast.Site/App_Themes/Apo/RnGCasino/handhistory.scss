@@ -1,0 +1,29 @@
+﻿@import '../Common/_Variables.scss';
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+.marginLeft100 { margin-left: 100px; }
+
+.paddingTop15 { padding-top: 15px; }
+
+.filter { margin: 8px  0 8px 2px; }
+
+.tblRpt {
+    tr {
+        td.number { color: #7D7D7D; }
+        &.odd td { background-color: #f9f9f7; }
+        td div.hand {
+            color: #1BA4ED;
+            cursor: pointer;
+        }
+        &.session td {
+            background-color: #E8DFCA;
+            font-weight: bold;
+        }
+
+        &:hover td { background-color: $table-td-hover-color; }
+    }
+}

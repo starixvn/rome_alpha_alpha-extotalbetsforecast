@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TotalBets</title>
+    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/TotalBets/TotalBets.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page_main">
+        <div id="header_main">
+            {static:LocalResources.TotalBetsLang.fglg}
+        </div>
+        {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,90,"FGLG")}
+        <div id="sContent">
+            <!--Contents-->
+            <table class="tblRpt tbl-FGLG">
+                <tr class="RptHeader">
+                    <td class="col-number" rowspan="2">
+                        {static:LocalResources.TotalBetsLang.no}
+                    </td>
+                    <td class="col-time" rowspan="2">
+                        {static:LocalResources.TotalBetsLang.time}
+                    </td>
+                    <td class="col-homeaway" rowspan="2">
+                        {static:LocalResources.TotalBetsLang.homeaway}
+                    </td>
+                    <td class="col-fulltime" colspan="3">
+                        {static:LocalResources.TotalBetsLang.fulltime}
+                    </td>
+                    <td class="col-half" colspan="3">
+                        {static:LocalResources.TotalBetsLang.lbl1sthalf}
+                    </td>
+                </tr>
+                <tr class="RptHeader02">
+                    <td class="col-goal">
+                        {static:LocalResources.TotalBetsLang.firstgoal}
+                    </td>
+                    <td class="col-goal">
+                        {static:LocalResources.TotalBetsLang.lastgoal}
+                    </td>
+                    <td class="col-goal">
+                        {static:LocalResources.TotalBetsLang.nogoal}
+                    </td>
+                    <td class="col-goal">
+                        {static:LocalResources.TotalBetsLang.firstgoal}
+                    </td>
+                    <td class="col-goal">
+                        {static:LocalResources.TotalBetsLang.lastgoal}
+                    </td>
+                    <td class="col-goal">
+                        {static:LocalResources.TotalBetsLang.nogoal}
+                    </td>
+                </tr>
+                <!--LeagueContents-->
+                <tr class="league">
+                    <td colspan="9" class="col-league">
+                        {LeagueName}
+                    </td>
+                </tr>
+                <!--MatchContents-->
+                <tr class="r" style="background-color: {ColorClass}" onmouseover="bgColor='{ColorOver}'" onmouseout="bgColor='{ColorClass}'">
+                    <td class="w-order" rowspan="2">
+                        {NoValue}
+                    </td>
+                    <td rowspan="2" class="c bl_time">
+                        {TimeValue}
+                    </td>
+                    <td class="l">
+                        <a href="javascript:doViewBetList({MatchId}, 14 , '{BetType}')">{HomeValue}</a>
+                    </td>
+                    <td class="fcnum">
+                        {FirstHomeValue}
+                    </td>
+                    <td class="fcnum">
+                        {LastHomeValue}
+                    </td>
+                    <td class="fcnum" rowspan="2">
+                        {NoGoalValue}
+                    </td>
+                    <td class="fcnum">
+                        {FirstHomeValue1H}
+                    </td>
+                    <td class="fcnum">
+                        {LastHomeValue1H}
+                    </td>
+                    <td class="fcnum" rowspan="2">
+                        {NoGoalValue1H}
+                    </td>
+                </tr>
+                <tr class="r" style="background-color: {ColorClass}" onmouseover="bgColor='{ColorOver}'" onmouseout="bgColor='{ColorClass}'">
+                    <td class="l">
+                        <a href="javascript:doViewBetList({MatchId}, 14 , '{BetType}')">{AwayValue}</a>
+                    </td>
+                    <td class="fcnum">
+                        {FirstAwayValue}
+                    </td>
+                    <td class="fcnum">
+                        {LastAwayValue}
+                    </td>
+                    <td class="fcnum">
+                        {FirstAwayValue1H}
+                    </td>
+                    <td class="fcnum">
+                        {LastAwayValue1H}
+                    </td>
+                </tr>
+                <!--/MatchContents-->
+                <!--/LeagueContents-->
+                <!--NotFoundContent-->
+                <tr class="bg_white">
+                    <td colspan="9" class="c nobold">
+                        {static:LocalResources.TotalBetsLang.noInfo}
+                    </td>
+                </tr>
+                <!--/NotFoundContent-->
+            </table>
+            <!--/Contents-->
+        </div>
+    </div>
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+    <script src="Resources/TotalBets.js" type="text/javascript"></script>
+
+    <!--Piwik-->
+    <script type="text/javascript">
+        var _pkUrl = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl}',
+            _pkScript = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript}',
+            _pkSiteId = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId}';
+    </script>
+    <script src="../_GlobalResources/Js/piwikLoader.js" type="text/javascript"></script>
+    <noscript><p><img src='{PiwikUrl}' style="border:0;" alt="" /></p></noscript>
+    <!--/Piwik-->
+</body>
+</html>

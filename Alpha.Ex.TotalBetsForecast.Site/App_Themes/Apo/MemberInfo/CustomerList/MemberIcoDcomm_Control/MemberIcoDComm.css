@@ -1,0 +1,17 @@
+﻿.chkMemDcomm {
+  display: none; }
+
+.bkgDcommAllowed, .bkgDcommDisallowed {
+  background: url("../Images/switch_mem.png") no-repeat;
+  width: 54px;
+  margin: auto; }
+
+.bkgDcommDisallowed {
+  background-position: 0 -25px; }
+
+.bkgDcommAllowed > a {
+  padding-right: 11px; }
+
+.bkgDcommDisallowed > a {
+  padding-left: 26px; }
+

@@ -1,0 +1,25 @@
+﻿#tblCustomerList
+{
+	border-collapse:collapse;
+	empty-cells: show;	
+	border:solid 1px black;	
+}
+
+
+#tblCustomerList tr th
+{
+	font-size:9pt;
+	border-top: solid 1px black;	
+	border-left: solid 1px black;		
+	white-space: nowrap;
+	text-align: center;
+}
+
+#tblCustomerList td
+{
+	font-size:9pt;
+	border-top: solid 1px black;	
+	border-left: solid 1px black;		
+	white-space: nowrap;
+	text-align: center;
+}

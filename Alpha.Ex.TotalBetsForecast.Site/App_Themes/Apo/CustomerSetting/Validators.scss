@@ -1,0 +1,40 @@
+﻿@import '../Common/_Variables.scss';
+@import '../Common/_Mixins.scss';
+
+/* The hint to Hide and Show */
+.hint {
+	display: none;
+	position: absolute;
+	min-width: 150px;
+	margin-top: -4px;
+	border: 1px solid $hint-warning-border-color;
+    color: $hint-warning-color;
+	padding: 10px 12px; /* to fix IE6, I can't just declare a background-color,     I must do a bg image, too!  So I'm duplicating the pointer.gif     image, and positioning it so that it doesn't show up     within the box */
+	background: $hint-warning-bg url('images/pointer.png') no-repeat 10px 38px;
+	white-space: nowrap;	
+	z-index: 1003;
+	font-size: $font-size;
+	height: 13px;
+    @include border-radius($hint-warning-border-radius);
+
+    /* The pointer image is hadded by using another span */
+    .hint-pointer {
+	    position: absolute;
+	    left: 10px;
+	    top: 33px;
+	    width: 20px;
+	    height: 19px;
+	    background: url('images/pointer.png') left top no-repeat;
+	    z-index: 1004;
+    }
+
+    .hint-pointer-down {
+	    position: absolute;
+	    left: 10px;
+	    top: 33px;
+	    width: 20px;
+	    height: 19px;
+	    background: url('images/pointerDown.png') left top no-repeat;
+	    z-index: 1004;
+    }
+}

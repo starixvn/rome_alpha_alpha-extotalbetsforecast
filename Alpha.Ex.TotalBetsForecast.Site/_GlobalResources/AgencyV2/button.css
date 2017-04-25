@@ -1,0 +1,17 @@
+.btn-inc1{width:20px; height:18px; background:url(Images/b_up.jpg) no-repeat; border:none}
+.btn-inc10{width:20px; height:18px; background:url(Images/b_add.jpg) no-repeat; border:none}
+.btn-dec1{width:20px; height:18px; background:url(Images/b_down.jpg) no-repeat; border:none}
+.btn-dec10{width:20px; height:18px; background:url(Images/b_sub.jpg) no-repeat; border:none}
+ 
+.btnpt_margin{margin-bottom:-1px}
+.btn_hand{cursor:pointer}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+{
+    .btn-inc10, .btn-dec10, .btn-inc1, .btn-dec1
+    {
+        position: relative;
+        top: 2px;
+    }
+}
+

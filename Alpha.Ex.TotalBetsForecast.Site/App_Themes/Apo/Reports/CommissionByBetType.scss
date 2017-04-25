@@ -1,0 +1,63 @@
+﻿@import '../Common/_Variables.scss';
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+body {
+    overflow: auto;
+}
+
+.bold-td {
+    font-weight: bold;
+
+    &.odd-column
+    {
+        background-color: $table-odd-bg;
+    }
+}
+
+.odd-column {
+    background-color: $table-odd-bg !important;
+}
+
+.filter-width {
+    width: 802px;
+}
+.filter-width-myanmarodds {
+    width: 802px;
+}
+
+.sizeTime {
+    font-size: 7px !important;
+}
+
+.altercol {
+    background-color: #F5F2D6 !important;
+    text-align: right;
+}
+
+#menuPopupAd {
+    left: 718px;
+    top: 105px;
+    z-index: 99;
+
+    #chkAd {
+        position: relative;
+        top: 2px;
+    }
+}
+
+.ad-content {
+    margin: 5px 5px;
+}
+
+/***************************************/
+/* Fanex Grid*/
+/***************************************/
+.freegrid .highlight-row:hover {
+    td {
+        background-color: $table-td-hover-color !important;
+    }
+}

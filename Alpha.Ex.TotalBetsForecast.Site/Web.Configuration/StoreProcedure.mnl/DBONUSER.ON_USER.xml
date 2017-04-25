@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="Login/log-out">
+    <Setting Key="Acc_ReCheckin" SpName="Age_ReCheckin" DbName="DBONUSER.ON_USER.BODBDownlineNet" Plain="0" />
+    <Setting Key="Acc_Checkin" SpName="Age_Checkin" DbName="DBONUSER.ON_USER.BODBDownlineNet" Plain="0" />
+    <Setting Key="Acc_CheckOut" SpName="Age_CheckOut" DbName="DBONUSER.ON_USER.BODBDownlineNet" Plain="0" />
+  </Function>
+  <Function Name="Message">
+    <Setting Key="Age_MessageNoticeSelByCustID" SpName="Age_MessageNoticeSelByCustID" DbName="DBONUSER.ON_USER.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_MessageNoticeUpdStatus" SpName="Age_MessageNoticeUpdStatus" DbName="DBONUSER.ON_USER.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_MessageSelAll" SpName="Age_MessageSelAll" DbName="DBONUSER.ON_USER.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_MessageSelByType" SpName="Age_MessageSelByType" DbName="DBONUSER.ON_USER.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_MessageSelOne" SpName="Age_MessageSelOne" DbName="DBONUSER.ON_USER.BODBDownlineNet" Plain="0" />
+  </Function>
+  <Function Name="General info">
+    <Setting Key="Acc_CustomerSelOnline" SpName="Acc_CustomerSelOnline" DbName="DBONUSER.ON_USER.BODBDownlineNet" Plain="0" />
+  </Function>
+</Functions>

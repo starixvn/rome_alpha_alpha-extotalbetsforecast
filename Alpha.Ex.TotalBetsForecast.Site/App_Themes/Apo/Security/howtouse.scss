@@ -1,0 +1,45 @@
+﻿@import '../Common/_Variables.scss';
+@import '../Common/_Mixins.scss';
+@import url($roboto-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+body{
+	font-family: $font-family;
+	font-size: $font-size;
+	line-height: 18px;
+	color: $text-color;
+	margin: 0;
+}
+
+td {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+#clear {
+	clear: both;
+	height: 10px;
+}
+#page_main {
+	text-align: left;
+	min-width: 550px;
+    padding: 0 16px;
+}
+#header_cont {
+	color: $text-red-color;
+	font-weight: 700;
+	height: 32px;
+	line-height: 32px;
+	min-width: 650px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #cecece;
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+{
+}

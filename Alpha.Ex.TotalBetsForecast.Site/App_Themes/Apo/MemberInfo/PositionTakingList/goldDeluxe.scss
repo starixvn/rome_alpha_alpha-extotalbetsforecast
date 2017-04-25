@@ -1,0 +1,62 @@
+﻿@import '../../Common/_Variables.scss';
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+/******************************************/
+/* Filter */
+/******************************************/
+label[for] {
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.infoIco:after {
+    position: relative;
+    top: 4px;
+}
+
+/******************************************/
+/* Content */
+/******************************************/
+.ptcontainer {
+    width: 625px;
+}
+
+.no-data {
+    text-align: center;
+}
+
+.margin-top12 {
+    margin-top: 12px;
+}
+
+
+#tblMain .header-lastcolumn {
+    background-color: #f0f1c7;
+    color: $text-color;
+}
+
+.odd-row {
+    background-color: $table-even-bg;
+}
+
+.even-row {
+    background-color: $table-odd-bg;
+}
+
+.closed-row {
+    background-color: $status-closed;
+}
+
+.suspended-row {
+    background-color: $status-suspended;
+}
+
+.disabled-row {
+    background-color: $status-disabled;
+}
+
+

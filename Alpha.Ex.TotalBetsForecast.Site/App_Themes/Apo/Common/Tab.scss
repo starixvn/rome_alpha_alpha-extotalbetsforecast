@@ -1,0 +1,69 @@
+﻿@import "../Common/_Variables.scss";
+@import "../Common/_Mixins.scss";
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+#button_hr
+{
+    border-bottom: solid 1px $tab-line-color;
+    display: inline-block;
+    width: 100%;    
+}
+
+#tab_hr {
+    ul {
+        font-weight: bold;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        float: left;
+        margin-right: 12px;
+        padding: 0;
+        position: relative;
+    }
+
+    a {
+        color: $tab-color;
+        float: left;      
+        text-decoration:none;
+
+        &:after {
+            content: '';
+            display: block;
+            height: 3px;
+            left: 0;
+            width: 0;
+            background: transparent;
+            position: absolute;
+            bottom: -2px;
+            @include transition(width .5s ease, background-color .5s ease);
+        }
+
+        span {
+            color: $tab-color;
+            font-weight: bold;
+            float: left;
+            padding: 12px 20px 11px;
+        }
+    }
+
+    .current a, #current a, a:hover {
+        &:after {
+            width: 100%;             
+        }
+    }
+ }
+
+
+@media only screen and (max-device-width: 1024px) 
+{
+    #tab_hr a:hover:after {
+        width: 0;
+    }
+}

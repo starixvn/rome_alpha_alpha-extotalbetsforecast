@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="Last bet monitoring">
+    <!--1-->
+    <Setting Key="Age_Monitor_BetlistSel_Ag_AllBettypes" SpName="Age_Monitor_BetlistSel_Ag_AllBettypes" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <!--/1-->
+  </Function>
+  <Function Name="Customer information">
+    <!--2-->
+    <Setting Key="Age_CustomerSelCheckBelonging" SpName="Age_CustomerSelCheckBelonging" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <!--/2-->
+  </Function>
+  <Function Name="Status">
+    <!--3-->
+    <Setting Key="Age_CustomerStatusSel" SpName="Age_CustomerStatusSel" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <!--/3-->
+  </Function>
+  <Function Name="Report">
+    <!--4-->
+    <Setting Key="Age_Rpt_ConsolidatedGroup_isShownMenu" SpName="Age_Rpt_ConsolidatedGroup_isShownMenu" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <!--4-->
+    <!--5-->
+    <Setting Key="Age_Rpt_Outstanding_Ag" SpName="Age_Rpt_Outstanding_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_Rpt_Outstanding_MAg" SpName="Age_Rpt_Outstanding_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_Rpt_Outstanding_SAg" SpName="Age_Rpt_Outstanding_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <!--/5-->
+  </Function>
+  <Function Name="Customer information - Home Page">
+    <!--6-->
+    <Setting Key="Age_CustomerSelStatisticsInfo_Ag" SpName="Age_CustomerSelStatisticsInfo_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_CustomerSelStatisticsInfo_MAg" SpName="Age_CustomerSelStatisticsInfo_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_CustomerSelStatisticsInfo_SAg" SpName="Age_CustomerSelStatisticsInfo_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <!--/6-->
+    <!--7-->
+    <Setting Key="Age_CustomerSelBalanceInfo_Ag" SpName="Age_CustomerSelBalanceInfo_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_CustomerSelBalanceInfo_MAg" SpName="Age_CustomerSelBalanceInfo_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_CustomerSelBalanceInfo_SAg" SpName="Age_CustomerSelBalanceInfo_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <!--7-->
+  </Function>
+</Functions>

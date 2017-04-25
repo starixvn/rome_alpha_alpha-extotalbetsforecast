@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="agentPTcomm" xml:space="preserve">
+    <value>에이전트거래조건/ &lt;br/&gt;수수료</value>
+  </data>
+  <data name="bingo" xml:space="preserve">
+    <value>빙고게임</value>
+  </data>
+  <data name="casinoGame" xml:space="preserve">
+    <value>Casino Games</value>
+  </data>
+  <data name="choice" xml:space="preserve">
+    <value>선택</value>
+  </data>
+  <data name="even" xml:space="preserve">
+    <value>짝수</value>
+  </data>
+  <data name="firstgoal" xml:space="preserve">
+    <value>첫  골</value>
+  </data>
+  <data name="ft" xml:space="preserve">
+    <value>풀게임</value>
+  </data>
+  <data name="high" xml:space="preserve">
+    <value>하이</value>
+  </data>
+  <data name="ht" xml:space="preserve">
+    <value>전반</value>
+  </data>
+  <data name="lbl1x2" xml:space="preserve">
+    <value>승/무/패</value>
+  </data>
+  <data name="lblBoth" xml:space="preserve">
+    <value>양팀</value>
+  </data>
+  <data name="lblDraw" xml:space="preserve">
+    <value>무승부</value>
+  </data>
+  <data name="lblNo" xml:space="preserve">
+    <value>아니오</value>
+  </data>
+  <data name="lblOne" xml:space="preserve">
+    <value>한팀</value>
+  </data>
+  <data name="lblOr" xml:space="preserve">
+    <value>또는</value>
+  </data>
+  <data name="lblYes" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="lose" xml:space="preserve">
+    <value>패</value>
+  </data>
+  <data name="low" xml:space="preserve">
+    <value>로우</value>
+  </data>
+  <data name="masterPTcomm" xml:space="preserve">
+    <value>마스터거래조건/ &lt;br/&gt; 수수료</value>
+  </data>
+  <data name="member" xml:space="preserve">
+    <value>회원</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>다음</value>
+  </data>
+  <data name="nogoal" xml:space="preserve">
+    <value>노 골</value>
+  </data>
+  <data name="noInfo" xml:space="preserve">
+    <value>가능한 정보가 없습니다</value>
+  </data>
+  <data name="numbergameno" xml:space="preserve">
+    <value>라이브빙고 번호</value>
+  </data>
+  <data name="odd" xml:space="preserve">
+    <value>홀수</value>
+  </data>
+  <data name="odds" xml:space="preserve">
+    <value>배당</value>
+  </data>
+  <data name="over" xml:space="preserve">
+    <value>오버</value>
+  </data>
+  <data name="pending" xml:space="preserve">
+    <value>보류</value>
+  </data>
+  <data name="race" xml:space="preserve">
+    <value>경주</value>
+  </data>
+  <data name="refno" xml:space="preserve">
+    <value>배팅 번호</value>
+  </data>
+  <data name="results" xml:space="preserve">
+    <value>결과 확인</value>
+  </data>
+  <data name="stake" xml:space="preserve">
+    <value>배팅 금액</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>상황</value>
+  </data>
+  <data name="superPTcomm" xml:space="preserve">
+    <value>슈퍼거래조건/ &lt;br/&gt; 수수료</value>
+  </data>
+  <data name="transfer" xml:space="preserve">
+    <value>전송</value>
+  </data>
+  <data name="transtime" xml:space="preserve">
+    <value>전송 시간</value>
+  </data>
+  <data name="under" xml:space="preserve">
+    <value>언더</value>
+  </data>
+  <data name="winloss" xml:space="preserve">
+    <value>승리 패배</value>
+  </data>
+  <data name="won" xml:space="preserve">
+    <value>승리</value>
+  </data>
+  <data name="correctscore" xml:space="preserve">
+    <value>정확한 점수</value>
+  </data>
+  <data name="lblMemberBetList" xml:space="preserve">
+    <value>회원 배팅 리스트</value>
+  </data>
+  <data name="lblMasterWinLoseDetail" xml:space="preserve">
+    <value>마스터 승 패 상세보기</value>
+  </data>
+  <data name="lblMatchWinLostDetail" xml:space="preserve">
+    <value>경기 승 패 상세보기</value>
+  </data>
+  <data name="lblMixParlay" xml:space="preserve">
+    <value>혼합 조합</value>
+  </data>
+  <data name="subtotalCom" xml:space="preserve">
+    <value>소계(수수료)</value>
+  </data>
+  <data name="subtotalWinlost" xml:space="preserve">
+    <value>소계(승패)</value>
+  </data>
+  <data name="total" xml:space="preserve">
+    <value>총</value>
+  </data>
+  <data name="reject" xml:space="preserve">
+    <value>거부</value>
+  </data>
+  <data name="running" xml:space="preserve">
+    <value>진행중</value>
+  </data>
+  <data name="draw" xml:space="preserve">
+    <value>무승부</value>
+  </data>
+  <data name="waiting" xml:space="preserve">
+    <value>대기</value>
+  </data>
+  <data name="refund" xml:space="preserve">
+    <value>환급</value>
+  </data>
+  <data name="voided" xml:space="preserve">
+    <value>무효</value>
+  </data>
+  <data name="place" xml:space="preserve">
+    <value>순위</value>
+  </data>
+  <data name="win" xml:space="preserve">
+    <value>승/패</value>
+  </data>
+  <data name="warrior2ndBall" xml:space="preserve">
+    <value>두번째 공 승리</value>
+  </data>
+  <data name="warrior3rdBall" xml:space="preserve">
+    <value>세번째 공 승리</value>
+  </data>
+  <data name="lblOverEven" xml:space="preserve">
+    <value>오버/홀수</value>
+  </data>
+  <data name="lblOverOdd" xml:space="preserve">
+    <value>오버/짝수</value>
+  </data>
+  <data name="lblUnderEven" xml:space="preserve">
+    <value>언더/홀수</value>
+  </data>
+  <data name="lblUnderOdd" xml:space="preserve">
+    <value>언더/짝수</value>
+  </data>
+  <data name="losingtickets" xml:space="preserve">
+    <value>총 잃은 티켓</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>세부사항</value>
+  </data>
+  <data name="scoreMap" xml:space="preserve">
+    <value>라이브스코어</value>
+  </data>
+  <data name="a" xml:space="preserve">
+    <value>원정팀</value>
+  </data>
+  <data name="h" xml:space="preserve">
+    <value>홈팀</value>
+  </data>
+  <data name="betweenXandY" xml:space="preserve">
+    <value>Between {0} and {1}</value>
+  </data>
+  <data name="points" xml:space="preserve">
+    <value>points</value>
+  </data>
+  <data name="upPoints" xml:space="preserve">
+    <value>UP points</value>
+  </data>
+  <data name="exactly" xml:space="preserve">
+    <value>Exactly</value>
+  </data>
+  <data name="set" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="noTiebreak" xml:space="preserve">
+    <value>No Tiebreak</value>
+  </data>
+  <data name="CombinationResultTooHuge" xml:space="preserve">
+    <value>There is a huge number of combinations of this Parlay ticket, please kindly click on &lt;a href={0}&gt;this link&lt;/a&gt; to download an Excel file comprising the full list of all combinations.</value>
+  </data>
+</root>

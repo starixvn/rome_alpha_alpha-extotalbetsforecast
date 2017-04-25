@@ -1,0 +1,81 @@
+﻿@font-face {
+  font-family: 'Roboto';
+  src: url("../Apo/Fonts/Roboto/Roboto-Regular.woff2") format("woff2");
+  src: url("../Apo/Fonts/Roboto/Roboto-Regular.eot");
+  src: url("../Apo/Fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../Apo/Fonts/Roboto/Roboto-Regular.eot#iefix") format("embedded-opentype"), url("../Apo/Fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+{
+    font-family: "Roboto Light";
+    src: url(../../_GlobalResources/Fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face
+{
+    font-family: "Roboto Bold";
+    src: url(../../_GlobalResources/Fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face
+{
+    font-family: "Roboto Medium";
+    src: url(../../_GlobalResources/Fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../Apo/Fonts/Roboto/Roboto-Medium.woff2") format("woff2");
+  src: url("../Apo/Fonts/Roboto/Roboto-Medium.eot");
+  src: url("../Apo/Fonts/Roboto/Roboto-Medium.woff") format("woff"), url("../Apo/Fonts/Roboto/Roboto-Medium.eot#iefix") format("embedded-opentype"), url("../Apo/Fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+#button_hr {
+  font-family: Roboto, Arial, Tahoma, helvetica, sans-serif;
+  font-size: 13px;
+  border-bottom: solid 1px #cecece;
+  display: inline-block;
+  width: 100%; }
+
+#tab_hr ul {
+  font-weight: bold;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+#tab_hr li {
+  float: left;
+  margin-right: 12px;
+  padding: 0;
+  position: relative; }
+
+#tab_hr a {
+  color: #333;
+  float: left;
+  text-decoration: none; }
+  #tab_hr a:after {
+    content: '';
+    display: block;
+    height: 3px;
+    left: 0;
+    width: 0;
+    background: transparent;
+    position: absolute;
+    bottom: -2px;
+    -webkit-transition: width 0.5s ease, background-color 0.5s ease;
+    -khtml-transition: width 0.5s ease, background-color 0.5s ease;
+    -moz-transition: width 0.5s ease, background-color 0.5s ease;
+    -o-transition: width 0.5s ease, background-color 0.5s ease;
+    transition: width 0.5s ease, background-color 0.5s ease; }
+  #tab_hr a span {
+    color: #333;
+    float: left;
+    padding: 6px 8px 7px; }
+
+#tab_hr .current a span, #tab_hr a:hover span {
+  color: #666; }
+
+#tab_hr .current a:after, #tab_hr a:hover:after {
+  background: #666;
+  width: 100%; }
+

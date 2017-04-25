@@ -1,0 +1,273 @@
+﻿@import '../../Common/_Variables.scss';
+@import '../../Common/_Mixins.scss';
+@import url($icon-alpha-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+/**********************************/
+/* Common */
+/**********************************/
+body {
+	display: none;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+}
+
+select, input[type=text] {
+    border: 1px solid $border-color-dark;
+}
+
+select {
+    padding: 0;
+    @include box-shadow-multiple(none);
+}
+
+/**********************************/
+/* Title */
+/**********************************/
+#race-book-positiontaking-header {
+	color: $text-red-color;
+	font-weight: 700;
+	height: 36px;
+	line-height: 36px;
+	min-width: 650px;    
+	text-transform: uppercase;
+	border-bottom: 1px solid #cecece;
+}
+
+/**********************************/
+/* Tables */
+/**********************************/
+#race-book-userinfo {
+	background: $pt-bg !important;
+	border-collapse: collapse;
+    margin-top: 12px;
+	text-align: left;
+	width: 100%;
+
+    th, td {
+        border: solid 1px $table-border-color;
+        height: $pt-col-height;
+        padding: 0 4px;
+        vertical-align: middle;
+    }
+
+    th {
+        font-weight: normal;
+	    color: $table-header-color;
+	    background-color: $table-header-bg-color;	    
+	    text-align: center;
+    }
+
+    td {
+	    color: $text-color;
+    }
+}
+
+.race-book-positiontaking {
+    border: solid 1px #cecece;
+	border-collapse: collapse;
+	width: 100%;
+
+    td, th {
+        height: $pt-col-height;
+    }
+
+    td {
+        border: none;
+        padding: 0 12px;
+    }
+
+    th {
+	    color: $table-header-color;
+	    height: $pt-col-height;
+	    text-align: left;
+	    background-color: $table-header-bg-color;
+	    border: solid 1px $table-border-color;
+	    font-weight: normal;
+        padding: 0 8px;
+    }
+
+    tbody {
+
+        .spanPT {
+            margin: auto;
+            width: 136px;
+            display: block;
+
+            * {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            select option {
+                display: block;
+            }
+        }
+    }
+}
+
+.race-book-positiontaking-content {
+	background: $pt-bg !important;
+	border-collapse: collapse;
+	border: solid 1px $table-border-color;
+	width: 100%;
+	margin-bottom: 5px;
+
+    td, th {
+        height: $pt-col-height;
+	    border: solid 1px $table-border-color;
+        padding: 0 8px;
+    }
+
+    th {
+	    text-align: left;
+	    font-weight: normal;
+	    color: $table-header-color;
+	    background-color: $table-header-bg-color;
+	    background-position: 0 -30px;
+	    
+    }
+}
+
+
+.race-book-status {
+	border-collapse: collapse;
+	width: 100%;
+	margin-left: -2px;
+
+    th {
+	    width: 50%;
+	    border-top: 0;
+	    border-right: 0;
+    }
+
+    td {
+	    width: 50%;
+	    border-bottom: 0;
+	    border-right: 0;
+    }
+}
+
+.race-book-commision {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: -2px;
+	margin-left: -2px;
+
+    td {
+	    width: 50%;
+	    border-right: 0;
+    }
+}
+
+.race-book-commisionEditMember {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: -2px;
+	margin-left: -2px;
+	margin-right: -5px;
+
+    td {
+	    width: 33%;
+	    border-right: 0;
+    }
+}
+
+/**********************************/
+/* Buttons */
+/**********************************/
+
+.btnLeft {
+    margin-top: 12px;
+}
+
+input.btnMain {
+    background: $btn-submit-bg;
+    color: $btn-submit-color;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-submit-bg-hover;
+        color: $btn-submit-color-hover;
+    }
+}
+
+/**********************************/
+/* Collapse/Expand */
+/**********************************/
+.menu_content, .menu_content1 {
+	color: $text-red-color;
+    cursor: pointer;
+    font-weight: bold;
+    height: 20px;
+    margin: 4px 0;
+    width: 100%;
+
+    &:before {
+        font-family: 'Iconalpha';
+        font-size: 16px;
+        margin-right: 2px;
+        position: relative;
+        top: 2px;
+    }
+}
+
+.menu_content:before {        
+    content: '\e929';   
+}
+
+.menu_content1:before {        
+    content: '\e928';
+}
+
+#divCopyAll {
+    height: $pt-col-height;
+    line-height: $pt-col-height;
+	width: 100%;
+    margin: 12px 0 0;
+}
+
+#divUserName {
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	border: solid 1px $table-border-color;
+	border-collapse: collapse;
+	line-height: 20px;
+}
+.divdisableracing {
+	text-align: center;
+	border-bottom-width: 0;
+	height: 23px;
+	vertical-align: middle;
+	z-index: -1000;
+}
+
+/************************************/
+/* Message */
+/************************************/
+#diverrmsg {
+    margin-top: 4px !important;
+}
+
+.Enrich, .msgscc, .msgerr { 
+    background-color: #fdfbec !important;
+    border: 1px solid #d9d9d9 !important;
+}

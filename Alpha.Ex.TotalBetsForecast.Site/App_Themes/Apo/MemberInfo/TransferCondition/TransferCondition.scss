@@ -1,0 +1,27 @@
+﻿// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+#header_main {
+    margin-bottom: 0;
+}
+
+.transferCondition {
+    float: none;
+    margin-top: 8px;
+	min-width: 550px;
+	width: 550px;	
+}
+
+.line {
+    min-width: 550px;
+}
+
+.headerTab, .minWidthCustomer {
+    width: 550px;
+}
+
+#diverrmsg {
+    margin-top: 0 !important;
+}

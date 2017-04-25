@@ -1,0 +1,484 @@
+﻿@import '../../Common/_Variables.scss';
+@import '../../Common/_Mixins.scss';
+@import url($icon-alpha-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+select, input {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.customerInfo {
+	min-width: 880px;
+	width: 100%;
+	border-bottom: 1px solid $pt-border-color;
+	border-right: 1px solid $pt-border-color;
+}
+
+#ptGridContainer {
+    padding: 12px;
+}
+
+.customerInfoBlock6 {
+	border-left: 1px solid $pt-border-color;
+	border-top: 1px solid $pt-border-color;
+}
+.customerInfo-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.minWidthCustomer {
+	width: auto;
+	display: table;
+}
+.customerInfoBlock1, .customerInfoBlock2, .customerInfoBlock3, .customerInfoBlock4 {
+	float: none;
+}
+.customerInfoBlock1 {
+	width: 20%;
+}
+.customerInfoBlock2 {
+	width: 30%;
+}
+.customerInfoBlock3 {
+	width: 20%;
+}
+.customerInfoBlock4 {
+	width: 30%;
+}
+.positionTaking {
+	border-bottom: 1px solid $pt-border-color;
+	border-left: 1px solid $pt-border-color;
+	border-right: 1px solid $pt-border-color;
+	width: 100%;
+	padding: 0;
+	min-width: 700px;
+    @include box-sizing;
+}
+.headerTab {
+	width: 100%;
+}
+.headerPositionTaking {
+	min-width: 700px;
+	width: 100%;
+	font-weight: bold;
+    height: $pt-col-height;
+    line-height: $pt-col-height;
+
+    input[type='checkbox'] {
+        margin-top: 0;
+        top: 0;
+    }
+}
+.inputNumberWidth90 {
+	text-align: right;
+	vertical-align: middle;
+	width: 90px !important;
+    margin-right: 4px !important;
+}
+.betSettingCommDropdown {
+	-webkit-appearance: menulist;
+}
+.BetTypeLabel, .BetTypeHeader2 {
+	background-color: $pt-col-highlight-bg;
+	border-left: 1px solid $pt-border-color;
+	border-top: 1px solid $pt-border-color;
+}
+.ToteLabel4, .ToteLabel3 {
+	background-color: $pt-col-highlight-bg;
+	border-left: 1px solid $pt-border-color;
+	border-top: 1px solid $pt-border-color;
+}
+
+.ToteLabel4 {
+    height: 120px;
+
+    input[type='checkbox'] {
+        margin-top: 0;
+    }
+}
+.PTLabel {
+	border-left: 1px solid $pt-border-color;
+	border-top: 1px solid $pt-border-color;
+    background-color: $pt-col-highlight-bg;
+    font-weight: normal;
+    height: $pt-col-height;
+    line-height: $pt-col-height-has-padding;
+    width: 126px;
+}
+.BetTypeSelect {
+    width: 126px;
+
+    * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.BetTypeSelect2 {
+	border-left: 1px solid $pt-border-color;
+	border-top: 1px solid $pt-border-color;
+    font-weight: normal;
+    width: 380px;    
+}
+.PTAgentDisableAutMPTBox {
+	float: left;
+	text-align: center;
+	background-color: #fff;
+}
+.bettingBox, .bettingBox2, .bettingBox3, .bettingBox4, .bettingBox5 {
+	background-color: #fff;
+	border-bottom: 1px solid $pt-border-color;
+	border-right: 1px solid $pt-border-color;
+}
+.bettingBox-header-sport, .bettingBox-header-bsbox, .bettingBox-header-bsbox2,
+.bettingBox-header-roletitle, .bettingBox-header-downlines, .bettingBox-header-status,
+.bettingBox-header-status2, .bettingBox-header-comm, .bettingBox-header-comm2,
+.bettingBox-header-comm3, .bettingBox-header-comm4, .bettingBox-header-minbet,
+.bettingBox-header-maxbet, .bettingBox-header-maxpermatch, .bettingBox-header-minbet2,
+.bettingBox-header-maxbet2, .bettingBox-header-maxpermatch2
+{
+	background-color: $table-header-bg-color;
+	border-left: 1px solid $pt-border-color;
+	border-top: 1px solid $pt-border-color;
+	color: $table-header-color;
+}
+
+.bettingBox-header-comm4 {
+    height: 60px;
+}
+
+.bettingBox-header-tote {
+	background-color: $table-header-bg-color;
+	border-top: 1px solid $pt-border-color;
+}
+.bettingBox-sport {
+	background-color: #F7F0E4;
+	border-top: 1px solid $pt-border-color;
+	border-left: 1px solid $pt-border-color;
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+    line-height: initial !important;
+    padding: 0 4px;
+}
+.bettingBox-tote {
+	background-color: $pt-col-highlight-bg;
+	border-top: 1px solid $pt-border-color;
+	border-left: 1px solid $pt-border-color;
+    padding: 0 4px;
+    position: relative;
+
+    input[type='checkbox'] {
+        position: relative;
+        top: 5px;
+    }
+}
+
+.bettingBox-comm, .bettingBox-comm2, .bettingBox-status, .bettingBox-status2,
+.bettingBox-downlines, .bettingBox-minbet, .bettingBox-maxbet, .bettingBox-maxpermatch,
+.bettingBox-minbet2, .bettingBox-maxbet2, .bettingBox-maxpermatch2 {
+	border-top: 1px solid $pt-border-color;
+	border-left: 1px solid $pt-border-color;
+}
+
+.bettingBox-sportbox, .PTLineBox {
+    background-color: $pt-bg;
+    display: table;
+}
+
+.bettingBox-sportbox > div{
+    display: table-cell;
+
+}
+
+.bettingBox-status, .bettingBox-roletitle, .bettingBox-downlines, .BetTypeSelect2 {
+    input[type="checkbox"] {
+        margin-top: 6px;
+        &.BetTypeCheckbox {
+            margin-top: 0;
+        }
+    }
+}
+
+/************************************/
+/* Racebook*/
+/************************************/
+.bettingBox-header-bsbox, .bettingBox-header-bsbox2,
+.bettingBox-header-minbet, .bettingBox-header-maxbet, .bettingBox-header-maxpermatch,
+.bettingBox-header-status, .bettingBox-header-roletitle, .bettingBox-header-downlines,
+.bettingBox-minbet, .bettingBox-maxbet, .bettingBox-maxpermatch,
+.bettingBox-comm, .bettingBox-comm2, .bettingBox-tote, .bettingBox-status,
+.bettingBox-status2, .BetTypeSelect2, .bettingBox-roletitle, .bettingBox-downlines {
+    height: $pt-col-height;
+    line-height: $pt-col-height - 4;
+}
+
+.headerStatusBox {
+    width: 144px;
+}
+
+.bettingBox-roletitle, .bettingBox-downlines, .bettingBox-header-downlines {
+    width: 73px;
+}
+
+.bettingBox-header-tote, .bettingBox-header-sport, .bettingBox-header-comm {
+    height: 2*$pt-col-height;
+    line-height: 2*$pt-col-height - 4;
+}
+
+.bettingBox-header-bsbox {
+    width: 573px;
+}
+
+.bettingBox-header-minbet, .bettingBox-header-maxbet,
+.bettingBox-header-maxpermatch, .bettingBox-minbet, .bettingBox-maxbet, .bettingBox-maxpermatch {
+    padding: 2px 4px;
+    width: 191px;
+}
+
+.bettingBox-header-status {
+    width: 145px;
+    position: relative;
+}
+.bettingBox-header-roletitle, .bettingBox-status {
+    width: 71px;
+}
+
+.bettingBox-header-minbet2, .bettingBox-header-maxbet2, .bettingBox-header-maxpermatch2,
+.bettingBox-minbet2, .bettingBox-maxbet2, .bettingBox-maxpermatch2, .bettingBox-header-comm3 {
+    height: $pt-col-height;
+    line-height: $pt-col-height
+}
+
+.bettingBox-header-minbet2, .bettingBox-header-maxbet2, .bettingBox-header-maxpermatch2,
+.bettingBox-minbet2, .bettingBox-maxbet2, .bettingBox-maxpermatch2 {
+    width: 101px;
+}
+.bettingBox-header-bsbox2 {
+    width: 303px;
+}
+
+.bettingBox-comm2 {
+    width: 71px;
+}
+
+.bettingBox-header-comm3 {
+    width: 213px;
+}
+
+.bettingBox-status2 {
+    width: 82px;
+}
+
+.bettingBox-header-status2 {
+    width: 82px;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+
+    .divBettingCommSportCopy {
+        top: 21px !important;
+    }
+
+    &#statusheader input[type='checkbox'] {
+        top: 6px;
+        left: 0 !important;
+    }
+
+    .text-align-right {
+        width: 59px !important;
+    }
+}
+
+.bettingBox-header-status, .bettingBox-header-status2 {
+    .text-align-right {
+        text-align: center;
+        margin: auto;
+        float: none;
+    }
+}
+
+.ToteLabel3 {
+    height: 90px;
+}
+
+#statusheader input[type='checkbox'] {
+    left: 25px !important;
+    top: 5px;
+}
+
+.bettingBox-header-comm2 {
+    height: 30px;
+
+    .divCommButtonBox {
+        top: 5px !important;
+    }
+}
+
+.divCommButtonTile {
+    width: 60px;
+    text-align: center;
+    margin: auto;
+    float: none;
+}
+
+.PTSportLabel {
+    padding: 0 8px;
+    text-indent: 0;
+}
+
+.bettingBox5 {
+    width: 729px;
+
+    .headerStatusBox {
+        width: 145px;
+    }
+
+    .bettingBox-header-downlines {
+        width: 74px;
+    }
+}
+
+.PTMemberBox {
+    width: 226px;
+}
+
+.spanPT select {
+    padding: 0;
+}
+
+.BetTypeHeader {
+    height: $pt-col-height;
+    @include box-sizing();
+}
+
+.BetTypeHeader2, .BetTypeHeaderActive {
+    height: $pt-col-height;
+    @include box-sizing();
+}
+
+/************************************/
+/* Icons*/
+/************************************/
+
+.PTBetTypeCopied, .PTBetTypeCopiedActive {
+    background: none;
+}
+
+.PTBetTypeCopied + .PTCheckCopied, .PTBetTypeCopiedActive + .PTCheckCopied {
+    &:before {
+        margin-right: 20px;
+    }
+
+    &:hover:after {
+        margin-left: -26px;
+    }
+}
+.PTBetTypeCopiedActive + .PTCheckCopied {
+    &:before {
+        color: $pt-icon-copy-color-active-dark;
+        content: '\e94e'; 
+    }
+}
+
+%icon-image {
+    background: url(../../Images/sprites.png) no-repeat;    
+    cursor: pointer;
+    height: 16px !important;
+    width: 16px !important;
+    display: inline-block;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.divBettingCommSportCopy {
+    position: absolute;
+    top: 4px;
+    right: 2px;
+}
+
+.bettingCommSportCopiedActive {
+    @extend %icon-image;
+    background-position: 0 0;
+
+}
+
+.bettingCommSportCopied {
+    @extend %icon-image;
+    background-position: -48px 0;
+}
+
+.bettingCommSportActive {
+    @extend %icon-image;
+    background-position: 0 -26px;
+
+}
+
+.bettingCommSportEdit {
+    @extend %icon-image;
+    background-position: -24px -26px;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.BetTypeHeader2:after {
+    content: '';
+}
+
+#betsettingheader {
+    position: relative;
+
+    .bettingCommSportActive, .bettingCommSportEdit {
+        position: absolute;
+        top: 6px;
+        right: 3px;
+    }
+}
+
+#commheader {
+    position: relative;
+    .divCommButtonBox {
+        position: absolute;
+        top: 19px;
+        right: 2px;
+    }
+
+    input[type='checkbox'] {
+        left: 2px !important;
+        top: 6px;
+    }
+}
+/************************************/
+/* Buttons */
+/************************************/
+button.btnMain {
+    background: $btn-submit-bg;
+    color: $btn-submit-color;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-submit-bg-hover;
+        color: $btn-submit-color-hover;
+    }
+}
+
+.btnLeft {
+    margin-top: 12px;
+}
+
+/************************************/
+/* Message */
+/************************************/
+#diverrmsg {
+    margin-top: 12px !important;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+{
+    
+}

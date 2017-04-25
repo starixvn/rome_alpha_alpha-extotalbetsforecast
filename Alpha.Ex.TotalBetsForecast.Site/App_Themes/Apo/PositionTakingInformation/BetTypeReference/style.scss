@@ -1,0 +1,154 @@
+﻿@import '../../Common/_Variables.scss';
+@import '../../Common/_Mixins.scss';
+@import url($roboto-fonts);
+@import url($icon-alpha-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+body {
+    background-color: $bg-color;
+    margin: 0;
+    padding: 0;
+    font:{
+        family: $font-family;
+        size: $font-size;
+    }
+    color: $text-color;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.followedByCol {
+    width: 35%;
+}
+.bettypeCol {
+	width: 30%;
+}
+.container {
+    padding: 16px;
+}
+.note-box {
+	background-color: #fff;
+	border: 1px solid $border-color-dark;
+	.note {
+		margin-left: 20px;
+		width: 40px;
+		text-align: center;
+		background: #918e91;
+		color: #fff;
+		padding: 2px 0;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border: 1px solid $border-color-dark;
+		font-size: $font-size - 2;
+		border-top: none;
+	}
+	.text-note {
+		padding: 10px 10px 10px 20px;
+	}
+}
+.content {
+	.title {
+		padding: 15px 0;
+		font-weight: bold;
+	}
+	>p {
+		margin: 0 0 15px;
+	}
+	.sport {		
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			background: #fff;
+			thead {
+				color: $table-header-color;
+				background: $table-header-bg-color;
+				font-weight: bold;
+				text-align: center;
+				th {
+                    height: $compopent-height;
+					padding: 0 8px;
+					border: 1px solid $table-border-color;
+					border-top: none;
+				}
+			}
+
+			tbody td {
+				padding: 5px;
+				border: 1px solid $table-border-color;
+				&.bettype {
+					background: #F3F5E0;
+					text-align: center;
+				}
+			}
+		}
+
+		.hide {
+            display: none;
+            visibility: hidden;
+        }
+	}
+}
+
+/**********************************/
+/* Collapse/Expand */
+/**********************************/
+.header-sport {
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+	color: $text-red-color;
+    cursor: pointer;
+    font-weight: bold;
+    height: 36px;
+    line-height: 30px;
+    margin: 4px 0;
+    padding: 0 6px;
+    width: 100%;
+    vertical-align: middle;
+    @include box-sizing;
+
+    &:hover {
+        border-color: #b3b3b3;
+    }
+}
+
+.iconBox {
+    &:before {
+        font-family: 'Iconalpha';
+        font-size: 16px;
+        margin-right: 2px;
+        position: relative;
+        top: 2px;
+    }
+
+	&.collapse-icon {
+		&:before {
+            content: '\e929';
+        }
+	}
+	&.expand-icon {
+		&:before {
+            content: '\e928';
+        }
+	}
+}
+
+@media only screen and (max-device-width: 767px) {
+    body {
+        font-size: $font-size + 3;
+        line-height: 1.5;
+    }
+
+    .note-box .note {
+        font-size: $font-size + 1;
+    }
+}

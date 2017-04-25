@@ -1,0 +1,105 @@
+﻿@font-face {
+    font-family: Roboto;
+    src: url(../../_GlobalResources/Fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Light";
+    src: url(../../_GlobalResources/Fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    src: url(../../_GlobalResources/Fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    src: url(../../_GlobalResources/Fonts/Roboto/Roboto-Medium.ttf);
+}
+
+html, body{overflow-x:hidden; overflow-y:auto}
+body{font-family:"Roboto",Tahoma,Arial,helvetica,sans-serif; font-size:11px; line-height:21px; color:#171717; margin:0px; text-align:left; background:url(Images/bg_left_menu.jpg) repeat-y -5px 0px; background-attachment:fixed; background-color:#f5f6f8}
+td{padding-left:2px; padding-right:2px}
+#tab_menu{border-bottom:1px solid #CCC; font-weight:bold; height:22px; margin-top:3px; text-align:center; text-transform:uppercase; width:202px}
+#tab_menu_m{float:left; height:23px; width:99px}
+#tab_menu_L{float:right; height:23px; width:101px}
+.tab_menu01AC{background:transparent url(Images/menutop_OV.jpg) no-repeat scroll right top; color:red; display:block; margin-top:2px; padding-left:10px; text-decoration:none}
+.tab_menu02{background:transparent url(Images/menutop_none.jpg) no-repeat scroll left top; color:white; display:block; padding-right:10px; text-decoration:none}
+.tab_menu02:hover{background:transparent url(Images/menutop_OV2.jpg) no-repeat scroll left top; color:red; margin-top:2px}
+.tab_menu02AC{background:transparent url(Images/menutop_OV2.jpg) no-repeat scroll left top; color:red; display:block; margin-top:2px; padding-right:10px; text-decoration:none}
+.tab_menu01:hover{background:transparent url(Images/menutop_OV.jpg) no-repeat scroll right top; color:red; margin-top:2px}
+.tab_menu01{background:transparent url(Images/menutop_none.jpg) no-repeat scroll right top; color:white; display:block; padding-left:10px; text-decoration:none}
+.tab_menu02Blink{background:transparent url(Images/menutop_none.gif) no-repeat scroll left top; color:white; display:block; padding-right:10px; text-decoration:none}
+.tab_menu02Blink:hover{background:transparent url(Images/menutop_OV2.jpg) no-repeat scroll left top; color:red; margin-top:2px}
+#leftpane02{background:transparent url(Images/bg_left.jpg) repeat-y scroll center top; border-left:1px solid #C8C8C8; border-right:1px solid #C8C8C8; float:left; height:95%; padding-top:5px; width:200px}
+#Bleft_Parent02{display:block; line-height:22px; width:190px}
+.user_left{float:left; display:block; margin-bottom:5px; width:183px}
+#left_line02{background:url(Images/line_left.jpg) no-repeat top left; width:190px; height:7px}
+#clear0{clear:both}
+.text_f{color:#F60; font-size:11px; vertical-align:top}
+.text_f1{color:#F93; font-style:italic; font-size:11px; vertical-align:top}
+.textDisabled{background-color:#a0a97a; color:white}
+.textBoxCredit{font-family:"Roboto",Tahoma,Verdana; font-size:8pt}
+#from_tab{float:left; height:18px; margin-bottom:10px; width:145px}
+#b_serachL{display:block; float:right; height:18px; width:27px; margin-top:1px; margin-left:7px; text-align:left}
+.imaLink img{filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); -moz-opacity:1; border:0px solid #ccc}
+.imaLink:hover img{filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60); -moz-opacity:0.6; border:0px dotted #666}
+.line_info{background:transparent url(Images/img_lineinfo.jpg) no-repeat scroll center top; height:9px; width:177px}
+.line_table{border-bottom:1px solid #E0E0E0; font-size:7pt; border-right:1px solid #E0E0E0}
+.Bleft_Sub02{background:#FFF url(Images/bg_leftSub.jpg) repeat-x scroll center top; border-bottom:1px solid #B2B2B2; border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; margin-bottom:1px; padding:0 0 0 5px; width:185px}
+.divStatus{float:left; width:91px; text-align:right}
+.divLinkSetting{float:left; width:91px; text-align:left}
+a.linkAg{color:#2678C5; font-weight:bold; text-decoration:none}
+a.linkAg:hover{color:#FF9000; font-weight:bold; text-decoration:none}
+.text_org{color:#FF9000; font-weight:bold}
+.text_bold{color:#036; font-weight:bold}
+#button_nLeft01{background:transparent url(Images/bg_buttonLeft.gif) no-repeat scroll center top; float:left; height:24px; text-align:center; width:92px}
+#button_nLeft02{background:transparent url(Images/bg_buttonLeft.gif) no-repeat scroll center top; float:right; height:24px; text-align:center; width:92px}
+.b_nleft{color:#2678C5; font-weight:bold; text-decoration:none}
+.b_nleft:hover{color:#F60}
+font.negative{color:#B50000; font-weight:bold}
+font.positive{color:#036; font-weight:bold}
+#left_tab{background:transparent url(Images/line_left02.jpg) repeat-x scroll center bottom; float:left; font-size:11px; font-weight:bold; line-height:18px; width:190px}
+#left_tab ul{font-size:11px; list-style-type:none; margin:1px auto 0; padding:0}
+#left_tab li{display:inline; font-size:11px}
+#left_tab .current a{background-position:0 -21px}
+#left_tab a{background:transparent url(Images/left_btleft.gif) no-repeat scroll left top; float:left; font-size:11px; margin-right:3px; padding-left:3px; text-decoration:none}
+#left_tab .current a span{background-position:100% -21px; color:#F78F1E}
+#left_tab a span{float:none}
+#left_tab a span{background:transparent url(Images/right_btleft.gif) no-repeat scroll right top; color:#FFF; display:block; float:left; font-size:11px; font-weight:bold; padding:1px 6px 2px 5px}
+#left_tab a:hover{background-position:0% -21px}
+
+#left_tab a:hover span{color:#4d4e4e; cursor:pointer}
+#left_tab a:hover span{background-position:100% -21px}
+#clear02{clear:both; height:5px}
+.text_redL:hover{color:#036}
+.text_redL{color:#B50000; font-weight:bold; text-decoration:none}
+.link_leftnone:hover{color:#F60; text-decoration:none}
+.link_leftnone{color:#06C; text-decoration:none}
+.text_smal{color:#333; font-size:11px}
+#leftpanewrapper{background:url(Images/bg_conts.jpg) repeat-x top; padding-left:5px; padding-top:5px; background-attachment:fixed; float:left; width:215px}
+#leftpane{width:202px; background:url(Images/bg_left_menu.jpg) repeat-y -10px 0px}
+#top_left{width:210px; height:6px}
+#button_left{width:200px; margin-left:7px; margin-right:2px}
+#button_left02{width:192px; margin-left:5px}
+.Bleft_Parent0{display:block; width:190px; line-height:20px; padding-bottom:7px; background:url(Images/bg_leftB01.jpg) repeat-x bottom}
+.Bleft_Parent{display:block; width:190px; background:url(Images/icon_off.jpg) no-repeat right; color:#394e6e; text-decoration:none; text-transform:uppercase}
+.Bleft_Parent:hover{color:#d00; background:url(Images/icon_active.jpg) no-repeat right}
+.Bleft_ParentAc{display:block; width:190px; background:url(Images/icon_active.jpg) no-repeat right; color:#d00; text-decoration:none; text-transform:uppercase; cursor:pointer}
+#left_submenu{width:190px}
+.left_line{background:url(Images/line_left.jpg) no-repeat top left; width:190px; height:7px}
+.Bleft_Sub0{width:180px; border-bottom:1px #b2b2b2 solid; border-left:1px #b2b2b2 solid; border-right:1px #b2b2b2 solid; background:url(Images/bg_leftSub.jpg) repeat-x top; background-color:#FFF; padding-left:8px; margin-bottom:3px}
+.Bleft_Sub{display:block; font-size:10px; color:#333; text-decoration:none; padding-left:12px; background:url(Images/icon_left02.jpg) no-repeat left; line-height:20px}
+.Bleft_Sub_2{display:block; font-size:10px; color:#EB6003; text-decoration:none; padding-left:12px; background:url(Images/icon_left01.jpg) no-repeat left}
+
+.Bleft_Sub:hover{color:#d00; background:url(Images/icon_left01.jpg) no-repeat left}
+.Bleft_SubAc{color:#d00; display:block; font-size:10px; text-decoration:none; font-weight:bold; padding-left:12px; background:url(Images/icon_left01.jpg) no-repeat left   }
+.active1{background:url(Images/icsubmenuhover.gif) 2px 10px no-repeat; color:#EB6003}
+#Layer1{border:0 none; height:100px; width:200px; z-index:1; margin-left:10px; float:left}
+.errMsg{color:Red; font-weight:bold}
+.popupsetting{ text-align:left;  padding:6px 6px 6px 6px;  background-color:#fff;  position:absolute;  display:none;  z-index:100;  border:solid 1px #000;  top:440px;  left:26px;  width:160px}
+
+div.divleft{float:left; text-align:left; display:block}
+
+div.divright{float:right; text-align:right; display:block}

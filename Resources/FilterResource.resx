@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="minv12pt_21" xml:space="preserve">
+    <value>minv12pt_21</value>
+  </data>
+  <data name="AccountRemark" xml:space="preserve">
+    <value>AccountRemark</value>
+  </data>
+  <data name="InstallmentDate" xml:space="preserve">
+    <value>InstallmentDate</value>
+  </data>
+  <data name="maxv12pt_21" xml:space="preserve">
+    <value>maxv12pt_21</value>
+  </data>
+  <data name="IsGroupHeadline" xml:space="preserve">
+    <value>IsGroupHeadline</value>
+  </data>
+  <data name="maxv2pt_9" xml:space="preserve">
+    <value>Max Mix Parlay</value>
+  </data>
+  <data name="enableDownline" xml:space="preserve">
+    <value>Apply For Downline</value>
+  </data>
+  <data name="autoSuspend" xml:space="preserve">
+    <value>AutoSuspend</value>
+  </data>
+  <data name="disablefinancial_wc" xml:space="preserve">
+    <value>disablefinancial_wc</value>
+  </data>
+  <data name="AccountRemarkDate" xml:space="preserve">
+    <value>AccountRemarkDate</value>
+  </data>
+  <data name="GroupID" xml:space="preserve">
+    <value>GroupID</value>
+  </data>
+  <data name="InstallmentAmount" xml:space="preserve">
+    <value>InstallmentAmount</value>
+  </data>
+  <data name="Checker" xml:space="preserve">
+    <value>Checker</value>
+  </data>
+  <data name="important" xml:space="preserve">
+    <value>important</value>
+  </data>
+  <data name="ag" xml:space="preserve">
+    <value>Agent Position Taking</value>
+  </data>
+  <data name="IP" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="disableFinancialWC" xml:space="preserve">
+    <value>disableFinancialWC</value>
+  </data>
+  <data name="isinternal0" xml:space="preserve">
+    <value>isinternal0</value>
+  </data>
+  <data name="isinternal1" xml:space="preserve">
+    <value>IsInternal1</value>
+  </data>
+  <data name="isinternal" xml:space="preserve">
+    <value>IsInternal</value>
+  </data>
+  <data name="ibcpt" xml:space="preserve">
+    <value>IBC Position Taking</value>
+  </data>
+  <data name="MatchLimit" xml:space="preserve">
+    <value>Match Limit</value>
+  </data>
+  <data name="minpt_9" xml:space="preserve">
+    <value>Min Mix Parlay</value>
+  </data>
+  <data name="PreAgreeAmount" xml:space="preserve">
+    <value>PreAgreeAmount</value>
+  </data>
+  <data name="danger" xml:space="preserve">
+    <value>Danger</value>
+  </data>
+  <data name="AccName" xml:space="preserve">
+    <value>Account Name</value>
+  </data>
+  <data name="DisableOpenTote" xml:space="preserve">
+    <value>Disable Horse Racing UK Tote</value>
+  </data>
+  <data name="UMMBv151OT" xml:space="preserve">
+    <value>Update Min-Max Bet Horse Racing UK Tote</value>
+  </data>
+  <data name="Domain" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="Platform" xml:space="preserve">
+    <value>Platform</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>Browser</value>
+  </data>
+  <data name="UMMBv99MP" xml:space="preserve">
+    <value>Update Min-Max Bet Mix Sports Parlay</value>
+  </data>
+  <data name="UMMBv161" xml:space="preserve">
+    <value>Update Min-Max Bet Number Game</value>
+  </data>
+  <data name="Updptv99MP" xml:space="preserve">
+    <value>Update Position Taking Mix Sports Parlay</value>
+  </data>
+  <data name="Updptv161" xml:space="preserve">
+    <value>Update Position Taking Number Game</value>
+  </data>
+  <data name="playerdiscountnumber" xml:space="preserve">
+    <value>Player's Number Game Discount</value>
+  </data>
+  <data name="DisableNumber" xml:space="preserve">
+    <value>Disabled Number Game</value>
+  </data>
+  <data name="disabledBG" xml:space="preserve">
+    <value>Disable Bingo</value>
+  </data>
+  <data name="syncBG" xml:space="preserve">
+    <value>Synchronized Bingo</value>
+  </data>
+  <data name="discountnumber" xml:space="preserve">
+    <value>Discount Number Game</value>
+  </data>
+  <data name="v152discount_41" xml:space="preserve">
+    <value>Greyhound's UK/Irish Tote Comm</value>
+  </data>
+  <data name="v152discount_51" xml:space="preserve">
+    <value>Greyhound's AUST Tote Comm</value>
+  </data>
+  <data name="v153discount_51" xml:space="preserve">
+    <value>Harness's AUST Tote Comm</value>
+  </data>
+  <data name="v151discount_31" xml:space="preserve">
+    <value>Racing's SA Tote Comm</value>
+  </data>
+  <data name="v151discount_41" xml:space="preserve">
+    <value>Racing's UK/Irish Tote Comm</value>
+  </data>
+  <data name="v151discount_51" xml:space="preserve">
+    <value>Racing's AUST Tote Comm</value>
+  </data>
+  <data name="IsCopyPreset_51" xml:space="preserve">
+    <value>Is Copy Preset Racing's AUST Tote</value>
+  </data>
+  <data name="IsCopyPreset152_41" xml:space="preserve">
+    <value>Is Copy Preset Greyhound's UK/Irish Tote</value>
+  </data>
+  <data name="IsCopyPreset152_51" xml:space="preserve">
+    <value>Is Copy Preset Greyhound's AUST Tote</value>
+  </data>
+  <data name="IsCopyPreset153_51" xml:space="preserve">
+    <value>Is Copy Preset Harness's AUST Tote</value>
+  </data>
+  <data name="a_v151spt_32" xml:space="preserve">
+    <value>Racing's SA Tote Place</value>
+  </data>
+  <data name="a_v151spt_31" xml:space="preserve">
+    <value>Racing's SA Tote Win</value>
+  </data>
+  <data name="a_v151spt_41" xml:space="preserve">
+    <value>Racing's UK/Irish Tote Win</value>
+  </data>
+  <data name="a_v151spt_42" xml:space="preserve">
+    <value>Racing's UK/Irish Tote Place</value>
+  </data>
+  <data name="a_v151spt_51" xml:space="preserve">
+    <value>Racing's AUST Tote Win</value>
+  </data>
+  <data name="a_v151spt_52" xml:space="preserve">
+    <value>Racing's AUST Tote Place</value>
+  </data>
+  <data name="a_v152spt_41" xml:space="preserve">
+    <value>Greyhound's UK/Irish Tote Win</value>
+  </data>
+  <data name="a_v152spt_42" xml:space="preserve">
+    <value>Greyhound's UK/Irish Tote Place</value>
+  </data>
+  <data name="a_v152spt_51" xml:space="preserve">
+    <value>Greyhound's AUST Tote Win</value>
+  </data>
+  <data name="a_v152spt_52" xml:space="preserve">
+    <value>Greyhound's AUST Tote Place</value>
+  </data>
+  <data name="a_v153spt_51" xml:space="preserve">
+    <value>Harness's AUST Tote Win</value>
+  </data>
+  <data name="a_v153spt_52" xml:space="preserve">
+    <value>Harness's AUST Tote Place</value>
+  </data>
+  <data name="MinBv153_51" xml:space="preserve">
+    <value>Harness's AUST Tote - Min Bet</value>
+  </data>
+  <data name="MaxBv153_51" xml:space="preserve">
+    <value>Harness's AUST Tote - Max Bet</value>
+  </data>
+  <data name="MPMv153_51" xml:space="preserve">
+    <value>Harness's AUST Tote - Max Per Match</value>
+  </data>
+  <data name="MinBv152_51" xml:space="preserve">
+    <value>Greyhound's AUST Tote - Min Bet</value>
+  </data>
+  <data name="MaxBv152_51" xml:space="preserve">
+    <value>Greyhound's AUST Tote - Max Bet</value>
+  </data>
+  <data name="MPMv152_51" xml:space="preserve">
+    <value>Greyhound's AUST Tote - Max Per Match</value>
+  </data>
+  <data name="MinBv152_41" xml:space="preserve">
+    <value>Greyhound's UK/Irish Tote - Min Bet</value>
+  </data>
+  <data name="MaxBv152_41" xml:space="preserve">
+    <value>Greyhound's UK/Irish Tote - Max Bet</value>
+  </data>
+  <data name="MPMv152_41" xml:space="preserve">
+    <value>Greyhound's UK/Irish Tote - Max Per Match</value>
+  </data>
+  <data name="MinBv151_51" xml:space="preserve">
+    <value>Racing's AUST Tote - Min Bet</value>
+  </data>
+  <data name="MaxBv151_51" xml:space="preserve">
+    <value>Racing's AUST Tote - Max Bet</value>
+  </data>
+  <data name="MPMv151_51" xml:space="preserve">
+    <value>Racing's AUST Tote - Max Per Match</value>
+  </data>
+  <data name="MinBv151_41" xml:space="preserve">
+    <value>Racing's UK/Irish Tote - Min Bet</value>
+  </data>
+  <data name="MaxBv151_41" xml:space="preserve">
+    <value>Racing's UK/Irish Tote - Max Bet</value>
+  </data>
+  <data name="MPMv151_41" xml:space="preserve">
+    <value>Racing's UK/Irish Tote - Max Per Match</value>
+  </data>
+  <data name="MinBv151_31" xml:space="preserve">
+    <value>Racing's SA Tote - Min Bet</value>
+  </data>
+  <data name="MaxBv151_31" xml:space="preserve">
+    <value>Racing's SA Tote - Max Bet</value>
+  </data>
+  <data name="MPMv151_31" xml:space="preserve">
+    <value>Racing's SA Tote - Max Per Match</value>
+  </data>
+  <data name="disabledHR" xml:space="preserve">
+    <value>Disabled Racing's SA Tote</value>
+  </data>
+  <data name="disableot" xml:space="preserve">
+    <value>Disabled Racing's UK/Irish Tote</value>
+  </data>
+  <data name="Disable151_51" xml:space="preserve">
+    <value>Disabled Racing's AUST Tote</value>
+  </data>
+  <data name="Disable152_41" xml:space="preserve">
+    <value>Disabled Greyhound's UK/Irish Tote</value>
+  </data>
+  <data name="Disable152_51" xml:space="preserve">
+    <value>Disabled Greyhound's AUST Tote</value>
+  </data>
+  <data name="Disable153_51" xml:space="preserve">
+    <value>Disabled Harness's AUST Tote</value>
+  </data>
+  <data name="DisableCasino" xml:space="preserve">
+    <value>Disabled Casino</value>
+  </data>
+  <data name="DisableBingo" xml:space="preserve">
+    <value>Disabled Bingo</value>
+  </data>
+  <data name="minV151PT_52" xml:space="preserve">
+    <value>Min Racing's AUST Tote Place</value>
+  </data>
+  <data name="minV151PT_51" xml:space="preserve">
+    <value>Min Racing's AUST Tote Win</value>
+  </data>
+  <data name="minV152PT_42" xml:space="preserve">
+    <value>Min Harness's UK/Irish Tote Place</value>
+  </data>
+  <data name="minV152PT_41" xml:space="preserve">
+    <value>Min Harness UK/Irish Tote Win</value>
+  </data>
+  <data name="minV152PT_52" xml:space="preserve">
+    <value>Min Harness's AUST Tote Place</value>
+  </data>
+  <data name="minV152PT_51" xml:space="preserve">
+    <value>Min Harness AUST Tote Win</value>
+  </data>
+  <data name="minV153PT_52" xml:space="preserve">
+    <value>Min Greyhound's AUST Tote Place</value>
+  </data>
+  <data name="minV153PT_51" xml:space="preserve">
+    <value>Min Greyhound AUST Tote Win</value>
+  </data>
+  <data name="maxV151PT_51" xml:space="preserve">
+    <value>Max Racing's AUST Tote Win</value>
+  </data>
+  <data name="maxV151PT_52" xml:space="preserve">
+    <value>Max Racing's AUST Tote Place</value>
+  </data>
+  <data name="maxV152PT_41" xml:space="preserve">
+    <value>Max Harness's UK/Irish Tote Win</value>
+  </data>
+  <data name="maxV152PT_42" xml:space="preserve">
+    <value>Max Harness's UK/Irish Tote Place</value>
+  </data>
+  <data name="maxV152PT_51" xml:space="preserve">
+    <value>Max Harness's AUST Tote Win</value>
+  </data>
+  <data name="maxV152PT_52" xml:space="preserve">
+    <value>Max Harness's AUST Tote Place</value>
+  </data>
+  <data name="maxV153PT_51" xml:space="preserve">
+    <value>Max Greyhound's AUST Tote Win</value>
+  </data>
+  <data name="maxV153PT_52" xml:space="preserve">
+    <value>Max Greyhound's AUST Tote Place</value>
+  </data>
+</root>

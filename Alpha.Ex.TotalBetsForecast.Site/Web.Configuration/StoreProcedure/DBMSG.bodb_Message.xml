@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="Message">
+    <Setting Key="Dot_Msg_GetPrivateMessage" SpName="Dot_Msg_GetPrivateMessage" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_GetPublicMessage" SpName="Dot_Msg_GetPublicMessage" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_GetNotSpecialMessage" SpName="Dot_Msg_GetNotSpecialMessage" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_GetSpecialMessage" SpName="Dot_Msg_GetSpecialMessage" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_GetMessage" SpName="Dot_Msg_GetMessage" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Acc_Msg_GetTopPubMessage" SpName="Acc_Msg_GetTopPubMessage" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_GetMessage_Simple" SpName="Dot_Msg_GetMessage_Simple" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_GetPriMsgCount" SpName="Dot_Msg_GetPriMsgCount" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_GetTopPriMessage24" SpName="Dot_Msg_GetTopPriMessage24" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_GetTopPubMessage" SpName="Dot_Msg_GetTopPubMessage" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_HasPriMessage24" SpName="Dot_Msg_HasPriMessage24" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_SetMessage" SpName="Dot_Msg_SetMessage" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_SetPriMsgRead" SpName="Dot_Msg_SetPriMsgRead" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Dot_Msg_SetUsrMessage" SpName="Dot_Msg_SetUsrMessage" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_CustomerSelMessages" SpName="Age_CustomerSelMessages" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_CustomerUpdMessagesRead" SpName="Age_CustomerUpdMessagesRead" DbName="DBMSG.bodb_Message.BODBDownlineNet" Plain="0" />
+  </Function>
+</Functions>

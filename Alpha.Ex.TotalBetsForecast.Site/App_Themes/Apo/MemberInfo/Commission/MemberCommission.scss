@@ -1,0 +1,92 @@
+﻿@import '../../Common/_Variables.scss';
+@import "../../Common/_Mixins.scss";
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+/*********************************/
+/* Filter */
+/*********************************/
+#box_header {
+    padding-bottom: 0;
+
+    .form-item {
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 12px;
+
+        select {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+    }
+
+    #selagent {
+        display: inline-block;
+    }
+}
+
+.infoIco {
+    display: inline-block;
+
+    &:hover:after {
+        top: 4px;
+    }
+}
+
+/**********************************/
+/* Table */
+/**********************************/
+.tblRpt tr td, .tblRpt thead tr th, .tblRpt tr th {
+    &.colHdr2 {
+        background-color: #dde5fa;
+        color: $text-color;
+    }
+
+    &.colHdr {
+        background-color: #f0f1c7;
+        color: $text-color;
+    }
+}
+
+.colHdr2 {
+    background-color: #dde5fa;
+    width: 60px;
+}
+
+.warning ul {
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.tick:before {
+    position: relative;
+    left: -40%;
+}
+
+.odd-row {
+    background-color: $table-odd-bg;
+}
+
+.even-row {
+    background-color: $table-even-bg;
+}
+
+.closed-row {
+    background-color: $status-closed;
+}
+
+.suspended-row {
+    background-color: $status-suspended;
+}
+
+.disabled-row {
+    background-color: $status-disabled;
+}
+
+.colNo
+{
+    width: 25px;
+}

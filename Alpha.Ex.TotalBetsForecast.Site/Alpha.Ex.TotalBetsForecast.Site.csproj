@@ -1,0 +1,1397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43446356-0B44-4875-AC06-AE5403C3AD3A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alpha.Ex.TotalBetsForecast.Site</RootNamespace>
+    <AssemblyName>Alpha.Ex.TotalBetsForecast.Site</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Alpha.Web, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alpha.Web.1.0.0.6\lib\net40\Alpha.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=2.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.GoldDeluxe.CoreSetting.1.0.0\lib\net40\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Age.UI, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Age.UI.3.0.2.2\lib\net40\Fanex.Age.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Age.UI.Components, Version=3.0.0.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Age.UI.Components.3.0.0.23\lib\net40\Fanex.Age.UI.Components.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.CustomerSetting.Client40">
+      <HintPath>..\packages\Fanex.CustomerSetting.1.0.2.5\lib\net40\Fanex.CustomerSetting.Client40.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.CustomerSetting.Module.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.CustomerSetting.Module.Core.Alpha.1.0.0.1\lib\net40\Fanex.CustomerSetting.Module.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.CustomerSetting.Module.Keno.KenoSetting, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.CustomerSetting.Module.Keno.KenoSetting.1.0.0.4\lib\net40\Fanex.CustomerSetting.Module.Keno.KenoSetting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.CustomerSetting.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.CustomerSetting.Security.1.0.0.1\lib\net40\Fanex.CustomerSetting.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Data, Version=0.5.404.59, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Data.0.5.404.59\lib\net40\Fanex.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Data.DbSettingProviderExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Data.DbSettingProviderExtension.1.0.0.1\lib\net40\Fanex.Data.DbSettingProviderExtension.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.GoldDeluxe.CoreSetting, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.GoldDeluxe.CoreSetting.1.0.0\lib\net40\Fanex.GoldDeluxe.CoreSetting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.LiveCasino.CoreSetting, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.LiveCasino.CoreSetting.Alpha.1.2.2.0\lib\net40\Fanex.LiveCasino.CoreSetting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.1.0.0.0\lib\net40\Fanex.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Products, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Products.1.0.0.0\lib\net40\Fanex.Products.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Razorbill.Security">
+      <HintPath>..\packages\Fanex.Razorbill.Security.3.0.0.1\lib\net40\Fanex.Razorbill.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IBCFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.File.1.0.0\lib\net40\IBCFile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.414.0\lib\net40\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Data.5.0.414.0\lib\net40\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.5.0.414.0\lib\net40\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Unity.5.0.414.0\lib\net40\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Unity.5.0.414.0\lib\net40\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Unity.5.0.414.0\lib\net40\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RemotingRef, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RemotingRef.1.0.0.13\lib\net40\RemotingRef.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SPSRemoting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPSRemoting.1.0.0\lib\net40\SPSRemoting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.2.3\lib\net40\Sunplus.Agent.Model.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.1.6\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sunplus.Agent.Model.RemotingRef, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.RemotingRef.3.0.0.2\lib\net40\Sunplus.Agent.Model.RemotingRef.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sunplus.Agent.UI.ScoreMap, Version=3.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.UI.ScoreMap.3.0.0.3\lib\net40\Sunplus.Agent.UI.ScoreMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sunplus.Agent.Utilities, Version=3.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Utilities.3.0.0.4\lib\net40\Sunplus.Agent.Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TplCore, Version=1.0.4854.17253, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TplCore.1.0.4854.17254\lib\net40\TplCore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="AccessNoData.aspx" />
+    <Content Include="App_Themes\AgencyV2\Images\left_btleft.gif" />
+    <Content Include="App_Themes\AgencyV2\Images\left_button.jpg" />
+    <Content Include="App_Themes\AgencyV2\Images\right_btleft.gif" />
+    <Content Include="App_Themes\AgencyV2\Images\right_button.jpg" />
+    <Content Include="App_Themes\AgencyV2\tabmenu.css" />
+    <Content Include="App_Themes\AgencyV2\thickbox.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\AccountInfo.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\AccountInfo.min.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\DoubleCommissionPopup.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\DoubleCommissionPopup.min.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\EditCustomerInfo.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\EditCustomerInfo.min.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\styles.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\styles.min.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\theme-agent.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\theme-agent.min.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\theme-master.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\theme-master.min.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\theme-super.css" />
+    <Content Include="App_Themes\Apo\AccountInfo\theme-super.min.css" />
+    <Content Include="App_Themes\Apo\Announcement\Announcement.css" />
+    <Content Include="App_Themes\Apo\Announcement\Announcement.min.css" />
+    <Content Include="App_Themes\Apo\BetList\BetList.css" />
+    <Content Include="App_Themes\Apo\BetList\BetList.min.css" />
+    <Content Include="App_Themes\Apo\BetList\BetSlip.css" />
+    <Content Include="App_Themes\Apo\BetList\BetSlip.min.css" />
+    <Content Include="App_Themes\Apo\BetList\Images\1F.gif" />
+    <Content Include="App_Themes\Apo\BetList\Images\1L.gif" />
+    <Content Include="App_Themes\Apo\BetList\Images\firstGoal.gif" />
+    <Content Include="App_Themes\Apo\BetList\Images\green-star.gif" />
+    <Content Include="App_Themes\Apo\BetList\Images\lastGoal.gif" />
+    <Content Include="App_Themes\Apo\BetList\Images\note_title.gif" />
+    <Content Include="App_Themes\Apo\Charts\WinlossAnalysis\charts.css" />
+    <Content Include="App_Themes\Apo\Charts\WinlossAnalysis\charts.min.css" />
+    <Content Include="App_Themes\Apo\Common\Agent.css" />
+    <Content Include="App_Themes\Apo\Common\Agent.min.css" />
+    <Content Include="App_Themes\Apo\Common\CustomizeFanexGrid.css" />
+    <Content Include="App_Themes\Apo\Common\CustomizeFanexGrid.min.css" />
+    <Content Include="App_Themes\Apo\Common\CustomizeFanexMultiselect.css" />
+    <Content Include="App_Themes\Apo\Common\CustomizeFanexMultiselect.min.css" />
+    <Content Include="App_Themes\Apo\Common\CustomizeFanexPagination.css" />
+    <Content Include="App_Themes\Apo\Common\CustomizeFanexPagination.min.css" />
+    <Content Include="App_Themes\Apo\Common\Paging.css" />
+    <Content Include="App_Themes\Apo\Common\Paging.min.css" />
+    <Content Include="App_Themes\Apo\Common\Popup.css" />
+    <Content Include="App_Themes\Apo\Common\Popup.min.css" />
+    <Content Include="App_Themes\Apo\Common\Tab-theme-agent.css" />
+    <Content Include="App_Themes\Apo\Common\Tab-theme-agent.min.css" />
+    <Content Include="App_Themes\Apo\Common\Tab-theme-master.css" />
+    <Content Include="App_Themes\Apo\Common\Tab-theme-master.min.css" />
+    <Content Include="App_Themes\Apo\Common\Tab-theme-super.css" />
+    <Content Include="App_Themes\Apo\Common\Tab-theme-super.min.css" />
+    <Content Include="App_Themes\Apo\Common\Tab.css" />
+    <Content Include="App_Themes\Apo\Common\Tab.min.css" />
+    <Content Include="App_Themes\Apo\Common\tooltip.css" />
+    <Content Include="App_Themes\Apo\Common\tooltip.min.css" />
+    <Content Include="App_Themes\Apo\Company\ContactUs.css" />
+    <Content Include="App_Themes\Apo\Company\ContactUs.min.css" />
+    <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.css" />
+    <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.min.css" />
+    <Content Include="App_Themes\Apo\Components\DateRangeSelect\DateRangeSelect.css" />
+    <Content Include="App_Themes\Apo\Components\DateRangeSelect\DateRangeSelect.min.css" />
+    <Content Include="App_Themes\Apo\Components\DateRangeSelect\Images\bullet3.png" />
+    <Content Include="App_Themes\Apo\Components\DateRangeSelect\Images\bullet4.png" />
+    <Content Include="App_Themes\Apo\Components\DateRangeSelect\Images\gradient-e5e5e5-ffffff.gif" />
+    <Content Include="App_Themes\Apo\Components\DateRangeSelect\Images\sprites.png" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\border-radius.css" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\border-radius.min.css" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\cool-bg-hard-inv.png" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\cool-bg-hard.png" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\cool-bg-inv.png" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\cool-bg.png" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\drop-down.gif" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\drop-up.gif" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\nav-left-x2.gif" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\nav-left.gif" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\nav-right-x2.gif" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\nav-right.gif" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\time-down.png" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\img\time-up.png" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\jscal2.css" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\jscal2.min.css" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\reduce-spacing.css" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\reduce-spacing.min.css" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\shadow-b.png" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\steel\brushed-steel.jpg" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\steel\brushed-steel.png" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\steel\coolbg.png" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\steel\steel.css" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\steel\steel.jpg" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\steel\steel.min.css" />
+    <Content Include="App_Themes\Apo\Components\DoubleCommissionSearchUserName_Control\SearchUserName_Control.css" />
+    <Content Include="App_Themes\Apo\Components\DoubleCommissionSearchUserName_Control\SearchUserName_Control.min.css" />
+    <Content Include="App_Themes\Apo\Components\DoubleCommissionSearchUserName_Control\styles.css" />
+    <Content Include="App_Themes\Apo\Components\DoubleCommissionSearchUserName_Control\styles.min.css" />
+    <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew.css" />
+    <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew.min.css" />
+    <Content Include="App_Themes\Apo\Components\PagingHeader\PagingHeader.css" />
+    <Content Include="App_Themes\Apo\Components\PagingHeader\PagingHeader.min.css" />
+    <Content Include="App_Themes\Apo\Components\Paging\Paging.css" />
+    <Content Include="App_Themes\Apo\Components\Paging\Paging.min.css" />
+    <Content Include="App_Themes\Apo\Components\Print_Control\Print.css" />
+    <Content Include="App_Themes\Apo\Components\Print_Control\Print.min.css" />
+    <Content Include="App_Themes\Apo\Components\PT_Control\PT_Control.css" />
+    <Content Include="App_Themes\Apo\Components\PT_Control\PT_Control.min.css" />
+    <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.css" />
+    <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.min.css" />
+    <Content Include="App_Themes\Apo\Components\SearchUserName_Control\SearchUserName_Control.css" />
+    <Content Include="App_Themes\Apo\Components\SearchUserName_Control\SearchUserName_Control.min.css" />
+    <Content Include="App_Themes\Apo\Components\SearchUserName_Control\styles.css" />
+    <Content Include="App_Themes\Apo\Components\SearchUserName_Control\styles.min.css" />
+    <Content Include="App_Themes\Apo\Components\ShowHideColumn\ContextMenuColumns_Control.css" />
+    <Content Include="App_Themes\Apo\Components\ShowHideColumn\ContextMenuColumns_Control.min.css" />
+    <Content Include="App_Themes\Apo\ContextualCustomer\ContextualCostomer.css" />
+    <Content Include="App_Themes\Apo\ContextualCustomer\ContextualCostomer.min.css" />
+    <Content Include="App_Themes\Apo\ContextualCustomer\Images\icon_user_default.png" />
+    <Content Include="App_Themes\Apo\ContextualCustomer\LoginOption.css" />
+    <Content Include="App_Themes\Apo\ContextualCustomer\LoginOption.min.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Casino\Casino.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Casino\Casino.min.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\ColossusBet\ColossusBet-setting.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\ColossusBet\ColossusBet-setting.min.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Common.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Common.min.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\EnableStatus\EnableStatus.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\EnableStatus\EnableStatus.min.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\buttons.png" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\glyphicons-halflings-white.png" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\glyphicons-halflings.png" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\Loading.gif" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\pointer.png" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\pointerDown.png" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Keno\customizengDialog.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Keno\customizengDialog.min.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Keno\keno-setting.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Keno\keno-setting.min.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Validators.css" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Validators.min.css" />
+    <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style.css" />
+    <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style.min.css" />
+    <Content Include="App_Themes\Apo\Forecast\FC.css" />
+    <Content Include="App_Themes\Apo\Forecast\FC.min.css" />
+    <Content Include="App_Themes\Apo\Forecast\Images\col_score.png" />
+    <Content Include="App_Themes\Apo\Forecast\Images\iLoading.png" />
+    <Content Include="App_Themes\Apo\Forecast\Images\Loading.gif" />
+    <Content Include="App_Themes\Apo\Forecast\Images\Refresh.png" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap.css" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap.min.css" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\ajax-loader.gif" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\bg_boxTop.jpg" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\bg_header01.jpg" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\center_score.png" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\col_score.png" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\first_score.png" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\global_bg.gif" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\icon_close.jpg" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\iLoading.png" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\last_score.png" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\letter_icoconts.png" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\Loading.gif" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\Refresh.png" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style.css" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style.min.css" />
+    <Content Include="App_Themes\Apo\GoldDeluxeSetting\fanex-gold-deluxe-setting-override.css" />
+    <Content Include="App_Themes\Apo\GoldDeluxeSetting\fanex-gold-deluxe-setting-override.min.css" />
+    <Content Include="App_Themes\Apo\Header\Header.css" />
+    <Content Include="App_Themes\Apo\Header\Header.min.css" />
+    <Content Include="App_Themes\Apo\Header\Header2.css" />
+    <Content Include="App_Themes\Apo\Header\Header2.min.css" />
+    <Content Include="App_Themes\Apo\Header\Header3.css" />
+    <Content Include="App_Themes\Apo\Header\Header3.min.css" />
+    <Content Include="App_Themes\Apo\Header\Header4.css" />
+    <Content Include="App_Themes\Apo\Header\Header4.min.css" />
+    <Content Include="App_Themes\Apo\Header\Images\profileTooltip_bg.png" />
+    <Content Include="App_Themes\Apo\Header\Images\profileTooltip_left.png" />
+    <Content Include="App_Themes\Apo\Header\Images\profileTooltip_right.png" />
+    <Content Include="App_Themes\Apo\Images\1F.gif" />
+    <Content Include="App_Themes\Apo\Images\1L.gif" />
+    <Content Include="App_Themes\Apo\Images\ajax-loader.gif" />
+    <Content Include="App_Themes\Apo\Images\bg-banner.png" />
+    <Content Include="App_Themes\Apo\Images\bg_head05.jpg" />
+    <Content Include="App_Themes\Apo\Images\btDown-large.png" />
+    <Content Include="App_Themes\Apo\Images\btRefresh-large.png" />
+    <Content Include="App_Themes\Apo\Images\buttons.png" />
+    <Content Include="App_Themes\Apo\Images\cal.gif" />
+    <Content Include="App_Themes\Apo\Images\center.jpg" />
+    <Content Include="App_Themes\Apo\Images\check.png" />
+    <Content Include="App_Themes\Apo\Images\disable_icon.gif" />
+    <Content Include="App_Themes\Apo\Images\excel.gif" />
+    <Content Include="App_Themes\Apo\Images\firstGoal.gif" />
+    <Content Include="App_Themes\Apo\Images\flag.jpg" />
+    <Content Include="App_Themes\Apo\Images\flags.jpg" />
+    <Content Include="App_Themes\Apo\Images\flag_cs.png" />
+    <Content Include="App_Themes\Apo\Images\flag_ct.png" />
+    <Content Include="App_Themes\Apo\Images\flag_e.png" />
+    <Content Include="App_Themes\Apo\Images\flag_j.png" />
+    <Content Include="App_Themes\Apo\Images\flag_ko.png" />
+    <Content Include="App_Themes\Apo\Images\flag_th.png" />
+    <Content Include="App_Themes\Apo\Images\flag_vi.png" />
+    <Content Include="App_Themes\Apo\Images\h_FF.jpg" />
+    <Content Include="App_Themes\Apo\Images\h_IE.jpg" />
+    <Content Include="App_Themes\Apo\Images\h_pass.jpg" />
+    <Content Include="App_Themes\Apo\Images\icon_close.jpg" />
+    <Content Include="App_Themes\Apo\Images\icon_content.gif" />
+    <Content Include="App_Themes\Apo\Images\icon_content04.gif" />
+    <Content Include="App_Themes\Apo\Images\lastGoal.gif" />
+    <Content Include="App_Themes\Apo\Images\letter_icoconts.png" />
+    <Content Include="App_Themes\Apo\Images\loader3.gif" />
+    <Content Include="App_Themes\Apo\Images\minptarrow.png" />
+    <Content Include="App_Themes\Apo\Images\minptbg.png" />
+    <Content Include="App_Themes\Apo\Images\minptclose.png" />
+    <Content Include="App_Themes\Apo\Images\minptleft.png" />
+    <Content Include="App_Themes\Apo\Images\minptright.png" />
+    <Content Include="App_Themes\Apo\Images\more.gif" />
+    <Content Include="App_Themes\Apo\Images\new.gif" />
+    <Content Include="App_Themes\Apo\Images\splitter.png" />
+    <Content Include="App_Themes\Apo\Images\sprites.png" />
+    <Content Include="App_Themes\Apo\Images\tick.png" />
+    <Content Include="App_Themes\Apo\Images\tooltip_bg.png" />
+    <Content Include="App_Themes\Apo\Images\tooltip_left.png" />
+    <Content Include="App_Themes\Apo\Images\tooltip_right.png" />
+    <Content Include="App_Themes\Apo\Images\x5.gif" />
+    <Content Include="App_Themes\Apo\IPInfo\IPInfo.css" />
+    <Content Include="App_Themes\Apo\IPInfo\IPInfo.min.css" />
+    <Content Include="App_Themes\Apo\LiveCasinoSetting\fanex-live-casino-setting-override.css" />
+    <Content Include="App_Themes\Apo\LiveCasinoSetting\fanex-live-casino-setting-override.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\BetSetting\BetSetting.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\BetSetting\BetSetting.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\Commission\CommissionHint.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\Commission\CommissionHint.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\Commission\MemberCommission.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\Commission\MemberCommission.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CreditBalance\CreditBalance.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CreditBalance\CreditBalance.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CreditBalance\CreditTransfer.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CreditBalance\CreditTransfer.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CreditBalance\Images\popup_au_sa_bg.jpg" />
+    <Content Include="App_Themes\Apo\MemberInfo\CreditBalance\Images\popup_bg.jpg" />
+    <Content Include="App_Themes\Apo\MemberInfo\CreditBalance\Images\popup_bg_cs.jpg" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\CustomerList.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\CustomerList.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\icons.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\icons.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Images\info.gif" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Images\loader3.gif" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Images\Pen.gif" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Images\switch.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Images\switch_mem.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Images\tick.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Images\x.jpg" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Images\x5.gif" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MemberIcoDcomm_Control\MemberIcoDComm.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MemberIcoDcomm_Control\MemberIcoDComm.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MenuPopup_Control\Images\ico_banned.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MenuPopup_Control\MenuPopup_Control.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MenuPopup_Control\MenuPopup_Control.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\1.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\1.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\1.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\1.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\1.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\1.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\1.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\2.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\2.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\2.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\2.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\2.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\2.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\2.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\3.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\3.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\3.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\3.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\3.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\3.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Agent\3.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\guideline.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\guideline.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\1.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\1.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\1.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\1.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\1.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\1.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\1.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\2.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\2.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\2.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\2.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\2.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\2.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\2.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\3.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\3.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\3.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\3.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\3.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\3.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\3.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\4.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\4.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\4.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\4.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\4.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\4.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\4.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\5.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\5.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\5.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\5.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\5.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\5.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\5.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\6.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\6.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\6.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\6.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\6.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\6.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Master\6.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\1.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\1.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\1.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\1.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\1.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\1.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\1.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\2.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\2.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\2.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\2.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\2.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\2.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\2.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\3.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\3.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\3.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\3.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\3.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\3.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\3.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\4.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\4.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\4.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\4.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\4.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\4.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\4.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\5.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\5.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\5.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\5.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\5.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\5.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\5.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\6.en-US.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\6.ja-JP.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\6.ko-KR.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\6.th-TH.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\6.vi-VN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\6.zh-CN.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\Super\6.zh-TW.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Print_Control\Images\printer.gif" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Print_Control\Print.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Print_Control\Print.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\EditCommission\EditCommission.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\EditCommission\EditCommission.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\Images\buttons.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\MemberInfo.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\MemberInfo.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\P2P\Images\loading.gif" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\goldDeluxe.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\goldDeluxe.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\Keno.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\Keno.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\PositionTakingList.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\PositionTakingList.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\ViewPTStyles.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\ViewPTStyles.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\Images\firstGoal.gif" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\Images\lastGoal.gif" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\MinMaxBet_Control\MinMaxBet_Control.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\MinMaxBet_Control\MinMaxBet_Control.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\Racing.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\Racing.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\RacingMinPT.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\RacingMinPT.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\SearchAndCopy\Images\circle.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\SearchAndCopy\Images\note_title.gif" />
+    <Content Include="App_Themes\Apo\MemberInfo\SearchAndCopy\Images\red-dot.png" />
+    <Content Include="App_Themes\Apo\MemberInfo\SearchAndCopy\Images\warning_icon.gif" />
+    <Content Include="App_Themes\Apo\MemberInfo\SearchAndCopy\Master.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\SearchAndCopy\Master.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\SearchAndCopy\SearchAndCopy.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\SearchAndCopy\SearchAndCopy.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\SetNickName\SetNickName.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\SetNickName\SetNickName.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\TransferCondition\TransferCondition.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\TransferCondition\TransferCondition.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\VirtualSports\VirtualSports.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\VirtualSports\VirtualSports.min.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\WinLimit\WinLimit.css" />
+    <Content Include="App_Themes\Apo\MemberInfo\WinLimit\WinLimit.min.css" />
+    <Content Include="App_Themes\Apo\Menu\Images\icon_new.gif" />
+    <Content Include="App_Themes\Apo\Menu\Images\icon_new_2.gif" />
+    <Content Include="App_Themes\Apo\Menu\Images\icon_new_3.gif" />
+    <Content Include="App_Themes\Apo\Menu\Images\icon_new_4.gif" />
+    <Content Include="App_Themes\Apo\Menu\Images\new3.gif" />
+    <Content Include="App_Themes\Apo\Menu\menu.css" />
+    <Content Include="App_Themes\Apo\Menu\menu.min.css" />
+    <Content Include="App_Themes\Apo\Menu\theme-agent.css" />
+    <Content Include="App_Themes\Apo\Menu\theme-agent.min.css" />
+    <Content Include="App_Themes\Apo\Menu\theme-master.css" />
+    <Content Include="App_Themes\Apo\Menu\theme-master.min.css" />
+    <Content Include="App_Themes\Apo\Menu\theme-super.css" />
+    <Content Include="App_Themes\Apo\Menu\theme-super.min.css" />
+    <Content Include="App_Themes\Apo\Message\Calendar\Calendar.css" />
+    <Content Include="App_Themes\Apo\Message\Calendar\Calendar.min.css" />
+    <Content Include="App_Themes\Apo\Message\Calendar\Images\bg_bg.gif" />
+    <Content Include="App_Themes\Apo\Message\message.css" />
+    <Content Include="App_Themes\Apo\Message\message.min.css" />
+    <Content Include="App_Themes\Apo\PortalPage\Images\loading_2.gif" />
+    <Content Include="App_Themes\Apo\PortalPage\PortalPage.css" />
+    <Content Include="App_Themes\Apo\PortalPage\PortalPage.min.css" />
+    <Content Include="App_Themes\Apo\PositionTakingInformation\BetTypeReference\style.css" />
+    <Content Include="App_Themes\Apo\PositionTakingInformation\BetTypeReference\style.min.css" />
+    <Content Include="App_Themes\Apo\Reports\CommissionByBetType.css" />
+    <Content Include="App_Themes\Apo\Reports\CommissionByBetType.min.css" />
+    <Content Include="App_Themes\Apo\Reports\Consolidate.css" />
+    <Content Include="App_Themes\Apo\Reports\Consolidate.min.css" />
+    <Content Include="App_Themes\Apo\Reports\ConsolidateWinLossDetail.css" />
+    <Content Include="App_Themes\Apo\Reports\ConsolidateWinLossDetail.min.css" />
+    <Content Include="App_Themes\Apo\Reports\Images\ui-icons.png" />
+    <Content Include="App_Themes\Apo\Reports\LastBetMonitoring.css" />
+    <Content Include="App_Themes\Apo\Reports\LastBetMonitoring.min.css" />
+    <Content Include="App_Themes\Apo\Reports\Reports.css" />
+    <Content Include="App_Themes\Apo\Reports\Reports.min.css" />
+    <Content Include="App_Themes\Apo\Reports\Statement.css" />
+    <Content Include="App_Themes\Apo\Reports\Statement.min.css" />
+    <Content Include="App_Themes\Apo\Reports\StatementDetails.css" />
+    <Content Include="App_Themes\Apo\Reports\StatementDetails.min.css" />
+    <Content Include="App_Themes\Apo\Reports\StatementGuideline\Guideline.css" />
+    <Content Include="App_Themes\Apo\Reports\StatementGuideline\Guideline.min.css" />
+    <Content Include="App_Themes\Apo\RnGCasino\BetDetails\BetDetails.css" />
+    <Content Include="App_Themes\Apo\RnGCasino\BetDetails\BetDetails.min.css" />
+    <Content Include="App_Themes\Apo\RnGCasino\handhistory.css" />
+    <Content Include="App_Themes\Apo\RnGCasino\handhistory.min.css" />
+    <Content Include="App_Themes\Apo\RnGCasino\HandHistory_API\HandHistory.css" />
+    <Content Include="App_Themes\Apo\RnGCasino\HandHistory_API\HandHistory.min.css" />
+    <Content Include="App_Themes\Apo\RnGCasino\HandHistory_API\Images\error.gif" />
+    <Content Include="App_Themes\Apo\Security\howtouse.css" />
+    <Content Include="App_Themes\Apo\Security\howtouse.min.css" />
+    <Content Include="App_Themes\Apo\Security\securityCode.css" />
+    <Content Include="App_Themes\Apo\Security\securityCode.min.css" />
+    <Content Include="App_Themes\Apo\SubAccount\SubAccount.css" />
+    <Content Include="App_Themes\Apo\SubAccount\SubAccount.min.css" />
+    <Content Include="App_Themes\Apo\TotalBets\TotalBets.css" />
+    <Content Include="App_Themes\Apo\TotalBets\TotalBets.min.css" />
+    <Content Include="App_Themes\Apo\Transfer\MenuPopup_Control\Images\icon\moneytransfer.png" />
+    <Content Include="App_Themes\Apo\Transfer\MenuPopup_Control\Images\icon\moneytransfer_dis.png" />
+    <Content Include="App_Themes\Apo\Transfer\MenuPopup_Control\MenuPopup_Control.css" />
+    <Content Include="App_Themes\Apo\Transfer\MenuPopup_Control\MenuPopup_Control.min.css" />
+    <Content Include="App_Themes\Apo\Transfer\Print_Control\Print.css" />
+    <Content Include="App_Themes\Apo\Transfer\Print_Control\Print.min.css" />
+    <Content Include="App_Themes\Apo\Transfer\Transfer.css" />
+    <Content Include="App_Themes\Apo\Transfer\Transfer.min.css" />
+    <Content Include="App_Themes\Apo\Voidbridge\BetDetails\BetDetails.css" />
+    <Content Include="App_Themes\Apo\Voidbridge\BetDetails\BetDetails.min.css" />
+    <Content Include="App_Themes\Apo\Voidbridge\HandHistory_API\HandHistory.css" />
+    <Content Include="App_Themes\Apo\Voidbridge\HandHistory_API\HandHistory.min.css" />
+    <Content Include="App_Themes\Apo\Voidbridge\HandHistory_API\Images\error.gif" />
+    <Content Include="Default.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="favico.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBACC.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb02_DB054.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBARC.bodb_Archive.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBCust.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBCust.IPDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBMSG.bodb_Message.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBONUSER.ON_USER.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBPOLICY.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBRPT.bodb_report.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBTXN.BODB02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBTXN.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\ThridParty.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBACC.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBAGE.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBAGE.bodb02_DB054.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBARC.bodb_Archive.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBCust.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBCust.IPDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBMSG.bodb_Message.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBONUSER.ON_USER.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBPOLICY.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBRPT.bodb_report.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBTXN.BODB02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBTXN.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\ThridParty.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBACC.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBAGE.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBAGE.bodb02_DB054.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBARC.bodb_Archive.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBCust.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBCust.IPDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBMSG.bodb_Message.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBONUSER.ON_USER.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBPOLICY.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBRPT.bodb_report.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBTXN.BODB02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBTXN.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\ThridParty.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBACC.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb02_DB054.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBARC.bodb_Archive.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBCust.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBCust.IPDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBMSG.bodb_Message.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBONUSER.ON_USER.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBPOLICY.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBRPT.bodb_report.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBTXN.BODB02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBTXN.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\ThridParty.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBACC.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb02_DB054.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBARC.bodb_Archive.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBCust.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBCust.IPDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBMSG.bodb_Message.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBONUSER.ON_USER.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBPOLICY.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBRPT.bodb_report.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBTXN.BODB02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBTXN.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\ThridParty.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBACC.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb02_DB054.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBARC.bodb_Archive.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBCust.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBCust.IPDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBMSG.bodb_Message.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBONUSER.ON_USER.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBPOLICY.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBRPT.bodb_report.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBTXN.BODB02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBTXN.CustDB.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\ThridParty.xml" />
+    <Content Include="WhoamI.aspx" />
+    <Content Include="_Components\AGEWnd\AGEWnd.js" />
+    <Content Include="_Components\AGEWnd\AGEWnd.min.js" />
+    <Content Include="_Components\AGEWnd\blank.html" />
+    <Content Include="_Components\AGEWnd\blank.js" />
+    <Content Include="_Components\AGEWnd\blank.min.js" />
+    <Content Include="_Components\AutoComplete\autocomplete.js" />
+    <Content Include="_Components\AutoComplete\autocomplete.min.js" />
+    <Content Include="_Components\AutoComplete\styles.css" />
+    <Content Include="_Components\CopyFromCheckBox_Control\CopyFromCheckBox_Control.js" />
+    <Content Include="_Components\DateRangeSelect\DateRangeSelect.js" />
+    <Content Include="_Components\DateRangeSelect\DateRangeSelect.min.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\jscal2.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\jscal2.min.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\ca.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\cn.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\cz.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\de.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\en.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\es.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\fr.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\it.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\jp.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\nl.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\pl.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\pt.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\ro.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\ru.js" />
+    <Content Include="_Components\DateTimeControl\JSCalendar\js\lang\sv.js" />
+    <Content Include="_Components\DateTimeFilter\Resources\DateTimeFilter.js" />
+    <Content Include="_Components\DoubleCommissionSearchUserName_Control\autocomplete.js" />
+    <Content Include="_Components\DoubleCommissionSearchUserName_Control\SearchUserName_Control.js" />
+    <Content Include="_Components\ErrorMsg\ErrorMsg.js" />
+    <Content Include="_Components\ErrorMsg\ErrorMsg.min.js" />
+    <Content Include="_Components\ErrorPage\ErrorPage.css" />
+    <Content Include="_Components\ErrorPage\ErrorPage.min.css" />
+    <Content Include="_Components\MatchByLeague\MatchByLeague.aspx" />
+    <Content Include="_Components\Paging\Paging.js" />
+    <Content Include="_Components\Paging\Paging.min.js" />
+    <Content Include="_Components\PopupMessage\PopupMessage.css" />
+    <Content Include="_Components\PopupMessage\PopupMessage.min.css" />
+    <Content Include="_Components\PT_Control\PT_Control.js" />
+    <Content Include="_Components\PT_Control\PT_Control.min.js" />
+    <Content Include="_Components\RefreshCountDown\RefreshCountDown.js" />
+    <Content Include="_Components\RefreshCountDown\RefreshCountDown.min.js" />
+    <Content Include="_Components\SearchUserName_Control\autocomplete.js" />
+    <Content Include="_Components\SearchUserName_Control\autocomplete.min.js" />
+    <Content Include="_Components\SearchUserName_Control\SearchUserName_Control.js" />
+    <Content Include="_Components\SearchUserName_Control\SearchUserName_Control.min.js" />
+    <Content Include="_Components\ShowHideColumn\Resources\ContextMenuColumns_Control.js" />
+    <Content Include="_Components\ToolTip\tip_balloon.js" />
+    <Content Include="_Components\ToolTip\tip_balloon.min.js" />
+    <Content Include="_Components\ToolTip\tip_balloon\b.gif" />
+    <Content Include="_Components\ToolTip\tip_balloon\background.gif" />
+    <Content Include="_Components\ToolTip\tip_balloon\l.gif" />
+    <Content Include="_Components\ToolTip\tip_balloon\lb.gif" />
+    <Content Include="_Components\ToolTip\tip_balloon\lt.gif" />
+    <Content Include="_Components\ToolTip\tip_balloon\r.gif" />
+    <Content Include="_Components\ToolTip\tip_balloon\rb.gif" />
+    <Content Include="_Components\ToolTip\tip_balloon\rt.gif" />
+    <Content Include="_Components\ToolTip\tip_balloon\stemb.gif" />
+    <Content Include="_Components\ToolTip\tip_balloon\stemt.gif" />
+    <Content Include="_Components\ToolTip\tip_balloon\t.gif" />
+    <Content Include="_Components\ToolTip\tip_centerwindow.js" />
+    <Content Include="_Components\ToolTip\tip_centerwindow.min.js" />
+    <Content Include="_Components\ToolTip\tip_followscroll.js" />
+    <Content Include="_Components\ToolTip\tip_followscroll.min.js" />
+    <Content Include="_Components\ToolTip\ToolTip.js" />
+    <Content Include="_Components\ToolTip\ToolTip.min.js" />
+    <Content Include="_Components\ToolTip\wz_tooltip.js" />
+    <Content Include="_Components\ToolTip\wz_tooltip.min.js" />
+    <Content Include="_Forecast\FC1X2.aspx" />
+    <Content Include="_Forecast\FCAH.aspx" />
+    <Content Include="_Forecast\FCHDPOU.aspx" />
+    <Content Include="_Forecast\RefreshLeague.aspx" />
+    <Content Include="_Forecast\Resources\FC.js" />
+    <Content Include="_Forecast\Resources\FC.min.js" />
+    <Content Include="_Forecast\Resources\MatchByLeague.js" />
+    <Content Include="_Forecast\Resources\MatchByLeague.min.js" />
+    <Content Include="_Forecast\Resources\ScoreMap.js" />
+    <Content Include="_Forecast\Resources\ScoreMap.min.js" />
+    <Content Include="_Forecast\ScoreMap.aspx" />
+    <Content Include="_Forecast\ScoreMapProcess.aspx" />
+    <Content Include="_GlobalResources\AgencyV2\button.css" />
+    <Content Include="_GlobalResources\AgencyV2\casino.css" />
+    <Content Include="_GlobalResources\AgencyV2\common.css" />
+    <Content Include="_GlobalResources\AgencyV2\countdown.css" />
+    <Content Include="_GlobalResources\AgencyV2\footer.css" />
+    <Content Include="_GlobalResources\AgencyV2\header.css" />
+    <Content Include="_GlobalResources\AgencyV2\Images\ajax-loader.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\BGb_top.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bgDIVIDER.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bgOFF.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bgON.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_boxTop.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_button.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_buttonLeft.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_buttonsite.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_buttonsiteOV.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_conts.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_f01.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_f02.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_head05.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_header01.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_header02.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_header03.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_header04.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_left.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_leftB01.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_leftSub.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_left_menu.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_popup.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\bg_popup2.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\btDown.png" />
+    <Content Include="_GlobalResources\AgencyV2\Images\btLoading.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\btRefresh.png" />
+    <Content Include="_GlobalResources\AgencyV2\Images\button_content.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\b_add.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\b_addall.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\b_addallOV.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\b_down.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\b_left.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\b_popleft1.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\b_popleft2.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\b_right.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\b_sub.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\b_up.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\cal.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\check.png" />
+    <Content Include="_GlobalResources\AgencyV2\Images\clock.png" />
+    <Content Include="_GlobalResources\AgencyV2\Images\cross.png" />
+    <Content Include="_GlobalResources\AgencyV2\Images\dec1.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\dec10.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\dot.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\d_info.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\edit.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\firstGoal.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\gLeft_button.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\gRight_button.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icon_active.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icon_add.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icon_bleft.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icon_content.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icon_content.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icon_content04.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icon_left01.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icon_left02.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icon_off.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icon_pop.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\icsubmenuhover.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\img_lineinfo.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\info.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\infoMsg.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\lastGoal.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\left.png" />
+    <Content Include="_GlobalResources\AgencyV2\Images\left_btleft.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\left_button.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\line_left.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\line_left02.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\line_left03.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\line_n.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\line_news.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\line_newsOV.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\menutop_none.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\menutop_none.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\menutop_OV.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\menutop_OV2.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\more.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\msg_01.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\msg_02.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\new.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\Pen.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\Penhover.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\printer1.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\right.png" />
+    <Content Include="_GlobalResources\AgencyV2\Images\rightBT.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\rightf001.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\rightf001a.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\right_btleft.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\right_button.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\rpBT.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\sticky-arrow.png" />
+    <Content Include="_GlobalResources\AgencyV2\Images\Success.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\succ_1_1.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\succ_1_2.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\succ_1_3.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\succ_2_1.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\succ_2_2.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\succ_3_1.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\succ_3_2.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\succ_3_3.gif" />
+    <Content Include="_GlobalResources\AgencyV2\Images\tab_head.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\tick.png" />
+    <Content Include="_GlobalResources\AgencyV2\Images\x.jpg" />
+    <Content Include="_GlobalResources\AgencyV2\Images\x5.gif" />
+    <Content Include="_GlobalResources\AgencyV2\leftMenu.css" />
+    <Content Include="_GlobalResources\AgencyV2\main.css" />
+    <Content Include="_GlobalResources\AgencyV2\message.css" />
+    <Content Include="_GlobalResources\AgencyV2\newagent.css" />
+    <Content Include="_GlobalResources\AgencyV2\popup.css" />
+    <Content Include="_GlobalResources\AgencyV2\PopUpMessage.css" />
+    <Content Include="_GlobalResources\AgencyV2\style.css" />
+    <Content Include="_GlobalResources\AgencyV2\tabmenu.css" />
+    <Content Include="_GlobalResources\AgencyV2\thickbox.css" />
+    <Content Include="_GlobalResources\AgencyV2\userinfo.css" />
+    <Content Include="_GlobalResources\Images\ajax-loader.gif" />
+    <Content Include="_GlobalResources\Images\bg.gif" />
+    <Content Include="_GlobalResources\Images\bg.jpg" />
+    <Content Include="_GlobalResources\Images\bg_buttonsite.jpg" />
+    <Content Include="_GlobalResources\Images\bg_buttonsiteOV.jpg" />
+    <Content Include="_GlobalResources\Images\bg_conts.jpg" />
+    <Content Include="_GlobalResources\Images\bg_f02.jpg" />
+    <Content Include="_GlobalResources\Images\bg_header02.jpg" />
+    <Content Include="_GlobalResources\Images\bg_popup.jpg" />
+    <Content Include="_GlobalResources\Images\cal.gif" />
+    <Content Include="_GlobalResources\Images\center.jpg" />
+    <Content Include="_GlobalResources\Images\emsg_1_1.gif" />
+    <Content Include="_GlobalResources\Images\emsg_1_2.gif" />
+    <Content Include="_GlobalResources\Images\emsg_1_3.gif" />
+    <Content Include="_GlobalResources\Images\emsg_2_1.gif" />
+    <Content Include="_GlobalResources\Images\emsg_2_2.gif" />
+    <Content Include="_GlobalResources\Images\emsg_3_1.gif" />
+    <Content Include="_GlobalResources\Images\emsg_3_2.gif" />
+    <Content Include="_GlobalResources\Images\emsg_3_3.gif" />
+    <Content Include="_GlobalResources\Images\error-icon.gif" />
+    <Content Include="_GlobalResources\Images\error2.png" />
+    <Content Include="_GlobalResources\Images\excel.gif" />
+    <Content Include="_GlobalResources\Images\flags.jpg" />
+    <Content Include="_GlobalResources\Images\icon_container.gif" />
+    <Content Include="_GlobalResources\Images\icon_content.gif" />
+    <Content Include="_GlobalResources\Js\Core.es5.js" />
+    <Content Include="_GlobalResources\Js\Core.es5.min.js" />
+    <Content Include="_GlobalResources\Js\Core.js" />
+    <Content Include="_GlobalResources\Js\Core.min.js" />
+    <Content Include="_GlobalResources\Js\IndexPage.js" />
+    <Content Include="_GlobalResources\Js\jx.js" />
+    <Content Include="_GlobalResources\Js\jx.min.js" />
+    <Content Include="_GlobalResources\Js\piwikLoader.js" />
+    <Content Include="_GlobalResources\Js\piwikLoader.min.js" />
+    <Content Include="_GlobalResources\Js\Sha1.js" />
+    <Content Include="_GlobalResources\Js\Sha1.min.js" />
+    <Content Include="_GlobalResources\Js\Sha256.js" />
+    <Content Include="_GlobalResources\Js\Sha256.min.js" />
+    <Content Include="_GlobalResources\Js\shortcut.js" />
+    <Content Include="_GlobalResources\Js\shortcut.min.js" />
+    <Content Include="_GlobalResources\Login\loader3.gif" />
+    <Content Include="_GlobalResources\Prefetch.js" />
+    <Content Include="_GlobalResources\Prefetch.min.js" />
+    <Content Include="_GlobalResources\t1.gif" />
+    <Content Include="_GlobalResources\test.txt" />
+    <Content Include="_GlobalResources\x.jpg" />
+    <Content Include="_GlobalResources\x5.gif" />
+    <Content Include="_TotalBets\CorrectScore.aspx" />
+    <Content Include="_TotalBets\FGLG.aspx" />
+    <Content Include="_TotalBets\Financial.aspx" />
+    <Content Include="_TotalBets\HDPOU.aspx" />
+    <Content Include="_TotalBets\HomeDrawAwayNoBet.aspx" />
+    <Content Include="_TotalBets\HTFT.aspx" />
+    <Content Include="_TotalBets\LiveCasino.aspx" />
+    <Content Include="_TotalBets\MoneyLine.aspx" />
+    <Content Include="_TotalBets\NextGoal.aspx" />
+    <Content Include="_TotalBets\NumberGame.aspx" />
+    <Content Include="_TotalBets\OddEven1X2.aspx" />
+    <Content Include="_TotalBets\OutRight.aspx" />
+    <Content Include="_TotalBets\Racing.aspx" />
+    <Content Include="_TotalBets\Resources\TotalBets.js" />
+    <Content Include="_TotalBets\Resources\TotalBets.min.js" />
+    <Content Include="_TotalBets\TotalGoal.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Components\MatchByLeague\MatchByLeague.aspx.cs">
+      <DependentUpon>MatchByLeague.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Forecast\FC1X2.aspx.cs">
+      <DependentUpon>FC1X2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Forecast\FCAH.aspx.cs">
+      <DependentUpon>FCAH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Forecast\FCHDPOU.aspx.cs">
+      <DependentUpon>FCHDPOU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Forecast\RefreshLeague.aspx.cs">
+      <DependentUpon>RefreshLeague.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Forecast\ScoreMap.aspx.cs">
+      <DependentUpon>ScoreMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Forecast\ScoreMapProcess.aspx.cs">
+      <DependentUpon>ScoreMapProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\CorrectScore.aspx.cs">
+      <DependentUpon>CorrectScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\FGLG.aspx.cs">
+      <DependentUpon>FGLG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\Financial.aspx.cs">
+      <DependentUpon>Financial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\HDPOU.aspx.cs">
+      <DependentUpon>HDPOU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\HomeDrawAwayNoBet.aspx.cs">
+      <DependentUpon>HomeDrawAwayNoBet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\HTFT.aspx.cs">
+      <DependentUpon>HTFT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\LiveCasino.aspx.cs">
+      <DependentUpon>LiveCasino.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\MoneyLine.aspx.cs">
+      <DependentUpon>MoneyLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\NextGoal.aspx.cs">
+      <DependentUpon>NextGoal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\NumberGame.aspx.cs">
+      <DependentUpon>NumberGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\OddEven1X2.aspx.cs">
+      <DependentUpon>OddEven1X2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\OutRight.aspx.cs">
+      <DependentUpon>OutRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\Racing.aspx.cs">
+      <DependentUpon>Racing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TotalBets\TotalGoal.aspx.cs">
+      <DependentUpon>TotalGoal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Apo\AccountInfo\AccountInfo.scss" />
+    <Content Include="App_Themes\Apo\AccountInfo\DoubleCommissionPopup.scss" />
+    <Content Include="App_Themes\Apo\AccountInfo\EditCustomerInfo.scss" />
+    <Content Include="App_Themes\Apo\AccountInfo\styles.scss" />
+    <Content Include="App_Themes\Apo\AccountInfo\theme-agent.scss" />
+    <Content Include="App_Themes\Apo\AccountInfo\theme-master.scss" />
+    <Content Include="App_Themes\Apo\AccountInfo\theme-super.scss" />
+    <Content Include="App_Themes\Apo\Announcement\Announcement.scss" />
+    <Content Include="App_Themes\Apo\BetList\BetList.scss" />
+    <Content Include="App_Themes\Apo\BetList\BetList2.scss" />
+    <Content Include="App_Themes\Apo\BetList\BetSlip.scss" />
+    <Content Include="App_Themes\Apo\Charts\WinlossAnalysis\charts.scss" />
+    <Content Include="App_Themes\Apo\Common\Agent.scss" />
+    <Content Include="App_Themes\Apo\Common\CustomizeFanexGrid.scss" />
+    <Content Include="App_Themes\Apo\Common\CustomizeFanexmultiSelect.scss" />
+    <Content Include="App_Themes\Apo\Common\CustomizeFanexPagination.scss" />
+    <Content Include="App_Themes\Apo\Common\Paging.scss" />
+    <Content Include="App_Themes\Apo\Common\Popup.scss" />
+    <Content Include="App_Themes\Apo\Common\Tab-theme-agent.scss" />
+    <Content Include="App_Themes\Apo\Common\Tab-theme-master.scss" />
+    <Content Include="App_Themes\Apo\Common\Tab-theme-super.scss" />
+    <Content Include="App_Themes\Apo\Common\Tab.scss" />
+    <Content Include="App_Themes\Apo\Common\tooltip.scss" />
+    <Content Include="App_Themes\Apo\Common\_Mixins.scss" />
+    <Content Include="App_Themes\Apo\Common\_Variables.scss" />
+    <Content Include="App_Themes\Apo\Common\_Variables2.scss" />
+    <Content Include="App_Themes\Apo\Company\ContactUs.scss" />
+    <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.scss" />
+    <Content Include="App_Themes\Apo\Components\DateRangeSelect\DateRangeSelect.scss" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\border-radius.scss" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\jscal2.scss" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\reduce-spacing.scss" />
+    <Content Include="App_Themes\Apo\Components\DateTimeControl\JSCalendar\steel\steel.scss" />
+    <Content Include="App_Themes\Apo\Components\DoubleCommissionSearchUserName_Control\SearchUserName_Control.scss" />
+    <Content Include="App_Themes\Apo\Components\DoubleCommissionSearchUserName_Control\styles.scss" />
+    <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew.scss" />
+    <Content Include="App_Themes\Apo\Components\PagingHeader\PagingHeader.scss" />
+    <Content Include="App_Themes\Apo\Components\Paging\Paging.scss" />
+    <Content Include="App_Themes\Apo\Components\Print_Control\Print.scss" />
+    <Content Include="App_Themes\Apo\Components\PT_Control\PT_Control.scss" />
+    <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.scss" />
+    <Content Include="App_Themes\Apo\Components\SearchUserName_Control\SearchUserName_Control.scss" />
+    <Content Include="App_Themes\Apo\Components\SearchUserName_Control\styles.scss" />
+    <Content Include="App_Themes\Apo\Components\ShowHideColumn\ContextMenuColumns_Control.scss" />
+    <Content Include="App_Themes\Apo\ContextualCustomer\ContextualCostomer.scss" />
+    <Content Include="App_Themes\Apo\ContextualCustomer\LoginOption.scss" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Casino\Casino.scss" />
+    <Content Include="App_Themes\Apo\CustomerSetting\ColossusBet\ColossusBet-setting.scss" />
+    <Content Include="App_Themes\Apo\CustomerSetting\ColossusBet\_Common.scss" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Common.scss" />
+    <Content Include="App_Themes\Apo\CustomerSetting\EnableStatus\EnableStatus.scss" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Keno\customizengDialog.scss" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Keno\keno-setting.scss" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Keno\_Common.scss" />
+    <Content Include="App_Themes\Apo\CustomerSetting\Validators.scss" />
+    <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style.scss" />
+    <Content Include="App_Themes\Apo\Forecast\FC.scss" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap.scss" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style.scss" />
+    <Content Include="App_Themes\Apo\GoldDeluxeSetting\fanex-gold-deluxe-setting-override.scss" />
+    <Content Include="App_Themes\Apo\Header\header.scss" />
+    <Content Include="App_Themes\Apo\Header\Header2.scss" />
+    <Content Include="App_Themes\Apo\Header\Header3.scss" />
+    <Content Include="App_Themes\Apo\Header\Header4.scss" />
+    <Content Include="App_Themes\Apo\IPInfo\IPInfo.scss" />
+    <Content Include="App_Themes\Apo\LiveCasinoSetting\fanex-live-casino-setting-override.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\BetSetting\BetSetting.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\Commission\CommissionHint.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\Commission\MemberCommission.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\CreditBalance\CreditBalance.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\CreditBalance\CreditTransfer.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\CustomerList.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\icons.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MemberIcoDcomm_Control\MemberIcoDComm.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MenuPopup_Control\MenuPopup_Control.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\MultipleEditSportsBookGuideline\guideline.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\CustomerList\Print_Control\Print.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\EditCommission\EditCommission.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\MemberInfo.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\goldDeluxe.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\keno.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\PositionTakingList.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\PositionTakingList\ViewPTStyles.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\MinMaxBet_Control\MinMaxBet_Control.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\Racing.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\RaceBook\RacingMinPT.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\SearchAndCopy\Master.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\SearchAndCopy\SearchAndCopy.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\SetNickName\SetNickName.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\TransferCondition\TransferCondition.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\VirtualSports\VirtualSports.scss" />
+    <Content Include="App_Themes\Apo\MemberInfo\WinLimit\WinLimit.scss" />
+    <Content Include="App_Themes\Apo\Menu\menu.scss" />
+    <Content Include="App_Themes\Apo\Menu\theme-agent.scss" />
+    <Content Include="App_Themes\Apo\Menu\theme-master.scss" />
+    <Content Include="App_Themes\Apo\Menu\theme-super.scss" />
+    <Content Include="App_Themes\Apo\Message\Calendar\Calendar.scss" />
+    <Content Include="App_Themes\Apo\Message\message.scss" />
+    <Content Include="App_Themes\Apo\PortalPage\PortalPage.scss" />
+    <Content Include="App_Themes\Apo\PositionTakingInformation\BetTypeReference\style.scss" />
+    <Content Include="App_Themes\Apo\Reports\CommissionByBetType.scss" />
+    <Content Include="App_Themes\Apo\Reports\Consolidate.scss" />
+    <Content Include="App_Themes\Apo\Reports\ConsolidateWinLossDetail.scss" />
+    <Content Include="App_Themes\Apo\Reports\LastBetMonitoring.scss" />
+    <Content Include="App_Themes\Apo\Reports\Reports.scss" />
+    <Content Include="App_Themes\Apo\Reports\Statement.scss" />
+    <Content Include="App_Themes\Apo\Reports\StatementDetails.scss" />
+    <Content Include="App_Themes\Apo\Reports\StatementGuideline\Guideline.scss" />
+    <Content Include="App_Themes\Apo\RnGCasino\BetDetails\BetDetails.scss" />
+    <Content Include="App_Themes\Apo\RnGCasino\handhistory.scss" />
+    <Content Include="App_Themes\Apo\RnGCasino\HandHistory_API\HandHistory.scss" />
+    <Content Include="App_Themes\Apo\Security\howtouse.scss" />
+    <Content Include="App_Themes\Apo\Security\securityCode.scss" />
+    <Content Include="App_Themes\Apo\SubAccount\SubAccount.scss" />
+    <Content Include="App_Themes\Apo\TotalBets\TotalBets.scss" />
+    <Content Include="App_Themes\Apo\Transfer\MenuPopup_Control\MenuPopup_Control.scss" />
+    <Content Include="App_Themes\Apo\Transfer\Print_Control\Print.scss" />
+    <Content Include="App_Themes\Apo\Transfer\Transfer.scss" />
+    <Content Include="App_Themes\Apo\UM\um.scss" />
+    <Content Include="App_Themes\Apo\Voidbridge\BetDetails\BetDetails.scss" />
+    <Content Include="App_Themes\Apo\Voidbridge\HandHistory_API\HandHistory.scss" />
+    <Content Include="App_Themes\Web.config" />
+    <Content Include="packages.config" />
+    <Content Include="SecurityCode.config" />
+    <None Include="Web.AppSettings.config" />
+    <Content Include="Web.Configuration\AuthenticationSection.config" />
+    <Content Include="Web.Configuration\CockFightingSection.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.mnl.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.mnlEx.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.mnlExi7.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.mnli7.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.mnlNap.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.mnlNapi7.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.napexternal.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.napexternal2.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.napinternal.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.napinternal2.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.pro.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.pro2.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.sit.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.sit2.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.uat.config" />
+    <Content Include="Web.Configuration\ColossusBetsSection.uat2.config" />
+    <Content Include="Web.Configuration\KenoBetTypesSection.config" />
+    <Content Include="Web.Configuration\LimtedCountryAccessSection.config" />
+    <Content Include="Web.Configuration\LogsConfiguration.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.mnl.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.mnlEx.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.mnlExi7.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.mnli7.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.mnlNap.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.mnlNapi7.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.napexternal.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.napexternal2.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.napinternal.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.napinternal2.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.pro.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.pro2.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.SIT.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.SIT2.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.UAT.config" />
+    <Content Include="Web.Configuration\OWRNGCasinoSection.UAT2.config" />
+    <Content Include="Web.Configuration\ProductSection.config" />
+    <Content Include="Web.Configuration\ProductSection.local2.config" />
+    <Content Include="Web.Configuration\ProductSection.mnl.config" />
+    <Content Include="Web.Configuration\ProductSection.mnlEx.config" />
+    <Content Include="Web.Configuration\ProductSection.mnlExi7.config" />
+    <Content Include="Web.Configuration\ProductSection.mnli7.config" />
+    <Content Include="Web.Configuration\ProductSection.mnlNap.config" />
+    <Content Include="Web.Configuration\ProductSection.mnlNapi7.config" />
+    <Content Include="Web.Configuration\ProductSection.napexternal.config" />
+    <Content Include="Web.Configuration\ProductSection.napexternal2.config" />
+    <Content Include="Web.Configuration\ProductSection.napinternal.config" />
+    <Content Include="Web.Configuration\ProductSection.napinternal2.config" />
+    <Content Include="Web.Configuration\ProductSection.pro.config" />
+    <Content Include="Web.Configuration\ProductSection.pro2.config" />
+    <Content Include="Web.Configuration\ProductSection.sit.config" />
+    <Content Include="Web.Configuration\ProductSection.sit2.config" />
+    <Content Include="Web.Configuration\ProductSection.uat.config" />
+    <Content Include="Web.Configuration\ProductSection.uat2.config" />
+    <Content Include="Web.Configuration\ReportTimeRange.config" />
+    <Content Include="Web.Configuration\RnGCasino.config" />
+    <Content Include="Web.Configuration\SpamFilter.config" />
+    <Content Include="Web.Configuration\SpamFilter.mnl.config" />
+    <Content Include="Web.Configuration\SpamFilter.mnlEx.config" />
+    <Content Include="Web.Configuration\SpamFilter.mnlExi7.config" />
+    <Content Include="Web.Configuration\SpamFilter.mnli7.config" />
+    <Content Include="Web.Configuration\SpamFilter.mnlNap.config" />
+    <Content Include="Web.Configuration\SpamFilter.mnlNapi7.config" />
+    <Content Include="Web.Configuration\SpamFilter.napexternal.config" />
+    <Content Include="Web.Configuration\SpamFilter.napexternal2.config" />
+    <Content Include="Web.Configuration\SpamFilter.napinternal.config" />
+    <Content Include="Web.Configuration\SpamFilter.napinternal2.config" />
+    <Content Include="Web.Configuration\SpamFilter.pro.config" />
+    <Content Include="Web.Configuration\SpamFilter.pro2.config" />
+    <Content Include="Web.Configuration\SpamFilter.UAT.config" />
+    <Content Include="Web.Configuration\SpamFilter.UAT2.config" />
+    <Content Include="Web.Configuration\StatementSection.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="_Components\web.config" />
+    <Content Include="_GlobalResources\Handlers\QueryUserName.ashx" />
+    <Content Include="_GlobalResources\Js\web.config" />
+    <Content Include="_GlobalResources\Prefetch.ashx" />
+    <Content Include="_GlobalResources\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fanex.Age.UI.Forecast\Fanex.Age.UI.Forecast.csproj">
+      <Project>{f5a64151-9580-4878-a3d1-f737e391a702}</Project>
+      <Name>Fanex.Age.UI.Forecast</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fanex.Age.UI.Totalbets\Fanex.Age.UI.TotalBets.csproj">
+      <Project>{4eeee9b8-03de-47f4-a7fd-b8f9da4cc1ee}</Project>
+      <Name>Fanex.Age.UI.TotalBets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources\_Resources.csproj">
+      <Project>{78cc9560-f36b-4e05-a65c-57ce732dc8e1}</Project>
+      <Name>_Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sunplus.Agent.Model.Forecast\Sunplus.Agent.Model.Forecast.csproj">
+      <Project>{dfcc1f18-0c93-415e-a932-e81d648254b7}</Project>
+      <Name>Sunplus.Agent.Model.Forecast</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sunplus.Agent.Model.TotalBets\Sunplus.Agent.Model.TotalBets.csproj">
+      <Project>{f75c0d34-f5ca-4825-ba4f-f1048e3f4a1a}</Project>
+      <Name>Sunplus.Agent.Model.TotalBets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sunplus.Agent.Model\Sunplus.Agent.Model.csproj">
+      <Project>{8831ee6f-7ef9-48f3-9da2-82c6c5eb6e47}</Project>
+      <Name>Sunplus.Agent.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49806</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49806/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{static:LocalResources.UIForecastLang.lblForecast}</title>
+    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/Forecast/FC.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page_main">
+        <div id="header_main">
+            <span id="leagueName">{static:LocalResources.UIForecastLang.lblHOUL}</span>
+        </div>
+        {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,15,"FCHDPOU","RefreshFC")}
+        <div id="sContent">
+            <!--Content-->
+            <!--LimitLeagueList-->
+            <div id="box_header">
+                <table class="tbl-filter">
+                    <tr>
+                        <td>
+                            {static:LocalResources.UIForecastLang.league}
+                        </td>
+                        <td id="selLeague">
+                            <select id='ddlLeague' name='ddlLeague' onchange='GetForecastByLeague();'>
+                                {LeagueList}
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--/LimitLeagueList-->
+            <table class="tblRpt tbl-hdpou">
+                <tr class="RptHeader">
+                    <td colspan="2">
+                        {static:LocalResources.UIForecastLang.lblTeam}
+                    </td>
+                    <td colspan="3">
+                        {static:LocalResources.UIForecastLang.lblHandicapFC}
+                    </td>
+                    <td colspan="3">
+                        {static:LocalResources.UIForecastLang.lblOverUnder}
+                    </td>
+                </tr>
+                <!--RowContent-->
+                <tr align="center">
+                    <td class="l league" colspan="8">
+                        {Home}-vs-{Away}
+                    </td>
+                </tr>
+                <tr class="even_row" align="center">
+                    <td colspan="2" class="col-time">
+                        <span>{Time}</span>
+                    </td>
+                    <td class="bold col-offset">
+                        <span>{OffsetHDPMinus1}</span>
+                    </td>
+                    <td class="bold col-offsetHDP">
+                        <span>{OffsetHDP}</span>
+                    </td>
+                    <td class="bold col-offset">
+                        <span>{OffsetHDPPlus1}</span>
+                    </td>
+                    <td class="bold col-offset">
+                        <span>{OffsetOUPlus2}</span>
+                    </td>
+                    <td class="bold col-offset">
+                        <span>{OffsetOUPlus1}</span>
+                    </td>
+                    <td class="bold col-offsetOU">
+                        <span>{OffsetOU}</span>
+                    </td>
+                </tr>
+                <tr class="even_row c">
+                    <td class="col-fulltime">
+                        <font>{static:LocalResources.UIForecastLang.fulltime}</font>
+                    </td>
+                    <td class="col-btnInfo">
+                        <a href="javascript:openForecastPopup('{MatchId}','1')" class="btnInfo"></a>
+                    </td>
+                    <td class="bold col-HD">
+                        <span>{HDPM1}</span>
+                    </td>
+                    <td class="bold col-HD">
+                        <span>{HDPBase}</span>
+                    </td>
+                    <td class="bold col-HD">
+                        <span>{HDPP1}</span>
+                    </td>
+                    <td class="bold col-OU">
+                        <span>{OUP2}</span>
+                    </td>
+                    <td class="bold col-OU">
+                        <span>{OUP1}</span>
+                    </td>
+                    <td class="bold col-OU">
+                        <span>{OUBase}</span>
+                    </td>
+                </tr>
+                <tr class="even_row c">
+                    <td class="col-halftime">
+                        <font>{static:LocalResources.UIForecastLang.halftime}</font>
+                    </td>
+                    <td class="col-btnInfo">
+                        <a href="javascript:openForecastPopup('{MatchId}','7')" class="btnInfo"></a>
+                    </td>
+                    <td class="bold col-HT">
+                        <span>{HTHDPM1}</span>
+                    </td>
+                    <td class="bold col-HT">
+                        <span>{HTHDPBase}</span>
+                    </td>
+                    <td class="bold col-HT">
+                        <span>{HTHDPP1}</span>
+                    </td>
+                    <td class="bold col-HT">
+                        <span>{HTOUP2}</span>
+                    </td>
+                    <td class="bold col-HT">
+                        <span>{HTOUP1}</span>
+                    </td>
+                    <td class="bold col-HT">
+                        <span>{HTOUBase}</span>
+                    </td>
+                </tr>
+                <!--/RowContent-->
+                <!--NotFoundContent-->
+                <tr class="bg_white">
+                    <td colspan="8" class="c nobold">
+                        {static:LocalResources.UIForecastLang.noInfo}
+                    </td>
+                </tr>
+                <!--/NotFoundContent-->
+            </table>
+            <!--/Content-->
+        </div>
+    </div>
+
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+    <script src="../_Components/AGEWnd/AGEWnd.js" type="text/javascript"></script>
+    <script src="Resources/FC.js" type="text/javascript"></script>
+
+    <!--Piwik-->
+    <script type="text/javascript">
+        var _pkUrl = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl}',
+            _pkScript = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript}',
+            _pkSiteId = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId}';
+    </script>
+    <script src="../_GlobalResources/Js/piwikLoader.js" type="text/javascript"></script>
+    <noscript><p><img src='{PiwikUrl}' style="border:0;" alt="" /></p></noscript>
+    <!--/Piwik-->
+</body>
+</html>

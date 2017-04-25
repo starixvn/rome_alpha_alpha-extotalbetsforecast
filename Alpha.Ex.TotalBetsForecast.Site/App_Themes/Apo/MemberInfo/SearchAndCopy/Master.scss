@@ -1,0 +1,83 @@
+﻿@import '../../Common/_Variables.scss';
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+.r {
+    text-align: right;
+}
+
+.rb {
+    text-align: right;
+    font-weight: bold;
+}
+
+#tblSB, #tblSB_Comm, #tblRacing, #tblVirtualSports, #tblVirtualSportsPT,
+#tblCasino, #tblCasino_PT {
+    td {
+        height: $height-normal;
+    }
+}
+
+#tblSB
+{
+    width: 100%;
+    td {    
+        padding: 0 8px;
+        width: 25%;
+    }
+
+    .t {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#tblSB_Comm {
+    width: 100%;
+	border-collapse: collapse;
+    border-style: hidden;
+
+    td {
+        width: 16%;
+        padding: 0 8px;
+    }
+}
+
+#tblRacing td, #tblVirtualSports td {
+    width: 50%;
+    padding: 0 8px;
+}
+
+#tblVirtualSportsPT td
+{
+    width: 16%;
+    padding: 0 8px;
+}
+
+#tblCasino {
+    width: 100%;
+
+    td {
+        width: 50%;
+        padding: 0 8px;
+    }
+
+    .t {
+        background-color: #F7F0E4;
+    }
+}
+
+#tblCasino_PT {
+    width: 100%;
+    border-collapse: collapse;
+    border-style: hidden;
+
+    td {
+        width: 14%;
+        border: 1px solid $table-border-color;
+        text-align: center;
+    }
+}

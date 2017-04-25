@@ -1,0 +1,29 @@
+﻿@import '../../Common/_Variables.scss';
+@import url($roboto-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+body {
+    font-size: 13px;
+    font-family: Roboto, Arial, Tahoma,helvetica,sans-serif;
+    line-height: 24px;
+}
+.bold-weight {
+    font-weight: bold;
+    color: $text-red-color-light;
+}
+
+.formular-accumulated-total {
+    padding-left: 50px;
+}
+
+.guideline-row {
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)  
+{
+}

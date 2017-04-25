@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>{static:LocalResources.UIForecastLang.lblScoreMap}</title>
+    <link href="../../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/Forecast/ScoreMap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page_main">
+        <!--mainTitle-->
+        <div id="header_main">
+            {Forecast}
+        </div>
+        <!--/mainTitle-->
+        <div id="sContent">
+            <!--Content-->
+            <!--LimitLeagueList-->
+            <div id="box_header" style="width: {mWidth}">
+                <table class="tbl-filter" style="{display}">
+                    <tr>
+                        <td>
+                            {static:LocalResources.UIForecastLang.league}
+                        </td>
+                        <td id="selLeague">
+                            {LeagueList}
+                        </td>
+                        <td><div title="{static:LocalResources.UIForecastLang.RefreshLeagues}" class="btnRefresh" id="RefreshLeagues">&nbsp;</div></td>
+                        <td><input type="button" class="btn" id="dSelMatch" value="{static:LocalResources.UIForecastLang.SelectMatch}"></td>
+                        <td valign="top"><div id="loading"></div></td>
+                    </tr>
+                </table>
+                <div class="pull-right">
+                    <a href="javascript:;" class="infoIco"
+                       title="Click to view Score Map Info" id="scoreMapIcon"></a>
+                </div>
+                <div id="tblLiveDead" style="{displayLiveDead}">
+                    <table class="tblRpt tbl-scoremap">
+                        <tr class="even_row">
+                            <td>
+                                <input class="hand" type="checkbox" {isCheckedAllLive} id="chkAllL">
+                                <label class="hand bold" for="chkAllL" title="{static:LocalResources.UIForecastLang.lblLiveBall}">{lblLiveBall}</label>
+                            </td>
+                            <td id="Td1">
+                                <table class="reference"><tr>{LiveBall}</tr></table>
+                            </td>
+                        </tr>
+                        <tr class="even_row">
+                            <td>
+                                <input class="hand" type="checkbox" {isCheckedAllDead} id="chkAllD">
+                                <label class="hand bold" for="chkAllD" title="{static:LocalResources.UIForecastLang.lblDeadball}">{lblDeadball}</label>
+                            </td>
+                            <td id="Td2">
+                                <table class="reference"><tr>{DeadBall}</tr></table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="tbl-action">
+                        <tr>
+                            <td><input type="button" value="{static:LocalResources.UIForecastLang.submit}" id="dSubmit" class="btn"></td>
+                            <td valign="top"><div id="loadingSubmit"></div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--/LimitLeagueList-->
+            <div id="mainContent" style="width: {mWidth}">
+                <!--ScoreMap-->
+                <div id="RefreshContent{matchId}">
+                    {MainTable}
+                </div>
+                <!--/ScoreMap-->
+            </div>
+            <!--/Content-->
+            {load:Fanex.Age.UI.Components.ErrorMsg.ErrorMsg_Template ErrorMsg = new Fanex.Age.UI.Components.ErrorMsg.ErrorMsg_Template()}
+        </div>
+    </div>
+    <input id="strValueL" name="strValueL" type="hidden" value="0" />
+    <input id="strValueD" name="strValueD" type="hidden" value="0" />
+    {BoxMatch}
+
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+    <script src="../_Components/AGEWnd/AGEWnd.js" type="text/javascript"></script>
+    <script src="Resources/MatchByLeague.js" type="text/javascript"></script>
+    <script src="Resources/ScoreMap.js" type="text/javascript"></script>
+</body>
+</html>

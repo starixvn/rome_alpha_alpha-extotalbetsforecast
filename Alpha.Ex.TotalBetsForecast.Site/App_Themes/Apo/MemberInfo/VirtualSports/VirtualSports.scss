@@ -1,0 +1,207 @@
+﻿@import '../../Common/_Variables.scss';
+@import '../../Common/_Mixins.scss';
+@import url($icon-alpha-fonts);
+@include keyframes-ripple;
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+.pt7 {
+    margin-top: 0;
+}
+
+
+/************************************/
+/* Icons */
+/************************************/
+.saveDiv, #saveStatus { 
+    cursor: pointer;
+    height: 30px;
+    position: relative;
+    //@include ripple-effect-icon($top: 6px, $margin-left: 2px);
+       
+    &:before {
+        font-family: 'Iconalpha';        
+        position: absolute;
+        font-size: 14px;
+        content: '\e948';
+        font-weight: 100; 
+        width: 16px;
+        height: 28px !important;
+        vertical-align: middle;
+        position: absolute;
+        z-index: 1;
+        right: 0; 
+        padding: 0 8px;   
+    }
+
+    .save {
+        background: none;
+        width: 30px;
+        height: 28px !important;
+        vertical-align: middle;
+        padding: 0; 
+        position: absolute;
+        z-index: 3;
+        right: 0;
+    }
+}
+
+.saveDiv {
+    float: right;
+}
+
+#header_main {
+    margin-bottom: 0;
+}
+
+.minWidthCustomer {
+    margin-top: 12px;
+}
+
+.headerPositionTaking, .customerInfo,
+.headerBetSetting, .BettingLimit, .headerTab {
+    min-width: 876px;
+    padding-right: 0;
+    width: 876px;
+}
+
+.BettingLimitLabel {
+    min-width: 234px;
+}
+
+/************************************/
+/* General Information */
+/************************************/
+.customerInfo .customerInfoBlock1, .customerInfo .customerInfoBlock2,
+.customerInfo .customerInfoBlock3, .customerInfo .customerInfoBlock4 {
+    font-weight: normal !important;
+}
+
+.customerInfoBlock1 {
+    width: 206px;
+}
+
+.customerInfoBlock2 {
+    width: 206px;
+}
+
+.customerInfoBlock3 {
+    width: 220px;
+}
+
+.customerInfoBlock4 {
+    width: 243px;
+}
+
+.customerInfoBlock5 {
+    border-left: 1px solid $pt-border-color;
+    border-top: 1px solid $pt-border-color;
+    float: left;
+    height: $pt-col-height;
+    line-height: $pt-col-height - 4;
+    margin: 0 0 0 1px;
+    vertical-align: middle;
+    width: 666px;
+}
+
+.customerInfoBlock6 {
+    border-left: 1px solid $pt-border-color;
+    border-top: 1px solid $pt-border-color;
+    float: left;
+    width: 875px;
+}
+
+.customerInfoBlock7 {
+    border-left: 1px solid $pt-border-color;
+    border-top: 1px solid $pt-border-color;
+    float: left;
+    height: $pt-col-height;
+    line-height: $pt-col-height;
+    margin: 0 0 0 1px;
+    padding: 0 4px;
+    text-align: right;
+    vertical-align: middle;
+    width: 206px;
+}
+
+#chkDownline {
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+}
+
+#chkEnabled {
+    position: relative;
+    top: 3px;
+    margin-right: 4px;
+}
+
+/************************************/
+/* Bet Setting */
+/************************************/
+.BettingLimitItem {
+    min-width: 118px;
+}
+
+.BettingLimitItem2 {
+    min-width: 116px;
+}
+
+/************************************/
+/* Position Taking */
+/************************************/
+#saveStatus {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.BetTypeHeader {
+    height: $pt-col-height;
+    @include box-sizing;
+}
+
+.PTBox .PTSelect {
+    margin-top: 2px;
+}
+
+.BetTypeCheckbox input {
+    margin-top: 8px;
+}
+
+.BetTypeSelect, .BetTypeLabel, .BetTypeCheckbox {
+    height: 30px;
+}
+
+/************************************/
+/* Buttons */
+/************************************/
+.btnMain {
+    background: $btn-submit-bg;
+    color: $btn-submit-color;
+    margin-top: 12px;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-submit-bg-hover;
+        color: $btn-submit-color-hover;
+    }
+}
+
+.noInfoBlock {
+    text-align: center;
+    background-color: #F7F0E4;
+    border: 1px solid $border-color-dark;
+    float: left;
+    width: 837px;
+    padding: 2px;
+}
+
+/************************************/
+/* Position Taking */
+/************************************/
+.Enrich, .msgscc, .msgerr { 
+    background-color: #fdfbec !important;
+    border: 1px solid #d9d9d9 !important;
+}

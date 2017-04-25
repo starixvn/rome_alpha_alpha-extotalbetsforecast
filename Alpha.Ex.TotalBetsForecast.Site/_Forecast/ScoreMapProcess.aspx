@@ -1,0 +1,1 @@
+<%@ Page Language="C#" EnableSessionState="ReadOnly" AutoEventWireup="false" CodeFile="ScoreMapProcess.aspx.cs" Inherits="Fanex.Age.UI.Forecast.ScoreMapProcess_Page" %>

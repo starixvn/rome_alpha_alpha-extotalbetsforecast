@@ -1,0 +1,66 @@
+﻿@import '../../Common/_Variables.scss';
+@import '../../Common/_Mixins.scss';
+
+%btn {
+    background: url(../../Images/buttons.png) no-repeat;
+    display: inline-block;
+    height: $pt-component-height;            
+    margin-right: 2px;
+    margin-top: 2px;
+    padding: 0;
+    @include box-shadow(0, 0, 0, transparent);
+}
+
+button, input {
+    &.btnPTDown {
+        @extend %btn;
+        background-position: -3px -5px;
+        margin-right: 2px;
+        margin-left: 2px;
+        width: 22px;
+
+        &:hover {
+            background-position: -3px -33px;
+        }
+    }
+
+    &.btnPTUp {
+        @extend %btn;
+        background-position: -33px -5px; 
+        width: 23px;           
+
+        &:hover {
+            background-position: -33px -33px;
+        }
+    }
+
+    &.btnPTSub {
+        @extend %btn;
+        background-position: -99px -5px;
+        width: 24px;
+
+        &:hover {
+            background-position: -99px -33px;
+        }
+    }
+
+    &.btnPTAdd {
+        @extend %btn;
+        background-position: -64px -5px;
+        width: 25px;
+
+        &:hover {
+            background-position: -64px -33px;
+        }
+    }
+}
+
+
+.spanPT > select {
+    height: $pt-component-height;
+    width: 60px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    
+}

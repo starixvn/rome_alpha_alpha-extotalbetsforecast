@@ -1,0 +1,16 @@
+﻿html {
+  touch-action: manipulation; }
+
+.minWidthCustomer {
+  width: 844px; }
+
+#header_main {
+  margin-bottom: 0; }
+
+.commission {
+  margin-top: 8px; }
+
+#diverrmsg {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+

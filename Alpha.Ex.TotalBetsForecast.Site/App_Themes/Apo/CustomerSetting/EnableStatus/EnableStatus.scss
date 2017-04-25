@@ -1,0 +1,183 @@
+﻿@import "../../Common/_Variables.scss";
+@import '../../Common/_Mixins.scss';
+@import url($roboto-fonts);
+@include keyframes-ripple;
+@include keyframes-rippleDuplicate;
+@include ripple-effect-checkbox;
+
+@font-face {
+    font-family: 'Iconalpha';
+    src:    url('../../Fonts/Iconalpha/fonts/Iconalpha.eot?#{$icon-version}');
+    src:    url('../../Fonts/Iconalpha/fonts/Iconalpha.eot?#{$icon-version}#iefix') format('embedded-opentype'),
+        url('../../Fonts/Iconalpha/fonts/Iconalpha.ttf?#{$icon-version}') format('truetype'),
+        url('../../Fonts/Iconalpha/fonts/Iconalpha.woff?#{$icon-version}') format('woff'),
+        url('../../Fonts/Iconalpha/fonts/Iconalpha.svg?#{$icon-version}#Iconalpha') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+body {
+    font: {
+        family: $font-family;
+        size: $font-size;
+    }
+
+    color: $text-color;
+}
+
+input, select {
+    font-family: inherit;
+
+    &[disabled] {
+        opacity: 0.4;
+    }
+}
+
+input[type=checkbox] {
+    margin-left: 4px;
+    padding: 0;
+    left: 2px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.pull-left {
+    float: left;
+}
+
+.list-button {
+    margin-top: 8px;
+}
+
+/************************************/
+/* Buttons */
+/************************************/
+%btn {
+    border: none;
+    cursor: pointer;
+    height: $height-normal;
+    -webkit-appearance: none;
+    outline: none;
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    @include effect-button;
+    @include box-sizing;
+
+    &[disabled] {
+        opacity: 0.4;
+        cursor: default;
+    }
+}
+
+.btn-submit {
+    @extend %btn;
+    background-color: $btn-submit-bg;
+    color: $btn-submit-color;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-submit-bg-hover;
+    }
+}
+
+/************************************/
+/* Tables */
+/************************************/
+.container-enableStatus {
+    display: none;
+}
+
+.bgTitle {
+    background-color: $table-header-bg-color;
+    color: $table-header-color;
+    font-weight: bold;
+}
+
+table {
+    font-size: $font-size;
+    width: 100%;
+    border-collapse: collapse;
+
+    td {
+        border: 1px solid $table-border-color;
+        height: $pt-col-height;
+        line-height: 24px;
+        @include box-sizing(border-box);
+    }
+}
+
+.noBorderTLR {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.line {
+    height: 1px;
+}
+
+.disabledButton {
+    opacity: 0.4;
+}
+
+// Messsages
+%icon {
+    font:{
+        family: Iconalpha;
+        size: 24px;
+    }
+    float: left;
+    margin-right: 4px;
+}
+
+%msg {
+    line-height: 20px;
+    margin: 12px 0 8px;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+    position: relative;  
+    @include border-radius(2px);
+    @include box-sizing;
+}
+
+.errMsg {
+    @extend %msg;
+	background-color: $msg-error-bg;
+    border: 1px solid $msg-error-border;
+    color: $msg-error-color;
+
+    &:before {
+        @extend %icon;
+        content: '\e93e';
+    }
+}
+
+.warningMsg {
+    @extend %msg;
+	background-color: $msg-warning-bg;
+    border: 1px solid $msg-warning-border;
+    color: $msg-warning-color;
+
+    &:before {
+        @extend %icon;
+        content: '\e93d';
+    }
+}
+
+.successMsg {
+    @extend %msg;
+	background-color: $msg-success-bg;
+    border: 1px solid $msg-success-border;
+	color: $msg-success-color;
+
+    &:before {
+        @extend %icon;
+        content: '\e93b';
+    }
+}

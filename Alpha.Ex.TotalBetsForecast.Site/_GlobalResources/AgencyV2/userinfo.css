@@ -1,0 +1,7 @@
+﻿body{background:#f2f4f6 url(Images/bg_conts.jpg) repeat-x top; background-color:#f5f6f8; background-attachment:fixed}
+#header_popup{height:22px; background:url(Images/bg_header01.jpg) no-repeat left bottom; color:#9d1c1c; font-weight:bold; padding-left:15px; text-transform:uppercase; line-height:18px}
+.bettextbox{width:100px}
+.focus{background-color:Red; width:100px}
+.tabl_text{display:block; width:136px; background:url(Images/tab_head.jpg) no-repeat left; color:#4d4d4d; font-weight:bold; text-decoration:none; text-transform:uppercase; line-height:20px; height:22px; text-indent:16px; font-size:11px; float:left}
+.tabl_conts{height:24px; background-color:#FAF9EE; border:0px solid #CCC; border-left:0px; padding-left:5px; line-height:8px; margin-top:2px}
+.text_R{font-weight:bold; color:#b2b2b2}

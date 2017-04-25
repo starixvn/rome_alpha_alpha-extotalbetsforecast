@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" EnableSessionState="ReadOnly" AutoEventWireup="false" CodeFile="OutRight.aspx.cs" Inherits="Fanex.Age.UI.TotalBets.OutRight_Page" %>

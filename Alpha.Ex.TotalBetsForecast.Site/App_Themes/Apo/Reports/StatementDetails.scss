@@ -1,0 +1,27 @@
+﻿@import '../Common/_Variables.scss';
+@import url($roboto-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+body {
+    font-family: $font-family;
+    padding: 12px 0;
+}
+
+.grid-title {
+    background: none;
+    border: none;
+}
+.freegrid .col_footer table thead th {
+    background: $table-footer-bg !important;
+    color: $table-footer-color;
+    font-weight: bold;
+    white-space: nowrap;
+
+    .format-negative {
+        color: $table-footer-color !important;
+    }
+}

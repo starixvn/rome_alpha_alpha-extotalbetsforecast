@@ -1,0 +1,99 @@
+﻿@import '../Common/_Variables.scss';
+ 
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+/************************************/
+/* Common */
+/************************************/
+body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+}
+
+a:link, a:visited {
+	color: $link-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $link-hover-color;
+	text-decoration: none;
+}
+
+input {
+	border: 1px solid $border-color;
+}
+
+/************************************/
+/* Popup */
+/************************************/
+/* Transfer page */
+#header_main {
+  margin-bottom: 8px;
+}
+
+#header_main ~ #page_popup {
+    margin-left: 8px;
+
+    .popup-bottom {
+        padding-left: 78px;
+        text-align: left;
+    }
+
+    input[type='text'] {
+        border: none;
+    }
+}
+
+#page_popup {
+    position: relative;
+
+    /******************************************/
+    /* Bottom of popup */
+    /******************************************/
+    .popup-bottom {
+        margin-top: $font-size;
+        text-align: right;
+
+        .btn:last-child {
+            margin-right: 0;
+        }
+    }
+
+    input[type='text'] {
+        border: 1px solid $border-color;
+    }
+}
+
+table.tblPop {
+    margin-top: 16px;
+
+    td {
+	    height: $height-normal;
+	    padding: 4px 0;
+    }
+} 
+
+.tblPop, .bg_tb, table.tblPop, table.tblRpt {
+	width: 100%;
+}
+
+.odd_row {
+	background-color: $table-odd-bg;
+}
+
+.even_row {
+	background-color: #faf9ee;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+{
+
+}

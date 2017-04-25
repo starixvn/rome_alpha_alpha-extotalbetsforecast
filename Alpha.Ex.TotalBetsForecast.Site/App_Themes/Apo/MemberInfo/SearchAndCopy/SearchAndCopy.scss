@@ -1,0 +1,524 @@
+﻿@import '../../Common/_Variables.scss';
+@import '../../Common/_Mixins.scss';
+@import url($icon-alpha-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+    background: $bg-color;
+    touch-action: manipulation;
+}
+
+#header_main {
+    height: 38px;
+}
+
+/********************************/
+/* Tabs */
+/********************************/
+#bdHeader {    
+    padding-bottom: 0;
+}
+
+#header_main {
+    border-bottom: none;
+}
+
+#page_main {
+    padding-top: 4px;
+}
+
+/********************************/
+/* Steps */
+/********************************/
+
+#tblHeader {
+    position: fixed;
+    top: 0;
+    width: 71%;
+    background-color: #f4f4f4;
+
+    .step {
+        list-style: none;
+        padding: 0;
+
+        li {
+            float: left;
+            margin-right: 32px;
+            padding: 0 0 12px;
+        }
+    }
+
+    %cycle {
+        width: 25px;
+	    height: 25px;
+	    text-align: center;
+        position: relative;
+        @include border-radius(50%);
+    }
+
+    .cycleEnable
+    {
+        @extend %cycle;
+        background-color: $table-red-color;
+        border: 1px solid $table-red-color;
+        color: White;        
+    }
+
+    .cycleDisable
+    {
+        @extend %cycle;
+	    border:  2px solid #c1c1c1;
+    }
+
+    div {
+        float: left;
+    }
+
+    h2
+    {
+	    padding: 0 5px;
+	    font-size: $font-size;
+        margin: 0;
+        float: left;
+        line-height: 25px;
+    }
+
+    span {
+	    padding-top: 4px;
+        margin: 0;
+        display: inline-block;    
+    }
+
+     .line1, .line2, .line3, .w {
+         padding-bottom: 8px;
+     }
+}
+
+#search {
+    line-height: 28px;
+
+    .text_username {
+        margin-right: 4px;
+    }
+
+    .text_italic, .text_normal
+    {
+        font-size: $font-size;
+	    width: 200px;
+    }
+}
+
+.tbl-searchcopy {
+    width: 70%;
+    margin-top: 46px;
+
+    &.tbl-member {
+        margin-top: 100px;
+    }
+}
+
+/************************************/
+/* Note */
+/************************************/
+.WaringMessage {	
+	background-color: $msg-warning-bg;
+    border: 1px solid $msg-warning-border;
+    color: $msg-warning-color;
+    line-height: 20px;
+    margin-top: 4px;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+    @include border-radius(2px);
+    @include box-sizing;
+
+    &:before {
+        font:{
+            family: Iconalpha;
+            size: 24px;
+        }
+        float: left;
+        margin-right: 4px;
+        content: '\e93d';
+        color: $msg-warning-icon-color;
+    }
+}
+
+.comm_note {
+    color: $note-color;
+    margin: 20px 20px 10px 0;
+    padding: 0 0 0 13px;
+    font-style: italic;
+
+    li {
+        line-height: 24px;
+    }
+}
+
+
+/**********************************/
+/* Enter information */
+/**********************************/
+#tblInfo
+{
+	width: 100%;
+
+    tbody td
+    {
+        padding: 0 4px;
+	    white-space: nowrap;
+
+        .minmaxbet
+        {
+	        font-weight: bold;
+            margin-left: 8px;
+        }
+    }
+    
+    .r
+    {
+	    width: 180px;
+    }
+    
+    select {
+        padding: 0;
+    }
+
+    select, .inputWidth {
+        border: 1px solid $border-color;
+        height: $table-compopent-height;
+        line-height: $table-compopent-height;
+        @include box-sizing;
+    }
+
+    .inputWidth {
+	    margin-left: 0;
+        width: 160px;
+    }
+
+    .PwdError:before {
+        margin-left: 8px;
+    }
+}
+
+#Number1 {
+    margin-left: 8px;
+}
+
+#Number1, #Number2, #Number3
+{
+	margin-top: 0;
+}
+
+
+.warning
+{
+	margin-top: 20px;
+}
+/********************************/
+/* Table */
+/********************************/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tbl-reviewSetting {
+    td {
+        border: 1px solid $border-color;
+    }
+}
+
+#tblMain
+{
+    background-color: #fff;
+    width: 100%;
+
+    td {
+        border: 1px solid $table-border-color;
+        height: $compopent-height;
+        padding: 0;
+
+        &.Header {
+            padding-left: 8px;
+        }
+    }
+}
+
+#tblHeadMain
+{
+	background-color: #fff;
+
+    tbody tr {
+	    background-color: #fff;
+
+        td {   
+            background-color: #fff;
+            border: none;
+        }
+    }
+}
+
+#tblSettingSB
+{
+	width: 100%;
+
+    tbody td {
+        height: $compopent-height;
+        padding: 0 4px;
+	    width: 50%;
+
+        &.Header {
+            padding-left: 8px;
+        }
+    }
+}
+
+.rb
+{
+	font-weight: bold;
+	text-align: right;
+}
+
+#tblTxtSearch
+{
+	border: 0;
+}
+
+#tblVirtualSports td {
+    padding: 0 4px;
+    width: 50%;
+
+    &.Header {
+        padding-left: 8px;
+    }
+}
+
+
+
+#tblSettingSBComm_M
+{
+	background-color: #B7B7B7;
+
+    .Comm {
+	    width: 235px;
+    }
+}
+
+#tblSettingSB_M {
+    width: 100%;
+    .PT_c1 {
+	    width: 25%;
+	    text-align: right;
+	    font-weight: bold;
+	    padding-right: 10px;
+    }
+
+    .PT_c2 {
+	    width: 25%;
+	    text-align: right;
+	    padding-right: 10px;
+    }
+    .PT_c3 {
+	    width: 25%;
+	    text-align: right;
+	    padding-right: 10px;
+    }
+
+    .PT_c4 {
+	    width: 25%;
+	    text-align: left;
+	    padding-left: 10px;
+    }
+}
+
+#tblSettingCS
+{
+	width: 100%;
+	border-radius: 0;
+
+    .header {
+	    width: 170px;
+	    text-align: center;
+    }
+
+    td.Header {
+        padding-left: 8px;
+    }
+
+    td {
+        padding: 0 4px;
+    }
+
+    .c1 {
+	    width: 127px;
+    }
+
+    .c2 {
+	    width: 235px;
+    }
+
+    .c3 {
+	    width: 350px;
+    }
+}
+
+.action-group {
+    margin: 12px 0;
+    display: table;
+
+    .btn {
+        float: left;
+        margin-right: 12px;
+    }
+}
+/***********************************/
+/* Preview settings */
+/***********************************/
+.memberSettingInfo, .Header
+{
+	background: $table-header-bg-color;
+	color: $table-header-color;
+	font-weight: bold;
+	height: $height-normal;
+    line-height: $height-normal;
+	text-align: left;
+	padding-left: 8px;
+}
+
+.Detail
+{
+	background-color: #F7F0E4;
+	padding: 1px;
+}
+
+%button {
+    cursor: pointer;
+    display: inline-block;
+	text-align: center;
+    height: $table-compopent-height;
+    line-height: $table-compopent-height;
+    margin: 4px 6px;
+    padding-left: 12px;
+	padding-right: 12px;
+    -webkit-appearance: none;
+    @include box-shadow(1px, 2px, 3px,  rgba(0,0,0,.3));
+    @include border-radius(3px);
+}
+.button
+{
+    @extend %button;
+    background-color: $btn-reset-bg;
+	color: $btn-reset-color;	
+
+    &:hover
+    {
+	    background-color: $btn-reset-bg-hover;
+	    cursor: pointer;
+    }
+}
+
+.buttonDisable
+{
+    @extend %button;
+    background-color: $btn-bg;
+    color: $btn-color;
+
+    &:hover
+    {
+	    background-color: $btn-bg-hover;
+	    cursor: pointer;
+    }
+}
+
+.showMsg
+{
+	background: url("Images/warning_icon.gif") no-repeat scroll left center transparent;
+	color: #DF2267;
+}
+
+#lblRacingTitle
+{
+	color: #9D1B19;
+	font-size: $font-size;
+	font-weight: bold;
+	text-align: center;
+}
+
+.highlight
+{
+	width: 15%;
+	text-align: right;
+	font-weight: bold;
+}
+
+.cmemberSettingInfo
+{
+	text-align: center;
+}
+
+.Hide
+{
+	display: none;
+}
+
+
+.numberGameComm
+{
+	width: 20% !important;
+}
+
+.numberGameCommValue
+{
+	width: 12% !important;
+}
+
+#txtCredit, #txtMaxCredit
+{
+	text-align: right;	
+}
+
+.name-wrap-text  
+{
+    width: 707px;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+}
+
+
+@media only screen and (max-width: 1024px) {
+     
+    .tbl-searchcopy, #tblHeader {
+        width: 100%;
+    }
+
+    #search .PwdError {
+        position: relative;
+        top: 1px;
+    }
+
+    #tblInfo tbody td {
+        padding: 4px;
+
+        select, .inputWidth {
+            height: $table-compopent-height-large;
+        }
+
+        .inputWidth {
+            width: 183px;
+        }
+
+        select {
+            padding: 4px;
+        }
+    } 
+    
+    #tblInfo .PwdError 
+    {
+        margin-left: 5px;
+    }
+    .buttonReView {
+        margin-right: 10px;
+    }
+}

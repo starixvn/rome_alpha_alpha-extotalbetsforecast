@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="IP">
+    <Setting Key="GetIPVN" SpName="GetIPVN" DbName="DBCust.IPDB.BODBDownlineNet" Plain="0" />
+  </Function>
+</Functions>

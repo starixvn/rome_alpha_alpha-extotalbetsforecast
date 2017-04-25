@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="agent" xml:space="preserve">
+    <value>에이전트</value>
+  </data>
+	<data name="agentdownline" xml:space="preserve">
+    <value>Agent's Downlines</value>
+  </data>
+	<data name="agentpositiontaking" xml:space="preserve">
+    <value>Agent Position Taking</value>
+  </data>
+	<data name="applymastertoallmember" xml:space="preserve">
+    <value>모든 회원에게 마스터 프리셋 PT 적용</value>
+  </data>
+	<data name="applysupertoallmember" xml:space="preserve">
+    <value>모든 회원에게 슈퍼 프리셋 PT 적용</value>
+  </data>
+	<data name="automasterpreset" xml:space="preserve">
+    <value>자동으로 마스터 미리 조정하기</value>
+  </data>
+	<data name="autosuperpreset" xml:space="preserve">
+    <value>자동으로 슈퍼 미리 조정하기</value>
+  </data>
+	<data name="autote" xml:space="preserve">
+    <value>Aust Tote</value>
+  </data>
+	<data name="betsetting" xml:space="preserve">
+    <value>배팅 설정</value>
+  </data>
+	<data name="commission" xml:space="preserve">
+    <value>수수료</value>
+  </data>
+	<data name="copyallfromuktotewin" xml:space="preserve">
+    <value>승리 -  UK/Irish Tote로 부터 동일한 모든 수수료와 포지션 설정</value>
+  </data>
+	<data name="copyallfromuktotewin1" xml:space="preserve">
+    <value>승리 - UK/Irish Tote로 부터 동일한 모든 베팅설정</value>
+  </data>
+	<data name="copyfromwin" xml:space="preserve">
+    <value>승리로 따릅니다.</value>
+  </data>
+	<data name="edithorseracing" xml:space="preserve">
+    <value>레이싱 수정</value>
+  </data>
+	<data name="enable" xml:space="preserve">
+    <value>활성화</value>
+  </data>
+	<data name="fax" xml:space="preserve">
+    <value>팩스</value>
+  </data>
+	<data name="firstname" xml:space="preserve">
+    <value>이름</value>
+  </data>
+	<data name="greyhound" xml:space="preserve">
+    <value>그레이 하운드</value>
+  </data>
+	<data name="harness" xml:space="preserve">
+    <value>Harness</value>
+  </data>
+	<data name="horseracing" xml:space="preserve">
+    <value>경마</value>
+  </data>
+	<data name="lastname" xml:space="preserve">
+    <value>성</value>
+  </data>
+	<data name="master" xml:space="preserve">
+    <value>마스터</value>
+  </data>
+	<data name="masterdownline" xml:space="preserve">
+    <value>마스터 하부라인</value>
+  </data>
+	<data name="masterpositiontaking" xml:space="preserve">
+    <value>마스터 포지션 설정</value>
+  </data>
+	<data name="masterpreset" xml:space="preserve">
+    <value>마스터 미리 설정</value>
+  </data>
+	<data name="maxbet" xml:space="preserve">
+    <value>최대 배팅</value>
+  </data>
+	<data name="maxpermatch" xml:space="preserve">
+    <value>경기당 최대 값</value>
+  </data>
+	<data name="member" xml:space="preserve">
+    <value>회원</value>
+  </data>
+	<data name="minbet" xml:space="preserve">
+    <value>최소 배팅</value>
+  </data>
+	<data name="mobilephone" xml:space="preserve">
+    <value>핸드폰</value>
+  </data>
+	<data name="phone" xml:space="preserve">
+    <value>전화</value>
+  </data>
+	<data name="place" xml:space="preserve">
+    <value>순위</value>
+  </data>
+	<data name="positiontaking" xml:space="preserve">
+    <value>거래 조건</value>
+  </data>
+	<data name="satote" xml:space="preserve">
+    <value>SA Tote</value>
+  </data>
+	<data name="submit" xml:space="preserve">
+    <value>확인</value>
+  </data>
+	<data name="superpositiontaking" xml:space="preserve">
+    <value>슈퍼 포지션 설정</value>
+  </data>
+	<data name="superpreset" xml:space="preserve">
+    <value>슈퍼 미리세팅</value>
+  </data>
+	<data name="ukirishtote" xml:space="preserve">
+    <value>UK/Irish Tote</value>
+  </data>
+	<data name="username" xml:space="preserve">
+    <value>사용자 이름</value>
+  </data>
+	<data name="win" xml:space="preserve">
+    <value>승</value>
+  </data>
+	<data name="mastercomm" xml:space="preserve">
+    <value>마스터 수수료</value>
+  </data>
+	<data name="agentcomm" xml:space="preserve">
+    <value>Agent Commission</value>
+  </data>
+	<data name="membercomm" xml:space="preserve">
+    <value>회원 수수료</value>
+  </data>
+	<data name="super" xml:space="preserve">
+    <value>슈퍼</value>
+  </data>
+	<data name="autosuper" xml:space="preserve">
+    <value>자동 슈퍼</value>
+  </data>
+	<data name="GreyhoundAU" xml:space="preserve">
+    <value>Aust Greyhound</value>
+  </data>
+	<data name="GreyhoundUK" xml:space="preserve">
+    <value>UK/Irish Greyhounds</value>
+  </data>
+	<data name="HarnessAU" xml:space="preserve">
+    <value>Aust Harness</value>
+  </data>
+	<data name="hrAUTote" xml:space="preserve">
+    <value>Aust Racing Tote</value>
+  </data>
+	<data name="hrSaTote" xml:space="preserve">
+    <value>SA Racing Tote</value>
+  </data>
+	<data name="hrUkTote" xml:space="preserve">
+    <value>UK/Irish Racing Tote</value>
+  </data>
+	<data name="copyallptfromuktotewin" xml:space="preserve">
+    <value>승리 - UK/Irish Tote로 부터 동일한 모든 포지션설정</value>
+  </data>
+	<data name="lblalertMaxBetNegative" xml:space="preserve">
+    <value>최대 배팅은 0보다 커야 합니다.</value>
+  </data>
+	<data name="lblalertMaxPerMatchNegative" xml:space="preserve">
+    <value>경기당 최대값은 0보다 커야 합니다.</value>
+  </data>
+	<data name="lblalertMinBetNegative" xml:space="preserve">
+    <value>최소 배팅은 0보다 커야 합니다.</value>
+  </data>
+	<data name="lblalerMaxbetCompare" xml:space="preserve">
+    <value>최대 배팅보다 이하이여야 합니다.</value>
+  </data>
+	<data name="lblalertMaxPerMatchCompare" xml:space="preserve">
+    <value>각 경기당 최대금액은 적거나 같아야만 합니다.</value>
+  </data>
+	<data name="lblalertMinbetCompare" xml:space="preserve">
+    <value>최소 배팅은 …과 같거나 커야 합니다</value>
+  </data>
+	<data name="alertMaxPerMatchLessMaxBet" xml:space="preserve">
+    <value>최대 배팅은 경기당최대 값보다 클수 없습니다</value>
+  </data>
+	<data name="alertMaxBetLessMinBet" xml:space="preserve">
+    <value>최소 배팅은 최대 배팅보다 클수 없습니다.</value>
+  </data>
+	<data name="alertIncorrectMaxBet" xml:space="preserve">
+    <value>최대 배팅이 잘못 되었습니다.</value>
+  </data>
+	<data name="alertIncorrectMaxPerMatch" xml:space="preserve">
+    <value>경기당 최대 값이 잘못 되었습니다.</value>
+  </data>
+	<data name="alertIncorrectMinBet" xml:space="preserve">
+    <value>최소 배팅이 잘못 되었습니다.</value>
+  </data>
+	<data name="enableRacing" xml:space="preserve">
+    <value>레이싱 활성화</value>
+  </data>
+	<data name="alertUpdRacingStatus" xml:space="preserve">
+    <value>이 고객과 모든 하위라인의 레이싱을 비활성화하시겠습니까?</value>
+  </data>
+	<data name="editminpt" xml:space="preserve">
+    <value>레이싱 최소 PT 수정</value>
+  </data>
+	<data name="editmultpt" xml:space="preserve">
+    <value>멀티플 레이싱 수정하기</value>
+  </data>
+	<data name="memberdownline">
+		<value>Member's Downlines</value>
+	</data>
+	<data name="copyallfromuktotewin2">
+		<value>从英国/爱尔兰彩池复制所有佣金设置/占成（独赢</value>
+	</data>
+</root>

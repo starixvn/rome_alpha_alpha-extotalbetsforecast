@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TotalBets</title>
+    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/TotalBets/TotalBets.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page_main">
+        <div id="header_main">
+            {static:LocalResources.TotalBetsLang.lblOddEven} + {static:LocalResources.TotalBetsLang.lbl1x2} + {static:LocalResources.TotalBetsLang.lblDraw}/{static:LocalResources.TotalBetsLang.lblNoDraw}
+        </div>
+        {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,15,"OddEvent1X2")}
+        <div id="sContent">
+            <!--Contents-->
+            <table class="tblRpt c">
+                <tr class="RptHeader">
+                    <td rowspan="2" class="col-number">
+                        #
+                    </td>
+                    <td rowspan="2" class="col-time">
+                        {static:LocalResources.TotalBetsLang.time}
+                    </td>
+                    <td rowspan="2">
+                        {static:LocalResources.TotalBetsLang.events}
+                    </td>
+                    <td colspan="4">
+                        {static:LocalResources.TotalBetsLang.fulltime}
+                    </td>
+                    <td colspan="3">
+                        {static:LocalResources.TotalBetsLang.lbl1sthalf}
+                    </td>
+                </tr>
+                <tr class="RptHeader02">
+                    <td class="lbl-totalBetsLang">
+                        {static:LocalResources.TotalBetsLang.lblOddEven}
+                    </td>
+                    <td colspan="2" class="lbl-totalBetsLang">
+                        {static:LocalResources.TotalBetsLang.lbl1x2}
+                    </td>
+                    <td class="lbl-totalBetsLang">
+                        {static:LocalResources.TotalBetsLang.lblDraw}/{static:LocalResources.TotalBetsLang.lblNoDraw}
+                    </td>
+                    <td class="lbl-totalBetsLang">
+                        {static:LocalResources.TotalBetsLang.lblOddEven}
+                    </td>
+                    <td colspan="2" class="lbl-totalBetsLang">
+                        {static:LocalResources.TotalBetsLang.lbl1x2}
+                    </td>
+                </tr>
+                <!--LeagueContents-->
+                <tr class="c">
+                    <td colspan="10" class="col-league league">
+                        {LeagueName}
+                    </td>
+                </tr>
+                <!--MatchContents-->
+                <tr class="r" style="background-color: {ColorClass}" onmouseover="bgColor='{ColorOver}'" onmouseout="bgColor='{ColorClass}'">
+                    <td class="w-order">
+                        {No}
+                    </td>
+                    <td class="c bl_time">
+                        {TimeValue}
+                        <!--LiveNotice-->
+                        <br />
+                        <font color="red"><i>{static:LocalResources.TotalBetsLang.lblLive}</i></font>
+                        <!--/LiveNotice-->
+                    </td>
+                    <td class='l'>
+                        {Home} -vs- {Away}
+                    </td>
+                    <td>
+                        <!--OddEvenValue-->
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId},2,'{BetType}');">
+                            {OddEvenValue}
+                        </a>
+                        <!--/OddEvenValue-->
+                    </td>
+                    <td class="col-oneXTwo">
+                        <!--OneXTwoValue-->
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId},5,'{BetType}');">
+                            {OneXTwoValue}
+                        </a>
+                        <!--/OneXTwoValue-->
+                    </td>
+                    <td class="fcbtn">
+                        <!--OneXTwoButton-->
+                        <a href="javascript:openForecast1X2('{MatchId}',5)" class="btnInfo"></a>
+                        <!--/OneXTwoButton-->
+                    </td>
+                    <td class="col-DND">
+                        <!--DNDValue-->
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId},123,'{BetType}');">
+                            {DNDValue}
+                        </a>
+                        <!--/DNDValue-->
+                    </td>
+                    <td>
+                        <!--OddEvenFirstHalfValue-->
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId},12,'{BetType}');">
+                            {OddEventFirstHalfValue}
+                        </a>
+                        <!--/OddEvenFirstHalfValue-->
+                    </td>
+                    <td class="col-oneXTwo">
+                        <!--OneXTwoFirstHalfValue-->
+                        <a class="fcnum" href="javascript:doViewBetList({MatchId},15,'{BetType}');">
+                            {OneXTwoFirstHalfValue}
+                        </a>
+                        <!--/OneXTwoFirstHalfValue-->
+                    </td>
+                    <td class="fcbtn c">
+                        <!--OneXTwoFirstHalfButton-->
+                        <a href="javascript:openForecast1X2('{MatchId}',15)" class="btnInfo"></a>
+                        <!--/OneXTwoFirstHalfButton-->
+                    </td>
+                </tr>
+                <!--/MatchContents-->
+                <!--/LeagueContents-->
+                <!--NotFoundContent-->
+                <tr class="bg_white">
+                    <td colspan="10" class="c nobold">
+                        {static:LocalResources.TotalBetsLang.noInfo}
+                    </td>
+                </tr>
+                <!--/NotFoundContent-->
+            </table>
+            <!--/Contents-->
+        </div>
+    </div>
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+    <script src="Resources/TotalBets.js" type="text/javascript"></script>
+    <script src="../_Components/AGEWnd/AGEWnd.js" type="text/javascript"></script>
+
+    <!--Piwik-->
+    <script type="text/javascript">
+        var _pkUrl = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl}',
+            _pkScript = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript}',
+            _pkSiteId = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId}';
+    </script>
+    <script src="../_GlobalResources/Js/piwikLoader.js" type="text/javascript"></script>
+    <noscript><p><img src='{PiwikUrl}' style="border:0;" alt="" /></p></noscript>
+    <!--/Piwik-->
+</body>
+</html>

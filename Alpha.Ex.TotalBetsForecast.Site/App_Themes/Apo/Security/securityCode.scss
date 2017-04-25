@@ -1,0 +1,204 @@
+﻿@import '../Common/_Variables.scss';
+@import '../Common/_Mixins.scss';
+@import url($icon-alpha-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+/* ----- miscs ----- */
+.display-none {
+    display: none !important;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.widthPercent60 {
+    width: 60%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+
+
+/************************************/
+/* Tabs */
+/************************************/
+#tab_hr a span {
+    padding: 8px 20px;
+}
+
+#button_hr {
+    margin-bottom: 8px;
+    &.pw {
+        #tab_hr a span {
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+    }
+}
+
+/************************************/
+/* Form */
+/************************************/
+.tbl-security {
+    td {
+        padding: 8px 8px 4px 0;
+        line-height: 28px;
+    }
+
+    input.txt {
+        margin-left: 0;
+        margin-right: 4px;
+        width: 200px;
+    }
+
+    input[type='checkbox'] {
+        position: relative;
+        top: 2px;
+    }
+}
+
+.lbl-usermame, .subTitle {
+    padding: 4px 0 12px;
+}
+
+.note-message {
+    color: $note-color;
+    font-style: italic;
+    padding: 4px;
+    @include text-size-adjust;
+}
+
+/************************************/
+/* page content */
+/************************************/
+.container-wrap {
+    overflow: visible;
+}
+
+#header_main {
+    margin-bottom: 10px;
+}
+
+/************************************/
+/* header message */
+/************************************/
+#error-wrap {
+    border: none;
+    display: table;
+    min-width: 378px;
+}
+
+%icon {
+    font:{
+        family: Iconalpha;
+        size: 24px;
+    }
+}
+
+%msg {
+    margin: 4px 0 8px;
+    padding: 10px 8px 10px 40px;
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
+    @include border-radius(2px);
+
+    &:before {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+}
+
+.errorSection {
+    @extend %msg;
+	background-color: $msg-error-bg;
+    border: 1px solid $msg-error-border;
+    color: $msg-error-color;
+
+    &:before {
+        @extend %icon;
+        content: '\e93c';
+    }
+}
+
+.successSection {
+    @extend %msg;
+	background-color: $msg-success-bg;
+    border: 1px solid $msg-success-border;
+	color: $msg-success-color;
+
+    &:before {
+        @extend %icon;
+        content: '\e93b';
+    }
+}
+
+/***************************************/
+/* security code hint */
+/***************************************/
+.schint {
+    margin-top: 12px;
+    padding: 2px;
+}
+
+.schint-message {
+    color: $note-color;
+    font-style: italic;
+    padding: 4px;
+    min-width: 450px;
+    @include text-size-adjust;
+    
+    pre {
+        font-family: $font-family;
+        line-height: 18px;
+        white-space: pre-wrap;
+    }
+
+    ul {
+        list-style: none;        
+        margin: 6px 0;
+    }
+
+    > ul {        
+        padding: 0;
+
+        ul {
+            padding-left: 20px;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/***************************************/
+/* Message */
+/***************************************/
+#diverrmsg {
+    max-width: 500px !important;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {   
+    
+}

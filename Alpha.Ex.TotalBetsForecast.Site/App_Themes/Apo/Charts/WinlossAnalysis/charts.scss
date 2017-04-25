@@ -1,0 +1,91 @@
+﻿@import '../../Common/_Variables.scss';
+@import '../../Common/_Mixins.scss';
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+/******************************/
+/* Filter */
+/******************************/
+#box_header {
+    padding: 12px 0;
+
+    #reportFilter {
+        padding: 12px 0;
+    }
+}
+
+/******************************/
+/* Table */
+/******************************/
+.tblRpt tr {
+    &:nth-child(2n) {
+        background-color: $table-odd-bg;
+    }
+
+    &:nth-child(2n + 1) {
+        background-color: $table-even-bg;
+    }
+
+    &:hover {
+        background-color: $table-td-hover-color;
+    }
+}
+
+/******************************/
+/* Chart */
+/******************************/
+#ChartImage {
+    margin-left: 12px;
+}
+
+.boldrow {
+    font-weight: bold;
+}
+
+.altercol {
+    text-align: right;
+}
+
+.toolTipTurnover, .toolTipWinloss {
+    font-weight:bold;
+    border: 1px solid $border-color-dark;
+    width: auto;
+    height: auto;
+    margin: 3px;
+    padding: 8px;
+    @include border-radius(3px);
+    @include box-shadow(1px, 2px, 6px, rgba(0, 0, 0, 0.2));    
+}
+
+.toolTipTurnover {
+    color: #fff;    
+    background-color: #56ACFC;
+}
+
+.toolTipWinloss {
+    color: #000;
+    background-color: lemonchiffon;
+}
+
+.no_info {
+	text-align: center;
+	background-color: #FFF;
+	font-weight: normal;
+}
+
+#toolTipOnChart {
+    z-index: 999;
+    visibility: hidden;
+    position: absolute;
+}
+
+#reportProductsFilter {
+    padding: 12px 0;
+
+    span:first-child {
+      margin: 0 5px;
+    }
+}

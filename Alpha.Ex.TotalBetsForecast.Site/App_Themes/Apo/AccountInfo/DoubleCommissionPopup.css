@@ -1,0 +1,10 @@
+﻿body {
+  padding: 12px 0; }
+
+input[type='radio'] {
+  position: relative;
+  top: 2px; }
+
+.buttonSubmit {
+  margin-top: 12px; }
+

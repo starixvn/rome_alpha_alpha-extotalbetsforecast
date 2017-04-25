@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>{static:LocalResources.TotalBetsLang.numbergame}</title>
+    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/TotalBets/TotalBets.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page_main">
+        <div id="header_main">
+            {static:LocalResources.TotalBetsLang.numbergame}
+        </div>
+        {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,15,"MoneyLine")}
+        <div id="sContent">
+            <!--Contents-->
+            <table class="tblRpt c width-100per">
+                <tr class="RptHeader">
+                    <td rowspan="2">
+                        {static:LocalResources.TotalBetsLang.no}
+                    </td>
+                    <td rowspan="2">
+                        {static:LocalResources.TotalBetsLang.events}
+                    </td>
+                    <td colspan="2">
+                        {static:LocalResources.TotalBetsLang.warrior}
+                    </td>
+                    <td colspan="2">
+                        {static:LocalResources.TotalBetsLang.lbl1stBall}
+                    </td>
+                    <td colspan="2">
+                        {static:LocalResources.TotalBetsLang.lastball}
+                    </td>
+                    <td colspan="3">
+                        {static:LocalResources.TotalBetsLang.nextBall}
+                    </td>
+                    <td colspan="4">
+                        {static:LocalResources.TotalBetsLang.nextcombo}
+                    </td>
+                    <td rowspan="2" title="{static:LocalResources.TotalBetsLang.lblFTOddEven}">
+                        {static:LocalResources.TotalBetsLang.lblFTOE}
+                    </td>
+                    <td colspan="2">
+                        {static:LocalResources.TotalBetsLang.numberGroup}
+                    </td>
+                </tr>
+                <tr class="RptHeader02">
+                    <td>
+                        {static:LocalResources.TotalBetsLang.warrior2ndBall}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.warrior3rdBall}
+                    </td>
+                    <td title="{static:LocalResources.TotalBetsLang.lblOverUnder}">
+                        {static:LocalResources.TotalBetsLang.lblOU}
+                    </td>
+                    <td title="{static:LocalResources.TotalBetsLang.lblOddEven}">
+                        {static:LocalResources.TotalBetsLang.lblOE}
+                    </td>
+                    <td title="{static:LocalResources.TotalBetsLang.lblOverUnder}">
+                        {static:LocalResources.TotalBetsLang.lblOU}
+                    </td>
+                    <td title="{static:LocalResources.TotalBetsLang.lblOddEven}">
+                        {static:LocalResources.TotalBetsLang.lblOE}
+                    </td>
+                    <td title="{static:LocalResources.TotalBetsLang.lblOverUnder}">
+                        {static:LocalResources.TotalBetsLang.lblOU}
+                    </td>
+                    <td title="{static:LocalResources.TotalBetsLang.lblOddEven}">
+                        {static:LocalResources.TotalBetsLang.lblOE}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.highlow}
+                    </td>
+                    <td title="{static:LocalResources.TotalBetsLang.lblOverOdd}">
+                        {static:LocalResources.TotalBetsLang.lblOO}
+                    </td>
+                    <td title="{static:LocalResources.TotalBetsLang.lblUnderOdd}">
+                        {static:LocalResources.TotalBetsLang.lblUO}
+                    </td>
+                    <td title="{static:LocalResources.TotalBetsLang.lblOverEven}">
+                        {static:LocalResources.TotalBetsLang.lblOvE}
+                    </td>
+                    <td title="{static:LocalResources.TotalBetsLang.lblUnderEven}">
+                        {static:LocalResources.TotalBetsLang.lblUE}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.LiveGame}
+                    </td>
+                    <td>
+                        {static:LocalResources.TotalBetsLang.PreGame}
+                    </td>
+                </tr>
+                <!--LeagueContents-->
+                <tr class="league">
+                    <td colspan="18" class="col-league">
+                        {LeagueName}
+                    </td>
+                </tr>
+                <!--MatchContents-->
+                <tr class="r" style="background-color: {ColorClass}" onmouseover="bgColor='{ColorOver}'" onmouseout="bgColor='{ColorClass}'">
+                    <td class="w-order">
+                        {NoValue}
+                    </td>
+                    <td class="l">
+                        {static:LocalResources.TotalBetsLang.numbergameno}&nbsp;{GameNo}
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListNewGames({MatchId}, 88, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',0,'h')">{Warrior_2ndBall}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListNewGames({MatchId}, 88, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',0,'a')">{Warrior_3rdBall}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 81, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',0)">{OverUnderFirstBall}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 83, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',0)">{OddEvenFirstBall}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 82, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',0)">{OverUnderLastBall}</a>
+                    </td>
+                    <td class="fcnum">
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 84, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',0)">{OddEvenLastBall}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 85, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',1)">{OverUnderNext}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 86, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',1)">{OddEvenNext}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 87, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',1)">{HighLow}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListNewGames({MatchId}, 89, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',1,'1:1')">{NextCombo_OverOdd}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListNewGames({MatchId}, 89, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',1,'2:1')">{NextCombo_UnderOdd}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListNewGames({MatchId}, 89, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',1,'1:2')">{NextCombo_OverEven}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListNewGames({MatchId}, 89, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',1,'2:2')">{NextCombo_UnderEven}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 86, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',0)">{OddEvenFullTime}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 90, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',1)">{NumberGroupLive}</a>
+                    </td>
+                    <td>
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 90, '{static:Fanex.Age.UI.Common.BetListByBetTypeMatch}',0)">{NumberGroupPre}</a>
+                    </td>
+                </tr>
+                <!--/MatchContents-->
+                <!--/LeagueContents-->
+                <!--NotFound-->
+                <tr class="bg_white">
+                    <td colspan="18" class="c nobold">
+                        {static:LocalResources.TotalBetsLang.noInfo}
+                    </td>
+                </tr>
+                <!--/NotFound-->
+            </table>
+            <!--/Contents-->
+        </div>
+    </div>
+    <script src="../_GlobalResources/Js/Core.js" type="text/javascript"></script>
+    <script src="Resources/TotalBets.js" type="text/javascript"></script>
+
+    <!--Piwik-->
+    <script type="text/javascript">
+        var _pkUrl = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl}',
+            _pkScript = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript}',
+            _pkSiteId = '{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId}';
+    </script>
+    <script src="../_GlobalResources/Js/piwikLoader.js" type="text/javascript"></script>
+    <noscript><p><img src='{PiwikUrl}' style="border:0;" alt="" /></p></noscript>
+    <!--/Piwik-->
+</body>
+</html>

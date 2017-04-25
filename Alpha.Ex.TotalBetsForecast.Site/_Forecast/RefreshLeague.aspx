@@ -1,0 +1,1 @@
+<%@ Page Language="C#" EnableSessionState="ReadOnly" AutoEventWireup="false" CodeFile="RefreshLeague.aspx.cs" Inherits="Fanex.Age.UI.Forecast.RefreshLeague_Page" %>

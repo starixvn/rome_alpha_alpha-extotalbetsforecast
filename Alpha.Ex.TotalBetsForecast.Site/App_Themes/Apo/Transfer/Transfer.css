@@ -1,0 +1,243 @@
+﻿/*******************************************/
+/* Common */
+/*******************************************/
+/*******************************************/
+/* Themes */
+/*******************************************/
+/*******************************************/
+/* Buttons */
+/*******************************************/
+/*******************************************/
+/* Icons */
+/*******************************************/
+/*******************************************/
+/* Table */
+/*******************************************/
+/*******************************************/
+/* Popup */
+/*******************************************/
+/*******************************************/
+/* Tooltip */
+/*******************************************/
+/*******************************************/
+/* Tab */
+/*******************************************/
+/*******************************************/
+/* Dropdown */
+/*******************************************/
+/*******************************************/
+/* Message */
+/*******************************************/
+/*******************************************/
+/* Note */
+/*******************************************/
+/*******************************************/
+/* PT setting */
+/*******************************************/
+/*******************************************/
+/* Paging */
+/*******************************************/
+/*******************************************/
+/* Customer List */
+/*******************************************/
+/*******************************************/
+/* Status */
+/*******************************************/
+/*******************************************/
+/* hint tooltip */
+/*******************************************/
+/*******************************************/
+/* Effect of dropdownlist */
+/*******************************************/
+/*******************************************/
+/* Effect of dropdownlist */
+/*******************************************/
+/*******************************************/
+/* Effect of texbox */
+/*******************************************/
+/*******************************************/
+/* Effect of button */
+/*******************************************/
+/*******************************************/
+/* font-smoothing */
+/*******************************************/
+/*******************************************/
+/* Ripple Effect */
+/*******************************************/
+html {
+  touch-action: manipulation; }
+
+/**************************************/
+/* Filter */
+/**************************************/
+#box_header {
+  padding-top: 12px; }
+
+#box_checking_filter {
+  line-height: 30px; }
+  #box_checking_filter input[type='checkbox'] {
+    position: relative;
+    top: 2px; }
+
+#txtUserName {
+  margin-left: 0; }
+
+.warningtranfer ul {
+  padding-left: 0;
+  color: #B50000;
+  font-weight: normal;
+  list-style: none;
+  margin-left: 2px;
+  margin-bottom: 0; }
+
+.warningtranfer li {
+  background: url("../Images/more.gif") no-repeat left;
+  padding-left: 10px; }
+
+/**************************************/
+/* Table */
+/**************************************/
+.tblRpt {
+  border-color: #F4F4F4; }
+
+#tblMain {
+  width: 100%; }
+
+#tblTransferList tbody tr:hover {
+  background-color: #f8eb95; }
+
+#tblTransferList tbody tr a:link {
+  color: #045ace;
+  text-decoration: none; }
+
+#tblTransferList .w-order {
+  width: 20px;
+  text-align: right; }
+
+#tblTransferList tr.Header th {
+  white-space: nowrap; }
+
+#tblTransferList .col-number, #tblTransferList .col-checkall {
+  width: 3%; }
+
+#tblTransferList .col-outstanding, #tblTransferList .col-usedcredit, #tblTransferList .col-firstname, #tblTransferList .col-lastname {
+  width: 8%; }
+
+#tblTransferList .col-username, #tblTransferList .col-yesterdaybalance, #tblTransferList .col-masterbalance,
+#tblTransferList .col-yesterdaycashbalance, #tblTransferList .col-mastercash, #tblTransferList .col-givencredit,
+#tblTransferList .col-agentbalance, #tblTransferList .col-agentcash {
+  width: 9%; }
+
+#tblTransferList .RptFooter {
+  text-align: right; }
+
+#tblTransferList tfoot .SubTitle {
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #d1d1d1;
+  border-top: none; }
+
+#tblTransferList tfoot .RptFooter + tr .SubTitle {
+  background-color: #F4F4F4;
+  border: none; }
+
+.RowBgClosed {
+  background-color: #ccc7ba; }
+
+.RowBgSuspended {
+  background-color: #f8ded7; }
+
+.RowBgDisabled {
+  background-color: #A0A97A; }
+
+.RowBgOpen {
+  background-color: #f9f9f7; }
+
+.trans_underdog {
+  color: blue;
+  text-align: right; }
+
+.trans_favorite {
+  color: #B50000;
+  text-align: right; }
+
+.trans_underdog_hightlighted {
+  color: #333;
+  background-color: #f8eb95;
+  text-align: right; }
+
+.trans_favorite_hightlighted {
+  color: #B50000;
+  background-color: #f8eb95;
+  text-align: right; }
+
+.highlight {
+  background: #f8eb95;
+  color: #9d1c1c; }
+
+#tblTransferList tfoot tr td .btnSubmit:hover {
+  color: #cc4800; }
+
+/******************************************/
+/* Bottom of popup */
+/******************************************/
+.bg-content {
+  background-color: #f3f5e0;
+  border: 1px solid #cecece;
+  padding: 6px 16px 8px;
+  margin: 6px 0; }
+
+#header_main ~ .transfer-page .popup-bottom {
+  padding-left: 82px;
+  text-align: left; }
+
+#header_main ~ .transfer-page .tblPop {
+  width: auto; }
+
+.transfer-page {
+  max-width: 500px; }
+
+#page_popup .tblPop {
+  margin-top: 16px; }
+
+#page_popup_agent {
+  float: left;
+  margin: 0 8px;
+  width: 450px;
+  max-width: 500px; }
+  #page_popup_agent .width-100per {
+    width: 100%; }
+  #page_popup_agent .tblPop {
+    margin-top: 8px; }
+    #page_popup_agent .tblPop td {
+      height: 24px; }
+  #page_popup_agent .tbl-transfer-member-action .btnSubmit {
+    margin-left: 16px; }
+  #page_popup_agent #diverrmsg {
+    margin: 0;
+    float: left; }
+
+.tblPop.tbl-transfer-member-info, .tblPop.tbl-transfer-member-action {
+  margin-top: 0; }
+  .tblPop.tbl-transfer-member-info td, .tblPop.tbl-transfer-member-action td {
+    padding: 2px 0; }
+
+.tblPop.tbl-transfer-member-info .transfer-title {
+  color: #0b599c;
+  padding: 0 0 4px; }
+
+.tblPop.tbl-transfer-member-action .col-from {
+  width: 46px; }
+
+.tblPop.tbl-transfer-member-action .col-to {
+  width: 36px; }
+
+.tblPop.tbl-transfer-member-action #txtamount {
+  border: 1px solid #dfdfdf;
+  height: 28px; }
+
+#txtamount {
+  text-align: right;
+  width: 280px;
+  margin-left: 35px; }
+

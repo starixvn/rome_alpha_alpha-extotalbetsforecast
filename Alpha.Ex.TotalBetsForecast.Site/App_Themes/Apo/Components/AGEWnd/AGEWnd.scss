@@ -1,0 +1,106 @@
+﻿@import "../../Common/_Variables.scss";
+@import "../../Common/_Mixins.scss";
+@import url($icon-alpha-fonts);
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+.AGEWnd  {
+	border: 1px solid $popup-border;
+	background-color: $popup-bg;
+	padding: 0 16px 25px;
+	margin: 0;
+	border-collapse: collapse;
+    @include effect-special;
+}
+
+.AGEWndMask
+{
+	border: dashed 2px $popup-border;
+	background-color: transparent;
+	z-index: 1002;
+	border-style: dotted;
+	cursor: move;
+}
+
+.AGEWndTitleMask {
+	border: solid 0 #fff;
+	background-color: #727272; 
+	height: 20px;
+	cursor: move;
+	position: absolute;
+	top: 0;
+    left: 0;
+	filter: alpha(opacity=01);
+	-moz-opacity: .01;
+	-khtml-opacity: 0.01;
+	opacity: 0.01;	
+	z-index: 1002;
+	padding: 0;
+	margin: 0;
+	border-style: none;
+}
+
+.AGEWndTable {
+	table-layout: fixed;
+	cursor: default;
+	width: 100%;
+	border: none;
+	padding: 0;
+	margin: 0;	
+}
+
+.AGEWndTitle {
+	color: $text-color;    
+	font-weight: bold;
+	margin: 0;
+	-moz-user-select: none;
+    border-bottom: 1px solid $popup-border;
+}
+
+.AGEWndTitleDiv {
+	font-size: $font-size;
+	font-weight: bold;    
+}
+
+.AGEWndTitleText {
+	text-align: left;
+	cursor: pointer;
+}
+
+.AGEWndTitleButton {
+	text-align: right;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	padding-right: 1px;
+}
+
+.AGEWndCloseButton, #AGEWndCloseButton {
+	display: block;
+	cursor: pointer;
+
+     &:after {                
+        content: '\e92c';
+        font:{
+            family: 'Iconalpha';
+            size: 14px;
+            weight: bold;
+        }
+    }
+}
+
+.AGEWndNoPadding {
+	padding: 0;
+	margin: 0;
+}
+.clssBackground {
+    background-color:#f8b72b;
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)  
+{
+}
