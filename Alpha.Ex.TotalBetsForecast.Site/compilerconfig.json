@@ -1,0 +1,42 @@
+[
+  {
+    "outputFile": "App_Themes/Apo/Common/Agent.css",
+    "inputFile": "App_Themes/Apo/Common/Agent.scss",
+    "sourceMap": false
+  },
+   {
+    "outputFile": "App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew.css",
+    "inputFile": "App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew.scss",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "App_Themes/Apo/TotalBets/TotalBets.css",
+    "inputFile": "App_Themes/Apo/TotalBets/TotalBets.scss",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "App_Themes/Apo/Forecast/FC.css",
+    "inputFile": "App_Themes/Apo/Forecast/FC.scss",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "App_Themes/Apo/Forecast/ScoreMap.css",
+    "inputFile": "App_Themes/Apo/Forecast/ScoreMap.scss",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "App_Themes/Apo/Forecast/ScoreMap/style.css",
+    "inputFile": "App_Themes/Apo/Forecast/ScoreMap/style.scss",
+    "sourceMap": false
+  },  
+  {
+    "outputFile": "App_Themes/Apo/Components/AGEWnd/AGEWnd.css",
+    "inputFile": "App_Themes/Apo/Components/AGEWnd/AGEWnd.scss",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "App_Themes/Apo/Common/Tab.css",
+    "inputFile": "App_Themes/Apo/Common/Tab.scss",
+    "sourceMap": false
+  }
+]

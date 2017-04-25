@@ -15,8 +15,6 @@ namespace Fanex.Razorbill.Module.Core.Web.Controllers
     using Fanex.NAP.Core.Web;
     using Fanex.NAP.Core.Web.Context;
     using Fanex.NAP.Core.Web.Session;
-    using Fanex.Razorbill.Module.Common.Enums;
-    using Fanex.Razorbill.Module.Common.Services;
     using Sunplus.Agent.Model.Entities;
     using System;
     using System.Collections.Generic;
@@ -130,23 +128,6 @@ namespace Fanex.Razorbill.Module.Core.Web.Controllers
             Thread.CurrentThread.CurrentCulture.NumberFormat = DefaultCulture.NumberFormat;
 
             base.Initialize(requestContext);
-        }
-
-        protected DateTime[] ReportDateTimeRange
-        {
-            get
-            {
-                var request = System.Web.HttpContext.Current.Request;
-                string rptmrange = request.QueryString["rptmrange"];
-                if (string.IsNullOrEmpty(rptmrange))
-                {
-                    string url = request.Url.AbsolutePath;
-                    return ReportTimer.GetReportTimeRange(url);
-                }
-
-                var timeRange = (ReportTimeRangeType)(int.Parse(rptmrange));
-                return ReportTimer.GetReportTimeRange(timeRange);
-            }
-        }
+        }        
     }
 }

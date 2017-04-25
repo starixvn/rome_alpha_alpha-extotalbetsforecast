@@ -126,11 +126,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\_Common.csproj">
-      <Project>{9503B9B7-DAE3-41CC-905C-F1B27B64E0DD}</Project>
+      <Project>{9503b9b7-dae3-41cc-905c-f1b27b64e0dd}</Project>
       <Name>_Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Fanex.Razorbill.Module.Core\_Core.csproj">
-      <Project>{AF2E11AA-2A92-47AC-86FA-4D48B0AEB5D7}</Project>
+      <Project>{af2e11aa-2a92-47ac-86fa-4d48b0aeb5d7}</Project>
       <Name>_Core</Name>
     </ProjectReference>
   </ItemGroup>

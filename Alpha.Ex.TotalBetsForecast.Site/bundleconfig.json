@@ -1,0 +1,86 @@
+[
+   {
+    "outputFileName": "_Forecast/Resources/FC.min.js",
+    "inputFiles": [
+      "_Forecast/Resources/FC.js"
+    ]
+  },
+  {
+    "outputFileName": "_Forecast/Resources/ScoreMap.min.js",
+    "inputFiles": [
+      "_Forecast/Resources/ScoreMap.js"
+    ]
+  },
+  {
+    "outputFileName": "_Components/AGEWnd/AGEWnd.min.js",
+    "inputFiles": [
+      "_Components/AGEWnd/AGEWnd.js"
+    ]
+  },
+  {
+    "outputFileName": "_Components/AGEWnd/blank.min.js",
+    "inputFiles": [
+      "_Components/AGEWnd/blank.js"
+    ]
+  },
+  {
+    "outputFileName": "_Components/RefreshCountDown/RefreshCountDown.min.js",
+    "inputFiles": [
+      "_Components/RefreshCountDown/RefreshCountDown.js"
+    ]
+  },
+  {
+    "outputFileName": "_Forecast/Resources/FC.min.js",
+    "inputFiles": [
+      "_Forecast/Resources/FC.js"
+    ]
+  },
+  {
+    "outputFileName": "_Forecast/Resources/ScoreMap.min.js",
+    "inputFiles": [
+      "_Forecast/Resources/ScoreMap.js"
+    ]
+  },
+  {
+    "outputFileName": "_GlobalResources/Js/Core.min.js",
+    "inputFiles": [
+      "_GlobalResources/Js/Core.js"
+    ]
+  },
+  {
+    "outputFileName": "_GlobalResources/Js/jx.min.js",
+    "inputFiles": [
+      "_GlobalResources/Js/jx.js"
+    ]
+  },
+  {
+    "outputFileName": "_GlobalResources/Js/piwikLoader.min.js",
+    "inputFiles": [
+      "_GlobalResources/Js/piwikLoader.js"
+    ]
+  },
+  {
+    "outputFileName": "_GlobalResources/Js/Sha1.min.js",
+    "inputFiles": [
+      "_GlobalResources/Js/Sha1.js"
+    ]
+  },
+  {
+    "outputFileName": "_GlobalResources/Js/Sha256.min.js",
+    "inputFiles": [
+      "_GlobalResources/Js/Sha256.js"
+    ]
+  },
+  {
+    "outputFileName": "_GlobalResources/Js/shortcut.min.js",
+    "inputFiles": [
+      "_GlobalResources/Js/shortcut.js"
+    ]
+  },
+  {
+    "outputFileName": "_TotalBets/Resources/TotalBets.min.js",
+    "inputFiles": [
+      "_TotalBets/Resources/TotalBets.js"
+    ]
+  }
+]

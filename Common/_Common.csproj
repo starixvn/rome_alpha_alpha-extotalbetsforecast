@@ -49,10 +49,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Alpha.Web, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Alpha.Web.1.0.0.6\lib\net40\Alpha.Web.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Couchbase, Version=1.2.6.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
       <HintPath>..\..\packages\CouchbaseNetClient.1.2.6.2\lib\net40\Couchbase.dll</HintPath>
       <Private>True</Private>
@@ -61,40 +57,12 @@
       <HintPath>..\..\packages\CouchbaseNetClient.1.2.6.2\lib\net40\Enyim.Caching.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Age.UI, Version=3.0.2.7, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Fanex.Age.UI.3.0.2.7\lib\net40\Fanex.Age.UI.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Fanex.Age.UI.Components, Version=3.0.0.23, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Fanex.Age.UI.Components.3.0.0.23\lib\net40\Fanex.Age.UI.Components.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Fanex.Caching, Version=1.0.404.95, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Fanex.Caching.1.0.404.96\lib\net40\Fanex.Caching.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
+      <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.CustomerSetting.Module.Keno.KenoSetting, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Fanex.CustomerSetting.Module.Keno.KenoSetting.1.0.0.5\lib\net40\Fanex.CustomerSetting.Module.Keno.KenoSetting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Fanex.Data, Version=0.5.404.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Fanex.Data.0.5.404.59\lib\net40\Fanex.Data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Fanex.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Fanex.Logging.1.0.0.0\lib\net40\Fanex.Logging.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Fanex.NAP.Framework, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Fanex.NAP.Framework.1.0.0.2\lib\net40\Fanex.NAP.Framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Fanex.Products, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Fanex.Products.1.0.0.0\lib\net40\Fanex.Products.dll</HintPath>
+    <Reference Include="IBCFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.File.1.0.0\lib\net40\IBCFile.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
@@ -106,19 +74,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="RemotingRef, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\RemotingRef.1.0.0.15\lib\net40\RemotingRef.dll</HintPath>
+      <HintPath>..\packages\RemotingRef.1.0.0.15\lib\net40\RemotingRef.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sunplus.Agent.Model.Base.3.0.2.4\lib\net40\Sunplus.Agent.Model.Base.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.1.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sunplus.Agent.Model.Definitions.3.0.1.7\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Sunplus.Agent.Utilities, Version=3.0.0.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sunplus.Agent.Utilities.3.0.0.6\lib\net40\Sunplus.Agent.Utilities.dll</HintPath>
+    <Reference Include="SPSRemoting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPSRemoting.1.0.0\lib\net40\SPSRemoting.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -127,58 +87,10 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configurations\CockFighting\CockFightingCollection.cs" />
-    <Compile Include="Configurations\CockFighting\CockFightingElement.cs" />
-    <Compile Include="Configurations\CockFighting\CockFightingSection.cs" />
-    <Compile Include="Configurations\LimtedCountryAccessSection.cs" />
-    <Compile Include="Configurations\ProductConfigurations\BetTypeElement.cs" />
-    <Compile Include="Configurations\ProductConfigurations\EnableElement.cs" />
-    <Compile Include="Configurations\ProductConfigurations\EnableElementCollection.cs" />
-    <Compile Include="Configurations\ProductConfigurations\LiveTypeElement.cs" />
-    <Compile Include="Configurations\ProductConfigurations\SportElement.cs" />
-    <Compile Include="Configurations\ReportTimeRangeConfig.cs" />
-    <Compile Include="Configurations\ReportTimeRangeSection.cs" />
-    <Compile Include="Constants\BetTypeConstants.cs" />
-    <Compile Include="Constants\RoleIdConstants.cs" />
-    <Compile Include="Constants\SessionKey.cs" />
-    <Compile Include="Constants\SportConstants.cs" />
-    <Compile Include="Criteria\Age_Rpt_ConsolidatedGroupProductSel.cs" />
-    <Compile Include="Criteria\LimitedCountryAccessCriteria.cs" />
-    <Compile Include="Criteria\ReportTimeRangeCriteria.cs" />
-    <Compile Include="Entities\IPRangeEntity.cs" />
     <Compile Include="Enums\LoggedInUserRole.cs" />
-    <Compile Include="Enums\ReportTimeRangeType.cs" />
-    <Compile Include="Extensions\CacheExtension.cs">
-      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
-    </Compile>
     <Compile Include="Helpers\CacheRemotingRef.cs" />
-    <Compile Include="Helpers\IPHelper.cs" />
-    <Compile Include="Models\ActivationElementModel.cs" />
-    <Compile Include="Models\ActivationGroupModel.cs" />
-    <Compile Include="Models\ProductFilter.cs" />
-    <Compile Include="Models\ProductModel.cs" />
-    <Compile Include="ProductRenderUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\IP\IIPRepository.cs" />
-    <Compile Include="Repositories\IP\IPRepository.cs" />
-    <Compile Include="Repositories\LimitedCountryAccess\ILimitedCountryAccessRepository.cs" />
-    <Compile Include="Repositories\LimitedCountryAccess\LimitedCountryAccessRepository.cs" />
-    <Compile Include="Repositories\ReportTimeRangeRepository.cs" />
-    <Compile Include="Repositories\IReportTimeRangeRepository.cs" />
-    <Compile Include="LocalResources\Module.Common.Lang.Designer.cs">
-      <DependentUpon>Module.Common.Lang.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Services\CookielessSession.cs" />
-    <Compile Include="Services\IP\IIPService.cs" />
-    <Compile Include="Services\IP\IPService.cs" />
-    <Compile Include="Services\IReportTimeRangeService.cs" />
-    <Compile Include="Services\LimitedCountryAccess\ILimitedCountryAccessService.cs" />
-    <Compile Include="Services\LimitedCountryAccess\LimitedCountryAccessService.cs" />
-    <Compile Include="Services\ProductServices\ProductService.cs" />
-    <Compile Include="Services\ReportTimer.cs" />
-    <Compile Include="Services\ReportTimeRangeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -186,26 +98,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LocalResources\Module.Common.Lang.ja-JP.resx" />
-    <EmbeddedResource Include="LocalResources\Module.Common.Lang.ko-KR.resx" />
-    <EmbeddedResource Include="LocalResources\Module.Common.Lang.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Module.Common.Lang.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LocalResources\Module.Common.Lang.th-TH.resx" />
-    <EmbeddedResource Include="LocalResources\Module.Common.Lang.vi-VN.resx" />
-    <EmbeddedResource Include="LocalResources\Module.Common.Lang.zh-CN.resx" />
-    <EmbeddedResource Include="LocalResources\Module.Common.Lang.zh-TW.resx" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Resources\_Resources.csproj">
       <Project>{78cc9560-f36b-4e05-a65c-57ce732dc8e1}</Project>
       <Name>_Resources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sunplus.Agent.Model\Sunplus.Agent.Model.csproj">
-      <Project>{8831ee6f-7ef9-48f3-9da2-82c6c5eb6e47}</Project>
-      <Name>Sunplus.Agent.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

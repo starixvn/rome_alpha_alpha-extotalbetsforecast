@@ -747,8 +747,8 @@ div.divBoxRight {
     content: '\e92a';
     color: #0b599c;
     position: relative;
-    top: 4px;
-    font-weight: 100; }
+    font-weight: 100;
+    vertical-align: middle; }
 
 .usernameIsValid:before, .PwdSuccess:before, .tick:before {
   content: '\e91f';
