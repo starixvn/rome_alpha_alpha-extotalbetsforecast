@@ -1,10 +1,4 @@
-[
-   {
-    "outputFileName": "_Forecast/Resources/FC.min.js",
-    "inputFiles": [
-      "_Forecast/Resources/FC.js"
-    ]
-  },
+[  
   {
     "outputFileName": "_Forecast/Resources/ScoreMap.min.js",
     "inputFiles": [

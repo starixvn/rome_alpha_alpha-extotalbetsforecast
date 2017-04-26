@@ -1,6 +1,6 @@
 ﻿using Alpha.Web;
 using Fanex.Data.Configuration;
-using Fanex.Security.SpamFilter.Factory;
+using Fanex.Razorbill.Security.Services.Authentication;
 using Sunplus.Agent.Model.Entities;
 using Sunplus.Agent.Utilities;
 using System;
@@ -13,6 +13,8 @@ namespace Alpha.Ex.TotalBetsForecast.Site
 {
     public class Global : System.Web.HttpApplication
     {
+        private string rngArea = "CustomerSetting/Casino";
+
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
@@ -29,10 +31,9 @@ namespace Alpha.Ex.TotalBetsForecast.Site
             DbSettingProviderManager.Current.Start();
             ShareSession.Init();
             
-            //AreaRegistration.RegisterAllAreas();
+            AreaRegistration.RegisterAllAreas();
             RegisterRoutes(RouteTable.Routes);
             RegisterGlobalFilters(GlobalFilters.Filters);
-            RepositoryFactory.Initialize();
             MvcHandler.DisableMvcResponseHeader = true;
         }
        
@@ -115,7 +116,85 @@ namespace Alpha.Ex.TotalBetsForecast.Site
             }
         }
 
-        bool CheckUnderMainternanceTime()
+        void Application_AcquireRequestState(object sender, EventArgs e)
+        {
+            if (!(HttpContext.Current.Handler is IRequiresSessionState)) return;
+
+            // Validate request & session
+            string executeFileName = Request.AppRelativeCurrentExecutionFilePath;
+            bool isNewSession = executeFileName.EndsWith("SignIn.aspx")
+                || executeFileName.EndsWith("ProcessAdminLogin.ashx")
+                || executeFileName.EndsWith("ProcessAfterLogin.ashx")
+                || executeFileName.EndsWith("Captcha.ashx")
+                || executeFileName.EndsWith("ChartImg.axd")
+                || executeFileName.EndsWith("ReCheckin.ashx")
+                || executeFileName.EndsWith("SignOut.ashx");
+
+            if (UserSession.Current.CustId == 0 && !isNewSession)
+            {
+                Response.Redirect("~/_Authorization/SignIn.aspx", true);
+                return;
+            }
+
+            string url = GetRequestPath();
+
+            if (string.IsNullOrEmpty(url) ||
+                url.Replace("/", "").Equals(Fanex.Razorbill.Security.Configurations.WebAppSettings.VirtualDirectory, StringComparison.OrdinalIgnoreCase))
+            {
+                Response.Redirect("~/Index.aspx", true);
+                return;
+            }
+
+            //---Checking closed status---
+            IAuthenticationService authencationService = new AuthenticationService(url);
+            if (UserSession.Current.CustId != 0 &&
+                !isNewSession && !string.IsNullOrWhiteSpace(url) &&
+                !UserSession.Current.IsInternal)
+            {
+                if (authencationService.CheckingClosedStatus())
+                {
+                    Session.Clear();
+                    Response.Redirect("~/_Authorization/SignIn.aspx", true);
+                    return;
+                }
+            }
+        }        
+
+        private string GetRequestPath()
+        {
+            var url = Request.Path;
+            if (IsRnGCasinoUri)
+            {
+                url = GetRnGCasinoUri();
+            }
+
+            url = url.Remove(0, 1).ToLower();
+
+            return url;
+        }
+
+        private string GetRnGCasinoUri()
+        {
+            var controller = Request.RequestContext.RouteData.Values["controller"];
+            var action = Request.RequestContext.RouteData.Values["action"];
+
+            var uri = string.Format("/{0}/{1}/{2}", rngArea, controller, action);
+
+            return uri;
+        }
+
+        private bool IsRnGCasinoUri
+        {
+            get
+            {
+                var url = Request.Path.ToString();
+                if (url.IndexOf(rngArea, StringComparison.OrdinalIgnoreCase) != -1) { return true; }
+
+                return false;
+            }
+        }
+
+        private bool CheckUnderMainternanceTime()
         {
             var isUm = false;
             try
