@@ -733,7 +733,6 @@
     <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.scss" />
     <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.scss" />
     <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew.scss" />
-    <Content Include="AuthenticationSection.config" />
     <None Include="Web.AppSettings.config" />
     <Content Include="Web.Configuration\AuthenticationSection.config" />
     <None Include="Web.AppSettings.local2.config" />

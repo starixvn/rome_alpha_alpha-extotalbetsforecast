@@ -20,9 +20,13 @@ function doViewBetListNewGames(matchId, betType, type, islive, betteam) {
 }
 
 function openForecast(matchId, betType) {
-    top.popupManager.openByRelativeUrl('_Forecast/FCAH.aspx?matchId=' + matchId + '&b=' + betType, '', 900);
+    var url = age.GetExTotalBetsForecastUrl() + '_Forecast/FCAH.aspx?matchId=' + matchId + '&b=' + betType
+
+    top.popupManager.openMultiple(url, 900);
 }
 
 function openForecast1X2(matchId, betType) {
-    top.popupManager.openByRelativeUrl('_Forecast/FC1X2.aspx?is_popup=1&matchId=' + matchId + '&betType=' + betType, '', 900);
+    var url = age.GetExTotalBetsForecastUrl() + '_Forecast/FC1X2.aspx?is_popup=1&matchId=' + matchId + '&betType=' + betType
+
+    top.popupManager.openMultiple(url, '', 900);
 }

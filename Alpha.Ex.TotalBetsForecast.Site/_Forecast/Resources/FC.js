@@ -23,7 +23,9 @@ function openForecast(matchId, betType) {
     }
 }
 function openForecastPopup(matchId, betType) {
-    top.popupManager.openByRelativeUrl('_Forecast/FCAH.aspx?matchid=' + matchId + '&b=' + betType, '', 600, 290);
+    var url = age.GetExTotalBetsForecastUrl() + '_Forecast/FCAH.aspx?matchid=' + matchId + '&b=' + betType
+
+    top.popupManager.openMultiple(url, 600, 290);
 }
 
 function RefreshFC() {
