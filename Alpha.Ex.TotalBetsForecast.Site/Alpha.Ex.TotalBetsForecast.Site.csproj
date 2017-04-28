@@ -396,6 +396,8 @@
     <Content Include="App_Themes\Apo\Images\tooltip_left.png" />
     <Content Include="App_Themes\Apo\Images\tooltip_right.png" />
     <Content Include="App_Themes\Apo\Images\x5.gif" />
+    <Content Include="App_Themes\Apo\TotalBets\TotalBets.css" />
+    <Content Include="App_Themes\Apo\TotalBets\TotalBets.min.css" />
     <Content Include="Areas\Forecast\Views\ScoreMap\Scripts\scoreMap.js" />
     <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
