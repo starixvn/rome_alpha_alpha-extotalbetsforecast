@@ -35,6 +35,8 @@ namespace Alpha.Ex.TotalBetsForecast.Site
             RegisterRoutes(RouteTable.Routes);
             RegisterGlobalFilters(GlobalFilters.Filters);
             MvcHandler.DisableMvcResponseHeader = true;
+
+            Logs.WriteInfo("Alpha - Ex Total Bets Forecast - Application Start");
         }
        
         public void Application_End()
