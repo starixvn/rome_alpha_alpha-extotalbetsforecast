@@ -656,10 +656,10 @@
       <DependentUpon>Financial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="_TotalBets\HDPOU.aspx.cs">
+    <Content Include="_TotalBets\HDPOU.aspx.cs">
       <DependentUpon>HDPOU.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    </Content>
     <Compile Include="_TotalBets\HomeDrawAwayNoBet.aspx.cs">
       <DependentUpon>HomeDrawAwayNoBet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
