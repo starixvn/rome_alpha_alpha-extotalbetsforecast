@@ -4,7 +4,7 @@
     "inputFile": "App_Themes/Apo/Common/Agent.scss",
     "sourceMap": false
   },
-   {
+  {
     "outputFile": "App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew.css",
     "inputFile": "App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew.scss",
     "sourceMap": false
@@ -28,7 +28,12 @@
     "outputFile": "App_Themes/Apo/Forecast/ScoreMap/style.css",
     "inputFile": "App_Themes/Apo/Forecast/ScoreMap/style.scss",
     "sourceMap": false
-  },  
+  },
+  {
+    "outputFile": "App_Themes/Apo/Forecast/BetTypesInfo/style.css",
+    "inputFile": "App_Themes/Apo/Forecast/BetTypesInfo/style.scss",
+    "sourceMap": false
+  },
   {
     "outputFile": "App_Themes/Apo/Components/AGEWnd/AGEWnd.css",
     "inputFile": "App_Themes/Apo/Components/AGEWnd/AGEWnd.scss",
