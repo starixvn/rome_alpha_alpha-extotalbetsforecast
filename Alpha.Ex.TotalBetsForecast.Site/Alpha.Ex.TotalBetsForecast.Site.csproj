@@ -325,6 +325,10 @@
     <Content Include="App_Themes\AgencyV2\thickbox.css" />
     <Content Include="App_Themes\Apo\Common\Agent.css" />
     <Content Include="App_Themes\Apo\Common\Agent.min.css" />
+    <Content Include="App_Themes\Apo\Common\Tab.css" />
+    <Content Include="App_Themes\Apo\Common\Tab.min.css" />
+    <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.css" />
+    <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.min.css" />
     <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew.css">
       <DependentUpon>ErrorMsgNew.scss</DependentUpon>
     </Content>
@@ -333,10 +337,14 @@
     </Content>
     <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.css" />
     <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.min.css" />
+    <Content Include="App_Themes\Apo\Forecast\FC.css" />
+    <Content Include="App_Themes\Apo\Forecast\FC.min.css" />
     <Content Include="App_Themes\Apo\Forecast\Images\col_score.png" />
     <Content Include="App_Themes\Apo\Forecast\Images\iLoading.png" />
     <Content Include="App_Themes\Apo\Forecast\Images\Loading.gif" />
     <Content Include="App_Themes\Apo\Forecast\Images\Refresh.png" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap.css" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap.min.css" />
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\ajax-loader.gif" />
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\bg_boxTop.jpg" />
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\bg_header01.jpg" />
@@ -350,6 +358,8 @@
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\letter_icoconts.png" />
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\Loading.gif" />
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\Refresh.png" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style.css" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style.min.css" />
     <Content Include="App_Themes\Apo\Images\1F.gif" />
     <Content Include="App_Themes\Apo\Images\1L.gif" />
     <Content Include="App_Themes\Apo\Images\ajax-loader.gif" />
@@ -622,86 +632,86 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_Forecast\FC1X2.aspx.cs">
+    <Content Include="_Forecast\FC1X2.aspx.cs">
       <DependentUpon>FC1X2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_Forecast\FCAH.aspx.cs">
+    </Content>
+    <Content Include="_Forecast\FCAH.aspx.cs">
       <DependentUpon>FCAH.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_Forecast\FCHDPOU.aspx.cs">
+    </Content>
+    <Content Include="_Forecast\FCHDPOU.aspx.cs">
       <DependentUpon>FCHDPOU.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_Forecast\RefreshLeague.aspx.cs">
+    </Content>
+    <Content Include="_Forecast\RefreshLeague.aspx.cs">
       <DependentUpon>RefreshLeague.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_Forecast\ScoreMap.aspx.cs">
+    </Content>
+    <Content Include="_Forecast\ScoreMap.aspx.cs">
       <DependentUpon>ScoreMap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_Forecast\ScoreMapProcess.aspx.cs">
+    </Content>
+    <Content Include="_Forecast\ScoreMapProcess.aspx.cs">
       <DependentUpon>ScoreMapProcess.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    </Content>
     <Compile Include="_TotalBets\CorrectScore.aspx.cs">
       <DependentUpon>CorrectScore.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="_TotalBets\FGLG.aspx.cs">
+    <Content Include="_TotalBets\FGLG.aspx.cs">
       <DependentUpon>FGLG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_TotalBets\Financial.aspx.cs">
+    </Content>
+    <Content Include="_TotalBets\Financial.aspx.cs">
       <DependentUpon>Financial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    </Content>
     <Content Include="_TotalBets\HDPOU.aspx.cs">
       <DependentUpon>HDPOU.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Content>
-    <Compile Include="_TotalBets\HomeDrawAwayNoBet.aspx.cs">
+    <Content Include="_TotalBets\HomeDrawAwayNoBet.aspx.cs">
       <DependentUpon>HomeDrawAwayNoBet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_TotalBets\HTFT.aspx.cs">
+    </Content>
+    <Content Include="_TotalBets\HTFT.aspx.cs">
       <DependentUpon>HTFT.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_TotalBets\LiveCasino.aspx.cs">
+    </Content>
+    <Content Include="_TotalBets\LiveCasino.aspx.cs">
       <DependentUpon>LiveCasino.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_TotalBets\MoneyLine.aspx.cs">
+    </Content>
+    <Content Include="_TotalBets\MoneyLine.aspx.cs">
       <DependentUpon>MoneyLine.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_TotalBets\NextGoal.aspx.cs">
+    </Content>
+    <Content Include="_TotalBets\NextGoal.aspx.cs">
       <DependentUpon>NextGoal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_TotalBets\NumberGame.aspx.cs">
+    </Content>
+    <Content Include="_TotalBets\NumberGame.aspx.cs">
       <DependentUpon>NumberGame.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_TotalBets\OddEven1X2.aspx.cs">
+    </Content>
+    <Content Include="_TotalBets\OddEven1X2.aspx.cs">
       <DependentUpon>OddEven1X2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_TotalBets\OutRight.aspx.cs">
+    </Content>
+    <Content Include="_TotalBets\OutRight.aspx.cs">
       <DependentUpon>OutRight.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_TotalBets\Racing.aspx.cs">
+    </Content>
+    <Content Include="_TotalBets\Racing.aspx.cs">
       <DependentUpon>Racing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_TotalBets\TotalGoal.aspx.cs">
+    </Content>
+    <Content Include="_TotalBets\TotalGoal.aspx.cs">
       <DependentUpon>TotalGoal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Apo\Common\Agent.scss" />
