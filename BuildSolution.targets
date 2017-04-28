@@ -5,7 +5,7 @@
          InitialTargets="BuildSolution">
 
   <Target Name="BuildSolution">
-    <MSBuild Projects="alpha-ex-totalbetsforecast.sln" />
+    <MSBuild Projects="Alpha.Ex.TotalBetsForecast.sln" />
   </Target>
   
 </Project>
