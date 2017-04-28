@@ -84,9 +84,10 @@ namespace Alpha.Ex.TotalBetsForecast.Site
         }
 
         void Application_Error(object sender, EventArgs e)
-        {
+        {            
             // 1. Don't log 404 error
             Exception ex = Server.GetLastError().GetBaseException();
+            Logs.FilterInfoWarnOrError(ex);
             if (ex is HttpException)
             {
                 if (((HttpException)ex).GetHttpCode() == 404)
