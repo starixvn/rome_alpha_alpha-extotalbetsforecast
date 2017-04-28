@@ -337,6 +337,12 @@
     </Content>
     <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.css" />
     <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.min.css" />
+    <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style.css">
+      <DependentUpon>style.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Apo\Forecast\FC.css" />
     <Content Include="App_Themes\Apo\Forecast\FC.min.css" />
     <Content Include="App_Themes\Apo\Forecast\Images\col_score.png" />
