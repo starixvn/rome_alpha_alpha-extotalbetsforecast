@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Functions>
-  <Function Name="Live Casino - Member Win Limit">
-    <Setting Key="Age_CustomerSelWinLimitList_Ag" SpName="Age_CustomerSelWinLimitList_Ag" DbName="DBTXN.CustDB.BODBDownlineNetView" />
-  </Function>
-  <Function Name="Gold Deluxe - Member Win Limit">
-    <Setting Key="Age_CustomerSelWinlimitInfo" SpName="Age_CustomerSelWinlimitInfo" DbName="DBTXN.CustDB.BODBDownlineNetView" />
-  </Function>
-</Functions>
