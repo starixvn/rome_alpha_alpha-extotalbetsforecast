@@ -437,6 +437,66 @@
     <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-icons_fcd113_256x240.png" />
     <Content Include="Scripts\_Libs\jQuery\Styles\jquery-ui-1.9.1.custom.css" />
     <Content Include="Scripts\_Libs\jQuery\Styles\jquery-ui-1.9.1.custom.min.css" />
+    <None Include="Web.AppSettings.local2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.mnl.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.mnl2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.mnlEx.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.mnlEx2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.mnlExi7.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.mnli7.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.mnlNap.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.mnlNap2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.mnlNapi7.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.napexternal.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.napexternal2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.napinternal.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.napinternal2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.pro.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.pro2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.sit.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.sit2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.uat.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
+    <None Include="Web.AppSettings.uat2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
     <Content Include="Web.config" />
     <Content Include="Web.Configuration\StoreProcedure.Internal\DBACC.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb02.xml" />
@@ -628,6 +688,9 @@
       <DependentUpon>TotalBets.js</DependentUpon>
     </Content>
     <Content Include="_TotalBets\TotalGoal.aspx" />
+    <None Include="web.UAT2.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Error.aspx.cs">
@@ -753,55 +816,72 @@
     <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew.scss" />
     <Content Include="Web.AppSettings.config" />
     <Content Include="Web.Configuration\AuthenticationSection.config" />
-    <Content Include="Web.AppSettings.local2.config" />
-    <Content Include="Web.AppSettings.mnl.config" />
-    <Content Include="Web.AppSettings.mnl2.config" />
-    <Content Include="Web.AppSettings.mnlEx.config" />
-    <Content Include="Web.AppSettings.mnlEx2.config" />
-    <Content Include="Web.AppSettings.mnlExi7.config" />
-    <Content Include="Web.AppSettings.mnli7.config" />
-    <Content Include="Web.AppSettings.mnlNap.config" />
-    <Content Include="Web.AppSettings.mnlNap2.config" />
-    <Content Include="Web.AppSettings.mnlNapi7.config" />
-    <Content Include="Web.AppSettings.napexternal.config" />
-    <Content Include="Web.AppSettings.napexternal2.config" />
-    <Content Include="Web.AppSettings.napinternal.config" />
-    <Content Include="Web.AppSettings.napinternal2.config" />
-    <Content Include="Web.AppSettings.pro.config" />
-    <Content Include="Web.AppSettings.pro2.config" />
-    <Content Include="Web.AppSettings.sit.config" />
-    <Content Include="Web.AppSettings.sit2.config" />
-    <Content Include="Web.AppSettings.uat.config" />
-    <Content Include="Web.AppSettings.uat2.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="web.local2.config" />
-    <None Include="web.mnl.config" />
-    <None Include="web.mnl2.config" />
-    <None Include="web.mnlEx.config" />
-    <None Include="web.mnlEx2.config" />
-    <None Include="web.mnlExi7.config" />
-    <None Include="web.mnli7.config" />
-    <None Include="web.mnlNap.config" />
-    <None Include="web.mnlNap2.config" />
-    <None Include="web.mnlNapi7.config" />
-    <None Include="web.napexternal.config" />
-    <None Include="web.napexternal2.config" />
-    <None Include="web.napinternal.config" />
-    <None Include="web.napinternal2.config" />
-    <None Include="web.pro.config" />
-    <None Include="web.pro2.config" />
+    <None Include="web.local2.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.mnl.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.mnl2.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.mnlEx.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.mnlEx2.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.mnlExi7.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.mnli7.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.mnlNap.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.mnlNap2.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.mnlNapi7.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.napexternal.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.napexternal2.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.napinternal.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.napinternal2.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.pro.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.pro2.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="_Components\web.config" />
     <Content Include="_GlobalResources\Js\web.config" />
     <Content Include="_GlobalResources\Web.config" />
-    <None Include="web.SIT.config" />
-    <None Include="web.SIT2.config" />
-    <None Include="web.UAT.config" />
-    <None Include="web.UAT2.config" />
+    <None Include="web.SIT.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.SIT2.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.UAT.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fanex.Age.UI.Forecast\Fanex.Age.UI.Forecast.csproj">
