@@ -13,3 +13,4 @@ BuildWebCompiler.log
 **/_Components/*/*.min.js
 **/_Forecast/*/*.min.js
 */_TotalBets/*/*.min.js
+*/_GlobalResources/**/*.min.js
