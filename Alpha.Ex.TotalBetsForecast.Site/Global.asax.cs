@@ -1,4 +1,5 @@
 ﻿using Alpha.Web;
+using Alpha.Web.Helpers;
 using Fanex.Data.Configuration;
 using Fanex.Razorbill.Security.Services.Authentication;
 using Sunplus.Agent.Model.Entities;
@@ -30,7 +31,7 @@ namespace Alpha.Ex.TotalBetsForecast.Site
         {
             DbSettingProviderManager.Current.Start();
             ShareSession.Init();
-            
+
             AreaRegistration.RegisterAllAreas();
             RegisterRoutes(RouteTable.Routes);
             RegisterGlobalFilters(GlobalFilters.Filters);
@@ -38,7 +39,7 @@ namespace Alpha.Ex.TotalBetsForecast.Site
 
             Logs.WriteInfo("Alpha - Ex Total Bets Forecast - Application Start");
         }
-       
+
         public void Application_End()
         {
 
@@ -86,10 +87,10 @@ namespace Alpha.Ex.TotalBetsForecast.Site
         }
 
         void Application_Error(object sender, EventArgs e)
-        {            
+        {
             // 1. Don't log 404 error
             Exception ex = Server.GetLastError().GetBaseException();
-            
+
             if (ex is HttpException)
             {
                 if (((HttpException)ex).GetHttpCode() == 404)
@@ -123,45 +124,27 @@ namespace Alpha.Ex.TotalBetsForecast.Site
         {
             if (!(HttpContext.Current.Handler is IRequiresSessionState)) return;
 
-            // Validate request & session
-            string executeFileName = Request.AppRelativeCurrentExecutionFilePath;
-            bool isNewSession = executeFileName.EndsWith("SignIn.aspx")
-                || executeFileName.EndsWith("ProcessAdminLogin.ashx")
-                || executeFileName.EndsWith("ProcessAfterLogin.ashx")
-                || executeFileName.EndsWith("Captcha.ashx")
-                || executeFileName.EndsWith("ChartImg.axd")
-                || executeFileName.EndsWith("ReCheckin.ashx")
-                || executeFileName.EndsWith("SignOut.ashx");
-
-            if (UserSession.Current.CustId == 0 && !isNewSession)
+            if (UserSession.Current.CustId == 0)
             {
-                Response.Redirect("~/_Authorization/SignIn.aspx", true);
+                Response.Redirect(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"), true);
                 return;
             }
 
             string url = GetRequestPath();
 
-            if (string.IsNullOrEmpty(url) ||
-                url.Replace("/", "").Equals(Fanex.Razorbill.Security.Configurations.WebAppSettings.VirtualDirectory, StringComparison.OrdinalIgnoreCase))
-            {
-                Response.Redirect("~/Index.aspx", true);
-                return;
-            }
-
             //---Checking closed status---
             IAuthenticationService authencationService = new AuthenticationService(url);
-            if (UserSession.Current.CustId != 0 &&
-                !isNewSession && !string.IsNullOrWhiteSpace(url) &&
+            if (UserSession.Current.CustId != 0 && !string.IsNullOrWhiteSpace(url) &&
                 !UserSession.Current.IsInternal)
             {
                 if (authencationService.CheckingClosedStatus())
                 {
                     Session.Clear();
-                    Response.Redirect("~/_Authorization/SignIn.aspx", true);
+                    Response.Redirect(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"), true);
                     return;
                 }
             }
-        }        
+        }
 
         private string GetRequestPath()
         {
