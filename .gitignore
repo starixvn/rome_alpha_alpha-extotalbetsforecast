@@ -7,3 +7,7 @@ packages/*
 BuildSolution.log
 *.csproj.user
 BuildWebCompiler.log
+*/App_Themes/Apo/**/*.css
+**/App_Themes/Apo/**/*.css
+**/App_Themes/Apo/*.css
+**/_Components/*/*.min.js
