@@ -323,34 +323,58 @@
     <Content Include="App_Themes\AgencyV2\Images\right_button.jpg" />
     <Content Include="App_Themes\AgencyV2\tabmenu.css" />
     <Content Include="App_Themes\AgencyV2\thickbox.css" />
-    <Content Include="App_Themes\Apo\Common\Agent.css" />
-    <Content Include="App_Themes\Apo\Common\Agent.min.css" />
-    <Content Include="App_Themes\Apo\Common\Tab.css" />
-    <Content Include="App_Themes\Apo\Common\Tab.min.css" />
-    <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.css" />
-    <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.min.css" />
+    <Content Include="App_Themes\Apo\Common\Agent.css">
+      <DependentUpon>Agent.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Common\Agent.min.css">
+      <DependentUpon>Agent.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Common\Tab.css">
+      <DependentUpon>Tab.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Common\Tab.min.css">
+      <DependentUpon>Tab.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.css">
+      <DependentUpon>AGEWnd.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.min.css">
+      <DependentUpon>AGEWnd.scss</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew.css">
       <DependentUpon>ErrorMsgNew.scss</DependentUpon>
     </Content>
     <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew.min.css">
       <DependentUpon>ErrorMsgNew.css</DependentUpon>
     </Content>
-    <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.css" />
-    <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.min.css" />
+    <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.css">
+      <DependentUpon>RefreshCountDown.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.min.css">
+      <DependentUpon>RefreshCountDown.scss</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style.css">
       <DependentUpon>style.scss</DependentUpon>
     </Content>
     <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style.min.css">
       <DependentUpon>style.css</DependentUpon>
     </Content>
-    <Content Include="App_Themes\Apo\Forecast\FC.css" />
-    <Content Include="App_Themes\Apo\Forecast\FC.min.css" />
+    <Content Include="App_Themes\Apo\Forecast\FC.css">
+      <DependentUpon>FC.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Forecast\FC.min.css">
+      <DependentUpon>FC.scss</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Apo\Forecast\Images\col_score.png" />
     <Content Include="App_Themes\Apo\Forecast\Images\iLoading.png" />
     <Content Include="App_Themes\Apo\Forecast\Images\Loading.gif" />
     <Content Include="App_Themes\Apo\Forecast\Images\Refresh.png" />
-    <Content Include="App_Themes\Apo\Forecast\ScoreMap.css" />
-    <Content Include="App_Themes\Apo\Forecast\ScoreMap.min.css" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap.css">
+      <DependentUpon>ScoreMap.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap.min.css">
+      <DependentUpon>ScoreMap.scss</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\ajax-loader.gif" />
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\bg_boxTop.jpg" />
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\bg_header01.jpg" />
@@ -412,8 +436,12 @@
     <Content Include="App_Themes\Apo\Images\tooltip_left.png" />
     <Content Include="App_Themes\Apo\Images\tooltip_right.png" />
     <Content Include="App_Themes\Apo\Images\x5.gif" />
-    <Content Include="App_Themes\Apo\TotalBets\TotalBets.css" />
-    <Content Include="App_Themes\Apo\TotalBets\TotalBets.min.css" />
+    <Content Include="App_Themes\Apo\TotalBets\TotalBets.css">
+      <DependentUpon>TotalBets.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\TotalBets\TotalBets.min.css">
+      <DependentUpon>TotalBets.scss</DependentUpon>
+    </Content>
     <Content Include="Areas\Forecast\Views\ScoreMap\Scripts\scoreMap.js" />
     <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
