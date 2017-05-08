@@ -11,3 +11,5 @@ BuildWebCompiler.log
 **/App_Themes/Apo/**/*.css
 **/App_Themes/Apo/*.css
 **/_Components/*/*.min.js
+**/_Forecast/*/*.min.js
+*/_TotalBets/*/*.min.js
