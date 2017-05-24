@@ -25,7 +25,7 @@ function openForecast(matchId, betType) {
 function openForecastPopup(matchId, betType) {
     var url = age.GetExTotalBetsForecastUrl() + '_Forecast/FCAH.aspx?matchid=' + matchId + '&b=' + betType
 
-    top.popupManager.openMultiple(url, 600, 290);
+    top.popupManager.open(url, '', 600, 290);
 }
 
 function RefreshFC() {
