@@ -554,6 +554,7 @@
     <Content Include="_Components\AGEWnd\blank.min.js">
       <DependentUpon>blank.js</DependentUpon>
     </Content>
+    <Content Include="_Components\ErrorPage\ErrorPage.css" />
     <Content Include="_Components\RefreshCountDown\RefreshCountDown.js" />
     <Content Include="_Components\RefreshCountDown\RefreshCountDown.min.js">
       <DependentUpon>RefreshCountDown.js</DependentUpon>
