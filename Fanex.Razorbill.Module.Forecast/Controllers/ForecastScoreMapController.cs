@@ -1,12 +1,15 @@
 ﻿namespace Fanex.Razorbill.Module.Forecast.Controllers
 {
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web.Mvc;
+    using Alpha.Web.Helpers;
     using Fanex.Razorbill.Module.Core.Web.Controllers;
     using Fanex.Razorbill.Module.Forecast.Criteria;
     using Fanex.Razorbill.Module.Forecast.Models;
     using Fanex.Razorbill.Module.Forecast.Services;
+    using global::Resources;
+    using Sunplus.Agent.Model.Entities;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
 
     /// <summary>
     /// Forecast Score Map controller.
@@ -115,6 +118,26 @@
             }
 
             return id;
+        }
+
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            var allowViewTotalBets = UserSession.Current.SubPageAccess.ViewTotalBets;
+            if (!allowViewTotalBets)
+            {
+                if (Request.IsAjaxRequest())
+                {
+                    var response = filterContext.HttpContext.Response;
+                    response.Clear();
+                    response.Write("{ \"message\": \" " + Lang.notAccessSubAccount + " }");
+                    response.TrySkipIisCustomErrors = true;
+                    response.End();
+                }
+                else
+                {
+                    filterContext.Result = new RedirectResult(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"));
+                }
+            }
         }
     }
 }

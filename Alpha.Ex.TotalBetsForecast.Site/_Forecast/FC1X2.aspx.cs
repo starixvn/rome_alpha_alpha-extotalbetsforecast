@@ -6,7 +6,7 @@ using System.Text;
 using System.Web.UI;
 using Sunplus.Agent.Model.BL.Forecast;
 using Sunplus.Agent.Utilities;
-
+using Fanex.Age.UI.Components;
 
 /*
  * Created 20100529@Jacob - Render FC1X2 page
@@ -121,6 +121,11 @@ namespace Fanex.Age.UI.Forecast
 
         public override object ValidateRequest(System.Collections.Hashtable p)
         {
+            if (!CurrentUserSession.SubPageAccess.ViewTotalBets)
+            {
+                return new ErrorPage_Page(Resources.Lang.strNotAccessPage);
+            }
+
             return null;
         }
 

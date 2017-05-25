@@ -99,6 +99,11 @@ namespace Fanex.Age.UI.TotalBets
 
         public override object ValidateRequest(System.Collections.Hashtable p)
         {
+            if (!CurrentUserSession.SubPageAccess.ViewTotalBets)
+            {
+                return new ErrorPage_Page(Resources.Lang.strNotAccessPage);
+            }
+
             return null;
         }
 

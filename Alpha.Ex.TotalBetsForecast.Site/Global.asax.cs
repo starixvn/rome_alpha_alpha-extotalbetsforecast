@@ -14,7 +14,7 @@ namespace Alpha.Ex.TotalBetsForecast.Site
 {
     public class Global : System.Web.HttpApplication
     {
-        private string rngArea = "CustomerSetting/Casino";
+        private readonly string rngArea = "CustomerSetting/Casino";
 
         public static void RegisterRoutes(RouteCollection routes)
         {
@@ -23,8 +23,7 @@ namespace Alpha.Ex.TotalBetsForecast.Site
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-                );
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional });
         }
 
         protected void Application_Start(object sender, EventArgs e)
@@ -86,7 +85,7 @@ namespace Alpha.Ex.TotalBetsForecast.Site
             log.WriteEntry(logMessage);
         }
 
-        void Application_Error(object sender, EventArgs e)
+        public void Application_Error(object sender, EventArgs e)
         {
             // 1. Don't log 404 error
             Exception ex = Server.GetLastError().GetBaseException();
@@ -122,7 +121,10 @@ namespace Alpha.Ex.TotalBetsForecast.Site
 
         void Application_AcquireRequestState(object sender, EventArgs e)
         {
-            if (!(HttpContext.Current.Handler is IRequiresSessionState)) return;
+            if (!(HttpContext.Current.Handler is IRequiresSessionState))
+            {
+                return;
+            }
 
             if (UserSession.Current.CustId == 0)
             {
@@ -180,6 +182,11 @@ namespace Alpha.Ex.TotalBetsForecast.Site
             }
         }
 
+        private static void RegisterGlobalFilters(GlobalFilterCollection filters)
+        {
+            filters.Add(new HandleErrorAttribute());
+        }
+
         private bool CheckUnderMainternanceTime()
         {
             var isUm = false;
@@ -192,11 +199,6 @@ namespace Alpha.Ex.TotalBetsForecast.Site
             }
 
             return isUm;
-        }
-
-        private static void RegisterGlobalFilters(GlobalFilterCollection filters)
-        {
-            filters.Add(new HandleErrorAttribute());
         }
     }
 }

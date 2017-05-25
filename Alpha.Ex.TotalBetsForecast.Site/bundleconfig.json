@@ -1,4 +1,10 @@
-[  
+[
+  {
+    "outputFileName": "_Components/ErrorPage/ErrorPage.min.css",
+    "inputFiles": [
+      "_Components/ErrorPage/ErrorPage.css"
+    ]
+  },
   {
     "outputFileName": "_Forecast/Resources/ScoreMap.min.js",
     "inputFiles": [
