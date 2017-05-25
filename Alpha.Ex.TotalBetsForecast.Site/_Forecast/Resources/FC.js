@@ -80,9 +80,29 @@ function GetForecastByLeague() {
     }
 }
 
+function correctCheckValueOnDropdown(dropdownId) {
+    var dropdown = $(dropdownId);
+    if (!dropdown) {
+        return;
+    }
+
+    for (var i = 0; i < dropdown.length; i++) {
+        var option = dropdown[i];
+        var attributeLength = option.attributes.length;
+        for (var j = 0; j < attributeLength; j++) {
+            var attr = option.attributes[j];
+            if (attr.name == "selected") {
+                dropdown.selectedIndex = i;
+                dropdown.value = option.value;
+
+                break;
+            }
+        }
+    }
+}
 
 function initFC() {
-
+    correctCheckValueOnDropdown("ddlLeague");
     var ageWnd = parent.ageWnd;
     if (typeof ageWnd == 'undefined') {
         return;
