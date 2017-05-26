@@ -508,17 +508,7 @@ AGE.prototype.GetBaseUrl = function () {
 
     return url;
 }
-AGE.prototype.GetExTotalBetsForecastUrl = function () {
-    var url = top.exTotalBetsForecastRootPath;
-    if (!url) {
-        var urlArray = window.location.href.split('/');
-        var protocol = urlArray[0];
-        var host = urlArray[2];
-        url = protocol + '//' + host + '/';
-    }
 
-    return url;
-}
 AGE.prototype.GetQueryString = function (key, defaultValue) {
     if (defaultValue == null) defaultValue = "";
     key = key.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
