@@ -28,7 +28,9 @@ namespace Fanex.Age.UI.TotalBets
 			protected static string s11{get{return AbsoluteUrl("Resources/TotalBets.js", TplSettings.Question);}}
 			protected static string s12 = "\" type=\"text/javascript\"></script><script src=\"";
 			protected static string s13{get{return AbsoluteUrl("_Components/AGEWnd/AGEWnd.js", TplSettings.Question);}}
-			protected static string s14 = "\" type=\"text/javascript\"></script></body></html>";
+			protected static string s14 = "\" type=\"text/javascript\"></script>";
+			public NextGoal_OldMainUrl_Block OldMainUrl = new NextGoal_OldMainUrl_Block();
+			protected static string s15 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
@@ -51,6 +53,8 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s12);
 					bd.Append(s13);
 					bd.Append(s14);
+					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
+					bd.Append(s15);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -65,31 +69,31 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class NextGoal_Contents_Block: Block
 		{
-			protected static string s15 = "<table class=\"tblRpt tbl-nextgoal\"><tr class=\"RptHeader\"><td class=\"col-number\">#</td><td class=\"col-time\">";
-			protected static string s16{get{return LocalResources.TotalBetsLang.time;}}
-			protected static string s17 = "</td><td>";
-			protected static string s18{get{return LocalResources.TotalBetsLang.events;}}
-			protected static string s19 = "</td><td colspan=\"5\">";
-			protected static string s20{get{return LocalResources.TotalBetsLang.turnoverWinlost;}}
-			protected static string s21 = "</td></tr>";
+			protected static string s16 = "<table class=\"tblRpt tbl-nextgoal\"><tr class=\"RptHeader\"><td class=\"col-number\">#</td><td class=\"col-time\">";
+			protected static string s17{get{return LocalResources.TotalBetsLang.time;}}
+			protected static string s18 = "</td><td>";
+			protected static string s19{get{return LocalResources.TotalBetsLang.events;}}
+			protected static string s20 = "</td><td colspan=\"5\">";
+			protected static string s21{get{return LocalResources.TotalBetsLang.turnoverWinlost;}}
+			protected static string s22 = "</td></tr>";
 			public NextGoal_Contents_LeagueContents_Block LeagueContents = new NextGoal_Contents_LeagueContents_Block();
 			public NextGoal_Contents_NotFoundContent_Block NotFoundContent = new NextGoal_Contents_NotFoundContent_Block();
-			protected static string s22 = "</table>";
+			protected static string s23 = "</table>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s15);
 					bd.Append(s16);
 					bd.Append(s17);
 					bd.Append(s18);
 					bd.Append(s19);
 					bd.Append(s20);
 					bd.Append(s21);
+					bd.Append(s22);
 					if(null != LeagueContents) LeagueContents.ToString(ref bd);
 					if(null != NotFoundContent) NotFoundContent.ToString(ref bd);
-					bd.Append(s22);
+					bd.Append(s23);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -97,18 +101,18 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class NextGoal_Contents_LeagueContents_Block: Block
 		{
-			protected static string s23 = "<tr class=\"league\"><td colspan=\"8\" class=\"col-league\">";
+			protected static string s24 = "<tr class=\"league\"><td colspan=\"8\" class=\"col-league\">";
 			public string LeagueName = "{LeagueName}";
-			protected static string s24 = "</td></tr>";
+			protected static string s25 = "</td></tr>";
 			public NextGoal_Contents_LeagueContents_MatchContents_Block MatchContents = new NextGoal_Contents_LeagueContents_MatchContents_Block();
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s23);
-					bd.Append(LeagueName);
 					bd.Append(s24);
+					bd.Append(LeagueName);
+					bd.Append(s25);
 					if(null != MatchContents) MatchContents.ToString(ref bd);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -117,53 +121,53 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class NextGoal_Contents_LeagueContents_MatchContents_Block: Block
 		{
-			protected static string s25 = "<tr style=\"background-color: ";
+			protected static string s26 = "<tr style=\"background-color: ";
 			public string ColorClass = "{ColorClass}";
-			protected static string s26 = "\" onmouseover=\"bgColor='";
+			protected static string s27 = "\" onmouseover=\"bgColor='";
 			public string ColorOver = "{ColorOver}";
-			protected static string s27 = "'\" onmouseout=\"bgColor='";
+			protected static string s28 = "'\" onmouseout=\"bgColor='";
 			protected string t0_ColorClass;
-			protected static string s28 = "'\"><td class=\"w-order c col-novalue\">";
+			protected static string s29 = "'\"><td class=\"w-order c col-novalue\">";
 			public string NoValue = "{NoValue}";
-			protected static string s29 = "</td><td class=\"c bl_time col-time\">";
+			protected static string s30 = "</td><td class=\"c bl_time col-time\">";
 			public string TimeValue = "{TimeValue}";
-			protected static string s30 = "</td><td class=\"nowrap c\"><a href=\"javascript:doViewBetList(";
+			protected static string s31 = "</td><td class=\"nowrap c\"><a href=\"javascript:doViewBetList(";
 			public string MatchId = "{MatchId}";
-			protected static string s31 = ", 22, '";
+			protected static string s32 = ", 22, '";
 			public string BetType = "{BetType}";
-			protected static string s32 = "')\">";
+			protected static string s33 = "')\">";
 			public string Home = "{Home}";
-			protected static string s33 = " -vs- ";
+			protected static string s34 = " -vs- ";
 			public string Away = "{Away}";
-			protected static string s34 = "</a></td><td colspan=\"5\" class=\"line_n\" style=\"padding: 0;\"><table class=\"width-100per\">";
+			protected static string s35 = "</a></td><td colspan=\"5\" class=\"line_n\" style=\"padding: 0;\"><table class=\"width-100per\">";
 			public NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_Block ScoreContents = new NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_Block();
-			protected static string s35 = "</table></td></tr>";
+			protected static string s36 = "</table></td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s25);
-					bd.Append(ColorClass);
 					bd.Append(s26);
-					bd.Append(ColorOver);
-					bd.Append(s27);
 					bd.Append(ColorClass);
+					bd.Append(s27);
+					bd.Append(ColorOver);
 					bd.Append(s28);
-					bd.Append(NoValue);
+					bd.Append(ColorClass);
 					bd.Append(s29);
-					bd.Append(TimeValue);
+					bd.Append(NoValue);
 					bd.Append(s30);
-					bd.Append(MatchId);
+					bd.Append(TimeValue);
 					bd.Append(s31);
-					bd.Append(BetType);
+					bd.Append(MatchId);
 					bd.Append(s32);
-					bd.Append(Home);
+					bd.Append(BetType);
 					bd.Append(s33);
-					bd.Append(Away);
+					bd.Append(Home);
 					bd.Append(s34);
-					if(null != ScoreContents) ScoreContents.ToString(ref bd);
+					bd.Append(Away);
 					bd.Append(s35);
+					if(null != ScoreContents) ScoreContents.ToString(ref bd);
+					bd.Append(s36);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -171,17 +175,17 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_Block: Block
 		{
-			protected static string s36 = "<tr>";
+			protected static string s37 = "<tr>";
 			public NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_Block BetScores = new NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_Block();
-			protected static string s37 = "</tr>";
+			protected static string s38 = "</tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s36);
-					if(null != BetScores) BetScores.ToString(ref bd);
 					bd.Append(s37);
+					if(null != BetScores) BetScores.ToString(ref bd);
+					bd.Append(s38);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -189,17 +193,17 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_Block: Block
 		{
-			protected static string s38 = "<td class=\"col-betScores\" align=\"center\">";
+			protected static string s39 = "<td class=\"col-betScores\" align=\"center\">";
 			public NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_BetScoreContents_Block BetScoreContents = new NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_BetScoreContents_Block();
-			protected static string s39 = "</td>";
+			protected static string s40 = "</td>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s38);
-					if(null != BetScoreContents) BetScoreContents.ToString(ref bd);
 					bd.Append(s39);
+					if(null != BetScoreContents) BetScoreContents.ToString(ref bd);
+					bd.Append(s40);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -207,27 +211,27 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_BetScoreContents_Block: Block
 		{
-			protected static string s40 = "<table class=\"tbl-betScoreContent\"><tr><td class=\"blue col-homeaway\">";
+			protected static string s41 = "<table class=\"tbl-betScoreContent\"><tr><td class=\"blue col-homeaway\">";
 			public string HomeScore = "{HomeScore}";
-			protected static string s41 = " - ";
+			protected static string s42 = " - ";
 			public string AwayScore = "{AwayScore}";
-			protected static string s42 = "</td></tr><tr><td align=\"center\" class=\"col-lastScore\">";
+			protected static string s43 = "</td></tr><tr><td align=\"center\" class=\"col-lastScore\">";
 			public NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_BetScoreContents_LastScoreContents_Block LastScoreContents = new NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_BetScoreContents_LastScoreContents_Block();
 			public NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_BetScoreContents_NextScoreContents_Block NextScoreContents = new NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_BetScoreContents_NextScoreContents_Block();
-			protected static string s43 = "</td></tr></table>";
+			protected static string s44 = "</td></tr></table>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s40);
-					bd.Append(HomeScore);
 					bd.Append(s41);
-					bd.Append(AwayScore);
+					bd.Append(HomeScore);
 					bd.Append(s42);
+					bd.Append(AwayScore);
+					bd.Append(s43);
 					if(null != LastScoreContents) LastScoreContents.ToString(ref bd);
 					if(null != NextScoreContents) NextScoreContents.ToString(ref bd);
-					bd.Append(s43);
+					bd.Append(s44);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -235,21 +239,21 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_BetScoreContents_LastScoreContents_Block: Block
 		{
-			protected static string s44 = "<table class=\"tbl-lastScore\"><tbody><tr><td align=\"right\">";
+			protected static string s45 = "<table class=\"tbl-lastScore\"><tbody><tr><td align=\"right\">";
 			public string SubGoal = "{SubGoal}";
-			protected static string s45 = "/0</td><td align=\"right\" class=\"col-info\"><a href=\"javascript:openForecast('";
+			protected static string s46 = "/0</td><td align=\"right\" class=\"col-info\"><a href=\"javascript:openForecast('";
 			public string MatchId = "{MatchId}";
-			protected static string s46 = "','22')\" class=\"btnInfo\"></a></td></tr></tbody></table>";
+			protected static string s47 = "','22')\" class=\"btnInfo\"></a></td></tr></tbody></table>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s44);
-					bd.Append(SubGoal);
 					bd.Append(s45);
-					bd.Append(MatchId);
+					bd.Append(SubGoal);
 					bd.Append(s46);
+					bd.Append(MatchId);
+					bd.Append(s47);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -258,7 +262,7 @@ namespace Fanex.Age.UI.TotalBets
 		public class NextGoal_Contents_LeagueContents_MatchContents_ScoreContents_BetScores_BetScoreContents_NextScoreContents_Block: Block
 		{
 			public string SubGoal = "{SubGoal}";
-			protected static string s47 = "/";
+			protected static string s48 = "/";
 			public string WinLost = "{WinLost}";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -266,7 +270,7 @@ namespace Fanex.Age.UI.TotalBets
 				if(RenderChild)
 				{
 					bd.Append(SubGoal);
-					bd.Append(s47);
+					bd.Append(s48);
 					bd.Append(WinLost);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -275,17 +279,35 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class NextGoal_Contents_NotFoundContent_Block: Block
 		{
-			protected static string s48 = "<tr class=\"bg_white\"><td colspan=\"8\" class=\"c nobold\">";
-			protected static string s49{get{return LocalResources.TotalBetsLang.noInfo;}}
-			protected static string s50 = "</td></tr>";
+			protected static string s49 = "<tr class=\"bg_white\"><td colspan=\"8\" class=\"c nobold\">";
+			protected static string s50{get{return LocalResources.TotalBetsLang.noInfo;}}
+			protected static string s51 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s48);
 					bd.Append(s49);
 					bd.Append(s50);
+					bd.Append(s51);
+				}
+				if(IsAssigned){bd.Append(Value);}
+			}
+		}
+
+		public class NextGoal_OldMainUrl_Block: Block
+		{
+			protected static string s52 = "<script type=\"text/javascript\">var _oldMainUrl = '";
+			public string OldMainUrl = "{OldMainUrl}";
+			protected static string s53 = "';</script>";
+			public override void ToString(ref StringBuilder bd)
+			{
+				if(!Visible) return;
+				if(RenderChild)
+				{
+					bd.Append(s52);
+					bd.Append(OldMainUrl);
+					bd.Append(s53);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

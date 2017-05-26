@@ -8,18 +8,19 @@
  */
 namespace Fanex.Age.UI.Forecast
 {
+    using Alpha.Web.Helpers;
+    using Fanex.Age.UI.Components;
+    using Fanex.Age.UI.Components.MatchByLeague;
+    using Sunplus.Agent.Model.BL.Cache;
+    using Sunplus.Agent.Model.BL.Forecast;
+    using Sunplus.Agent.Model.Entities;
+    using Sunplus.Agent.UI.ScoreMap.Factories;
     using System;
     using System.Collections.Generic;
     using System.Data;
     using System.Linq;
     using System.Text;
     using System.Web.UI;
-    using Fanex.Age.UI.Components;
-    using Fanex.Age.UI.Components.MatchByLeague;
-    using Sunplus.Agent.Model.BL.Forecast;
-    using Sunplus.Agent.Model.Entities;
-    using Sunplus.Agent.UI.ScoreMap.Factories;
-    using Sunplus.Agent.Model.BL.Cache;
 
     public partial class ScoreMap_Page : Fanex.Age.UI.TplPage
     {
@@ -99,6 +100,9 @@ namespace Fanex.Age.UI.Forecast
                 RenderingFactory.Render(false, listScoreMap, listMatch, content, false);
                 tpl.Content.ScoreMap.SetValue(content.ToString());
             }
+
+            ///  old Main URL
+            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
 
             writer.Write(tpl);
         }

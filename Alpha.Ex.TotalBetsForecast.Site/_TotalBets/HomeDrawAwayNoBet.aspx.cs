@@ -11,17 +11,17 @@
 
 namespace Fanex.Age.UI.TotalBets
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Web;
-    using System.Web.UI;
-
+    using Alpha.Web.Helpers;
     using Fanex.Age.UI;
     using Fanex.Age.UI.Components;
     using Sunplus.Agent.Model.BL.Definitions;
     using Sunplus.Agent.Model.BL.TotalBets;
     using Sunplus.Agent.Utilities;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Web;
+    using System.Web.UI;
 
     public partial class HomeDrawAwayNoBet_Page : TotalBets_Page
     {
@@ -86,6 +86,9 @@ namespace Fanex.Age.UI.TotalBets
             {
                 tpl.Piwik.Clear();
             }
+
+            ///  old Main URL
+            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
 
             if (_fullMode)
             {

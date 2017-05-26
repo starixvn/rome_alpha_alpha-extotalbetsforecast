@@ -8,14 +8,14 @@
  */
 namespace Fanex.Age.UI.Forecast
 {
+    using Alpha.Web.Helpers;
+    using Fanex.Age.UI.Components;
+    using Sunplus.Agent.Model.BL.Forecast;
+    using Sunplus.Agent.Utilities;
     using System;
     using System.Collections;
     using System.Data;
     using System.Web.UI;
-    using Sunplus.Agent.Model.BL.Forecast;
-    using Sunplus.Agent.Utilities;
-    using Fanex.Age.UI.Components;
-
     public partial class FCAH_Page : Fanex.Age.UI.TplPage
     {
         #region Const
@@ -261,6 +261,9 @@ namespace Fanex.Age.UI.Forecast
 
             // For FPS.
             RenderFPSArea(tpl);
+
+            ///  old Main URL
+            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
 
             if (_fullMode) writer.Write(tpl);
             else writer.Write(tpl.Content);

@@ -30,6 +30,7 @@ namespace Fanex.Age.UI.Forecast
 			protected static string s13{get{return AbsoluteUrl("Resources/FC.js", TplSettings.Question);}}
 			protected static string s14 = "\" type=\"text/javascript\"></script>";
 			public FCAH_FPSArea_Block FPSArea = new FCAH_FPSArea_Block();
+			public FCAH_OldMainUrl_Block OldMainUrl = new FCAH_OldMainUrl_Block();
 			protected static string s15 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -54,6 +55,7 @@ namespace Fanex.Age.UI.Forecast
 					bd.Append(s13);
 					bd.Append(s14);
 					if(null != FPSArea) FPSArea.ToString(ref bd);
+					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
 					bd.Append(s15);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -326,6 +328,24 @@ namespace Fanex.Age.UI.Forecast
 					bd.Append(s63);
 					bd.Append(s64);
 					bd.Append(s65);
+				}
+				if(IsAssigned){bd.Append(Value);}
+			}
+		}
+
+		public class FCAH_OldMainUrl_Block: Block
+		{
+			protected static string s66 = "<script type=\"text/javascript\">var _oldMainUrl = '";
+			public string OldMainUrl = "{OldMainUrl}";
+			protected static string s67 = "';</script>";
+			public override void ToString(ref StringBuilder bd)
+			{
+				if(!Visible) return;
+				if(RenderChild)
+				{
+					bd.Append(s66);
+					bd.Append(OldMainUrl);
+					bd.Append(s67);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

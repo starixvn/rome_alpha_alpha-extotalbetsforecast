@@ -26,7 +26,9 @@ namespace Fanex.Age.UI.TotalBets
 			protected static string s9{get{return AbsoluteUrl("_GlobalResources/Js/Core.js", TplSettings.Question);}}
 			protected static string s10 = "\" type=\"text/javascript\"></script><script src=\"";
 			protected static string s11{get{return AbsoluteUrl("Resources/TotalBets.js", TplSettings.Question);}}
-			protected static string s12 = "\" type=\"text/javascript\"></script></body></html>";
+			protected static string s12 = "\" type=\"text/javascript\"></script>";
+			public CorrectScore_OldMainUrl_Block OldMainUrl = new CorrectScore_OldMainUrl_Block();
+			protected static string s13 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
@@ -47,6 +49,8 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s10);
 					bd.Append(s11);
 					bd.Append(s12);
+					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
+					bd.Append(s13);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -61,30 +65,29 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class CorrectScore_Contents_Block: Block
 		{
-			protected static string s13 = "<table class=\"tblRpt tbl-correctScore\"><tr class=\"RptHeader\"><td rowspan=\"2\" class=\"col-number\">#</td><td rowspan=\"2\" class=\"col-timeRange\">";
-			protected static string s14{get{return LocalResources.TotalBetsLang.timerange;}}
-			protected static string s15 = "</td><td colspan=\"2\">";
-			protected static string s16{get{return LocalResources.TotalBetsLang.lblOverUnder;}}
-			protected static string s17 = "</td><td colspan=\"2\">";
-			protected static string s18{get{return LocalResources.TotalBetsLang.lblOddEven;}}
-			protected static string s19 = "</td></tr><tr class=\"RptHeader02\"><td class=\"lbl-totalBetsLang\">";
-			protected static string s20{get{return LocalResources.TotalBetsLang.turnover;}}
-			protected static string s21 = "</td><td class=\"lbl-totalBetsLang\">";
-			protected static string s22{get{return LocalResources.TotalBetsLang.lblWinLoss;}}
-			protected static string s23 = "</td><td class=\"lbl-totalBetsLang\">";
-			protected static string s24{get{return LocalResources.TotalBetsLang.turnover;}}
-			protected static string s25 = "</td><td class=\"lbl-totalBetsLang\">";
-			protected static string s26{get{return LocalResources.TotalBetsLang.lblWinLoss;}}
-			protected static string s27 = "</td></tr>";
+			protected static string s14 = "<table class=\"tblRpt tbl-correctScore\"><tr class=\"RptHeader\"><td rowspan=\"2\" class=\"col-number\">#</td><td rowspan=\"2\" class=\"col-timeRange\">";
+			protected static string s15{get{return LocalResources.TotalBetsLang.timerange;}}
+			protected static string s16 = "</td><td colspan=\"2\">";
+			protected static string s17{get{return LocalResources.TotalBetsLang.lblOverUnder;}}
+			protected static string s18 = "</td><td colspan=\"2\">";
+			protected static string s19{get{return LocalResources.TotalBetsLang.lblOddEven;}}
+			protected static string s20 = "</td></tr><tr class=\"RptHeader02\"><td class=\"lbl-totalBetsLang\">";
+			protected static string s21{get{return LocalResources.TotalBetsLang.turnover;}}
+			protected static string s22 = "</td><td class=\"lbl-totalBetsLang\">";
+			protected static string s23{get{return LocalResources.TotalBetsLang.lblWinLoss;}}
+			protected static string s24 = "</td><td class=\"lbl-totalBetsLang\">";
+			protected static string s25{get{return LocalResources.TotalBetsLang.turnover;}}
+			protected static string s26 = "</td><td class=\"lbl-totalBetsLang\">";
+			protected static string s27{get{return LocalResources.TotalBetsLang.lblWinLoss;}}
+			protected static string s28 = "</td></tr>";
 			public CorrectScore_Contents_StockIndex_Block StockIndex = new CorrectScore_Contents_StockIndex_Block();
 			public CorrectScore_Contents_NotFoundContent_Block NotFoundContent = new CorrectScore_Contents_NotFoundContent_Block();
-			protected static string s28 = "</table>";
+			protected static string s29 = "</table>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s13);
 					bd.Append(s14);
 					bd.Append(s15);
 					bd.Append(s16);
@@ -99,9 +102,10 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s25);
 					bd.Append(s26);
 					bd.Append(s27);
+					bd.Append(s28);
 					if(null != StockIndex) StockIndex.ToString(ref bd);
 					if(null != NotFoundContent) NotFoundContent.ToString(ref bd);
-					bd.Append(s28);
+					bd.Append(s29);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -109,9 +113,9 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class CorrectScore_Contents_StockIndex_Block: Block
 		{
-			protected static string s29 = "<tr><td colspan=\"6\" class=\"col-league league\">";
+			protected static string s30 = "<tr><td colspan=\"6\" class=\"col-league league\">";
 			public string IndexName = "{IndexName}";
-			protected static string s30 = "</td></tr>";
+			protected static string s31 = "</td></tr>";
 			public CorrectScore_Contents_StockIndex_BetType_Block BetType = new CorrectScore_Contents_StockIndex_BetType_Block();
 			public CorrectScore_Contents_StockIndex_TotalContents_Block TotalContents = new CorrectScore_Contents_StockIndex_TotalContents_Block();
 			public override void ToString(ref StringBuilder bd)
@@ -119,9 +123,9 @@ namespace Fanex.Age.UI.TotalBets
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s29);
-					bd.Append(IndexName);
 					bd.Append(s30);
+					bd.Append(IndexName);
+					bd.Append(s31);
 					if(null != BetType) BetType.ToString(ref bd);
 					if(null != TotalContents) TotalContents.ToString(ref bd);
 				}
@@ -131,53 +135,53 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class CorrectScore_Contents_StockIndex_BetType_Block: Block
 		{
-			protected static string s31 = "<tr class=\"r\" style=\"background-color: ";
+			protected static string s32 = "<tr class=\"r\" style=\"background-color: ";
 			public string ColorClass = "{ColorClass}";
-			protected static string s32 = "\" onmouseover=\"bgColor='";
+			protected static string s33 = "\" onmouseover=\"bgColor='";
 			public string ColorOver = "{ColorOver}";
-			protected static string s33 = "'\" onmouseout=\"bgColor='";
+			protected static string s34 = "'\" onmouseout=\"bgColor='";
 			protected string t0_ColorClass;
-			protected static string s34 = "'\"><td class=\"w-order\">";
+			protected static string s35 = "'\"><td class=\"w-order\">";
 			public string NoValue = "{NoValue}";
-			protected static string s35 = "</td><td class=\"nowrap c\">";
+			protected static string s36 = "</td><td class=\"nowrap c\">";
 			public string BetTime = "{BetTime}";
-			protected static string s36 = "</td><td class=\"b col-over\">";
+			protected static string s37 = "</td><td class=\"b col-over\">";
 			public CorrectScore_Contents_StockIndex_BetType_OULink_Block OULink = new CorrectScore_Contents_StockIndex_BetType_OULink_Block();
 			public CorrectScore_Contents_StockIndex_BetType_OUText_Block OUText = new CorrectScore_Contents_StockIndex_BetType_OUText_Block();
-			protected static string s37 = "</td><td class=\"b col-over\">";
-			public string OUWinlossValue = "{OUWinlossValue}";
 			protected static string s38 = "</td><td class=\"b col-over\">";
+			public string OUWinlossValue = "{OUWinlossValue}";
+			protected static string s39 = "</td><td class=\"b col-over\">";
 			public CorrectScore_Contents_StockIndex_BetType_OELink_Block OELink = new CorrectScore_Contents_StockIndex_BetType_OELink_Block();
 			public CorrectScore_Contents_StockIndex_BetType_OEText_Block OEText = new CorrectScore_Contents_StockIndex_BetType_OEText_Block();
-			protected static string s39 = "</td><td class=\"b col-over\">";
+			protected static string s40 = "</td><td class=\"b col-over\">";
 			public string OEWinlossValue = "{OEWinlossValue}";
-			protected static string s40 = "</td></tr>";
+			protected static string s41 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s31);
-					bd.Append(ColorClass);
 					bd.Append(s32);
-					bd.Append(ColorOver);
-					bd.Append(s33);
 					bd.Append(ColorClass);
+					bd.Append(s33);
+					bd.Append(ColorOver);
 					bd.Append(s34);
-					bd.Append(NoValue);
+					bd.Append(ColorClass);
 					bd.Append(s35);
-					bd.Append(BetTime);
+					bd.Append(NoValue);
 					bd.Append(s36);
+					bd.Append(BetTime);
+					bd.Append(s37);
 					if(null != OULink) OULink.ToString(ref bd);
 					if(null != OUText) OUText.ToString(ref bd);
-					bd.Append(s37);
-					bd.Append(OUWinlossValue);
 					bd.Append(s38);
+					bd.Append(OUWinlossValue);
+					bd.Append(s39);
 					if(null != OELink) OELink.ToString(ref bd);
 					if(null != OEText) OEText.ToString(ref bd);
-					bd.Append(s39);
-					bd.Append(OEWinlossValue);
 					bd.Append(s40);
+					bd.Append(OEWinlossValue);
+					bd.Append(s41);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -185,29 +189,29 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class CorrectScore_Contents_StockIndex_BetType_OULink_Block: Block
 		{
-			protected static string s41 = "<a onclick=\"doViewBetList(";
+			protected static string s42 = "<a onclick=\"doViewBetList(";
 			public string MatchId = "{MatchId}";
-			protected static string s42 = ", ";
+			protected static string s43 = ", ";
 			public string BetType = "{BetType}";
-			protected static string s43 = ", '";
+			protected static string s44 = ", '";
 			public string BetTypeMatch = "{BetTypeMatch}";
-			protected static string s44 = "')\" href=\"#\" class=\"fcnum\">";
+			protected static string s45 = "')\" href=\"#\" class=\"fcnum\">";
 			public string OUTurnOverValue = "{OUTurnOverValue}";
-			protected static string s45 = "</a>";
+			protected static string s46 = "</a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s41);
-					bd.Append(MatchId);
 					bd.Append(s42);
-					bd.Append(BetType);
+					bd.Append(MatchId);
 					bd.Append(s43);
-					bd.Append(BetTypeMatch);
+					bd.Append(BetType);
 					bd.Append(s44);
-					bd.Append(OUTurnOverValue);
+					bd.Append(BetTypeMatch);
 					bd.Append(s45);
+					bd.Append(OUTurnOverValue);
+					bd.Append(s46);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -229,29 +233,29 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class CorrectScore_Contents_StockIndex_BetType_OELink_Block: Block
 		{
-			protected static string s46 = "<a onclick=\"doViewBetList(";
+			protected static string s47 = "<a onclick=\"doViewBetList(";
 			public string MatchId = "{MatchId}";
-			protected static string s47 = ", ";
+			protected static string s48 = ", ";
 			public string BetType = "{BetType}";
-			protected static string s48 = ", '";
+			protected static string s49 = ", '";
 			public string BetTypeMatch = "{BetTypeMatch}";
-			protected static string s49 = "')\" href=\"#\" class=\"fcnum\">";
+			protected static string s50 = "')\" href=\"#\" class=\"fcnum\">";
 			public string OETurnOverValue = "{OETurnOverValue}";
-			protected static string s50 = "</a>";
+			protected static string s51 = "</a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s46);
-					bd.Append(MatchId);
 					bd.Append(s47);
-					bd.Append(BetType);
+					bd.Append(MatchId);
 					bd.Append(s48);
-					bd.Append(BetTypeMatch);
+					bd.Append(BetType);
 					bd.Append(s49);
-					bd.Append(OETurnOverValue);
+					bd.Append(BetTypeMatch);
 					bd.Append(s50);
+					bd.Append(OETurnOverValue);
+					bd.Append(s51);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -273,33 +277,33 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class CorrectScore_Contents_StockIndex_TotalContents_Block: Block
 		{
-			protected static string s51 = "<tr class=\"header_tb04\"><td colspan=\"2\">";
-			protected static string s52{get{return LocalResources.TotalBetsLang.total;}}
-			protected static string s53 = "</td><td>";
-			public string OUTurnOverTotal = "{OUTurnOverTotal}";
+			protected static string s52 = "<tr class=\"header_tb04\"><td colspan=\"2\">";
+			protected static string s53{get{return LocalResources.TotalBetsLang.total;}}
 			protected static string s54 = "</td><td>";
-			public string OUWinlossTotal = "{OUWinlossTotal}";
+			public string OUTurnOverTotal = "{OUTurnOverTotal}";
 			protected static string s55 = "</td><td>";
-			public string OETurnOverTotal = "{OETurnOverTotal}";
+			public string OUWinlossTotal = "{OUWinlossTotal}";
 			protected static string s56 = "</td><td>";
+			public string OETurnOverTotal = "{OETurnOverTotal}";
+			protected static string s57 = "</td><td>";
 			public string OEWinlossTotal = "{OEWinlossTotal}";
-			protected static string s57 = "</td></tr>";
+			protected static string s58 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s51);
 					bd.Append(s52);
 					bd.Append(s53);
-					bd.Append(OUTurnOverTotal);
 					bd.Append(s54);
-					bd.Append(OUWinlossTotal);
+					bd.Append(OUTurnOverTotal);
 					bd.Append(s55);
-					bd.Append(OETurnOverTotal);
+					bd.Append(OUWinlossTotal);
 					bd.Append(s56);
-					bd.Append(OEWinlossTotal);
+					bd.Append(OETurnOverTotal);
 					bd.Append(s57);
+					bd.Append(OEWinlossTotal);
+					bd.Append(s58);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -307,17 +311,35 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class CorrectScore_Contents_NotFoundContent_Block: Block
 		{
-			protected static string s58 = "<tr><td colspan=\"6\" class=\"bg_white c nobold\">";
-			protected static string s59{get{return LocalResources.TotalBetsLang.noInfo;}}
-			protected static string s60 = "</td></tr>";
+			protected static string s59 = "<tr><td colspan=\"6\" class=\"bg_white c nobold\">";
+			protected static string s60{get{return LocalResources.TotalBetsLang.noInfo;}}
+			protected static string s61 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s58);
 					bd.Append(s59);
 					bd.Append(s60);
+					bd.Append(s61);
+				}
+				if(IsAssigned){bd.Append(Value);}
+			}
+		}
+
+		public class CorrectScore_OldMainUrl_Block: Block
+		{
+			protected static string s62 = "<script type=\"text/javascript\">var _oldMainUrl = '";
+			public string OldMainUrl = "{OldMainUrl}";
+			protected static string s63 = "';</script>";
+			public override void ToString(ref StringBuilder bd)
+			{
+				if(!Visible) return;
+				if(RenderChild)
+				{
+					bd.Append(s62);
+					bd.Append(OldMainUrl);
+					bd.Append(s63);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

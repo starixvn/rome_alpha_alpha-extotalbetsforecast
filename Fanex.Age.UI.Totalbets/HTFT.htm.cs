@@ -28,6 +28,7 @@ namespace Fanex.Age.UI.TotalBets
 			protected static string s11{get{return AbsoluteUrl("Resources/TotalBets.js", TplSettings.Question);}}
 			protected static string s12 = "\" type=\"text/javascript\"></script>";
 			public HTFT_Piwik_Block Piwik = new HTFT_Piwik_Block();
+			public HTFT_OldMainUrl_Block OldMainUrl = new HTFT_OldMainUrl_Block();
 			protected static string s13 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -50,6 +51,7 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s11);
 					bd.Append(s12);
 					if(null != Piwik) Piwik.ToString(ref bd);
+					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
 					bd.Append(s13);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -260,6 +262,24 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s69);
 					bd.Append(PiwikUrl);
 					bd.Append(s70);
+				}
+				if(IsAssigned){bd.Append(Value);}
+			}
+		}
+
+		public class HTFT_OldMainUrl_Block: Block
+		{
+			protected static string s71 = "<script type=\"text/javascript\">var _oldMainUrl = '";
+			public string OldMainUrl = "{OldMainUrl}";
+			protected static string s72 = "';</script>";
+			public override void ToString(ref StringBuilder bd)
+			{
+				if(!Visible) return;
+				if(RenderChild)
+				{
+					bd.Append(s71);
+					bd.Append(OldMainUrl);
+					bd.Append(s72);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

@@ -36,6 +36,7 @@ namespace Fanex.Age.UI.TotalBets
 			protected static string s19{get{return AbsoluteUrl("_Components/AGEWnd/AGEWnd.js", TplSettings.Question);}}
 			protected static string s20 = "\" type=\"text/javascript\"></script>";
 			public OddEven1X2_Piwik_Block Piwik = new OddEven1X2_Piwik_Block();
+			public OddEven1X2_OldMainUrl_Block OldMainUrl = new OddEven1X2_OldMainUrl_Block();
 			protected static string s21 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -66,6 +67,7 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s19);
 					bd.Append(s20);
 					if(null != Piwik) Piwik.ToString(ref bd);
+					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
 					bd.Append(s21);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -462,6 +464,24 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s99);
 					bd.Append(PiwikUrl);
 					bd.Append(s100);
+				}
+				if(IsAssigned){bd.Append(Value);}
+			}
+		}
+
+		public class OddEven1X2_OldMainUrl_Block: Block
+		{
+			protected static string s101 = "<script type=\"text/javascript\">var _oldMainUrl = '";
+			public string OldMainUrl = "{OldMainUrl}";
+			protected static string s102 = "';</script>";
+			public override void ToString(ref StringBuilder bd)
+			{
+				if(!Visible) return;
+				if(RenderChild)
+				{
+					bd.Append(s101);
+					bd.Append(OldMainUrl);
+					bd.Append(s102);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
