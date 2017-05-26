@@ -14,6 +14,7 @@ namespace Fanex.Age.UI.Forecast
     using System.Web.UI;
     using Sunplus.Agent.Model.BL.Forecast;
     using Sunplus.Agent.Utilities;
+    using Fanex.Age.UI.Components;
 
     public partial class FCAH_Page : Fanex.Age.UI.TplPage
     {
