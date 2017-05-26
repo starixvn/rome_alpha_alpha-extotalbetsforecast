@@ -645,9 +645,7 @@
       <DependentUpon>TotalBets.js</DependentUpon>
     </Content>
     <Content Include="_TotalBets\TotalGoal.aspx" />
-    <Content Include="web.UAT2.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
+    <Content Include="web.UAT2.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Error.aspx.cs">
@@ -776,69 +774,31 @@
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="web.local2.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.mnl.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.mnl2.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.mnlEx.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.mnlEx2.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.mnlExi7.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.mnli7.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.mnlNap.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.mnlNap2.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.mnlNapi7.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.napexternal.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.napexternal2.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.napinternal.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.napinternal2.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.pro.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.pro2.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
+    <Content Include="web.local2.config" />
+    <Content Include="web.mnl.config" />
+    <Content Include="web.mnl2.config" />
+    <Content Include="web.mnlEx.config" />
+    <Content Include="web.mnlEx2.config" />
+    <Content Include="web.mnlExi7.config" />
+    <Content Include="web.mnli7.config" />
+    <Content Include="web.mnlNap.config" />
+    <Content Include="web.mnlNap2.config" />
+    <Content Include="web.mnlNapi7.config" />
+    <Content Include="web.napexternal.config" />
+    <Content Include="web.napexternal2.config" />
+    <Content Include="web.napinternal.config" />
+    <Content Include="web.napinternal2.config" />
+    <Content Include="web.pro.config" />
+    <Content Include="web.pro2.config" />
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="_Components\web.config" />
     <Content Include="_GlobalResources\Js\web.config" />
     <Content Include="_GlobalResources\Web.config" />
-    <Content Include="web.SIT.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.SIT2.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="web.UAT.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
+    <Content Include="web.SIT.config" />
+    <Content Include="web.SIT2.config" />
+    <Content Include="web.UAT.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fanex.Age.UI.Forecast\Fanex.Age.UI.Forecast.csproj">
