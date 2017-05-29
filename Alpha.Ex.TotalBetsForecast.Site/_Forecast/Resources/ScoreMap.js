@@ -58,8 +58,8 @@ function initScoreMap() {
 
         $('scoreMapIcon').onclick = function () {
             var width = window.top.window.innerWidth * 0.7;
-            var url = 'ForecastScoreMap/BetTypesInfo';
-            top.popupManager.openByRelativeUrl(url, '', width);
+            var url = age.GetExTotalBetsForecastUrl() + 'ForecastScoreMap/BetTypesInfo';
+            top.popupManager.open(url, '', width);
         };
     }
     catch (err) { }

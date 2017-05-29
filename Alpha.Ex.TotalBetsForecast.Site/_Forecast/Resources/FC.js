@@ -1,6 +1,6 @@
 ﻿function openBetListPopup(matchId, betType, betTypeValue) {
     top.popupManager.openMultipleByRelativeUrl(
-        _oldMainUrl + "_BetList/BetList.aspx?matchid=" + matchId + "&bettype=" + betType + "&type=" + betTypeValue,
+        "_BetList/BetList.aspx?matchid=" + matchId + "&bettype=" + betType + "&type=" + betTypeValue,
         "", 1024);
 }
 
