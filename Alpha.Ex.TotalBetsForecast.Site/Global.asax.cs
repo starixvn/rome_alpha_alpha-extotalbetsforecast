@@ -5,6 +5,7 @@ using Fanex.Razorbill.Security.Services.Authentication;
 using Sunplus.Agent.Model.Entities;
 using Sunplus.Agent.Utilities;
 using System;
+using System.Configuration;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -28,6 +29,8 @@ namespace Alpha.Ex.TotalBetsForecast.Site
 
         protected void Application_Start(object sender, EventArgs e)
         {
+            TplCore.TplSettings.UrlVersion = ConfigurationManager.AppSettings["JsVersion"];
+
             DbSettingProviderManager.Current.Start();
             ShareSession.Init();
 
