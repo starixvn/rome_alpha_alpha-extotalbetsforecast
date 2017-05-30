@@ -465,34 +465,25 @@
     <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-icons_fcd113_256x240.png" />
     <Content Include="Scripts\_Libs\jQuery\Styles\jquery-ui-1.9.1.custom.css" />
     <Content Include="Scripts\_Libs\jQuery\Styles\jquery-ui-1.9.1.custom.min.css" />
+	<Content Include="web.backupMNL.config">
+	  <DependentUpon>Web.AppSettings.config</DependentUpon>
+	</Content>
+	<Content Include="web.backupMNL2.config">
+	  <DependentUpon>Web.AppSettings.config</DependentUpon>
+	</Content>
+	<Content Include="web.backupMNLExNap.config">
+	  <DependentUpon>Web.AppSettings.config</DependentUpon>
+	</Content>
+	<Content Include="web.backupMNLExNap2.config">
+	  <DependentUpon>Web.AppSettings.config</DependentUpon>
+	</Content>
+	<Content Include="web.backupMNLNap.config">
+	  <DependentUpon>Web.AppSettings.config</DependentUpon>
+	</Content>
+	<Content Include="web.backupMNLNap2.config">
+	  <DependentUpon>Web.AppSettings.config</DependentUpon>
+	</Content>
     <Content Include="Web.AppSettings.local2.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.mnl.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.mnl2.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.mnlEx.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.mnlEx2.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.mnlExi7.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.mnli7.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.mnlNap.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.mnlNap2.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.mnlNapi7.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.napexternal.config">
@@ -774,16 +765,7 @@
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="web.local2.config" />
-    <Content Include="web.mnl.config" />
-    <Content Include="web.mnl2.config" />
-    <Content Include="web.mnlEx.config" />
-    <Content Include="web.mnlEx2.config" />
-    <Content Include="web.mnlExi7.config" />
-    <Content Include="web.mnli7.config" />
-    <Content Include="web.mnlNap.config" />
-    <Content Include="web.mnlNap2.config" />
-    <Content Include="web.mnlNapi7.config" />
+    <Content Include="web.local2.config" />    
     <Content Include="web.napexternal.config" />
     <Content Include="web.napexternal2.config" />
     <Content Include="web.napinternal.config" />
