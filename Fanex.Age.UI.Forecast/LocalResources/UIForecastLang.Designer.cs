@@ -79,15 +79,6 @@ namespace Fanex.Age.UI.Forecast.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  (N).
-        /// </summary>
-        internal static string IsNeutral {
-            get {
-                return ResourceManager.GetString("IsNeutral", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 1 X 2.
         /// </summary>
         internal static string lbl1x2 {
@@ -138,15 +129,6 @@ namespace Fanex.Age.UI.Forecast.LocalResources {
         internal static string lblHOUL {
             get {
                 return ResourceManager.GetString("lblHOUL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Live!.
-        /// </summary>
-        internal static string lblLive {
-            get {
-                return ResourceManager.GetString("lblLive", resourceCulture);
             }
         }
         

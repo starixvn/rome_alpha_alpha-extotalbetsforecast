@@ -171,10 +171,4 @@
   <data name="submit" xml:space="preserve">
     <value>提交</value>
   </data>
-  <data name="IsNeutral" xml:space="preserve">
-    <value> (N)</value>
-  </data>
-  <data name="lblLive" xml:space="preserve">
-    <value>现场！</value>
-  </data>
 </root>

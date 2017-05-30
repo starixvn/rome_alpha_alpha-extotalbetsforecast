@@ -171,10 +171,4 @@
   <data name="submit" xml:space="preserve">
     <value>Xác nhận</value>
   </data>
-  <data name="IsNeutral" xml:space="preserve">
-    <value> (N)</value>
-  </data>
-  <data name="lblLive" xml:space="preserve">
-    <value>Trực Tuyến</value>
-  </data>
 </root>
