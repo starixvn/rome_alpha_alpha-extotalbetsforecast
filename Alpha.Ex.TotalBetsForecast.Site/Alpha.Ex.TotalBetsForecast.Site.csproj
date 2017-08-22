@@ -910,7 +910,8 @@
   <PropertyGroup>
     <PostBuildEvent>cd $(ProjectDir)
 cd ..
-BuildWebCompiler.bat
+cd build
+assets.build.cmd
       if not exist "$(WebProjectOutputDir)\bin\Roslyn" md "$(WebProjectOutputDir)\bin\Roslyn"
       start /MIN xcopy /s /y /R "$(OutDir)roslyn\*.*" "$(WebProjectOutputDir)\bin\Roslyn"</PostBuildEvent>
   </PropertyGroup>
