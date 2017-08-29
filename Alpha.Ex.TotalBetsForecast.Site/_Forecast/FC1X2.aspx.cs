@@ -100,8 +100,8 @@ namespace Fanex.Age.UI.Forecast
                 tpl.Piwik.Clear();
             }
 
-            ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
+            // Bet List Url
+            tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
 
             if (_fullMode) writer.Write(tpl);
             else writer.Write(tpl.Content);

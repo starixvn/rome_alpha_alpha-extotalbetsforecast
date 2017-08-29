@@ -8,7 +8,6 @@
  */
 namespace Fanex.Age.UI.Forecast
 {
-    using Alpha.Web.Helpers;
     using Fanex.Age.UI.Components;
     using Fanex.Age.UI.Components.MatchByLeague;
     using Sunplus.Agent.Model.BL.Cache;
@@ -100,9 +99,6 @@ namespace Fanex.Age.UI.Forecast
                 RenderingFactory.Render(false, listScoreMap, listMatch, content, false);
                 tpl.Content.ScoreMap.SetValue(content.ToString());
             }
-
-            ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
 
             writer.Write(tpl);
         }

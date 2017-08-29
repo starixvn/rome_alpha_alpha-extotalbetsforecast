@@ -28,7 +28,7 @@ namespace Fanex.Age.UI.TotalBets
 			protected static string s11{get{return AbsoluteUrl("Resources/TotalBets.js", TplSettings.Question);}}
 			protected static string s12 = "\" type=\"text/javascript\"></script>";
 			public OutRight_Piwik_Block Piwik = new OutRight_Piwik_Block();
-			public OutRight_OldMainUrl_Block OldMainUrl = new OutRight_OldMainUrl_Block();
+			public OutRight_BetListsUrl_Block BetListsUrl = new OutRight_BetListsUrl_Block();
 			protected static string s13 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -51,7 +51,7 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s11);
 					bd.Append(s12);
 					if(null != Piwik) Piwik.ToString(ref bd);
-					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
+					if(null != BetListsUrl) BetListsUrl.ToString(ref bd);
 					bd.Append(s13);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -129,15 +129,13 @@ namespace Fanex.Age.UI.TotalBets
 			public string NoValue = "{NoValue}";
 			protected static string s28 = "</td><td class=\"l\"><a href=\"javascript:doViewBetList(";
 			public string MatchId = "{MatchId}";
-			protected static string s29 = ", 10, '";
-			public string BetType = "{BetType}";
-			protected static string s30 = "')\">";
+			protected static string s29 = ", 10)\">";
 			public string TeamsValue = "{TeamsValue}";
-			protected static string s31 = "</a></td><td>";
+			protected static string s30 = "</a></td><td>";
 			public string BalanceValue = "{BalanceValue}";
-			protected static string s32 = "</td><td class=\"fcnum\">";
+			protected static string s31 = "</td><td class=\"fcnum\">";
 			public string ForecastValue = "{ForecastValue}";
-			protected static string s33 = "</td></tr>";
+			protected static string s32 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
@@ -154,14 +152,12 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s28);
 					bd.Append(MatchId);
 					bd.Append(s29);
-					bd.Append(BetType);
-					bd.Append(s30);
 					bd.Append(TeamsValue);
-					bd.Append(s31);
+					bd.Append(s30);
 					bd.Append(BalanceValue);
-					bd.Append(s32);
+					bd.Append(s31);
 					bd.Append(ForecastValue);
-					bd.Append(s33);
+					bd.Append(s32);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -169,17 +165,17 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OutRight_Contents_NotFoundContent_Block: Block
 		{
-			protected static string s34 = "<tr class=\"bg_white\"><td colspan=\"4\" class=\"c nobold\">";
-			protected static string s35{get{return LocalResources.TotalBetsLang.noInfo;}}
-			protected static string s36 = "</td></tr>";
+			protected static string s33 = "<tr class=\"bg_white\"><td colspan=\"4\" class=\"c nobold\">";
+			protected static string s34{get{return LocalResources.TotalBetsLang.noInfo;}}
+			protected static string s35 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s33);
 					bd.Append(s34);
 					bd.Append(s35);
-					bd.Append(s36);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -187,22 +183,23 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OutRight_Piwik_Block: Block
 		{
-			protected static string s37 = "<script type=\"text/javascript\">var _pkUrl = '";
-			protected static string s38{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl;}}
-			protected static string s39 = "',_pkScript = '";
-			protected static string s40{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript;}}
-			protected static string s41 = "',_pkSiteId = '";
-			protected static string s42{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId;}}
-			protected static string s43 = "';</script><script src=\"";
-			protected static string s44{get{return AbsoluteUrl("_GlobalResources/Js/piwikLoader.js", TplSettings.Question);}}
-			protected static string s45 = "\" type=\"text/javascript\"></script><noscript><p><img src='";
+			protected static string s36 = "<script type=\"text/javascript\">var _pkUrl = '";
+			protected static string s37{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl;}}
+			protected static string s38 = "',_pkScript = '";
+			protected static string s39{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript;}}
+			protected static string s40 = "',_pkSiteId = '";
+			protected static string s41{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId;}}
+			protected static string s42 = "';</script><script src=\"";
+			protected static string s43{get{return AbsoluteUrl("_GlobalResources/Js/piwikLoader.js", TplSettings.Question);}}
+			protected static string s44 = "\" type=\"text/javascript\"></script><noscript><p><img src='";
 			public string PiwikUrl = "{PiwikUrl}";
-			protected static string s46 = "' style=\"border:0;\" alt=\"\" /></p></noscript>";
+			protected static string s45 = "' style=\"border:0;\" alt=\"\" /></p></noscript>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s36);
 					bd.Append(s37);
 					bd.Append(s38);
 					bd.Append(s39);
@@ -211,27 +208,26 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s42);
 					bd.Append(s43);
 					bd.Append(s44);
-					bd.Append(s45);
 					bd.Append(PiwikUrl);
-					bd.Append(s46);
+					bd.Append(s45);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
 		}
 
-		public class OutRight_OldMainUrl_Block: Block
+		public class OutRight_BetListsUrl_Block: Block
 		{
-			protected static string s47 = "<script type=\"text/javascript\">var _oldMainUrl = '";
-			public string OldMainUrl = "{OldMainUrl}";
-			protected static string s48 = "';</script>";
+			protected static string s46 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			public string BetListsUrl = "{BetListsUrl}";
+			protected static string s47 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s46);
+					bd.Append(BetListsUrl);
 					bd.Append(s47);
-					bd.Append(OldMainUrl);
-					bd.Append(s48);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

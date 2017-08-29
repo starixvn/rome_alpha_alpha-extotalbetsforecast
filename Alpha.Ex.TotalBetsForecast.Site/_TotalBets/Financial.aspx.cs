@@ -92,8 +92,6 @@ namespace Fanex.Age.UI.TotalBets
                             betTypeBlocks[j].OEText.OETurnOverValue = "0";
                             betTypeBlocks[j].OEWinlossValue = "0";
                             betTypeBlocks[j].ColorOver = Fanex.Age.UI.Common.RowBgOver;
-                            betTypeBlocks[j].OULink.BetTypeMatch = Fanex.Age.UI.Common.BetListByBetTypeMatch;
-                            betTypeBlocks[j].OELink.BetTypeMatch = Fanex.Age.UI.Common.BetListByBetTypeMatch;
                         }
                     }
 
@@ -128,9 +126,8 @@ namespace Fanex.Age.UI.TotalBets
                 }
             }
 
-            ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
-
+            // Bet List Url
+            tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
 
             if (_fullMode)
             {

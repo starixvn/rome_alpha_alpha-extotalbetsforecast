@@ -85,8 +85,8 @@ namespace Fanex.Age.UI.TotalBets
                 tpl.Piwik.Clear();
             }
 
-            ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
+            // Bet List Url
+            tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
 
             if (_fullMode)
             {

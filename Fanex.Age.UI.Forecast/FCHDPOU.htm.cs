@@ -32,7 +32,7 @@ namespace Fanex.Age.UI.Forecast
 			protected static string s15{get{return AbsoluteUrl("Resources/FC.js", TplSettings.Question);}}
 			protected static string s16 = "\" type=\"text/javascript\"></script>";
 			public FCHDPOU_Piwik_Block Piwik = new FCHDPOU_Piwik_Block();
-			public FCHDPOU_OldMainUrl_Block OldMainUrl = new FCHDPOU_OldMainUrl_Block();
+			public FCHDPOU_BetListsUrl_Block BetListsUrl = new FCHDPOU_BetListsUrl_Block();
 			protected static string s17 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -59,7 +59,7 @@ namespace Fanex.Age.UI.Forecast
 					bd.Append(s15);
 					bd.Append(s16);
 					if(null != Piwik) Piwik.ToString(ref bd);
-					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
+					if(null != BetListsUrl) BetListsUrl.ToString(ref bd);
 					bd.Append(s17);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -295,10 +295,10 @@ namespace Fanex.Age.UI.Forecast
 			}
 		}
 
-		public class FCHDPOU_OldMainUrl_Block: Block
+		public class FCHDPOU_BetListsUrl_Block: Block
 		{
-			protected static string s71 = "<script type=\"text/javascript\">var _oldMainUrl = '";
-			public string OldMainUrl = "{OldMainUrl}";
+			protected static string s71 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			public string BetListsUrl = "{BetListsUrl}";
 			protected static string s72 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -306,7 +306,7 @@ namespace Fanex.Age.UI.Forecast
 				if(RenderChild)
 				{
 					bd.Append(s71);
-					bd.Append(OldMainUrl);
+					bd.Append(BetListsUrl);
 					bd.Append(s72);
 				}
 				if(IsAssigned){bd.Append(Value);}

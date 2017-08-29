@@ -30,7 +30,7 @@ namespace Fanex.Age.UI.Forecast
 			protected static string s13{get{return AbsoluteUrl("Resources/FC.js", TplSettings.Question);}}
 			protected static string s14 = "\" type=\"text/javascript\"></script>";
 			public FCAH_FPSArea_Block FPSArea = new FCAH_FPSArea_Block();
-			public FCAH_OldMainUrl_Block OldMainUrl = new FCAH_OldMainUrl_Block();
+			public FCAH_BetListsUrls_Block BetListsUrls = new FCAH_BetListsUrls_Block();
 			protected static string s15 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -55,7 +55,7 @@ namespace Fanex.Age.UI.Forecast
 					bd.Append(s13);
 					bd.Append(s14);
 					if(null != FPSArea) FPSArea.ToString(ref bd);
-					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
+					if(null != BetListsUrls) BetListsUrls.ToString(ref bd);
 					bd.Append(s15);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -269,11 +269,9 @@ namespace Fanex.Age.UI.Forecast
 			public string MatchId = "{MatchId}";
 			protected static string s54 = ", ";
 			public string BetType = "{BetType}";
-			protected static string s55 = ", '";
-			public string BetTypeValue = "{BetTypeValue}";
-			protected static string s56 = "')\">";
-			protected static string s57{get{return LocalResources.UIForecastLang.lblBetLists;}}
-			protected static string s58 = "</a>";
+			protected static string s55 = ")\">";
+			protected static string s56{get{return LocalResources.UIForecastLang.lblBetLists;}}
+			protected static string s57 = "</a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
@@ -284,10 +282,8 @@ namespace Fanex.Age.UI.Forecast
 					bd.Append(s54);
 					bd.Append(BetType);
 					bd.Append(s55);
-					bd.Append(BetTypeValue);
 					bd.Append(s56);
 					bd.Append(s57);
-					bd.Append(s58);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -295,17 +291,17 @@ namespace Fanex.Age.UI.Forecast
 
 		public class FCAH_Content_NoInfo_Block: Block
 		{
-			protected static string s59 = "<table class=\"tblRpt width-100per\"><tr class=\"no_info\"><td>";
-			protected static string s60{get{return LocalResources.UIForecastLang.noInfo;}}
-			protected static string s61 = "</td></tr></table>";
+			protected static string s58 = "<table class=\"tblRpt width-100per\"><tr class=\"no_info\"><td>";
+			protected static string s59{get{return LocalResources.UIForecastLang.noInfo;}}
+			protected static string s60 = "</td></tr></table>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s58);
 					bd.Append(s59);
 					bd.Append(s60);
-					bd.Append(s61);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -313,39 +309,39 @@ namespace Fanex.Age.UI.Forecast
 
 		public class FCAH_FPSArea_Block: Block
 		{
-			protected static string s62 = "<input type=\"hidden\" id=\"userId\" value=\"";
+			protected static string s61 = "<input type=\"hidden\" id=\"userId\" value=\"";
 			public string userId = "{userId}";
-			protected static string s63 = "\" /><script src=\"";
-			protected static string s64{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.FPSApi;}}
-			protected static string s65 = "\" type=\"text/javascript\"></script>";
+			protected static string s62 = "\" /><script src=\"";
+			protected static string s63{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.FPSApi;}}
+			protected static string s64 = "\" type=\"text/javascript\"></script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s62);
+					bd.Append(s61);
 					bd.Append(userId);
+					bd.Append(s62);
 					bd.Append(s63);
 					bd.Append(s64);
-					bd.Append(s65);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
 		}
 
-		public class FCAH_OldMainUrl_Block: Block
+		public class FCAH_BetListsUrls_Block: Block
 		{
-			protected static string s66 = "<script type=\"text/javascript\">var _oldMainUrl = '";
-			public string OldMainUrl = "{OldMainUrl}";
-			protected static string s67 = "';</script>";
+			protected static string s65 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			public string BetListsUrl = "{BetListsUrl}";
+			protected static string s66 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s65);
+					bd.Append(BetListsUrl);
 					bd.Append(s66);
-					bd.Append(OldMainUrl);
-					bd.Append(s67);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

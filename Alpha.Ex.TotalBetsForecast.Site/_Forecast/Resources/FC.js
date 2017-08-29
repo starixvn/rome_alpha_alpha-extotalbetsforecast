@@ -1,6 +1,6 @@
-﻿function openBetListPopup(matchId, betType, betTypeValue) {
-    top.popupManager.openMultipleByRelativeUrl(
-        "_BetList/BetList.aspx?matchid=" + matchId + "&bettype=" + betType + "&type=" + betTypeValue,
+﻿function openBetListPopup(matchId, betType) {
+    top.popupManager.openMultiple(
+        _betListsUrl + "BetListByBetTypeAndMatch/Index?matchid=" + matchId + "&bettype=" + betType,
         "", 1024);
 }
 
@@ -16,10 +16,10 @@ function GetFCAH(matchId, score, bettype) {
 }
 function openForecast(matchId, betType) {
     if (betType == 1) {
-        location.href = _oldMainUrl + '_BetList/BetList.aspx?matchid=' + matchId + '&bettype=5&type=BettypeMatch';
+        location.href = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchid=' + matchId + '&bettype=5';
     }
     else {
-        location.href = _oldMainUrl + '_BetList/BetList.aspx?matchid=' + matchId + '&bettype=15&type=BettypeMatch';
+        location.href = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchid=' + matchId + '&bettype=15';
     }
 }
 function openForecastPopup(matchId, betType) {

@@ -262,8 +262,8 @@ namespace Fanex.Age.UI.Forecast
             // For FPS.
             RenderFPSArea(tpl);
 
-            ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
+            // Bet List Url
+            tpl.BetListsUrls.BetListsUrl = MicroSites.BetListsUrl();
 
             if (_fullMode) writer.Write(tpl);
             else writer.Write(tpl.Content);
@@ -395,7 +395,6 @@ namespace Fanex.Age.UI.Forecast
             {
                 betListBlock.MatchId = _matchId.ToString();
                 betListBlock.BetType = _betType.ToString();
-                betListBlock.BetTypeValue = Fanex.Age.UI.Common.BetListByBetTypeMatch;
             }
             else
             {

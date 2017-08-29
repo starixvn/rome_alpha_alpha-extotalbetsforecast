@@ -87,8 +87,8 @@ namespace Fanex.Age.UI.TotalBets
                 tpl.Piwik.Clear();
             }
 
-            ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
+            // Bet List Url
+            tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
 
             if (_fullMode)
             {
@@ -165,7 +165,6 @@ namespace Fanex.Age.UI.TotalBets
                 decimal HdpTotal = Convert.ToDecimal(dr["home_odds_HDP"]) - Convert.ToDecimal(dr["away_odds_HDP"]);
                 matchBlock.HandicapTotalValue.HandicapTotalValue = NegativeNumberRoundColor(HdpTotal);
                 matchBlock.HandicapTotalValue.MatchId = dr["matchid"].ToString();
-                matchBlock.HandicapTotalValue.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
                 matchBlock.HandicapTotalButton.MatchId = dr["matchid"].ToString();
 
                 matchBlock.HandicapTotalValue.Show();
@@ -192,7 +191,6 @@ namespace Fanex.Age.UI.TotalBets
 
                 matchBlock.OverUnderTotalValue.OverUnderTotalValue = NegativeNumberRoundColor(OUTotal);
                 matchBlock.OverUnderTotalValue.MatchId = dr["matchid"].ToString();
-                matchBlock.OverUnderTotalValue.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
                 matchBlock.OverUnderTotalButton.MatchId = dr["matchid"].ToString();
 
                 matchBlock.OverUnderTotalValue.Show();
@@ -218,7 +216,6 @@ namespace Fanex.Age.UI.TotalBets
 
                 matchBlock.HandicapFirstHalfValue.HandicapFirstHalfValue = NegativeNumberRoundColor(HdpFH);
                 matchBlock.HandicapFirstHalfValue.MatchId = dr["matchid"].ToString();
-                matchBlock.HandicapFirstHalfValue.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
                 matchBlock.HandicapFirstHalfButton.MatchId = dr["matchid"].ToString();
 
                 matchBlock.HandicapFirstHalfValue.Show();
@@ -244,7 +241,6 @@ namespace Fanex.Age.UI.TotalBets
 
                 matchBlock.OverUnderFirstHalfValue.OverUnderFirstHalfValue = NegativeNumberRoundColor(OUHT);
                 matchBlock.OverUnderFirstHalfValue.MatchId = dr["matchid"].ToString();
-                matchBlock.OverUnderFirstHalfValue.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
                 matchBlock.OverUnderFirstHalfButton.MatchId = dr["matchid"].ToString();
 
                 matchBlock.OverUnderFirstHalfValue.Show();

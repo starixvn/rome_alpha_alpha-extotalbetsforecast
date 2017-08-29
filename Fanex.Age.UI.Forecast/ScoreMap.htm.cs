@@ -33,9 +33,7 @@ namespace Fanex.Age.UI.Forecast
 			protected static string s14{get{return AbsoluteUrl("Resources/MatchByLeague.js", TplSettings.Question);}}
 			protected static string s15 = "\" type=\"text/javascript\"></script><script src=\"";
 			protected static string s16{get{return AbsoluteUrl("Resources/ScoreMap.js", TplSettings.Question);}}
-			protected static string s17 = "\" type=\"text/javascript\"></script>";
-			public ScoreMap_OldMainUrl_Block OldMainUrl = new ScoreMap_OldMainUrl_Block();
-			protected static string s18 = "</body></html>";
+			protected static string s17 = "\" type=\"text/javascript\"></script></body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
@@ -63,8 +61,6 @@ namespace Fanex.Age.UI.Forecast
 					bd.Append(s15);
 					bd.Append(s16);
 					bd.Append(s17);
-					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
-					bd.Append(s18);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -79,17 +75,17 @@ namespace Fanex.Age.UI.Forecast
 
 		public class ScoreMap_mainTitle_Block: Block
 		{
-			protected static string s19 = "<div id=\"header_main\">";
+			protected static string s18 = "<div id=\"header_main\">";
 			public string Forecast = "{Forecast}";
-			protected static string s20 = "</div>";
+			protected static string s19 = "</div>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s19);
+					bd.Append(s18);
 					bd.Append(Forecast);
-					bd.Append(s20);
+					bd.Append(s19);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -98,22 +94,22 @@ namespace Fanex.Age.UI.Forecast
 		public class ScoreMap_Content_Block: Block
 		{
 			public ScoreMap_Content_LimitLeagueList_Block LimitLeagueList = new ScoreMap_Content_LimitLeagueList_Block();
-			protected static string s21 = "<div id=\"mainContent\" style=\"width: ";
+			protected static string s20 = "<div id=\"mainContent\" style=\"width: ";
 			public string mWidth = "{mWidth}";
-			protected static string s22 = "\">";
+			protected static string s21 = "\">";
 			public ScoreMap_Content_ScoreMap_Block ScoreMap = new ScoreMap_Content_ScoreMap_Block();
-			protected static string s23 = "</div>";
+			protected static string s22 = "</div>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
 					if(null != LimitLeagueList) LimitLeagueList.ToString(ref bd);
-					bd.Append(s21);
+					bd.Append(s20);
 					bd.Append(mWidth);
-					bd.Append(s22);
+					bd.Append(s21);
 					if(null != ScoreMap) ScoreMap.ToString(ref bd);
-					bd.Append(s23);
+					bd.Append(s22);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -121,77 +117,77 @@ namespace Fanex.Age.UI.Forecast
 
 		public class ScoreMap_Content_LimitLeagueList_Block: Block
 		{
-			protected static string s24 = "<div id=\"box_header\" style=\"width: ";
+			protected static string s23 = "<div id=\"box_header\" style=\"width: ";
 			public string mWidth = "{mWidth}";
-			protected static string s25 = "\"><table class=\"tbl-filter\" style=\"";
+			protected static string s24 = "\"><table class=\"tbl-filter\" style=\"";
 			public string display = "{display}";
-			protected static string s26 = "\"><tr><td>";
-			protected static string s27{get{return LocalResources.UIForecastLang.league;}}
-			protected static string s28 = "</td><td id=\"selLeague\">";
+			protected static string s25 = "\"><tr><td>";
+			protected static string s26{get{return LocalResources.UIForecastLang.league;}}
+			protected static string s27 = "</td><td id=\"selLeague\">";
 			public string LeagueList = "{LeagueList}";
-			protected static string s29 = "</td><td><div title=\"";
-			protected static string s30{get{return LocalResources.UIForecastLang.RefreshLeagues;}}
-			protected static string s31 = "\" class=\"btnRefresh\" id=\"RefreshLeagues\">&nbsp;</div></td><td><input type=\"button\" class=\"btn\" id=\"dSelMatch\" value=\"";
-			protected static string s32{get{return LocalResources.UIForecastLang.SelectMatch;}}
-			protected static string s33 = "\"></td><td valign=\"top\"><div id=\"loading\"></div></td></tr></table><div class=\"pull-right\"><a href=\"javascript:;\" class=\"infoIco\"title=\"Click to view Score Map Info\" id=\"scoreMapIcon\"></a></div><div id=\"tblLiveDead\" style=\"";
+			protected static string s28 = "</td><td><div title=\"";
+			protected static string s29{get{return LocalResources.UIForecastLang.RefreshLeagues;}}
+			protected static string s30 = "\" class=\"btnRefresh\" id=\"RefreshLeagues\">&nbsp;</div></td><td><input type=\"button\" class=\"btn\" id=\"dSelMatch\" value=\"";
+			protected static string s31{get{return LocalResources.UIForecastLang.SelectMatch;}}
+			protected static string s32 = "\"></td><td valign=\"top\"><div id=\"loading\"></div></td></tr></table><div class=\"pull-right\"><a href=\"javascript:;\" class=\"infoIco\"title=\"Click to view Score Map Info\" id=\"scoreMapIcon\"></a></div><div id=\"tblLiveDead\" style=\"";
 			public string displayLiveDead = "{displayLiveDead}";
-			protected static string s34 = "\"><table class=\"tblRpt tbl-scoremap\"><tr class=\"even_row\"><td><input class=\"hand\" type=\"checkbox\" ";
+			protected static string s33 = "\"><table class=\"tblRpt tbl-scoremap\"><tr class=\"even_row\"><td><input class=\"hand\" type=\"checkbox\" ";
 			public string isCheckedAllLive = "{isCheckedAllLive}";
-			protected static string s35 = " id=\"chkAllL\"><label class=\"hand bold\" for=\"chkAllL\" title=\"";
-			protected static string s36{get{return LocalResources.UIForecastLang.lblLiveBall;}}
-			protected static string s37 = "\">";
+			protected static string s34 = " id=\"chkAllL\"><label class=\"hand bold\" for=\"chkAllL\" title=\"";
+			protected static string s35{get{return LocalResources.UIForecastLang.lblLiveBall;}}
+			protected static string s36 = "\">";
 			public string lblLiveBall = "{lblLiveBall}";
-			protected static string s38 = "</label></td><td id=\"Td1\"><table class=\"reference\"><tr>";
+			protected static string s37 = "</label></td><td id=\"Td1\"><table class=\"reference\"><tr>";
 			public string LiveBall = "{LiveBall}";
-			protected static string s39 = "</tr></table></td></tr><tr class=\"even_row\"><td><input class=\"hand\" type=\"checkbox\" ";
+			protected static string s38 = "</tr></table></td></tr><tr class=\"even_row\"><td><input class=\"hand\" type=\"checkbox\" ";
 			public string isCheckedAllDead = "{isCheckedAllDead}";
-			protected static string s40 = " id=\"chkAllD\"><label class=\"hand bold\" for=\"chkAllD\" title=\"";
-			protected static string s41{get{return LocalResources.UIForecastLang.lblDeadball;}}
-			protected static string s42 = "\">";
+			protected static string s39 = " id=\"chkAllD\"><label class=\"hand bold\" for=\"chkAllD\" title=\"";
+			protected static string s40{get{return LocalResources.UIForecastLang.lblDeadball;}}
+			protected static string s41 = "\">";
 			public string lblDeadball = "{lblDeadball}";
-			protected static string s43 = "</label></td><td id=\"Td2\"><table class=\"reference\"><tr>";
+			protected static string s42 = "</label></td><td id=\"Td2\"><table class=\"reference\"><tr>";
 			public string DeadBall = "{DeadBall}";
-			protected static string s44 = "</tr></table></td></tr></table><table class=\"tbl-action\"><tr><td><input type=\"button\" value=\"";
-			protected static string s45{get{return LocalResources.UIForecastLang.submit;}}
-			protected static string s46 = "\" id=\"dSubmit\" class=\"btn\"></td><td valign=\"top\"><div id=\"loadingSubmit\"></div></td></tr></table></div></div>";
+			protected static string s43 = "</tr></table></td></tr></table><table class=\"tbl-action\"><tr><td><input type=\"button\" value=\"";
+			protected static string s44{get{return LocalResources.UIForecastLang.submit;}}
+			protected static string s45 = "\" id=\"dSubmit\" class=\"btn\"></td><td valign=\"top\"><div id=\"loadingSubmit\"></div></td></tr></table></div></div>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s24);
+					bd.Append(s23);
 					bd.Append(mWidth);
-					bd.Append(s25);
+					bd.Append(s24);
 					bd.Append(display);
+					bd.Append(s25);
 					bd.Append(s26);
 					bd.Append(s27);
-					bd.Append(s28);
 					bd.Append(LeagueList);
+					bd.Append(s28);
 					bd.Append(s29);
 					bd.Append(s30);
 					bd.Append(s31);
 					bd.Append(s32);
-					bd.Append(s33);
 					bd.Append(displayLiveDead);
-					bd.Append(s34);
+					bd.Append(s33);
 					bd.Append(isCheckedAllLive);
+					bd.Append(s34);
 					bd.Append(s35);
 					bd.Append(s36);
-					bd.Append(s37);
 					bd.Append(lblLiveBall);
-					bd.Append(s38);
+					bd.Append(s37);
 					bd.Append(LiveBall);
-					bd.Append(s39);
+					bd.Append(s38);
 					bd.Append(isCheckedAllDead);
+					bd.Append(s39);
 					bd.Append(s40);
 					bd.Append(s41);
-					bd.Append(s42);
 					bd.Append(lblDeadball);
-					bd.Append(s43);
+					bd.Append(s42);
 					bd.Append(DeadBall);
+					bd.Append(s43);
 					bd.Append(s44);
 					bd.Append(s45);
-					bd.Append(s46);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -199,39 +195,21 @@ namespace Fanex.Age.UI.Forecast
 
 		public class ScoreMap_Content_ScoreMap_Block: Block
 		{
-			protected static string s47 = "<div id=\"RefreshContent";
+			protected static string s46 = "<div id=\"RefreshContent";
 			public string matchId = "{matchId}";
-			protected static string s48 = "\">";
+			protected static string s47 = "\">";
 			public string MainTable = "{MainTable}";
-			protected static string s49 = "</div>";
+			protected static string s48 = "</div>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s47);
+					bd.Append(s46);
 					bd.Append(matchId);
-					bd.Append(s48);
+					bd.Append(s47);
 					bd.Append(MainTable);
-					bd.Append(s49);
-				}
-				if(IsAssigned){bd.Append(Value);}
-			}
-		}
-
-		public class ScoreMap_OldMainUrl_Block: Block
-		{
-			protected static string s50 = "<script type=\"text/javascript\">var _oldMainUrl = '";
-			public string OldMainUrl = "{OldMainUrl}";
-			protected static string s51 = "';</script>";
-			public override void ToString(ref StringBuilder bd)
-			{
-				if(!Visible) return;
-				if(RenderChild)
-				{
-					bd.Append(s50);
-					bd.Append(OldMainUrl);
-					bd.Append(s51);
+					bd.Append(s48);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

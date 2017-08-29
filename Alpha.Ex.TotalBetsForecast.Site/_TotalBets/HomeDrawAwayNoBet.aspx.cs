@@ -87,8 +87,8 @@ namespace Fanex.Age.UI.TotalBets
                 tpl.Piwik.Clear();
             }
 
-            ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
+            // Bet List Url
+            tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
 
             if (_fullMode)
             {
@@ -175,7 +175,6 @@ namespace Fanex.Age.UI.TotalBets
                 decimal HNBTotal = (decimal)(dr["home_odds_HNB"]) - (decimal)(dr["away_odds_HNB"]);
                 matchBlock.HomeNoBetValue.HomeNoBetValue = Formater.DecFormat(HNBTotal, 0);
                 matchBlock.HomeNoBetValue.MatchId = dr["matchid"].ToString();
-                matchBlock.HomeNoBetValue.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
 
                 matchBlock.HomeNoBetValue.Show();
             }
@@ -197,7 +196,6 @@ namespace Fanex.Age.UI.TotalBets
                 decimal DNBTotal = (decimal)(dr["home_odds_DNB"]) - (decimal)(dr["away_odds_DNB"]);
                 matchBlock.DrawNoBetValue.DrawNoBetValue = Formater.DecFormat(DNBTotal, 0);
                 matchBlock.DrawNoBetValue.MatchId = dr["matchid"].ToString();
-                matchBlock.DrawNoBetValue.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
 
                 matchBlock.DrawNoBetValue.Show();
             }
@@ -219,7 +217,6 @@ namespace Fanex.Age.UI.TotalBets
                 decimal ANBTotal = (decimal)(dr["home_odds_ANB"]) - (decimal)(dr["away_odds_ANB"]);
                 matchBlock.AwayNoBetValue.AwayNoBetValue = Formater.DecFormat(ANBTotal, 0);
                 matchBlock.AwayNoBetValue.MatchId = dr["matchid"].ToString();
-                matchBlock.AwayNoBetValue.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
 
                 matchBlock.AwayNoBetValue.Show();
             }
