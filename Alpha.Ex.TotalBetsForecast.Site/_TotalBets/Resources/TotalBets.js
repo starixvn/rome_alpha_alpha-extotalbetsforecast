@@ -1,11 +1,10 @@
-﻿
-function doViewBetList(matchId, betType) {
+﻿function doViewBetList(matchId, betType) {
     var url = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchId=' + matchId + '&betType=' + betType;
     window.location.href = url;
 }
 
 function doViewBetListRacing(matchId, betType) {
-    var url = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchId=' + matchId + '&betType=' + betType;
+    var url = _betListsUrl + 'RacingByMatch/Index?matchId=' + matchId + '&betType=' + betType;
     window.location.href = url;
 }
 

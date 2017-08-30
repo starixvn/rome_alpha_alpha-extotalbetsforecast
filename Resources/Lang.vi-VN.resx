@@ -211,4 +211,7 @@
   <data name="totalgoal" xml:space="preserve">
     <value>Tổng số bàn thắng</value>
   </data>
+  <data name="lblBetLists" xml:space="preserve">
+    <value>Danh sách cược</value>
+  </data>
 </root>

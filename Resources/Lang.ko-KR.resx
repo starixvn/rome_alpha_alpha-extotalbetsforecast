@@ -210,4 +210,7 @@
   <data name="lblNoDraw" xml:space="preserve">
     <value>No Draw</value>
   </data>
+  <data name="lblBetLists" xml:space="preserve">
+    <value>배팅 목록</value>
+  </data>
 </root>

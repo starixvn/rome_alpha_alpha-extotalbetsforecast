@@ -333,7 +333,9 @@ namespace Fanex.Age.UI.Forecast
 		{
 			protected static string s65 = "<script type=\"text/javascript\">var _betListsUrl = '";
 			public string BetListsUrl = "{BetListsUrl}";
-			protected static string s66 = "';</script>";
+			protected static string s66 = "';var _betListsTitle = '";
+			public string BetListsTitle = "{BetListsTitle}";
+			protected static string s67 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
@@ -342,6 +344,8 @@ namespace Fanex.Age.UI.Forecast
 					bd.Append(s65);
 					bd.Append(BetListsUrl);
 					bd.Append(s66);
+					bd.Append(BetListsTitle);
+					bd.Append(s67);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
