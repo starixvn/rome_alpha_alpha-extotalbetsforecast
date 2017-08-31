@@ -659,7 +659,6 @@
     <Content Include="_GlobalResources\x5.gif" />
     <Content Include="_TotalBets\CorrectScore.aspx" />
     <Content Include="_TotalBets\FGLG.aspx" />
-    <Content Include="_TotalBets\Financial.aspx" />
     <Content Include="_TotalBets\HDPOU.aspx" />
     <Content Include="_TotalBets\HomeDrawAwayNoBet.aspx" />
     <Content Include="_TotalBets\HTFT.aspx" />
@@ -718,10 +717,6 @@
     </Compile>
     <Content Include="_TotalBets\FGLG.aspx.cs">
       <DependentUpon>FGLG.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="_TotalBets\Financial.aspx.cs">
-      <DependentUpon>Financial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="_TotalBets\HDPOU.aspx.cs">

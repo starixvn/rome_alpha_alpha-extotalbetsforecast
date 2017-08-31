@@ -148,7 +148,6 @@
   <ItemGroup>
     <Content Include="CorrectScore.htm" />
     <Content Include="FGLG.htm" />
-    <Content Include="Financial.htm" />
     <Content Include="HDPOU.htm" />
     <Content Include="HomeDrawAwayNoBet.htm" />
     <Content Include="HTFT.htm" />
@@ -171,7 +170,6 @@
   <ItemGroup>
     <Compile Include="CorrectScore.htm.cs" />
     <Compile Include="FGLG.htm.cs" />
-    <Compile Include="Financial.htm.cs" />
     <Compile Include="HDPOU.htm.cs" />
     <Compile Include="HomeDrawAwayNoBet.htm.cs" />
     <Compile Include="HTFT.htm.cs" />
