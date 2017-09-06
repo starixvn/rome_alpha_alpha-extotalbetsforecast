@@ -15,12 +15,8 @@ function GetFCAH(matchId, score, bettype) {
     });
 }
 function openForecast(matchId, betType) {
-    if (betType == 1) {
-        location.href = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchid=' + matchId + '&bettype=5';
-    }
-    else {
-        location.href = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchid=' + matchId + '&bettype=15';
-    }
+    var url = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchid=' + matchId + '&bettype=' + (betType == 1 ? 5 : 15);
+    location.href = url;
 }
 function openForecastPopup(matchId, betType) {
     var url = age.GetExTotalBetsForecastUrl() + '_Forecast/FCAH.aspx?matchid=' + matchId + '&b=' + betType
