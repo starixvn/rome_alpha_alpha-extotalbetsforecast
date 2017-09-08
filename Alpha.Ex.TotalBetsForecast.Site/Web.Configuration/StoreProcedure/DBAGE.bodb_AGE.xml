@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Functions SiteId="105" SiteName="Alpha">
+<Functions SiteId="105" SiteName="Total Bets">
   <Function Name="Bet list">
     <Setting Key="Age_BetList_SelRunningByDate_Mem" SpName="Age_BetList_SelRunningByDate_Mem" DbName="DBAGE.bodb_AGE.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_BetList_SelRunningByBettype_Ag" SpName="Age_BetList_SelRunningByBettype_Ag" DbName="DBAGE.bodb_AGE.BODBDownlineNet" Plain="0" />
