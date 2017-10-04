@@ -465,25 +465,37 @@
     <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-icons_fcd113_256x240.png" />
     <Content Include="Scripts\_Libs\jQuery\Styles\jquery-ui-1.9.1.custom.css" />
     <Content Include="Scripts\_Libs\jQuery\Styles\jquery-ui-1.9.1.custom.min.css" />
-	<Content Include="web.backupMNL.config">
-	  <DependentUpon>Web.AppSettings.config</DependentUpon>
-	</Content>
-	<Content Include="web.backupMNL2.config">
-	  <DependentUpon>Web.AppSettings.config</DependentUpon>
-	</Content>
-	<Content Include="web.backupMNLExNap.config">
-	  <DependentUpon>Web.AppSettings.config</DependentUpon>
-	</Content>
-	<Content Include="web.backupMNLExNap2.config">
-	  <DependentUpon>Web.AppSettings.config</DependentUpon>
-	</Content>
-	<Content Include="web.backupMNLNap.config">
-	  <DependentUpon>Web.AppSettings.config</DependentUpon>
-	</Content>
-	<Content Include="web.backupMNLNap2.config">
-	  <DependentUpon>Web.AppSettings.config</DependentUpon>
-	</Content>
+    <Content Include="web.backupMNL.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="web.backupMNL2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="web.backupMNL3.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="web.backupMNLExNap.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="web.backupMNLExNap2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="web.backupMNLExNap3.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="web.backupMNLNap.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="web.backupMNLNap2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="web.backupMNLNap3.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="Web.AppSettings.local2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.local3.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.napexternal.config">
@@ -492,10 +504,16 @@
     <Content Include="Web.AppSettings.napexternal2.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
+    <Content Include="Web.AppSettings.napexternal3.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
     <Content Include="Web.AppSettings.napinternal.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.napinternal2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.napinternal3.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.pro.config">
@@ -504,16 +522,25 @@
     <Content Include="Web.AppSettings.pro2.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
+    <Content Include="Web.AppSettings.pro3.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
     <Content Include="Web.AppSettings.sit.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.sit2.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
+    <Content Include="Web.AppSettings.sit3.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
     <Content Include="Web.AppSettings.uat.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.uat2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.uat3.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.config" />
@@ -636,7 +663,9 @@
       <DependentUpon>TotalBets.js</DependentUpon>
     </Content>
     <Content Include="_TotalBets\TotalGoal.aspx" />
-    <Content Include="web.UAT2.config" />
+    <Content Include="web.UAT2.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Error.aspx.cs">
@@ -765,22 +794,43 @@
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="web.local2.config" />    
-    <Content Include="web.napexternal.config" />
-    <Content Include="web.napexternal2.config" />
-    <Content Include="web.napinternal.config" />
-    <Content Include="web.napinternal2.config" />
-    <Content Include="web.pro.config" />
-    <Content Include="web.pro2.config" />
+	<Content Include="web.local.config" />
+    <Content Include="web.local2.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.napexternal.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.napexternal2.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.napinternal.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.napinternal2.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.pro.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.pro2.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="_Components\web.config" />
     <Content Include="_GlobalResources\Js\web.config" />
     <Content Include="_GlobalResources\Web.config" />
-    <Content Include="web.SIT.config" />
-    <Content Include="web.SIT2.config" />
-    <Content Include="web.UAT.config" />
+    <Content Include="web.SIT.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.SIT2.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.UAT.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fanex.Age.UI.Forecast\Fanex.Age.UI.Forecast.csproj">
@@ -812,6 +862,26 @@
       <Name>Sunplus.Agent.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.local3.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.napexternal3.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.napinternal3.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.pro3.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.SIT3.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+    <Content Include="web.UAT3.config">
+		<DependentUpon>Web.local.config</DependentUpon>
+	</Content>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -840,7 +910,8 @@
   <PropertyGroup>
     <PostBuildEvent>cd $(ProjectDir)
 cd ..
-BuildWebCompiler.bat
+cd build
+assets.build.cmd
       if not exist "$(WebProjectOutputDir)\bin\Roslyn" md "$(WebProjectOutputDir)\bin\Roslyn"
       start /MIN xcopy /s /y /R "$(OutDir)roslyn\*.*" "$(WebProjectOutputDir)\bin\Roslyn"</PostBuildEvent>
   </PropertyGroup>

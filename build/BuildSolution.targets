@@ -5,7 +5,8 @@
          InitialTargets="BuildSolution">
 
   <Target Name="BuildSolution">
-    <MSBuild Projects="Alpha.Ex.TotalBetsForecast.sln" />
+	<Exec Command="..\tools\Nuget\nuget restore ..\Alpha.Ex.TotalBetsForecast.sln"/>
+    <MSBuild Projects="..\Alpha.Ex.TotalBetsForecast.sln" />
   </Target>
   
 </Project>
