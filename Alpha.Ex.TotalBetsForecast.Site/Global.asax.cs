@@ -1,6 +1,7 @@
 ﻿namespace Alpha.Ex.TotalBetsForecast.Site
 {
     using System;
+    using System.Collections.Generic;
     using System.Configuration;
     using System.Web;
     using System.Web.Mvc;
@@ -40,12 +41,9 @@
             RegisterGlobalFilters(GlobalFilters.Filters);
             MvcHandler.DisableMvcResponseHeader = true;
 
-            var logConfig = new LoggingConfiguration()
-               .GetHttpHeaderInfo()
-               .UseGetDbExceptionInfo(DatabaseInfoGetters.GetDbExceptionInfo);
-
+            var logConfig = new LoggingConfiguration().UseGetDbExceptionInfo(DatabaseInfoGetters.GetDbExceptionInfo);
             ExceptionHandler.UseConfig(logConfig);
-        }       
+        }
 
         public void Application_Error(object sender, EventArgs e)
         {

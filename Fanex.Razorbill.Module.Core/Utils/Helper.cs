@@ -8,8 +8,8 @@
 using System;
 using System.Collections.Generic;
 using System.Web;
+using Fanex.Logging.Extensions.Web;
 using Fanex.Razorbill.Module.Core.Services.Impl;
-using Sunplus.Agent.Utilities;
 
 namespace Fanex.Razorbill.Module.Core.Utils
 {
@@ -49,7 +49,7 @@ namespace Fanex.Razorbill.Module.Core.Utils
             }
             catch (Exception ex)
             {
-                Logs.Write(ex);
+                ExceptionHandler.Handle(ex);
             }
 
             return ip;
