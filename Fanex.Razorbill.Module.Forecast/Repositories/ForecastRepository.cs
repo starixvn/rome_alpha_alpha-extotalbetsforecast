@@ -10,6 +10,7 @@
     using Fanex.Razorbill.Module.Common.Helpers;
     using Fanex.Razorbill.Module.Forecast.Criteria;
     using Fanex.Razorbill.Module.Forecast.Models;
+    using Logging.Extensions.Database;
 
     /// <summary>
     /// Forecast repository.
@@ -26,15 +27,22 @@
             IList<ScoreMapLeague> leagues = new List<ScoreMapLeague>();
             using (var db = new ObjectDb(criteria.GetSettingKey()))
             {
-                using (var reader = db.ExecuteReader(criteria.GetSpParams()))
+                try
                 {
-                    while (reader.Read())
+                    using (var reader = db.ExecuteReader(criteria.GetSpParams()))
                     {
-                        leagues.Add(new ScoreMapLeague(Converter.ToInt(reader["leagueid"]))
+                        while (reader.Read())
                         {
-                            SportId = Converter.ToInt(reader["sporttype"])
-                        });
+                            leagues.Add(new ScoreMapLeague(Converter.ToInt(reader["leagueid"]))
+                            {
+                                SportId = Converter.ToInt(reader["sporttype"])
+                            });
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    throw new DatabaseException(ex.Message, ex, db.DbSetting);
                 }
             }
 
@@ -51,15 +59,22 @@
             IList<ScoreMapMatch> matches = new List<ScoreMapMatch>();
             using (var db = new ObjectDb(criteria.GetSettingKey()))
             {
-                using (var reader = db.ExecuteReader(criteria.GetSpParams()))
+                try
                 {
-                    while (reader.Read())
+                    using (var reader = db.ExecuteReader(criteria.GetSpParams()))
                     {
-                        matches.Add(new ScoreMapMatch(
-                            Converter.ToInt(reader["matchid"]),
-                            Converter.ToInt(reader["homeid"]),
-                            Converter.ToInt(reader["awayid"])));
+                        while (reader.Read())
+                        {
+                            matches.Add(new ScoreMapMatch(
+                                Converter.ToInt(reader["matchid"]),
+                                Converter.ToInt(reader["homeid"]),
+                                Converter.ToInt(reader["awayid"])));
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    throw new DatabaseException(ex.Message, ex, db.DbSetting);
                 }
             }
 
@@ -77,18 +92,25 @@
 
             using (var db = new ObjectDb(criteria.GetSettingKey()))
             {
-                using (var reader = db.ExecuteReader())
+                try
                 {
-                    while (reader.Read())
+                    using (var reader = db.ExecuteReader())
                     {
-                        rawdata.Add(new RawScoreMapBetType 
+                        while (reader.Read())
                         {
-                            TypeId = Converter.ToInt(reader["TypeId"]),
-                            EventType = Converter.ToInt(reader["EvenType"]),
-                            FirstId = Converter.ToString2(reader["1stId"]),
-                            InfoId = Converter.ToString2(reader["InfoId"]),
-                        });
+                            rawdata.Add(new RawScoreMapBetType
+                            {
+                                TypeId = Converter.ToInt(reader["TypeId"]),
+                                EventType = Converter.ToInt(reader["EvenType"]),
+                                FirstId = Converter.ToString2(reader["1stId"]),
+                                InfoId = Converter.ToString2(reader["InfoId"]),
+                            });
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    throw new DatabaseException(ex.Message, ex, db.DbSetting);
                 }
             }
 
@@ -112,48 +134,55 @@
             IDictionary<int, ForecastScoreMap> matchHash = new Dictionary<int, ForecastScoreMap>();
             using (var db = new ObjectDb(criteria.GetSettingKey()))
             {
-                using (var reader = db.ExecuteReader(criteria.GetSpParams()))
+                try
                 {
-                    while (reader.Read())
+                    using (var reader = db.ExecuteReader(criteria.GetSpParams()))
                     {
-                        matchId = Converter.ToInt(reader["matchid"]);
-                        if (!matchHash.TryGetValue(matchId, out scoreMap))
+                        while (reader.Read())
                         {
-                            scoreMap = new ForecastScoreMap(rowNumber, columnNumber) 
+                            matchId = Converter.ToInt(reader["matchid"]);
+                            if (!matchHash.TryGetValue(matchId, out scoreMap))
                             {
-                                MatchId = matchId,
-                                HaftTime = new int[rowNumber, columnNumber],
-                                FullTime = new int[rowNumber, columnNumber]
-                            };
+                                scoreMap = new ForecastScoreMap(rowNumber, columnNumber)
+                                {
+                                    MatchId = matchId,
+                                    HaftTime = new int[rowNumber, columnNumber],
+                                    FullTime = new int[rowNumber, columnNumber]
+                                };
 
-                            matchHash.Add(matchId, scoreMap);    
+                                matchHash.Add(matchId, scoreMap);
+                            }
+
+                            home = Converter.ToInt(reader["home"]);
+                            away = Converter.ToInt(reader["away"]);
+
+                            haftTime = reader["HT"];
+                            if (haftTime != DBNull.Value)
+                            {
+                                scoreMap.HaftTime[away, home] = (int)Math.Round(Converter.ToDecimal(haftTime), MidpointRounding.AwayFromZero);
+                            }
+                            else
+                            {
+                                scoreMap.HaftTime = null;
+                            }
+
+                            fullTime = reader["FT"];
+                            if (fullTime != null)
+                            {
+                                scoreMap.FullTime[away, home] = (int)Math.Round(Converter.ToDecimal(fullTime), MidpointRounding.AwayFromZero);
+                            }
+                            else
+                            {
+                                scoreMap.FullTime = null;
+                            }
                         }
 
-                        home = Converter.ToInt(reader["home"]);
-                        away = Converter.ToInt(reader["away"]);
-                        
-                        haftTime = reader["HT"];
-                        if (haftTime != DBNull.Value)
-                        {
-                            scoreMap.HaftTime[away, home] = (int)Math.Round(Converter.ToDecimal(haftTime), MidpointRounding.AwayFromZero);
-                        }
-                        else
-                        {
-                            scoreMap.HaftTime = null;
-                        }
-
-                        fullTime = reader["FT"];
-                        if (fullTime != null)
-                        {
-                            scoreMap.FullTime[away, home] = (int)Math.Round(Converter.ToDecimal(fullTime), MidpointRounding.AwayFromZero);
-                        }
-                        else
-                        {
-                            scoreMap.FullTime = null;
-                        }
+                        UpdateHomeAwayTeam(reader, matchHash, rowNumber, columnNumber);
                     }
-
-                    UpdateHomeAwayTeam(reader, matchHash, rowNumber, columnNumber);
+                }
+                catch (Exception ex)
+                {
+                    throw new DatabaseException(ex.Message, ex, db.DbSetting);
                 }
             }
 

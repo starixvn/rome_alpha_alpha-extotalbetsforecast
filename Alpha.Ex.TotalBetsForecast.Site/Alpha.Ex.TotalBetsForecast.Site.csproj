@@ -112,8 +112,20 @@
       <HintPath>..\packages\Fanex.LiveCasino.CoreSetting.Alpha.1.2.2.0\lib\net40\Fanex.LiveCasino.CoreSetting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Logging.1.0.0.0\lib\net40\Fanex.Logging.dll</HintPath>
+    <Reference Include="Fanex.Logging, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.1.0.4\lib\net40\Fanex.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Logging.Extensions, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Extensions.1.0.5\lib\net40\Fanex.Logging.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Logging.Extensions.Database.V59, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Extensions.Database.V59.1.0.3\lib\net40\Fanex.Logging.Extensions.Database.V59.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Logging.Extensions.Web, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Extensions.Web.1.0.5\lib\net40\Fanex.Logging.Extensions.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Products, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
@@ -664,8 +676,8 @@
     </Content>
     <Content Include="_TotalBets\TotalGoal.aspx" />
     <Content Include="web.UAT2.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Error.aspx.cs">
@@ -794,28 +806,28 @@
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-	<Content Include="web.local.config" />
+    <Content Include="web.local.config" />
     <Content Include="web.local2.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.napexternal.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.napexternal2.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.napinternal.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.napinternal2.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.pro.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.pro2.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -823,14 +835,14 @@
     <Content Include="_GlobalResources\Js\web.config" />
     <Content Include="_GlobalResources\Web.config" />
     <Content Include="web.SIT.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.SIT2.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.UAT.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fanex.Age.UI.Forecast\Fanex.Age.UI.Forecast.csproj">
@@ -864,23 +876,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.local3.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.napexternal3.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.napinternal3.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.pro3.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.SIT3.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
     <Content Include="web.UAT3.config">
-		<DependentUpon>Web.local.config</DependentUpon>
-	</Content>
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

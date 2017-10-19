@@ -10,9 +10,9 @@
 namespace Sunplus.Agent.Model.Services
 {
     using System;
-    using Utilities;
-    using ONEbook.UM.Services;
+    using Fanex.Logging.Extensions.Web;
     using ONEbook.UM.Models;
+    using ONEbook.UM.Services;
 
     public class MaintenanceService
     {
@@ -29,7 +29,7 @@ namespace Sunplus.Agent.Model.Services
             }
             catch (Exception ex)
             {
-                Logs.Write(ex);
+                ExceptionHandler.Handle(ex);
             }
 
             return false;
@@ -49,7 +49,7 @@ namespace Sunplus.Agent.Model.Services
             }
             catch (Exception ex)
             {
-                Logs.Write(ex);
+                ExceptionHandler.Handle(ex);
             }
 
             startTime = endTime = null;
