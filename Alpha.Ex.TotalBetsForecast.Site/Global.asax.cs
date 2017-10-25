@@ -1,6 +1,7 @@
 ﻿namespace Alpha.Ex.TotalBetsForecast.Site
 {
     using System;
+    using System.Collections.Generic;
     using System.Configuration;
     using System.Web;
     using System.Web.Mvc;
@@ -48,7 +49,17 @@
         {
             if (!CheckUnderMainternanceTime())
             {
-                ExceptionHandler.Handle(Server.GetLastError());
+                Exception ex = Server.GetLastError();
+                var currentCustomer = UserSession.Current;
+
+                ExceptionHandler.Handle(ex,
+                    new Dictionary<string, object>
+                    {
+                        ["CustId"] = currentCustomer?.CustId,
+                        ["CustName"] = currentCustomer?.UserName,
+                        ["SubAccountName"] = currentCustomer?.SubUserName,
+                        ["AdminName"] = currentCustomer?.AdminName
+                    });
             }
 
             if (!Sunplus.Agent.Model.BL.Definitions.AppSettings.LocalTest)
