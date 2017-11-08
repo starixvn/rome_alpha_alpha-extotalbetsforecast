@@ -1,21 +1,20 @@
-﻿
-function doViewBetList(matchId, betType, type) {
-    var url = _oldMainUrl + '_BetList/BetList.aspx?matchId=' + matchId + '&betType=' + betType + '&type=' + type;
+﻿function doViewBetList(matchId, betType) {
+    var url = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchId=' + matchId + '&betType=' + betType;
     window.location.href = url;
 }
 
-function doViewBetListRacing(matchId, betType, type) {
-    var url = _oldMainUrl + '_BetList/BetList.aspx?matchId=' + matchId + '&betType=' + betType + '&type=' + type + '&racing=1';
+function doViewBetListRacing(matchId, betType) {
+    var url = _betListsUrl + 'RacingByMatch/Index?matchId=' + matchId + '&betType=' + betType;
     window.location.href = url;
 }
 
-function doViewBetListGame(matchId, betType, type, islive) {
-    var url = _oldMainUrl + '_BetList/BetList.aspx?matchId=' + matchId + '&betType=' + betType + '&type=' + type + '&islive=' + islive;
+function doViewBetListGame(matchId, betType, islive) {
+    var url = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchId=' + matchId + '&betType=' + betType + '&islive=' + islive;
     window.location.href = url;
 }
 
-function doViewBetListNewGames(matchId, betType, type, islive, betteam) {
-    var url = _oldMainUrl + '_BetList/BetList.aspx?matchId=' + matchId + '&betType=' + betType + '&type=' + type + '&islive=' + islive + '&betteam=' + betteam;
+function doViewBetListNewGames(matchId, betType, islive, betteam) {
+    var url = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchId=' + matchId + '&betType=' + betType + '&islive=' + islive + '&betteam=' + betteam;
     window.location.href = url;
 }
 

@@ -125,11 +125,6 @@
     <Setting Key="Age_Rpt_DailyWLFoobet" SpName="Age_Rpt_DailyWLFoobet" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Rpt_ConsolidatedGroupProductSel" SpName="Age_Rpt_ConsolidatedGroupProductSel" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
   </Function>
-  <Function Name="Report-Charts">
-    <Setting Key="Age_Chart_WinlossAnalysis_Ag" SpName="Age_Chart_WinlossAnalysis_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_Chart_WinlossAnalysis_MAg" SpName="Age_Chart_WinlossAnalysis_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_Chart_WinlossAnalysis_SAg" SpName="Age_Chart_WinlossAnalysis_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-  </Function>
   <Function Name="Last bet monitoring">
     <Setting Key="Age_Monitor_BetlistSel_Ag_HDP" SpName="Age_Monitor_BetlistSel_Ag_HDP" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Monitor_BetlistSel_Ag_OtherBettypes" SpName="Age_Monitor_BetlistSel_Ag_OtherBettypes" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
@@ -218,44 +213,6 @@
     <Setting Key="Age_CustomerSelUserSearch" SpName="Age_CustomerSelUserSearch" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_CustSubCheckPageAccess" SpName="Age_CustSubCheckPageAccess" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Rpt_CustomerConsolidatedGroup_CheckBelonging" SpName="Age_Rpt_CustomerConsolidatedGroup_CheckBelonging" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-  </Function>
-  <Function Name="Bet list">
-    <Setting Key="Acc_BetlistCombinationParlay_Details" SpName="Acc_BetlistCombinationParlay_Details" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelAllByDate_Mem" SpName="Age_BetList_SelAllByDate_Mem" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelAllByDateHR_Ag" SpName="Age_BetList_SelAllByDateHR_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelAllByDateHR_MAg" SpName="Age_BetList_SelAllByDateHR_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelAllByDateHR_SAg" SpName="Age_BetList_SelAllByDateHR_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelByDayAll_Mem" SpName="Age_BetList_SelByDayAll_Mem" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelDeleted" SpName="Age_BetList_SelDeleted" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelDeleted_UserList_Ag" SpName="Age_BetList_SelDeleted_UserList_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelDeleted_UserList_MAg" SpName="Age_BetList_SelDeleted_UserList_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelDeleted_UserList_SAg" SpName="Age_BetList_SelDeleted_UserList_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelMatchResultFinance" SpName="Age_BetList_SelMatchResultFinance" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelMatchResultNumberGame" SpName="Age_BetList_SelMatchResultNumberGame" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelMatchResultParlay" SpName="Age_BetList_SelMatchResultParlay" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelMatchResult" SpName="Age_BetList_SelMatchResult" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelMatchResult2" SpName="Age_BetList_SelMatchResult2" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelParlayDetail" SpName="Age_BetList_SelParlayDetail" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelRunningByBettype_SAg" SpName="Age_BetList_SelRunningByBettype_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelRunningByBettypeMatch_Ag" SpName="Age_BetList_SelRunningBybettypeMatch_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelRunningByBettypeMatch_MAg" SpName="Age_BetList_SelRunningBybettypeMatch_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossByBettypeMatch_Ag" SpName="Age_BetList_SelWinlossByBettypeMatch_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossByBettypeMatch_MAg" SpName="Age_BetList_SelWinlossByBettypeMatch_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossByBettypeMatch_SAg" SpName="Age_BetList_SelWinlossByBettypeMatch_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinLossByDate_Mem" SpName="Age_BetList_SelWinLossByDate_Mem" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossHR_Ag" SpName="Age_BetList_SelWinlossHR_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossHR_MAg" SpName="Age_BetList_SelWinlossHR_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossHR_SAg" SpName="Age_BetList_SelWinlossHR_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossOutright_Ag" SpName="Age_BetList_SelWinlossOutright_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossOutright_MAg" SpName="Age_BetList_SelWinlossOutright_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossOutright_SAg" SpName="Age_BetList_SelWinlossOutright_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossParlay_Ag" SpName="Age_BetList_SelWinlossParlay_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossParlay_MAg" SpName="Age_BetList_SelWinlossParlay_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelWinlossParlay_SAg" SpName="Age_BetList_SelWinlossParlay_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BettransSelBetSlip" SpName="Age_BettransSelBetSlip" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_BetList_SelMatchResultSS" SpName="Age_BetList_SelMatchResultSS" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_Result_MatchSelResultDetail" SpName="Age_Result_MatchSelResultDetail" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="All_BetList_MatchResultGDSel" SpName="All_BetList_MatchResultGDSel" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
   </Function>
   <Function Name="Member Commission">
     <Setting Key="Age_MemCommission_SelBettype" SpName="Age_MemCommission_SelBettype" DbName="DBAGE.bodb02.BODBDownlineNet" />

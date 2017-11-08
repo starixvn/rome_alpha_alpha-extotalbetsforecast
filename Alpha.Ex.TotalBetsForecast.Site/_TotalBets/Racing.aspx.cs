@@ -139,8 +139,8 @@ namespace Fanex.Age.UI.TotalBets
                 tpl.Piwik.Clear();
             }
 
-            ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
+            // Bet List Url
+            tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
 
             if (_fullMode)
             {
@@ -223,8 +223,6 @@ namespace Fanex.Age.UI.TotalBets
                 matchBlock.WinToteValue.Hide();
                 matchBlock.WinTote.WinToteTotal = RedForNegativeAmount(dr["Total_Win_Tote"], 0);
                 matchBlock.WinTote.MatchId = dr["matchid"].ToString();
-                matchBlock.WinTote.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
-
             }
             matchBlock.WinToteWinloss = RedForNegativeAmount(dr["Winloss_Win_Tote"], 2);
             #endregion
@@ -242,8 +240,6 @@ namespace Fanex.Age.UI.TotalBets
                 matchBlock.PlaceToteValue.Hide();
                 matchBlock.PlaceTote.PlaceToteTotal = RedForNegativeAmount(dr["Total_Place_Tote"], 0);
                 matchBlock.PlaceTote.MatchId = dr["matchid"].ToString();
-                matchBlock.PlaceTote.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
-
             }
             matchBlock.PlaceToteWinloss = RedForNegativeAmount(dr["Winloss_Place_Tote"], 2);
             #endregion
@@ -261,8 +257,6 @@ namespace Fanex.Age.UI.TotalBets
                 matchBlock.WinplaceToteValue.Hide();
                 matchBlock.WinplaceTote.WinplaceToteTotal = RedForNegativeAmount(dr["Total_WinPlace_Tote"], 0);
                 matchBlock.WinplaceTote.MatchId = dr["matchid"].ToString();
-                matchBlock.WinplaceTote.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
-
             }
             matchBlock.WinplaceToteWinloss = RedForNegativeAmount(dr["Winloss_WinPlace_Tote"], 2);
             #endregion

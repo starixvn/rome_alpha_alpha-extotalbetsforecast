@@ -28,7 +28,7 @@ namespace Fanex.Age.UI.TotalBets
 			protected static string s11{get{return AbsoluteUrl("Resources/TotalBets.js", TplSettings.Question);}}
 			protected static string s12 = "\" type=\"text/javascript\"></script>";
 			public MoneyLine_Piwik_Block Piwik = new MoneyLine_Piwik_Block();
-			public MoneyLine_OldMainUrl_Block OldMainUrl = new MoneyLine_OldMainUrl_Block();
+			public MoneyLine_BetListsUrl_Block BetListsUrl = new MoneyLine_BetListsUrl_Block();
 			protected static string s13 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -51,7 +51,7 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s11);
 					bd.Append(s12);
 					if(null != Piwik) Piwik.ToString(ref bd);
-					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
+					if(null != BetListsUrl) BetListsUrl.ToString(ref bd);
 					bd.Append(s13);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -175,53 +175,37 @@ namespace Fanex.Age.UI.TotalBets
 			public string Away = "{Away}";
 			protected static string s51 = "</td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
 			public string MatchId = "{MatchId}";
-			protected static string s52 = ", 20, '";
-			public string BetType = "{BetType}";
-			protected static string s53 = "')\">";
+			protected static string s52 = ", 20)\">";
 			public string TotalHomeFullTime = "{TotalHomeFullTime}";
-			protected static string s54 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected static string s53 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
 			protected string t1_MatchId;
-			protected static string s55 = ", 20, '";
-			protected string t2_BetType;
-			protected static string s56 = "')\">";
+			protected static string s54 = ", 20)\">";
 			public string TotalAwayFullTime = "{TotalAwayFullTime}";
-			protected static string s57 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
-			protected string t3_MatchId;
-			protected static string s58 = ", 20, '";
-			protected string t4_BetType;
-			protected static string s59 = "')\">";
+			protected static string s55 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected string t2_MatchId;
+			protected static string s56 = ", 20)\">";
 			public string ForecastHomeFullTime = "{ForecastHomeFullTime}";
-			protected static string s60 = "</a></td><td class=\"fcnum\"><a class=\"fcnum\" href=\"javascript:doViewBetList(";
-			protected string t5_MatchId;
-			protected static string s61 = ", 20, '";
-			protected string t6_BetType;
-			protected static string s62 = "')\">";
+			protected static string s57 = "</a></td><td class=\"fcnum\"><a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected string t3_MatchId;
+			protected static string s58 = ", 20)\">";
 			public string ForecastAwayFullTime = "{ForecastAwayFullTime}";
-			protected static string s63 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
-			protected string t7_MatchId;
-			protected static string s64 = ", 21, '";
-			protected string t8_BetType;
-			protected static string s65 = "')\">";
+			protected static string s59 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected string t4_MatchId;
+			protected static string s60 = ", 21)\">";
 			public string TotalHomeHalfTime = "{TotalHomeHalfTime}";
-			protected static string s66 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
-			protected string t9_MatchId;
-			protected static string s67 = ", 21, '";
-			protected string t10_BetType;
-			protected static string s68 = "')\">";
+			protected static string s61 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected string t5_MatchId;
+			protected static string s62 = ", 21)\">";
 			public string TotalAwayHalfTime = "{TotalAwayHalfTime}";
-			protected static string s69 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
-			protected string t11_MatchId;
-			protected static string s70 = ", 21, '";
-			protected string t12_BetType;
-			protected static string s71 = "')\">";
+			protected static string s63 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected string t6_MatchId;
+			protected static string s64 = ", 21)\">";
 			public string ForecastHomeHalfTime = "{ForecastHomeHalfTime}";
-			protected static string s72 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
-			protected string t13_MatchId;
-			protected static string s73 = ", 21, '";
-			protected string t14_BetType;
-			protected static string s74 = "')\">";
+			protected static string s65 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected string t7_MatchId;
+			protected static string s66 = ", 21)\">";
 			public string ForecastAwayHalfTime = "{ForecastAwayHalfTime}";
-			protected static string s75 = "</a></td></tr>";
+			protected static string s67 = "</a></td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
@@ -244,52 +228,36 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s51);
 					bd.Append(MatchId);
 					bd.Append(s52);
-					bd.Append(BetType);
-					bd.Append(s53);
 					bd.Append(TotalHomeFullTime);
-					bd.Append(s54);
+					bd.Append(s53);
 					bd.Append(MatchId);
-					bd.Append(s55);
-					bd.Append(BetType);
-					bd.Append(s56);
+					bd.Append(s54);
 					bd.Append(TotalAwayFullTime);
+					bd.Append(s55);
+					bd.Append(MatchId);
+					bd.Append(s56);
+					bd.Append(ForecastHomeFullTime);
 					bd.Append(s57);
 					bd.Append(MatchId);
 					bd.Append(s58);
-					bd.Append(BetType);
-					bd.Append(s59);
-					bd.Append(ForecastHomeFullTime);
-					bd.Append(s60);
-					bd.Append(MatchId);
-					bd.Append(s61);
-					bd.Append(BetType);
-					bd.Append(s62);
 					bd.Append(ForecastAwayFullTime);
+					bd.Append(s59);
+					bd.Append(MatchId);
+					bd.Append(s60);
+					bd.Append(TotalHomeHalfTime);
+					bd.Append(s61);
+					bd.Append(MatchId);
+					bd.Append(s62);
+					bd.Append(TotalAwayHalfTime);
 					bd.Append(s63);
 					bd.Append(MatchId);
 					bd.Append(s64);
-					bd.Append(BetType);
-					bd.Append(s65);
-					bd.Append(TotalHomeHalfTime);
-					bd.Append(s66);
-					bd.Append(MatchId);
-					bd.Append(s67);
-					bd.Append(BetType);
-					bd.Append(s68);
-					bd.Append(TotalAwayHalfTime);
-					bd.Append(s69);
-					bd.Append(MatchId);
-					bd.Append(s70);
-					bd.Append(BetType);
-					bd.Append(s71);
 					bd.Append(ForecastHomeHalfTime);
-					bd.Append(s72);
+					bd.Append(s65);
 					bd.Append(MatchId);
-					bd.Append(s73);
-					bd.Append(BetType);
-					bd.Append(s74);
+					bd.Append(s66);
 					bd.Append(ForecastAwayHalfTime);
-					bd.Append(s75);
+					bd.Append(s67);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -297,17 +265,17 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class MoneyLine_Contents_MoneyLineNotFoundContent_Block: Block
 		{
-			protected static string s76 = "<tr class=\"bg_white\"><td colspan=\"11\" class=\"c nobold\">";
-			protected static string s77{get{return LocalResources.TotalBetsLang.noInfo;}}
-			protected static string s78 = "</td></tr>";
+			protected static string s68 = "<tr class=\"bg_white\"><td colspan=\"11\" class=\"c nobold\">";
+			protected static string s69{get{return LocalResources.TotalBetsLang.noInfo;}}
+			protected static string s70 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s76);
-					bd.Append(s77);
-					bd.Append(s78);
+					bd.Append(s68);
+					bd.Append(s69);
+					bd.Append(s70);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -315,51 +283,51 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class MoneyLine_Piwik_Block: Block
 		{
-			protected static string s79 = "<script type=\"text/javascript\">var _pkUrl = '";
-			protected static string s80{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl;}}
-			protected static string s81 = "',_pkScript = '";
-			protected static string s82{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript;}}
-			protected static string s83 = "',_pkSiteId = '";
-			protected static string s84{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId;}}
-			protected static string s85 = "';</script><script src=\"";
-			protected static string s86{get{return AbsoluteUrl("_GlobalResources/Js/piwikLoader.js", TplSettings.Question);}}
-			protected static string s87 = "\" type=\"text/javascript\"></script><noscript><p><img src='";
+			protected static string s71 = "<script type=\"text/javascript\">var _pkUrl = '";
+			protected static string s72{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl;}}
+			protected static string s73 = "',_pkScript = '";
+			protected static string s74{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript;}}
+			protected static string s75 = "',_pkSiteId = '";
+			protected static string s76{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId;}}
+			protected static string s77 = "';</script><script src=\"";
+			protected static string s78{get{return AbsoluteUrl("_GlobalResources/Js/piwikLoader.js", TplSettings.Question);}}
+			protected static string s79 = "\" type=\"text/javascript\"></script><noscript><p><img src='";
 			public string PiwikUrl = "{PiwikUrl}";
-			protected static string s88 = "' style=\"border:0;\" alt=\"\" /></p></noscript>";
+			protected static string s80 = "' style=\"border:0;\" alt=\"\" /></p></noscript>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s71);
+					bd.Append(s72);
+					bd.Append(s73);
+					bd.Append(s74);
+					bd.Append(s75);
+					bd.Append(s76);
+					bd.Append(s77);
+					bd.Append(s78);
 					bd.Append(s79);
-					bd.Append(s80);
-					bd.Append(s81);
-					bd.Append(s82);
-					bd.Append(s83);
-					bd.Append(s84);
-					bd.Append(s85);
-					bd.Append(s86);
-					bd.Append(s87);
 					bd.Append(PiwikUrl);
-					bd.Append(s88);
+					bd.Append(s80);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
 		}
 
-		public class MoneyLine_OldMainUrl_Block: Block
+		public class MoneyLine_BetListsUrl_Block: Block
 		{
-			protected static string s89 = "<script type=\"text/javascript\">var _oldMainUrl = '";
-			public string OldMainUrl = "{OldMainUrl}";
-			protected static string s90 = "';</script>";
+			protected static string s81 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			public string BetListsUrl = "{BetListsUrl}";
+			protected static string s82 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s89);
-					bd.Append(OldMainUrl);
-					bd.Append(s90);
+					bd.Append(s81);
+					bd.Append(BetListsUrl);
+					bd.Append(s82);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

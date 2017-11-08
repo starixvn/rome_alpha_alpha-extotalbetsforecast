@@ -211,4 +211,7 @@
   <data name="lblNoDraw" xml:space="preserve">
     <value>No Draw</value>
   </data>
+  <data name="lblBetLists" xml:space="preserve">
+    <value>ベットリスト</value>
+  </data>
 </root>

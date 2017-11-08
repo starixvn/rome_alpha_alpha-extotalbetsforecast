@@ -7,15 +7,15 @@
  */
 namespace Fanex.Age.UI.Forecast
 {
-    using Alpha.Web.Helpers;
-    using Fanex.Age.UI.Components;
-    using Sunplus.Agent.Model.BL.Forecast;
-    using Sunplus.Agent.Utilities;
     using System;
     using System.Collections.Generic;
     using System.Data;
     using System.Text;
     using System.Web.UI;
+    using Alpha.Web.Helpers;
+    using Fanex.Age.UI.Components;
+    using Sunplus.Agent.Model.BL.Forecast;
+    using Sunplus.Agent.Utilities;
 
     public partial class FCHDPOU_Page : Fanex.Age.UI.TplPage
     {
@@ -110,7 +110,7 @@ namespace Fanex.Age.UI.Forecast
             }
 
             ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
+            tpl.BetListsUrl.BetListsUrl = MicroSites.OldMainUrl("~/");
 
             if (_fullMode) writer.Write(tpl);
             else writer.Write(tpl.Content);

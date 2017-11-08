@@ -67,8 +67,8 @@ namespace Fanex.Age.UI.TotalBets
                 if (leagueBlock != null) tpl.Contents.LeagueContents.Append(leagueBlock);
             }
 
-            ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
+            // Bet List Url
+            tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
 
             if (_fullMode)
             {

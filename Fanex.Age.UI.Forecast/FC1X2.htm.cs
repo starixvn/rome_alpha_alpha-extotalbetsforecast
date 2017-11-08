@@ -31,7 +31,7 @@ namespace Fanex.Age.UI.Forecast
 			protected static string s12{get{return AbsoluteUrl("Resources/FC.js", TplSettings.Question);}}
 			protected static string s13 = "\" type=\"text/javascript\"></script>";
 			public FC1X2_Piwik_Block Piwik = new FC1X2_Piwik_Block();
-			public FC1X2_OldMainUrl_Block OldMainUrl = new FC1X2_OldMainUrl_Block();
+			public FC1X2_BetListsUrl_Block BetListsUrl = new FC1X2_BetListsUrl_Block();
 			protected static string s14 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -57,7 +57,7 @@ namespace Fanex.Age.UI.Forecast
 					bd.Append(s12);
 					bd.Append(s13);
 					if(null != Piwik) Piwik.ToString(ref bd);
-					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
+					if(null != BetListsUrl) BetListsUrl.ToString(ref bd);
 					bd.Append(s14);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -281,10 +281,10 @@ namespace Fanex.Age.UI.Forecast
 			}
 		}
 
-		public class FC1X2_OldMainUrl_Block: Block
+		public class FC1X2_BetListsUrl_Block: Block
 		{
-			protected static string s60 = "<script type=\"text/javascript\">var _oldMainUrl = '";
-			public string OldMainUrl = "{OldMainUrl}";
+			protected static string s60 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			public string BetListsUrl = "{BetListsUrl}";
 			protected static string s61 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -292,7 +292,7 @@ namespace Fanex.Age.UI.Forecast
 				if(RenderChild)
 				{
 					bd.Append(s60);
-					bd.Append(OldMainUrl);
+					bd.Append(BetListsUrl);
 					bd.Append(s61);
 				}
 				if(IsAssigned){bd.Append(Value);}

@@ -85,8 +85,8 @@ namespace Fanex.Age.UI.TotalBets
                 tpl.Piwik.Clear();
             }
 
-            ///  old Main URL
-            tpl.OldMainUrl.OldMainUrl = MicroSites.OldMainUrl("~/");
+            // Bet List Url
+            tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
 
             if (_fullMode)
             {
@@ -137,7 +137,6 @@ namespace Fanex.Age.UI.TotalBets
             RenderHalfTimeFGLG(matchBlock, dr);
 
             matchBlock.MatchId = dr["matchid"].ToString();
-            matchBlock.BetType = Fanex.Age.UI.Common.BetListByBetTypeMatch;
         }
 
         private void RenderHalfTimeFGLG(FGLG_Contents_LeagueContents_MatchContents_Block matchBlock, DataRow dr)

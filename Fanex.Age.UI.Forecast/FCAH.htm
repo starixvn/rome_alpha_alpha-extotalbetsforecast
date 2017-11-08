@@ -84,7 +84,7 @@
             <tr class="even_row">
                 <td colspan="5">
                     <!--BetListLink-->
-                    <a class="forecast_betlist_link" href="javascript:openBetListPopup({MatchId}, {BetType}, '{BetTypeValue}')">
+                    <a class="forecast_betlist_link" href="javascript:openBetListPopup({MatchId}, {BetType})">
                         {static:LocalResources.UIForecastLang.lblBetLists}
                     </a>
                     <!--/BetListLink-->
@@ -114,11 +114,12 @@
     <script src="{static:Sunplus.Agent.Model.BL.Definitions.AppSettings.FPSApi}" type="text/javascript"></script>
     <!--/FPSArea-->
 
-    <!--OldMainUrl-->
+    <!--BetListsUrls-->
     <script type="text/javascript">
-        var _oldMainUrl = '{OldMainUrl}';
+        var _betListsUrl = '{BetListsUrl}';
+        var _betListsTitle = '{BetListsTitle}';
     </script>
-    <!--/OldMainUrl-->
+    <!--/BetListsUrls-->
 
 </body>
 </html>

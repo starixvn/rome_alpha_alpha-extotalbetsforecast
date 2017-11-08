@@ -211,4 +211,7 @@
   <data name="totalgoal" xml:space="preserve">
     <value>Total Goal</value>
   </data>
+  <data name="lblBetLists" xml:space="preserve">
+    <value>Bet List</value>
+  </data>
 </root>

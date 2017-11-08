@@ -30,7 +30,7 @@ namespace Fanex.Age.UI.TotalBets
 			protected static string s13{get{return AbsoluteUrl("Resources/TotalBets.js", TplSettings.Question);}}
 			protected static string s14 = "\" type=\"text/javascript\"></script>";
 			public NumberGame_Piwik_Block Piwik = new NumberGame_Piwik_Block();
-			public NumberGame_OldMainUrl_Block OldMainUrl = new NumberGame_OldMainUrl_Block();
+			public NumberGame_BetListsUrl_Block BetListsUrl = new NumberGame_BetListsUrl_Block();
 			protected static string s15 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -55,7 +55,7 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s13);
 					bd.Append(s14);
 					if(null != Piwik) Piwik.ToString(ref bd);
-					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
+					if(null != BetListsUrl) BetListsUrl.ToString(ref bd);
 					bd.Append(s15);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -265,101 +265,69 @@ namespace Fanex.Age.UI.TotalBets
 			public string GameNo = "{GameNo}";
 			protected static string s97 = "</td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
 			public string MatchId = "{MatchId}";
-			protected static string s98 = ", 88, '";
-			protected static string s99{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s100 = "',0,'h')\">";
+			protected static string s98 = ", 88, 0,'h')\">";
 			public string Warrior_2ndBall = "{Warrior_2ndBall}";
-			protected static string s101 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
+			protected static string s99 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
 			protected string t1_MatchId;
-			protected static string s102 = ", 88, '";
-			protected static string s103{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s104 = "',0,'a')\">";
+			protected static string s100 = ", 88, 0,'a')\">";
 			public string Warrior_3rdBall = "{Warrior_3rdBall}";
-			protected static string s105 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
+			protected static string s101 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t2_MatchId;
-			protected static string s106 = ", 81, '";
-			protected static string s107{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s108 = "',0)\">";
+			protected static string s102 = ", 81, 0)\">";
 			public string OverUnderFirstBall = "{OverUnderFirstBall}";
-			protected static string s109 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
+			protected static string s103 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t3_MatchId;
-			protected static string s110 = ", 83, '";
-			protected static string s111{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s112 = "',0)\">";
+			protected static string s104 = ", 83, 0)\">";
 			public string OddEvenFirstBall = "{OddEvenFirstBall}";
-			protected static string s113 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
+			protected static string s105 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t4_MatchId;
-			protected static string s114 = ", 82, '";
-			protected static string s115{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s116 = "',0)\">";
+			protected static string s106 = ", 82, 0)\">";
 			public string OverUnderLastBall = "{OverUnderLastBall}";
-			protected static string s117 = "</a></td><td class=\"fcnum\"><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
+			protected static string s107 = "</a></td><td class=\"fcnum\"><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t5_MatchId;
-			protected static string s118 = ", 84, '";
-			protected static string s119{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s120 = "',0)\">";
+			protected static string s108 = ", 84, 0)\">";
 			public string OddEvenLastBall = "{OddEvenLastBall}";
-			protected static string s121 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
+			protected static string s109 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t6_MatchId;
-			protected static string s122 = ", 85, '";
-			protected static string s123{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s124 = "',1)\">";
+			protected static string s110 = ", 85, 1)\">";
 			public string OverUnderNext = "{OverUnderNext}";
-			protected static string s125 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
+			protected static string s111 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t7_MatchId;
-			protected static string s126 = ", 86, '";
-			protected static string s127{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s128 = "',1)\">";
+			protected static string s112 = ", 86, 1)\">";
 			public string OddEvenNext = "{OddEvenNext}";
-			protected static string s129 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
+			protected static string s113 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t8_MatchId;
-			protected static string s130 = ", 87, '";
-			protected static string s131{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s132 = "',1)\">";
+			protected static string s114 = ", 87, 1)\">";
 			public string HighLow = "{HighLow}";
-			protected static string s133 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
+			protected static string s115 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
 			protected string t9_MatchId;
-			protected static string s134 = ", 89, '";
-			protected static string s135{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s136 = "',1,'1:1')\">";
+			protected static string s116 = ", 89, 1,'1:1')\">";
 			public string NextCombo_OverOdd = "{NextCombo_OverOdd}";
-			protected static string s137 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
+			protected static string s117 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
 			protected string t10_MatchId;
-			protected static string s138 = ", 89, '";
-			protected static string s139{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s140 = "',1,'2:1')\">";
+			protected static string s118 = ", 89, 1,'2:1')\">";
 			public string NextCombo_UnderOdd = "{NextCombo_UnderOdd}";
-			protected static string s141 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
+			protected static string s119 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
 			protected string t11_MatchId;
-			protected static string s142 = ", 89, '";
-			protected static string s143{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s144 = "',1,'1:2')\">";
+			protected static string s120 = ", 89, 1,'1:2')\">";
 			public string NextCombo_OverEven = "{NextCombo_OverEven}";
-			protected static string s145 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
+			protected static string s121 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
 			protected string t12_MatchId;
-			protected static string s146 = ", 89, '";
-			protected static string s147{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s148 = "',1,'2:2')\">";
+			protected static string s122 = ", 89, 1,'2:2')\">";
 			public string NextCombo_UnderEven = "{NextCombo_UnderEven}";
-			protected static string s149 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
+			protected static string s123 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t13_MatchId;
-			protected static string s150 = ", 86, '";
-			protected static string s151{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s152 = "',0)\">";
+			protected static string s124 = ", 86, 0)\">";
 			public string OddEvenFullTime = "{OddEvenFullTime}";
-			protected static string s153 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
+			protected static string s125 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t14_MatchId;
-			protected static string s154 = ", 90, '";
-			protected static string s155{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s156 = "',1)\">";
+			protected static string s126 = ", 90, 1)\">";
 			public string NumberGroupLive = "{NumberGroupLive}";
-			protected static string s157 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
+			protected static string s127 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t15_MatchId;
-			protected static string s158 = ", 90, '";
-			protected static string s159{get{return Fanex.Age.UI.Common.BetListByBetTypeMatch;}}
-			protected static string s160 = "',0)\">";
+			protected static string s128 = ", 90, 0)\">";
 			public string NumberGroupPre = "{NumberGroupPre}";
-			protected static string s161 = "</a></td></tr>";
+			protected static string s129 = "</a></td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
@@ -380,100 +348,68 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s97);
 					bd.Append(MatchId);
 					bd.Append(s98);
-					bd.Append(s99);
-					bd.Append(s100);
 					bd.Append(Warrior_2ndBall);
+					bd.Append(s99);
+					bd.Append(MatchId);
+					bd.Append(s100);
+					bd.Append(Warrior_3rdBall);
 					bd.Append(s101);
 					bd.Append(MatchId);
 					bd.Append(s102);
+					bd.Append(OverUnderFirstBall);
 					bd.Append(s103);
+					bd.Append(MatchId);
 					bd.Append(s104);
-					bd.Append(Warrior_3rdBall);
+					bd.Append(OddEvenFirstBall);
 					bd.Append(s105);
 					bd.Append(MatchId);
 					bd.Append(s106);
+					bd.Append(OverUnderLastBall);
 					bd.Append(s107);
+					bd.Append(MatchId);
 					bd.Append(s108);
-					bd.Append(OverUnderFirstBall);
+					bd.Append(OddEvenLastBall);
 					bd.Append(s109);
 					bd.Append(MatchId);
 					bd.Append(s110);
+					bd.Append(OverUnderNext);
 					bd.Append(s111);
+					bd.Append(MatchId);
 					bd.Append(s112);
-					bd.Append(OddEvenFirstBall);
+					bd.Append(OddEvenNext);
 					bd.Append(s113);
 					bd.Append(MatchId);
 					bd.Append(s114);
+					bd.Append(HighLow);
 					bd.Append(s115);
+					bd.Append(MatchId);
 					bd.Append(s116);
-					bd.Append(OverUnderLastBall);
+					bd.Append(NextCombo_OverOdd);
 					bd.Append(s117);
 					bd.Append(MatchId);
 					bd.Append(s118);
+					bd.Append(NextCombo_UnderOdd);
 					bd.Append(s119);
+					bd.Append(MatchId);
 					bd.Append(s120);
-					bd.Append(OddEvenLastBall);
+					bd.Append(NextCombo_OverEven);
 					bd.Append(s121);
 					bd.Append(MatchId);
 					bd.Append(s122);
+					bd.Append(NextCombo_UnderEven);
 					bd.Append(s123);
+					bd.Append(MatchId);
 					bd.Append(s124);
-					bd.Append(OverUnderNext);
+					bd.Append(OddEvenFullTime);
 					bd.Append(s125);
 					bd.Append(MatchId);
 					bd.Append(s126);
-					bd.Append(s127);
-					bd.Append(s128);
-					bd.Append(OddEvenNext);
-					bd.Append(s129);
-					bd.Append(MatchId);
-					bd.Append(s130);
-					bd.Append(s131);
-					bd.Append(s132);
-					bd.Append(HighLow);
-					bd.Append(s133);
-					bd.Append(MatchId);
-					bd.Append(s134);
-					bd.Append(s135);
-					bd.Append(s136);
-					bd.Append(NextCombo_OverOdd);
-					bd.Append(s137);
-					bd.Append(MatchId);
-					bd.Append(s138);
-					bd.Append(s139);
-					bd.Append(s140);
-					bd.Append(NextCombo_UnderOdd);
-					bd.Append(s141);
-					bd.Append(MatchId);
-					bd.Append(s142);
-					bd.Append(s143);
-					bd.Append(s144);
-					bd.Append(NextCombo_OverEven);
-					bd.Append(s145);
-					bd.Append(MatchId);
-					bd.Append(s146);
-					bd.Append(s147);
-					bd.Append(s148);
-					bd.Append(NextCombo_UnderEven);
-					bd.Append(s149);
-					bd.Append(MatchId);
-					bd.Append(s150);
-					bd.Append(s151);
-					bd.Append(s152);
-					bd.Append(OddEvenFullTime);
-					bd.Append(s153);
-					bd.Append(MatchId);
-					bd.Append(s154);
-					bd.Append(s155);
-					bd.Append(s156);
 					bd.Append(NumberGroupLive);
-					bd.Append(s157);
+					bd.Append(s127);
 					bd.Append(MatchId);
-					bd.Append(s158);
-					bd.Append(s159);
-					bd.Append(s160);
+					bd.Append(s128);
 					bd.Append(NumberGroupPre);
-					bd.Append(s161);
+					bd.Append(s129);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -481,17 +417,17 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class NumberGame_Contents_NotFound_Block: Block
 		{
-			protected static string s162 = "<tr class=\"bg_white\"><td colspan=\"18\" class=\"c nobold\">";
-			protected static string s163{get{return LocalResources.TotalBetsLang.noInfo;}}
-			protected static string s164 = "</td></tr>";
+			protected static string s130 = "<tr class=\"bg_white\"><td colspan=\"18\" class=\"c nobold\">";
+			protected static string s131{get{return LocalResources.TotalBetsLang.noInfo;}}
+			protected static string s132 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s162);
-					bd.Append(s163);
-					bd.Append(s164);
+					bd.Append(s130);
+					bd.Append(s131);
+					bd.Append(s132);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -499,51 +435,51 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class NumberGame_Piwik_Block: Block
 		{
-			protected static string s165 = "<script type=\"text/javascript\">var _pkUrl = '";
-			protected static string s166{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl;}}
-			protected static string s167 = "',_pkScript = '";
-			protected static string s168{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript;}}
-			protected static string s169 = "',_pkSiteId = '";
-			protected static string s170{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId;}}
-			protected static string s171 = "';</script><script src=\"";
-			protected static string s172{get{return AbsoluteUrl("_GlobalResources/Js/piwikLoader.js", TplSettings.Question);}}
-			protected static string s173 = "\" type=\"text/javascript\"></script><noscript><p><img src='";
+			protected static string s133 = "<script type=\"text/javascript\">var _pkUrl = '";
+			protected static string s134{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl;}}
+			protected static string s135 = "',_pkScript = '";
+			protected static string s136{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript;}}
+			protected static string s137 = "',_pkSiteId = '";
+			protected static string s138{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId;}}
+			protected static string s139 = "';</script><script src=\"";
+			protected static string s140{get{return AbsoluteUrl("_GlobalResources/Js/piwikLoader.js", TplSettings.Question);}}
+			protected static string s141 = "\" type=\"text/javascript\"></script><noscript><p><img src='";
 			public string PiwikUrl = "{PiwikUrl}";
-			protected static string s174 = "' style=\"border:0;\" alt=\"\" /></p></noscript>";
+			protected static string s142 = "' style=\"border:0;\" alt=\"\" /></p></noscript>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s165);
-					bd.Append(s166);
-					bd.Append(s167);
-					bd.Append(s168);
-					bd.Append(s169);
-					bd.Append(s170);
-					bd.Append(s171);
-					bd.Append(s172);
-					bd.Append(s173);
+					bd.Append(s133);
+					bd.Append(s134);
+					bd.Append(s135);
+					bd.Append(s136);
+					bd.Append(s137);
+					bd.Append(s138);
+					bd.Append(s139);
+					bd.Append(s140);
+					bd.Append(s141);
 					bd.Append(PiwikUrl);
-					bd.Append(s174);
+					bd.Append(s142);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
 		}
 
-		public class NumberGame_OldMainUrl_Block: Block
+		public class NumberGame_BetListsUrl_Block: Block
 		{
-			protected static string s175 = "<script type=\"text/javascript\">var _oldMainUrl = '";
-			public string OldMainUrl = "{OldMainUrl}";
-			protected static string s176 = "';</script>";
+			protected static string s143 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			public string BetListsUrl = "{BetListsUrl}";
+			protected static string s144 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s175);
-					bd.Append(OldMainUrl);
-					bd.Append(s176);
+					bd.Append(s143);
+					bd.Append(BetListsUrl);
+					bd.Append(s144);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

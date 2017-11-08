@@ -27,7 +27,7 @@ namespace Fanex.Age.UI.TotalBets
 			protected static string s10 = "\" type=\"text/javascript\"></script><script src=\"";
 			protected static string s11{get{return AbsoluteUrl("Resources/TotalBets.js", TplSettings.Question);}}
 			protected static string s12 = "\" type=\"text/javascript\"></script>";
-			public CorrectScore_OldMainUrl_Block OldMainUrl = new CorrectScore_OldMainUrl_Block();
+			public CorrectScore_BetListsUrl_Block BetListsUrl = new CorrectScore_BetListsUrl_Block();
 			protected static string s13 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
@@ -49,7 +49,7 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s10);
 					bd.Append(s11);
 					bd.Append(s12);
-					if(null != OldMainUrl) OldMainUrl.ToString(ref bd);
+					if(null != BetListsUrl) BetListsUrl.ToString(ref bd);
 					bd.Append(s13);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -193,11 +193,9 @@ namespace Fanex.Age.UI.TotalBets
 			public string MatchId = "{MatchId}";
 			protected static string s43 = ", ";
 			public string BetType = "{BetType}";
-			protected static string s44 = ", '";
-			public string BetTypeMatch = "{BetTypeMatch}";
-			protected static string s45 = "')\" href=\"#\" class=\"fcnum\">";
+			protected static string s44 = ")\" href=\"#\" class=\"fcnum\">";
 			public string OUTurnOverValue = "{OUTurnOverValue}";
-			protected static string s46 = "</a>";
+			protected static string s45 = "</a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
@@ -208,10 +206,8 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s43);
 					bd.Append(BetType);
 					bd.Append(s44);
-					bd.Append(BetTypeMatch);
-					bd.Append(s45);
 					bd.Append(OUTurnOverValue);
-					bd.Append(s46);
+					bd.Append(s45);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -233,29 +229,25 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class CorrectScore_Contents_StockIndex_BetType_OELink_Block: Block
 		{
-			protected static string s47 = "<a onclick=\"doViewBetList(";
+			protected static string s46 = "<a onclick=\"doViewBetList(";
 			public string MatchId = "{MatchId}";
-			protected static string s48 = ", ";
+			protected static string s47 = ", ";
 			public string BetType = "{BetType}";
-			protected static string s49 = ", '";
-			public string BetTypeMatch = "{BetTypeMatch}";
-			protected static string s50 = "')\" href=\"#\" class=\"fcnum\">";
+			protected static string s48 = ")\" href=\"#\" class=\"fcnum\">";
 			public string OETurnOverValue = "{OETurnOverValue}";
-			protected static string s51 = "</a>";
+			protected static string s49 = "</a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s47);
+					bd.Append(s46);
 					bd.Append(MatchId);
-					bd.Append(s48);
+					bd.Append(s47);
 					bd.Append(BetType);
-					bd.Append(s49);
-					bd.Append(BetTypeMatch);
-					bd.Append(s50);
+					bd.Append(s48);
 					bd.Append(OETurnOverValue);
-					bd.Append(s51);
+					bd.Append(s49);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -277,33 +269,33 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class CorrectScore_Contents_StockIndex_TotalContents_Block: Block
 		{
-			protected static string s52 = "<tr class=\"header_tb04\"><td colspan=\"2\">";
-			protected static string s53{get{return LocalResources.TotalBetsLang.total;}}
-			protected static string s54 = "</td><td>";
+			protected static string s50 = "<tr class=\"header_tb04\"><td colspan=\"2\">";
+			protected static string s51{get{return LocalResources.TotalBetsLang.total;}}
+			protected static string s52 = "</td><td>";
 			public string OUTurnOverTotal = "{OUTurnOverTotal}";
-			protected static string s55 = "</td><td>";
+			protected static string s53 = "</td><td>";
 			public string OUWinlossTotal = "{OUWinlossTotal}";
-			protected static string s56 = "</td><td>";
+			protected static string s54 = "</td><td>";
 			public string OETurnOverTotal = "{OETurnOverTotal}";
-			protected static string s57 = "</td><td>";
+			protected static string s55 = "</td><td>";
 			public string OEWinlossTotal = "{OEWinlossTotal}";
-			protected static string s58 = "</td></tr>";
+			protected static string s56 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s50);
+					bd.Append(s51);
 					bd.Append(s52);
-					bd.Append(s53);
-					bd.Append(s54);
 					bd.Append(OUTurnOverTotal);
-					bd.Append(s55);
+					bd.Append(s53);
 					bd.Append(OUWinlossTotal);
-					bd.Append(s56);
+					bd.Append(s54);
 					bd.Append(OETurnOverTotal);
-					bd.Append(s57);
+					bd.Append(s55);
 					bd.Append(OEWinlossTotal);
-					bd.Append(s58);
+					bd.Append(s56);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -311,35 +303,35 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class CorrectScore_Contents_NotFoundContent_Block: Block
 		{
-			protected static string s59 = "<tr><td colspan=\"6\" class=\"bg_white c nobold\">";
-			protected static string s60{get{return LocalResources.TotalBetsLang.noInfo;}}
-			protected static string s61 = "</td></tr>";
+			protected static string s57 = "<tr><td colspan=\"6\" class=\"bg_white c nobold\">";
+			protected static string s58{get{return LocalResources.TotalBetsLang.noInfo;}}
+			protected static string s59 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s57);
+					bd.Append(s58);
 					bd.Append(s59);
-					bd.Append(s60);
-					bd.Append(s61);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
 		}
 
-		public class CorrectScore_OldMainUrl_Block: Block
+		public class CorrectScore_BetListsUrl_Block: Block
 		{
-			protected static string s62 = "<script type=\"text/javascript\">var _oldMainUrl = '";
-			public string OldMainUrl = "{OldMainUrl}";
-			protected static string s63 = "';</script>";
+			protected static string s60 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			public string BetListsUrl = "{BetListsUrl}";
+			protected static string s61 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s62);
-					bd.Append(OldMainUrl);
-					bd.Append(s63);
+					bd.Append(s60);
+					bd.Append(BetListsUrl);
+					bd.Append(s61);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
