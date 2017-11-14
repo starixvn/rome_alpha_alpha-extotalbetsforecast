@@ -157,7 +157,7 @@
                             away = Converter.ToInt(reader["away"]);
 
                             haftTime = reader["HT"];
-                            if (haftTime != DBNull.Value)
+                            if (haftTime != null && haftTime != DBNull.Value)
                             {
                                 scoreMap.HaftTime[away, home] = (int)Math.Round(Converter.ToDecimal(haftTime), MidpointRounding.AwayFromZero);
                             }
@@ -167,7 +167,7 @@
                             }
 
                             fullTime = reader["FT"];
-                            if (fullTime != null)
+                            if (fullTime != null && fullTime != DBNull.Value)
                             {
                                 scoreMap.FullTime[away, home] = (int)Math.Round(Converter.ToDecimal(fullTime), MidpointRounding.AwayFromZero);
                             }
