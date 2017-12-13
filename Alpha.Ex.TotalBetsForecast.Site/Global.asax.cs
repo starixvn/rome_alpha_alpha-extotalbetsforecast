@@ -76,6 +76,12 @@
                 return;
             }
 
+            string executeFileName = Request.AppRelativeCurrentExecutionFilePath;
+            if (executeFileName.EndsWith(".aspx"))
+            {
+                Response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+            }
+
             if (UserSession.Current.CustId == 0)
             {
                 Response.Redirect(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"), true);
