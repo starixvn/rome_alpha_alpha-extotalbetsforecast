@@ -171,4 +171,10 @@
   <data name="submit" xml:space="preserve">
     <value>확인</value>
   </data>
+  <data name="totalbets" xml:space="preserve">
+    <value>총 배팅</value>
+  </data>
+  <data name="forecast" xml:space="preserve">
+    <value>예상</value>
+  </data>
 </root>

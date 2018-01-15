@@ -109,10 +109,10 @@ namespace Fanex.Age.UI.Forecast
 
         public override void ProcessRequest(ref System.Collections.Hashtable p)
         {
-            p.AddHttpParameters(new string[] { 
-                "matchid", 
+            p.AddHttpParameters(new string[] {
+                "matchid",
                 "leagueid",
-                "bettype" 
+                "bettype"
             }, Request);
             _fullMode = String.IsNullOrEmpty(Request["full_mode"]) ? true : Convert.ToInt32(Request["full_mode"]) > 0;
             _isPopup = String.IsNullOrEmpty(Request["is_popup"]) ? false : Convert.ToInt32(Request["is_popup"]) > 0;
@@ -124,7 +124,8 @@ namespace Fanex.Age.UI.Forecast
 
         public override object ValidateRequest(System.Collections.Hashtable p)
         {
-            if (!CurrentUserSession.SubPageAccess.ViewTotalBets)
+            if (!CurrentUserSession.SubPageAccess.ViewTotalBets &&
+                !Sunplus.Agent.Model.Entities.UserSession.Current.SubPageAccess.GetPermission(Sunplus.Agent.Model.Entities.PageAccessType.ViewBetLists))
             {
                 return new ErrorPage_Page(Resources.Lang.strNotAccessPage);
             }

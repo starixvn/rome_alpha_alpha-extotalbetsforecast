@@ -122,7 +122,7 @@
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            var allowViewTotalBets = UserSession.Current.SubPageAccess.ViewTotalBets;
+            var allowViewTotalBets = UserSession.Current.SubPageAccess.ViewTotalBets || UserSession.Current.SubPageAccess.GetPermission(PageAccessType.ViewBetLists);
             if (!allowViewTotalBets)
             {
                 if (Request.IsAjaxRequest())

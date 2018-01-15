@@ -16,6 +16,7 @@ namespace Fanex.Age.UI.Forecast
     using Fanex.Age.UI.Components;
     using Sunplus.Agent.Model.BL.Forecast;
     using Sunplus.Agent.Utilities;
+    using Sunplus.Agent.Model.Entities;
 
     public partial class FCHDPOU_Page : Fanex.Age.UI.TplPage
     {
@@ -111,6 +112,7 @@ namespace Fanex.Age.UI.Forecast
 
             ///  old Main URL
             tpl.BetListsUrl.BetListsUrl = MicroSites.OldMainUrl("~/");
+            tpl.level = LevelName(UserSession.Current.RoleId);
 
             if (_fullMode) writer.Write(tpl);
             else writer.Write(tpl.Content);
@@ -118,7 +120,7 @@ namespace Fanex.Age.UI.Forecast
 
         public override void ProcessRequest(ref System.Collections.Hashtable p)
         {
-            p.AddHttpParameters(new string[] { 
+            p.AddHttpParameters(new string[] {
                 "leagueid",
             }, Request);
             _fullMode = String.IsNullOrEmpty(Request["full_mode"]) ? true : Convert.ToInt32(Request["full_mode"]) > 0;
@@ -128,7 +130,8 @@ namespace Fanex.Age.UI.Forecast
 
         public override object ValidateRequest(System.Collections.Hashtable p)
         {
-            if (!CurrentUserSession.SubPageAccess.ViewTotalBets)
+            if (!CurrentUserSession.SubPageAccess.ViewTotalBets &&
+                !Sunplus.Agent.Model.Entities.UserSession.Current.SubPageAccess.GetPermission(Sunplus.Agent.Model.Entities.PageAccessType.ViewBetLists))
             {
                 return new ErrorPage_Page(Resources.Lang.strNotAccessPage);
             }
@@ -162,6 +165,14 @@ namespace Fanex.Age.UI.Forecast
         #endregion
 
         #region Render Utility
+
+        private string LevelName(byte roleId)
+        {
+            return roleId == 4 ? "super" :
+                roleId == 3 ? "master" :
+                "agent";
+        }
+
         /// <summary>
         /// Round color for negative number
         /// </summary>

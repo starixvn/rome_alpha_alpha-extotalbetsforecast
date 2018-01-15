@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Web;
 using System.Web.UI;
+using Sunplus.Agent.Model.Entities;
 
 
 /*
@@ -20,7 +21,7 @@ using System.Web.UI;
  */
 namespace Fanex.Age.UI.TotalBets
 {
-    
+
     public partial class HDPOU_Page : TotalBets_Page
     {
 
@@ -89,6 +90,7 @@ namespace Fanex.Age.UI.TotalBets
 
             // Bet List Url
             tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
+            tpl.level = LevelName(UserSession.Current.RoleId);
 
             if (_fullMode)
             {
@@ -97,7 +99,14 @@ namespace Fanex.Age.UI.TotalBets
             else
             {
                 writer.Write(tpl.Contents);
-            }            
+            }
+        }
+
+        private string LevelName(byte roleId)
+        {
+            return roleId == 4 ? "super" :
+                roleId == 3 ? "master" :
+                "agent";
         }
 
         public override object ValidateRequest(System.Collections.Hashtable p)

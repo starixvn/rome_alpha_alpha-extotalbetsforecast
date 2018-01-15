@@ -48,5 +48,10 @@
     "outputFile": "App_Themes/Apo/Common/Tab.css",
     "inputFile": "App_Themes/Apo/Common/Tab.scss",
     "sourceMap": false
+  },
+  {
+    "outputFile": "App_Themes/Apo/Common/SubTabs.css",
+    "inputFile": "App_Themes/Apo/Common/SubTabs.scss",
+    "sourceMap": false
   }
 ]

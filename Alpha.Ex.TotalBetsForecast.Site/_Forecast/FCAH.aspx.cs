@@ -56,7 +56,8 @@ namespace Fanex.Age.UI.Forecast
 
         public override object ValidateRequest(System.Collections.Hashtable p)
         {
-            if (!CurrentUserSession.SubPageAccess.ViewTotalBets)
+            if (!CurrentUserSession.SubPageAccess.ViewTotalBets &&
+                !Sunplus.Agent.Model.Entities.UserSession.Current.SubPageAccess.GetPermission(Sunplus.Agent.Model.Entities.PageAccessType.ViewBetLists))
             {
                 return new ErrorPage_Page(Resources.Lang.strNotAccessPage);
             }
