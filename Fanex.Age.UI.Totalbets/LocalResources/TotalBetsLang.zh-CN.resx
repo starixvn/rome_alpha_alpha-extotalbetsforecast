@@ -282,9 +282,6 @@
   <data name="lblRace" xml:space="preserve">
     <value>赛事</value>
   </data>
-  <data name="hr" xml:space="preserve">
-    <value>赛马</value>
-  </data>
   <data name="aa" xml:space="preserve">
     <value>客客</value>
   </data>
@@ -365,9 +362,6 @@
   </data>
   <data name="lblOvE" xml:space="preserve">
     <value>大/双</value>
-  </data>
-  <data name="LiveCasino" xml:space="preserve">
-    <value>娱乐厅</value>
   </data>
   <data name="LiveGame" xml:space="preserve">
     <value>Live Game</value>

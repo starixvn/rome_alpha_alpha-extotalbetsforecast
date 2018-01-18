@@ -61,15 +61,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Correct Score.
-        /// </summary>
-        public static string correctscore {
-            get {
-                return ResourceManager.GetString("correctscore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Hide Match.
         /// </summary>
         public static string hideMatch {

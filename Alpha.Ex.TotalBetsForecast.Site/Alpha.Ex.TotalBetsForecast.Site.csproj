@@ -68,12 +68,12 @@
       <HintPath>..\packages\CasinoUtility.1.2.9.0\lib\net40\CasinoUtility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Age.UI, Version=3.0.2.7, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Age.UI.3.0.2.7\lib\net40\Fanex.Age.UI.dll</HintPath>
+    <Reference Include="Fanex.Age.UI, Version=3.0.2.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Age.UI.3.0.2.9-HideInactiveProduct\lib\net40\Fanex.Age.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Age.UI.Components, Version=3.0.0.23, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Age.UI.Components.3.0.0.23\lib\net40\Fanex.Age.UI.Components.dll</HintPath>
+    <Reference Include="Fanex.Age.UI.Components, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Age.UI.Components.3.0.1.0-HideInactiveProduct-02\lib\net40\Fanex.Age.UI.Components.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
@@ -112,10 +112,6 @@
       <HintPath>..\packages\Fanex.GoldDeluxe.CoreSetting.Alpha.1.0.0.8\lib\net40\Fanex.GoldDeluxe.CoreSetting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.LiveCasino.CoreSetting, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.LiveCasino.CoreSetting.Alpha.1.2.2.0\lib\net40\Fanex.LiveCasino.CoreSetting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Fanex.Logging, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Logging.1.0.4\lib\net40\Fanex.Logging.dll</HintPath>
       <Private>True</Private>
@@ -136,8 +132,8 @@
       <HintPath>..\packages\Fanex.Products.1.0.0.0\lib\net40\Fanex.Products.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Razorbill.Security, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Razorbill.Security.3.0.1\lib\net40\Fanex.Razorbill.Security.dll</HintPath>
+    <Reference Include="Fanex.Razorbill.Security, Version=3.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Razorbill.Security.3.0.1.1-HideInactiveProduct-01\lib\net40\Fanex.Razorbill.Security.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="HandHistoryLibrary, Version=1.0.0.43, Culture=neutral, processorArchitecture=MSIL">
@@ -225,8 +221,8 @@
       <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.0.5\lib\net40\Sunplus.Agent.Model.Auth.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.3.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.3.3\lib\net40\Sunplus.Agent.Model.Base.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.3.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.3.4-HideInactiveProduct-07\lib\net40\Sunplus.Agent.Model.Base.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Casino, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
@@ -237,8 +233,8 @@
       <HintPath>..\packages\Sunplus.Agent.Model.DataAccessLibrary.3.0.0.2\lib\net40\Sunplus.Agent.Model.DataAccessLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.2.0\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.2.1-HideInactiveProduct-03\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.IpFormatter, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
@@ -667,18 +663,15 @@
     <Content Include="_GlobalResources\t1.gif" />
     <Content Include="_GlobalResources\x.jpg" />
     <Content Include="_GlobalResources\x5.gif" />
-    <Content Include="_TotalBets\CorrectScore.aspx" />
     <Content Include="_TotalBets\FGLG.aspx" />
     <Content Include="_TotalBets\HDPOU.aspx" />
     <Content Include="_TotalBets\HomeDrawAwayNoBet.aspx" />
     <Content Include="_TotalBets\HTFT.aspx" />
-    <Content Include="_TotalBets\LiveCasino.aspx" />
     <Content Include="_TotalBets\MoneyLine.aspx" />
     <Content Include="_TotalBets\NextGoal.aspx" />
     <Content Include="_TotalBets\NumberGame.aspx" />
     <Content Include="_TotalBets\OddEven1X2.aspx" />
     <Content Include="_TotalBets\OutRight.aspx" />
-    <Content Include="_TotalBets\Racing.aspx" />
     <Content Include="_TotalBets\Resources\TotalBets.js" />
     <Content Include="_TotalBets\Resources\TotalBets.min.js">
       <DependentUpon>TotalBets.js</DependentUpon>
@@ -721,10 +714,6 @@
       <DependentUpon>ScoreMapProcess.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Content>
-    <Compile Include="_TotalBets\CorrectScore.aspx.cs">
-      <DependentUpon>CorrectScore.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Content Include="_TotalBets\FGLG.aspx.cs">
       <DependentUpon>FGLG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -739,10 +728,6 @@
     </Content>
     <Content Include="_TotalBets\HTFT.aspx.cs">
       <DependentUpon>HTFT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="_TotalBets\LiveCasino.aspx.cs">
-      <DependentUpon>LiveCasino.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="_TotalBets\MoneyLine.aspx.cs">
@@ -763,10 +748,6 @@
     </Content>
     <Content Include="_TotalBets\OutRight.aspx.cs">
       <DependentUpon>OutRight.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="_TotalBets\Racing.aspx.cs">
-      <DependentUpon>Racing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="_TotalBets\TotalGoal.aspx.cs">

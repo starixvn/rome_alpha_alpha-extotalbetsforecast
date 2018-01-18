@@ -277,15 +277,6 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Racing.
-        /// </summary>
-        internal static string hr {
-            get {
-                return ResourceManager.GetString("hr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to HT/FT.
         /// </summary>
         internal static string htft {
@@ -597,15 +588,6 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         internal static string lblWinLoss {
             get {
                 return ResourceManager.GetString("lblWinLoss", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Live Casino.
-        /// </summary>
-        internal static string LiveCasino {
-            get {
-                return ResourceManager.GetString("LiveCasino", resourceCulture);
             }
         }
         
