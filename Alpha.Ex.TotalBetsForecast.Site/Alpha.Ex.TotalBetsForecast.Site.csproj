@@ -41,7 +41,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Alpha.SubAccount, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Alpha.SubAccount.1.0.0.0-BetListPermission-03\lib\net40\Alpha.SubAccount.dll</HintPath>
+      <HintPath>..\packages\Alpha.SubAccount.1.0.0\lib\net40\Alpha.SubAccount.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Alpha.Web, Version=1.0.0.11, Culture=neutral, processorArchitecture=MSIL">
@@ -137,7 +137,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Razorbill.Security, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Razorbill.Security.3.0.1.0-BetListMenu-01\lib\net40\Fanex.Razorbill.Security.dll</HintPath>
+      <HintPath>..\packages\Fanex.Razorbill.Security.3.0.1\lib\net40\Fanex.Razorbill.Security.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="HandHistoryLibrary, Version=1.0.0.43, Culture=neutral, processorArchitecture=MSIL">
@@ -222,11 +222,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Auth, Version=3.0.0.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.0.5-BetListMenu-01\lib\net40\Sunplus.Agent.Model.Auth.dll</HintPath>
+      <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.0.5\lib\net40\Sunplus.Agent.Model.Auth.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.3.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.3.3-BetListMenu-01\lib\net40\Sunplus.Agent.Model.Base.dll</HintPath>
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.3.3\lib\net40\Sunplus.Agent.Model.Base.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Casino, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
