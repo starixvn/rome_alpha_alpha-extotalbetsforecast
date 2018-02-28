@@ -61,6 +61,15 @@ namespace Fanex.Age.UI.Forecast.LocalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Forecast.
+        /// </summary>
+        internal static string forecast {
+            get {
+                return ResourceManager.GetString("forecast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Full Time.
         /// </summary>
         internal static string fulltime {
@@ -219,6 +228,15 @@ namespace Fanex.Age.UI.Forecast.LocalResources {
         internal static string submit {
             get {
                 return ResourceManager.GetString("submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Bets.
+        /// </summary>
+        internal static string totalbets {
+            get {
+                return ResourceManager.GetString("totalbets", resourceCulture);
             }
         }
     }

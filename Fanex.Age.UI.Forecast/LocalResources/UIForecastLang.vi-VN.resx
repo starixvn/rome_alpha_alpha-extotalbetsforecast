@@ -171,4 +171,10 @@
   <data name="submit" xml:space="preserve">
     <value>Xác nhận</value>
   </data>
+  <data name="totalbets" xml:space="preserve">
+    <value>Tổng Cược</value>
+  </data>
+  <data name="forecast" xml:space="preserve">
+    <value>Dự đoán</value>
+  </data>
 </root>

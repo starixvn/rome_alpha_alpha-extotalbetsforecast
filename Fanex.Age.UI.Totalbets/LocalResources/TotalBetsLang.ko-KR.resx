@@ -402,4 +402,10 @@
   <data name="Banker" xml:space="preserve">
     <value>Banker</value>
   </data>
+  <data name="totalbets" xml:space="preserve">
+    <value>총 배팅</value>
+  </data>
+  <data name="forecast" xml:space="preserve">
+    <value>예상</value>
+  </data>
 </root>

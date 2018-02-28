@@ -3,13 +3,23 @@
 <head>
     <title>{static:LocalResources.UIForecastLang.lblForecast}</title>
     <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Apo/Common/SubTabs.min.css" rel="stylesheet" type="text/css" />
     <link href="../App_Themes/Apo/Forecast/FC.min.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="page-{level}">
     <div id="page_main">
         <div id="header_main">
             <span id="leagueName">{static:LocalResources.UIForecastLang.lblHOUL}</span>
         </div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation">
+                <a href="../_TotalBets/HDPOU.aspx">{static:LocalResources.UIForecastLang.totalbets}</a>
+            </li>
+            <li role="presentation" class="active">
+                <a href="../_Forecast/FCHDPOU.aspx">{static:LocalResources.UIForecastLang.forecast}</a>
+            </li>
+        </ul>
+
         {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,15,"FCHDPOU","RefreshFC")}
         <div id="sContent">
             <!--Content-->
@@ -148,7 +158,6 @@
     <script src="../_GlobalResources/Js/piwikLoader.js" type="text/javascript"></script>
     <noscript><p><img src='{PiwikUrl}' style="border:0;" alt="" /></p></noscript>
     <!--/Piwik-->
-
     <!--BetListsUrl-->
     <script type="text/javascript">
         var _betListsUrl = '{BetListsUrl}';
