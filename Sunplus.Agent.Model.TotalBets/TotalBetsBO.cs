@@ -331,78 +331,8 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return nextGoal;
         }
-        #endregion
-
-        #region HorseRacing
-        /// <summary>
-        /// Get data for NextGoal page
-        /// </summary>
-        /// <returns></returns>
-        public DataTable GetHorseRacing()
-        {
-            DataTable horseRacing = null;
-
-            // parameter
-            int customerID = CurrentSession.CustId;
-            string language = CurrentSession.LangKey;
-
-            // execute
-            if (CurrentSession.IsAgent)
-            {
-                horseRacing = TotalBetsDataAccess.Age_TotalBets_SelHR_Ag(customerID, language);
-            }
-            else if (CurrentSession.IsMaster)
-            {
-                horseRacing = TotalBetsDataAccess.Age_TotalBets_SelHR_MAg(customerID, language);
-            }
-            else if (CurrentSession.IsSuper)
-            {
-                horseRacing = TotalBetsDataAccess.Age_TotalBets_SelHR_SAg(customerID, language);
-            }
-            else
-            {
-                horseRacing = new DataTable();
-            }
-
-            return horseRacing;
-        }
-        #endregion
-
-        #region Financial
-        /// <summary>
-        /// Get data for Financial page
-        /// </summary>
-        /// <returns></returns>
-        public DataTable GetFinancial()
-        {
-            DataTable financial = null;
-
-            // parameter
-            int customerID = CurrentSession.CustId;
-            string language = CurrentSession.LangKey;
-
-            // execute
-            if (CurrentSession.IsAgent)
-            {
-                financial = TotalBetsDataAccess.Age_TotalBets_Sel201_Ag(customerID, language);
-            }
-            else if (CurrentSession.IsMaster)
-            {
-                financial = TotalBetsDataAccess.Age_TotalBets_Sel201_MAg(customerID, language);
-            }
-            else if (CurrentSession.IsSuper)
-            {
-                financial = TotalBetsDataAccess.Age_TotalBets_Sel201_SAg(customerID, language);
-            }
-            else
-            {
-                financial = new DataTable();
-            }
-
-            return financial;
-        }
-        #endregion
-
+        #endregion        
+               
         #region NumberGame
         /// <summary>
         /// Get data for number game page
@@ -437,42 +367,7 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             return numberGame;
         }
         #endregion
-
-        #region LiveCasino
-        /// <summary>
-        /// Get data for LiveCasino page
-        /// </summary>
-        /// <returns></returns>
-        public DataTable GetLiveCasino()
-        {
-            DataTable liveCasino = null;
-
-            // parameter
-            int customerID = CurrentSession.CustId;
-            string language = CurrentSession.LangKey;
-
-            // execute
-            if (CurrentSession.IsAgent)
-            {
-                liveCasino = TotalBetsDataAccess.Age_TotalBets_Sel162_Ag(customerID, language);
-            }
-            else if (CurrentSession.IsMaster)
-            {
-                liveCasino = TotalBetsDataAccess.Age_TotalBets_Sel162_MAg(customerID, language);
-            }
-            else if (CurrentSession.IsSuper)
-            {
-                liveCasino = TotalBetsDataAccess.Age_TotalBets_Sel162_SAg(customerID, language);
-            }
-            else
-            {
-                liveCasino = new DataTable();
-            }
-
-            return liveCasino;
-        }
-        #endregion
-
+        
         #region VirtualSports
         /// <summary>
         /// Get data for VirtualSports page

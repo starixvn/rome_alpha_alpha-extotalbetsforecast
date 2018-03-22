@@ -289,9 +289,6 @@
   <data name="lblRace" xml:space="preserve">
     <value>Race </value>
   </data>
-  <data name="hr" xml:space="preserve">
-    <value>Racing</value>
-  </data>
   <data name="nextGoal" xml:space="preserve">
     <value>Next Goal</value>
   </data>
@@ -369,9 +366,6 @@
   </data>
   <data name="lblOvE" xml:space="preserve">
     <value>O/E</value>
-  </data>
-  <data name="LiveCasino" xml:space="preserve">
-    <value>Live Casino</value>
   </data>
   <data name="LiveGame" xml:space="preserve">
     <value>Live Game</value>

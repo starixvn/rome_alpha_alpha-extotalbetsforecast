@@ -83,19 +83,7 @@ a.fcnum {
             text-align: left;
             color: $text-color;
         }
-    }
-
-	&.tbl-correctScore {
-		width: 80%;
-
-		.col-timeRange {
-			width: 16%;
-		}
-
-		.lbl-totalBetsLang, .col-over {
-			width: 11%;
-		}
-	}
+    }	
 
 	&.tbl-totalGoal {
 		.col-homeAway {
@@ -160,31 +148,7 @@ a.fcnum {
 			width: 86px;
 		}
 	}
-
-	&.tbl-racing {
-		width: 80%;
-
-		.col-race {
-			width: 7%;
-		}
-
-		.col-noHR {
-			width: 6%;
-		}
-
-		.col-runner {
-			width: 21%;
-		}
-
-		.col-total {
-			width: 5%;
-		}
-
-		.col-winloss {
-			width: 6%;
-		}
-	}
-
+	
 	&.tbl-financial {
 		width: 80%;
 
@@ -195,10 +159,6 @@ a.fcnum {
 		.col-value {
 			width: 11%;
 		}
-	}
-
-	&.tbl-livecasino {
-		width: 600px;
 	}
 
 	&.tbl-nextgoal {

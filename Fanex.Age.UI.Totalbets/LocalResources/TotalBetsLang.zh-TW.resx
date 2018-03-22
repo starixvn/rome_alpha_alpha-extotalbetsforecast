@@ -267,9 +267,6 @@
   <data name="lbl1sthalf" xml:space="preserve">
     <value>上半场</value>
   </data>
-  <data name="hr" xml:space="preserve">
-    <value>賽馬</value>
-  </data>
   <data name="WinHR" xml:space="preserve">
     <value>獨贏</value>
   </data>
@@ -365,9 +362,6 @@
   </data>
   <data name="lblOvE" xml:space="preserve">
     <value>大/雙</value>
-  </data>
-  <data name="LiveCasino" xml:space="preserve">
-    <value>娛樂廳</value>
   </data>
   <data name="LiveGame" xml:space="preserve">
     <value>Live Game</value>

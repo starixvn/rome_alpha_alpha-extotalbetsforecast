@@ -267,9 +267,6 @@
   <data name="lbl1sthalf" xml:space="preserve">
     <value>ครึ่งแรก</value>
   </data>
-  <data name="hr" xml:space="preserve">
-    <value>การแข่งขันความเร็ว</value>
-  </data>
   <data name="WinHR" xml:space="preserve">
     <value>ชนะ</value>
   </data>
@@ -365,9 +362,6 @@
   </data>
   <data name="lblOvE" xml:space="preserve">
     <value>สูง คู่</value>
-  </data>
-  <data name="LiveCasino" xml:space="preserve">
-    <value>คาสิโนเกมสด</value>
   </data>
   <data name="lblNoDraw" xml:space="preserve">
     <value>No Draw</value>

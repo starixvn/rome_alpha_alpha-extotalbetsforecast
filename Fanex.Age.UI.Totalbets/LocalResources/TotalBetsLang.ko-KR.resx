@@ -267,9 +267,6 @@
   <data name="lbl1sthalf" xml:space="preserve">
     <value>전반전</value>
   </data>
-  <data name="hr" xml:space="preserve">
-    <value>경마</value>
-  </data>
   <data name="WinHR" xml:space="preserve">
     <value>승</value>
   </data>
@@ -365,9 +362,6 @@
   </data>
   <data name="lblOvE" xml:space="preserve">
     <value>O/E</value>
-  </data>
-  <data name="LiveCasino" xml:space="preserve">
-    <value>라이브 카지노</value>
   </data>
   <data name="LiveGame" xml:space="preserve">
     <value>Live Game</value>

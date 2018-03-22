@@ -22,15 +22,13 @@ namespace Fanex.Razorbill.Module.Core.Utils
         {
             Sportsbook = 0,
             NumberGame = 1,
-            VirtualSports = 2,
-            LiveCasino = 3
+            VirtualSports = 2
         }
 
         public static Dictionary<int, string> SportTypes = new Dictionary<int, string>() {
             {0, "Sportsbook"},
             {1, "NumberGame"},
-            {2, "VirtualSports"},
-            {3, "LiveCasino"}
+            {2, "VirtualSports"}
         };
 
         public static string[] CustRole = new string[] { "", "Member", "Agent", "Master", "Super" };

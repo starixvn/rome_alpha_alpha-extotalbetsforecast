@@ -180,9 +180,6 @@
   <data name="homeaway" xml:space="preserve">
     <value>Home /Away</value>
   </data>
-  <data name="hr" xml:space="preserve">
-    <value>Racing</value>
-  </data>
   <data name="htft" xml:space="preserve">
     <value>Hiệp 1/Toàn trận</value>
   </data>
@@ -287,9 +284,6 @@
   </data>
   <data name="lblWinLoss" xml:space="preserve">
     <value>Thắng thua</value>
-  </data>
-  <data name="LiveCasino" xml:space="preserve">
-    <value>Live Casino</value>
   </data>
   <data name="LiveGame" xml:space="preserve">
     <value>Live Game</value>

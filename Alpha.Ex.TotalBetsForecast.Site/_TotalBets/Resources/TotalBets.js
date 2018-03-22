@@ -3,11 +3,6 @@
     window.location.href = url;
 }
 
-function doViewBetListRacing(matchId, betType) {
-    var url = _betListsUrl + 'RacingByMatch/Index?matchId=' + matchId + '&betType=' + betType;
-    window.location.href = url;
-}
-
 function doViewBetListGame(matchId, betType, islive) {
     var url = _betListsUrl + 'BetListByBetTypeAndMatch/Index?matchId=' + matchId + '&betType=' + betType + '&islive=' + islive;
     window.location.href = url;
