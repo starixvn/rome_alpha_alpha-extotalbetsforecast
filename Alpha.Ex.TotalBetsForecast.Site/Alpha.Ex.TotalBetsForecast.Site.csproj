@@ -562,14 +562,23 @@
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.config" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DB053_DB054.bodb_AGE.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DB053_DB054.bodb_AGE.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Configuration\StoreProcedure.mnl\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.mnl\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.mnl\DBAGE.bodb_AGE.xml" />
     <Content Include="Web.Configuration\StoreProcedure.pro\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.pro\DBAGE.bodb02_DB054.bodb02.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DB053_DB054.bodb_AGE.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Configuration\StoreProcedure.pro\DBAGE.bodb_AGE.xml" />
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb02_DB054.bodb02.xml" />
