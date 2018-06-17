@@ -2,9 +2,9 @@
 <Functions>
   <Function Name="Total bets">
     <!--Group 7-->
-    <Setting Key="Age_TotalBets_Sel1378_Ag" SpName="Age_TotalBets_Sel1378_Ag" DbName="DB053.bodb_AGE.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_TotalBets_Sel1378_MAg" SpName="Age_TotalBets_Sel1378_MAg" DbName="DB053.bodb_AGE.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_TotalBets_Sel1378_SAg" SpName="Age_TotalBets_Sel1378_SAg" DbName="DB053.bodb_AGE.BODBDownlineNetView" Plain="0" />
-    <!--Group 7-->
+	  <Setting Key="Age_TotalBets_Sel1378_Ag" SpName="Age_TotalBets_1378_Member" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
+	  <Setting Key="Age_TotalBets_Sel1378_MAg" SpName="Age_TotalBets_1378_Agent" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
+	  <Setting Key="Age_TotalBets_Sel1378_SAg" SpName="Age_TotalBets_1378_Master" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
+	  <!--Group 7-->
   </Function>
 </Functions>
