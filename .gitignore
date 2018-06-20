@@ -14,3 +14,4 @@ BuildWebCompiler.log
 */_GlobalResources/**/*.min.js
 */_Components/*/*.min.css
 *.log
+/Fanex.Age.UI.Forecast/Fanex.Age.UI.Forecast.csproj.user
