@@ -25,9 +25,6 @@
     <Setting Key="Age_TotalBets_Sel25_Ag" SpName="Age_TotalBets_Sel25_Ag" DbName="DB042.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_TotalBets_Sel25_MAg" SpName="Age_TotalBets_Sel25_MAg" DbName="DB042.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_TotalBets_Sel25_SAg" SpName="Age_TotalBets_Sel25_SAg" DbName="DB042.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_TotalBets_Sel430_Ag" SpName="Age_TotalBets_Sel430_Ag" DbName="DB042.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_TotalBets_Sel430_MAg" SpName="Age_TotalBets_Sel430_MAg" DbName="DB042.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_TotalBets_Sel430_SAg" SpName="Age_TotalBets_Sel430_SAg" DbName="DB042.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_TotalBets_Sel6_Ag" SpName="Age_TotalBets_Sel6_Ag" DbName="DB042.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_TotalBets_Sel6_MAg" SpName="Age_TotalBets_Sel6_MAg" DbName="DB042.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_TotalBets_Sel6_SAg" SpName="Age_TotalBets_Sel6_SAg" DbName="DB042.bodb02.BODBDownlineNetView" Plain="0" />    
