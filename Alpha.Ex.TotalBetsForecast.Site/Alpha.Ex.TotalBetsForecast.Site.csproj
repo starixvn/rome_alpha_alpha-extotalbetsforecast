@@ -492,7 +492,7 @@
     <Content Include="web.backupMNL3.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-	<Content Include="web.backupMNL4.config">
+    <Content Include="web.backupMNL4.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
     <Content Include="web.backupMNLExNap.config">
@@ -504,7 +504,7 @@
     <Content Include="web.backupMNLExNap3.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-	<Content Include="web.backupMNLExNap4.config">
+    <Content Include="web.backupMNLExNap4.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
     <Content Include="web.backupMNLNap.config">
@@ -516,7 +516,7 @@
     <Content Include="web.backupMNLNap3.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-	<Content Include="web.backupMNLNap4.config">
+    <Content Include="web.backupMNLNap4.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.local2.config">
@@ -525,7 +525,7 @@
     <Content Include="Web.AppSettings.local3.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-	<Content Include="Web.AppSettings.local4.config">
+    <Content Include="Web.AppSettings.local4.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.napexternal.config">
@@ -537,7 +537,7 @@
     <Content Include="Web.AppSettings.napexternal3.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-	<Content Include="Web.AppSettings.napexternal4.config">
+    <Content Include="Web.AppSettings.napexternal4.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.napinternal.config">
@@ -549,7 +549,7 @@
     <Content Include="Web.AppSettings.napinternal3.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-	<Content Include="Web.AppSettings.napinternal4.config">
+    <Content Include="Web.AppSettings.napinternal4.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.pro.config">
@@ -561,7 +561,7 @@
     <Content Include="Web.AppSettings.pro3.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-	<Content Include="Web.AppSettings.pro4.config">
+    <Content Include="Web.AppSettings.pro4.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.sit.config">
@@ -573,7 +573,7 @@
     <Content Include="Web.AppSettings.sit3.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-	<Content Include="Web.AppSettings.sit4.config">
+    <Content Include="Web.AppSettings.sit4.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.uat.config">
@@ -585,7 +585,7 @@
     <Content Include="Web.AppSettings.uat3.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-	<Content Include="Web.AppSettings.uat4.config">
+    <Content Include="Web.AppSettings.uat4.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.config" />
@@ -610,6 +610,9 @@
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DB053_DB054.bodb_AGE.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb_AGE.xml" />
@@ -900,37 +903,37 @@
     <Content Include="web.local3.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-	<Content Include="web.local4.config">
+    <Content Include="web.local4.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
     <Content Include="web.napexternal3.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-	<Content Include="web.napexternal4.config">
+    <Content Include="web.napexternal4.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
     <Content Include="web.napinternal3.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-	<Content Include="web.napinternal4.config">
+    <Content Include="web.napinternal4.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
     <Content Include="web.pro3.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-	<Content Include="web.pro4.config">
+    <Content Include="web.pro4.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
     <Content Include="web.SIT3.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-	<Content Include="web.SIT4.config">
+    <Content Include="web.SIT4.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
     <Content Include="web.UAT3.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-	<Content Include="web.UAT4.config">
+    <Content Include="web.UAT4.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
   </ItemGroup>
