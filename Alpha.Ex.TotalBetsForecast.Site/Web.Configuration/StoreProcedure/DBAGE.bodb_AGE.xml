@@ -1,10 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Functions SiteId="105" SiteName="Total Bets">
-  <Function Name="Total bets">
-    <Setting Key="Age_TotalBets_Sel1378_Ag" SpName="Age_TotalBets_1378_Member" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_TotalBets_Sel1378_MAg" SpName="Age_TotalBets_1378_Agent" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_TotalBets_Sel1378_SAg" SpName="Age_TotalBets_1378_Master" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-  </Function>
+<Functions>
   <Function Name="Profile Pictures">
     <Setting Key="Age_CustomerSelProfilePicture" SpName="Age_CustomerSelProfilePicture" DbName="DBAGE.bodb_AGE.BODBDownlineNet" />
     <Setting Key="Age_CustomerUpdProfilePicture" SpName="Age_CustomerUpdProfilePicture" DbName="DBAGE.bodb_AGE.BODBDownlineNet" />

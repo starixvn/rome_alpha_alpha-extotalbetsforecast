@@ -616,6 +616,7 @@
     <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DB053_DB054.bodb_AGE.xml" />
     <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb_AGE.xml" />
