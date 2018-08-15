@@ -7,7 +7,6 @@
     using System.Linq;
     using Fanex.Common;
     using Fanex.Data;
-    using Fanex.Razorbill.Module.Common.Helpers;
     using Fanex.Razorbill.Module.Forecast.Criteria;
     using Fanex.Razorbill.Module.Forecast.Models;
     using Logging.Extensions.Database;

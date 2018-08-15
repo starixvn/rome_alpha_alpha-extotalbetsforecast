@@ -4,7 +4,7 @@ namespace Sunplus.Agent.Model.BL.Forecast
     using System.Collections.Generic;
     using System.Data;
     using Fanex.Caching;
-    using Sunplus.Agent.Model.BL.Cache;
+    using Fanex.Razorbill.Module.Core.Services.Impl;
     using Sunplus.Agent.Model.DL.Forecast;
 
     [Obsolete("Should rename to Sunplus.Agent.Model.Forecast")]
@@ -342,7 +342,7 @@ namespace Sunplus.Agent.Model.BL.Forecast
             {
                 row = mainTable.NewRow();
                 row["matchid"] = Convert.ToInt32(dr["matchid"]);
-                row["matchname"] = CacheRef.GetTeamName(dr["homeid"]) + "-vs-" + CacheRef.GetTeamName(dr["awayid"]);
+                row["matchname"] = CacheRef.GetTeamName(Convert.ToInt32(dr["homeid"])) + "-vs-" + CacheRef.GetTeamName(Convert.ToInt32(dr["awayid"]));
                 mainTable.Rows.Add(row);
             }
 

@@ -14,8 +14,10 @@ namespace Fanex.Age.UI.Forecast
     using System.Web.UI;
     using Alpha.Web.Helpers;
     using Fanex.Age.UI.Components;
+    using Fanex.Razorbill.Module.Core.Services.Impl;
     using Sunplus.Agent.Model.BL.Forecast;
     using Sunplus.Agent.Utilities;
+
     public partial class FCAH_Page : Fanex.Age.UI.TplPage
     {
         #region Const
@@ -230,8 +232,8 @@ namespace Fanex.Age.UI.Forecast
                 DataRow dr = topodds.Rows[0];
                 int liveHomeScore = Convert.ToInt16(dr["livehomescore"]);
                 int liveAwayScore = Convert.ToInt16(dr["liveawayscore"]);
-                string home = Sunplus.Agent.Model.BL.Cache.CacheRef.GetTeamName(dr["homeid"]) + ((bool)dr["isNeutral"] ? Resources.Lang.IsNeutral : String.Empty);
-                string away = Sunplus.Agent.Model.BL.Cache.CacheRef.GetTeamName(dr["awayid"]);
+                string home = CacheRef.GetTeamName(Convert.ToInt32(dr["homeid"])) + ((bool)dr["isNeutral"] ? Resources.Lang.IsNeutral : String.Empty);
+                string away = CacheRef.GetTeamName(Convert.ToInt32(dr["awayid"]));
 
                 FCAH_Content_ForecastContent_Block forecastContent = tpl.Content.ForecastContent;
                 forecastContent.Home = home;

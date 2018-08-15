@@ -13,6 +13,7 @@
     using Fanex.Logging.Extensions.Database;
     using Fanex.Logging.Extensions.Web;
     using Fanex.Razorbill.Security.Services.Authentication;
+    using Fanex.RemotingRef;
     using Sunplus.Agent.Model.Entities;
 
     public class Global : System.Web.HttpApplication
@@ -43,6 +44,10 @@
 
             var logConfig = new LoggingConfiguration().UseGetDbExceptionInfo(DatabaseInfoGetters.GetDbExceptionInfo);
             ExceptionHandler.UseConfig(logConfig);
+
+            RefDataTypeContainer
+                .ConnectTo(new Uri(ConfigurationManager.AppSettings["RemoteRefURL"]))
+                .FromApplication("Alpha.Ex.TotalBetsForecast.Site");
         }
 
         public void Application_Error(object sender, EventArgs e)
