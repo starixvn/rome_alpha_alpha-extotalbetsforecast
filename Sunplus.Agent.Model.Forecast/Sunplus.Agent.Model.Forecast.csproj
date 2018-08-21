@@ -128,7 +128,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.UI.ScoreMap, Version=3.0.0.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.UI.ScoreMap.3.0.0.4-RR01\lib\net40\Sunplus.Agent.UI.ScoreMap.dll</HintPath>
+      <HintPath>..\packages\Sunplus.Agent.UI.ScoreMap.3.0.0.4\lib\net40\Sunplus.Agent.UI.ScoreMap.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
