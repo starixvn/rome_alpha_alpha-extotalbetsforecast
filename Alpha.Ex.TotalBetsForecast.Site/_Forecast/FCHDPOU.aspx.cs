@@ -14,9 +14,10 @@ namespace Fanex.Age.UI.Forecast
     using System.Web.UI;
     using Alpha.Web.Helpers;
     using Fanex.Age.UI.Components;
+    using Fanex.Razorbill.Module.Core.Services.Impl;
     using Sunplus.Agent.Model.BL.Forecast;
-    using Sunplus.Agent.Utilities;
     using Sunplus.Agent.Model.Entities;
+    using Sunplus.Agent.Utilities;
 
     public partial class FCHDPOU_Page : Fanex.Age.UI.TplPage
     {
@@ -52,8 +53,8 @@ namespace Fanex.Age.UI.Forecast
                 {
                     DataRow dr = fcData.Rows[i];
 
-                    block.Home = Sunplus.Agent.Model.BL.Cache.CacheRef.GetTeamName(dr["homeid"]) + ((bool)dr["isNeutral"] ? Resources.Lang.IsNeutral : String.Empty);
-                    block.Away = Sunplus.Agent.Model.BL.Cache.CacheRef.GetTeamName(dr["awayid"]);
+                    block.Home = CacheRef.GetTeamName(Convert.ToInt32(dr["homeid"])) + ((bool)dr["isNeutral"] ? Resources.Lang.IsNeutral : String.Empty);
+                    block.Away = CacheRef.GetTeamName(Convert.ToInt32(dr["awayid"]));
 
                     int liveHomeScore = Convert.ToInt32(dr["livehomescore"]);
                     int liveAwayScore = Convert.ToInt32(dr["liveawayscore"]);
@@ -196,7 +197,7 @@ namespace Fanex.Age.UI.Forecast
                 foreach (DataRow dr in leagues.Rows)
                 {
                     int leagueId = Convert.ToInt32(dr["leagueid"]);
-                    String leagueName = Sunplus.Agent.Model.BL.Cache.CacheRef.GetLeagueName(dr["leagueid"]);
+                    String leagueName = CacheRef.GetLeagueName(leagueId);
                     if (leagueId == _leagueId)
                     {
                         sb.Append(String.Format("<option value='{0}' selected>{1}</option>", leagueId, leagueName));

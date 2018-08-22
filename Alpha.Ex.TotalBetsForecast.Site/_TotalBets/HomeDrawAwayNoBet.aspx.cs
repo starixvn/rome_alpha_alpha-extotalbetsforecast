@@ -11,17 +11,18 @@
 
 namespace Fanex.Age.UI.TotalBets
 {
-    using Alpha.Web.Helpers;
-    using Fanex.Age.UI;
-    using Fanex.Age.UI.Components;
-    using Sunplus.Agent.Model.BL.Definitions;
-    using Sunplus.Agent.Model.BL.TotalBets;
-    using Sunplus.Agent.Utilities;
     using System;
     using System.Collections.Generic;
     using System.Data;
     using System.Web;
     using System.Web.UI;
+    using Alpha.Web.Helpers;
+    using Fanex.Age.UI;
+    using Fanex.Age.UI.Components;
+    using Fanex.Razorbill.Module.Core.Services.Impl;
+    using Sunplus.Agent.Model.BL.Definitions;
+    using Sunplus.Agent.Model.BL.TotalBets;
+    using Sunplus.Agent.Utilities;
 
     public partial class HomeDrawAwayNoBet_Page : TotalBets_Page
     {
@@ -58,7 +59,7 @@ namespace Fanex.Age.UI.TotalBets
                         currentLeagueId = leagueId;
 
                         leagueBlock.MatchContents.Clear();
-                        leagueBlock.LeagueName = Sunplus.Agent.Model.BL.Cache.CacheRef.GetLeagueName(leagueId);
+                        leagueBlock.LeagueName = CacheRef.GetLeagueName(leagueId);
                     }
                     else
                     {
@@ -152,8 +153,8 @@ namespace Fanex.Age.UI.TotalBets
             matchBlock.ColorOver = Fanex.Age.UI.Common.RowBgOver;
 
             // Event 
-            matchBlock.Home = Sunplus.Agent.Model.BL.Cache.CacheRef.GetTeamName(dr["homeid"]) + (Convert.ToBoolean(dr["isNeutral"]) ? Resources.Lang.IsNeutral : string.Empty);
-            matchBlock.Away = Sunplus.Agent.Model.BL.Cache.CacheRef.GetTeamName(dr["awayid"]);
+            matchBlock.Home = CacheRef.GetTeamName(Convert.ToInt32(dr["homeid"])) + (Convert.ToBoolean(dr["isNeutral"]) ? Resources.Lang.IsNeutral : string.Empty);
+            matchBlock.Away = CacheRef.GetTeamName(Convert.ToInt32(dr["awayid"]));
             matchBlock.No = rowIndex.ToString();
 
             // Render value column

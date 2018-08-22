@@ -1,7 +1,7 @@
 ﻿namespace Fanex.Razorbill.Module.Forecast.Models
 {
     using System;
-    using Fanex.Razorbill.Module.Common.Helpers;
+    using Core.Services.Impl;
     using Fanex.Razorbill.Module.Forecast.Resources;
 
     /// <summary>
@@ -20,7 +20,7 @@
             Id = id;
             if (name == null)
             {
-                Name = id == 5 ? ForecastLang.BetType1x2 : CacheRemotingRef.GetBettype(Id.ToString());
+                Name = id == 5 ? ForecastLang.BetType1x2 : CacheRef.GetBettype(Id);
             }
             else
             {

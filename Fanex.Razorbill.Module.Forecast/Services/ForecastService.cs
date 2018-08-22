@@ -3,8 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Core.Services.Impl;
     using Fanex.Caching;
-    using Fanex.Razorbill.Module.Common.Helpers;
     using Fanex.Razorbill.Module.Forecast.Criteria;
     using Fanex.Razorbill.Module.Forecast.Models;
     using Fanex.Razorbill.Module.Forecast.Repositories;
@@ -52,7 +52,7 @@
                 ScoreMapBetType info = new ScoreMapBetType
                 {
                     BetTypeId = bettype.TypeId,
-                    BetType = GetBetTypeName(bettype.TypeId.ToString(), true),
+                    BetType = GetBetTypeName(bettype.TypeId, true),
                     FollowedBetTypes = bettype.FirstId.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).ToList()
                 };
 
@@ -85,8 +85,8 @@
             {
                 ScoreMapBetTypeInfo info = new ScoreMapBetTypeInfo
                 {
-                    BetType = GetBetTypeName(bettype.TypeId.ToString(), true),
-                    FollowedBetTypes = bettype.InfoId.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(s => GetBetTypeName(s)).ToList()
+                    BetType = GetBetTypeName(bettype.TypeId, true),
+                    FollowedBetTypes = bettype.InfoId.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(s => GetBetTypeName(int.Parse(s))).ToList()
                 };
 
                 if (bettype.EventType == 1)
@@ -166,15 +166,15 @@
             return data;
         }
 
-        private string GetBetTypeName(string id, bool fromResource = false)
+        private string GetBetTypeName(int id, bool fromResource = false)
         {
             // 1 x 2.
-            if (fromResource && id == "5")
+            if (fromResource && id == 5)
             {
                 return ForecastLang.BetType1x2;    
             }
 
-            return CacheRemotingRef.GetBettype(id);
+            return CacheRef.GetBettype(id);
         }
     }
 }
