@@ -6,6 +6,7 @@ namespace Sunplus.Agent.Model.BL.Forecast
     using Fanex.Caching;
     using Fanex.Razorbill.Module.Core.Services.Impl;
     using Sunplus.Agent.Model.DL.Forecast;
+    using System.Linq;
 
     [Obsolete("Should rename to Sunplus.Agent.Model.Forecast")]
     public class ForecastBO : Sunplus.Agent.Model.BL.Base.BOBase
@@ -244,13 +245,13 @@ namespace Sunplus.Agent.Model.BL.Forecast
             leagues = ForecastDataAccess.Age_ScoreMap_SelLeague(agentId);
             if (leagues != null)
             {
-                leagues = this.MakeSortLeagueTable(leagues);
+                leagues = MakeSortLeagueTable(leagues);
             }
 
             return leagues;
         }
 
-        private DataTable MakeSortLeagueTable(DataTable dt)
+        private static DataTable MakeSortLeagueTable(DataTable dt)
         {
             // Create a new DataTable.
             System.Data.DataTable mainTable = new DataTable("mainTable");
@@ -307,13 +308,13 @@ namespace Sunplus.Agent.Model.BL.Forecast
             matchByLeague = ForecastDataAccess.Age_ScoreMap_SelMatch(agentId, leagueId);
             if (matchByLeague != null)
             {
-                matchByLeague = this.MakeSortMatchTable(matchByLeague);
+                matchByLeague = MakeSortMatchTable(matchByLeague);
             }
 
             return matchByLeague;
         }
 
-        private DataTable MakeSortMatchTable(DataTable dt)
+        private static DataTable MakeSortMatchTable(DataTable dt)
         {
             // Create a new DataTable.
             System.Data.DataTable mainTable = new DataTable("mainTable");
@@ -360,7 +361,7 @@ namespace Sunplus.Agent.Model.BL.Forecast
         /// Bet Type Score Map
         /// </summary>
         /// <returns></returns>
-        public DataTable GetBetTypeScoreMap()
+        public static DataTable GetBetTypeScoreMap()
         {
             ICache cache = CacheService.CreateInstance(CacheType.MemoryCache);
             object oldData = cache.Get<DataTable>(BetTypeScoreMapKey);
@@ -377,17 +378,17 @@ namespace Sunplus.Agent.Model.BL.Forecast
             return oldData as DataTable;
         }
 
-        public List<int> GetListBetTypeScoreMap()
+        public static List<int> GetListBetTypeScoreMap()
         {
             ICache cache = CacheService.CreateInstance(CacheType.MemoryCache);
             object oldData = cache.Get<List<int>>(BetTypeListScoreMapKey);
             if (oldData == null)
             {
                 string firstId;
-                char[] splitChars = new char[] { ',' };
+                char[] splitChars = { ',' };
 
                 List<int> bettypeIds = new List<int>();
-                DataTable dt = this.GetBetTypeScoreMap();
+                DataTable dt = GetBetTypeScoreMap();
                 DataRowCollection dr = dt.Rows;
                 foreach (DataRow items in dr)
                 {
@@ -396,10 +397,10 @@ namespace Sunplus.Agent.Model.BL.Forecast
                     if (firstId != "0")
                     {
                         string[] firstIdArray = firstId.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
-                        foreach (string id in firstIdArray)
+                        firstIdArray.ToList().ForEach(id =>
                         {
                             bettypeIds.Add(int.Parse(id));
-                        }
+                        });
                     }
                 }
 

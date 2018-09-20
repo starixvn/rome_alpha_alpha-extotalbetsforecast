@@ -8,13 +8,8 @@ namespace Sunplus.Agent.Model.DL.Forecast
     [Obsolete("Should rename to Sunplus.Agent.Model.Forecast")]
     public class ForecastDAO : Sunplus.Agent.Model.DL.Base.DAOBase
     {
-        private static string connection = DbTypes.ARCHIVE;
 
-        public static string Connection
-        {
-            get { return ForecastDAO.connection; }
-            set { ForecastDAO.connection = value; }
-        }
+        public static string Connection { get; set; } = DbTypes.ARCHIVE;
 
         #region TopOddsByMatch
 

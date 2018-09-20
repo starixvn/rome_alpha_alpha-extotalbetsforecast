@@ -18,14 +18,7 @@
         public BetTypeModel(int id, string name)
         {
             Id = id;
-            if (name == null)
-            {
-                Name = id == 5 ? ForecastLang.BetType1x2 : CacheRef.GetBettype(Id);
-            }
-            else
-            {
-                Name = name;
-            }
+            Name = name ?? (id == 5 ? ForecastLang.BetType1x2 : CacheRef.GetBettype(Id));
         }
 
         public int Id { get; private set; }

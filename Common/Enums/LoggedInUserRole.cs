@@ -1,6 +1,6 @@
 ﻿namespace Fanex.Razorbill.Module.Common.Enums
 {
-    public enum LoggedInUserRole : int
+    public enum LoggedInUserRole
     {
         Unknown = 0,
         Member = 1,

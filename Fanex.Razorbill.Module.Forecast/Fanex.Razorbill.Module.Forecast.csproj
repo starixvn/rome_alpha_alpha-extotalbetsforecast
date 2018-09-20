@@ -168,6 +168,7 @@
     <Compile Include="Criteria\GetForecastScoreMapCriteria.cs" />
     <Compile Include="Criteria\GetScoreMapMatchByLeagueCriteria.cs" />
     <Compile Include="Criteria\GetScoreMapRunningLeagueCriteria.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Models\BetTypeModel.cs" />
     <Compile Include="Models\ScoreMapBetType.cs" />
     <Compile Include="Models\ForecastScoreMap.cs" />

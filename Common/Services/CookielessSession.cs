@@ -9,8 +9,6 @@
         private const string ADMINID = "ADMINID";
         private const string CUSTID = "CUSTID";
         private const string SUBACCID = "SUBACCID";
-        private const string ISINTERNAL = "ISINTERNAL";
-        private const string ISSUBACCOUNT = "ISSUBACCOUNT";
         private const string ROLEID = "ROLEID";
 
         private const string HYPHEN = "_";

@@ -128,8 +128,11 @@
             int columnNumber = criteria.AwayEndScore - criteria.AwayBeginScore + 1;
 
             ForecastScoreMap scoreMap;
-            object haftTime, fullTime;
-            int matchId, home, away;
+            object haftTime;
+            object fullTime;
+            int matchId;
+            int home;
+            int away;
             IDictionary<int, ForecastScoreMap> matchHash = new Dictionary<int, ForecastScoreMap>();
             using (var db = new ObjectDb(criteria.GetSettingKey()))
             {

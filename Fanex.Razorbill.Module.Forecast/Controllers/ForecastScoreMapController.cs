@@ -104,7 +104,7 @@
         /// <param name="id">The id of live/dead.</param>
         /// <param name="bettypes">The bet type list.</param>
         /// <returns>The string of bet type id.</returns>
-        private string GetBettypeIds(string id, IList<ScoreMapBetType> bettypes)
+        private static string GetBettypeIds(string id, IList<ScoreMapBetType> bettypes)
         {
             if (id != "-1")
             {

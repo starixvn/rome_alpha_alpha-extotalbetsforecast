@@ -53,7 +53,7 @@
                 {
                     BetTypeId = bettype.TypeId,
                     BetType = GetBetTypeName(bettype.TypeId, true),
-                    FollowedBetTypes = bettype.FirstId.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).ToList()
+                    FollowedBetTypes = bettype.FirstId.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).ToList()
                 };
 
                 if (bettype.EventType == 1)
@@ -86,7 +86,7 @@
                 ScoreMapBetTypeInfo info = new ScoreMapBetTypeInfo
                 {
                     BetType = GetBetTypeName(bettype.TypeId, true),
-                    FollowedBetTypes = bettype.InfoId.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(s => GetBetTypeName(int.Parse(s))).ToList()
+                    FollowedBetTypes = bettype.InfoId.Split(new [] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(s => GetBetTypeName(int.Parse(s))).ToList()
                 };
 
                 if (bettype.EventType == 1)
@@ -121,17 +121,17 @@
                 var rawdata = GetRawScoreMapBetTypes();
                 foreach (RawScoreMapBetType bettype in rawdata)
                 {
-                    foreach (string item in bettype.FirstId.Split(new char[] { ',' }))
+                    bettype.FirstId.Split(new[] { ',' }).ToList().ForEach(item =>
                     {
                         bettypeId = int.Parse(item);
                         if (!bettypeHash.ContainsKey(bettypeId))
                         {
                             bettypeHash.Add(bettypeId, true);
                         }
-                    }
+                    });                    
                 }
 
-                cache.Set<IDictionary<int, bool>>(key, bettypeHash);
+                cache.Set(key, bettypeHash);
             }
 
             return bettypeHash;
@@ -160,13 +160,13 @@
 
                 // 2 hours.
                 int cacheInHours = 2;
-                cache.Set<IList<RawScoreMapBetType>>(key, data, TimeSpan.FromHours(cacheInHours));
+                cache.Set(key, data, TimeSpan.FromHours(cacheInHours));
             }
 
             return data;
         }
 
-        private string GetBetTypeName(int id, bool fromResource = false)
+        private static string GetBetTypeName(int id, bool fromResource = false)
         {
             // 1 x 2.
             if (fromResource && id == 5)

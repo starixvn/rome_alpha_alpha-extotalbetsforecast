@@ -11,13 +11,7 @@
         [SpParam(Ignored = true)]
         public int LeagueId { get; set; }
 
-        public int AgentId 
-        {
-            get
-            {
-                return CookielessSession.CustomerId;
-            }
-        }
+        public int AgentId { get; set; } = CookielessSession.CustomerId;
 
         public override string GetSettingKey()
         {

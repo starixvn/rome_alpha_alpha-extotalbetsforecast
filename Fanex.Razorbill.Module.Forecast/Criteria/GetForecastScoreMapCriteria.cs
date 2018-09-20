@@ -10,8 +10,8 @@
     /// </summary>
     public class GetForecastScoreMapCriteria : CriteriaBase
     {
-        private LoggedInUserRole _role;
-        private int _customerId;
+        private readonly LoggedInUserRole _role;
+        private readonly int _customerId;
 
         public GetForecastScoreMapCriteria()
         {
@@ -49,7 +49,7 @@
             {
                 return "Age_ScoreMap_Result_MAg";
             }
-            else if (_role == LoggedInUserRole.Agent)
+            else
             {
                 return "Age_ScoreMap_Result_Ag";
             }
@@ -82,7 +82,7 @@
             {
                 inputParams.Add("mrecommend", _customerId);
             }
-            else if (_role == LoggedInUserRole.Agent)
+            else
             {
                 inputParams.Add("recommend", _customerId);
             }
