@@ -67,8 +67,8 @@
       <HintPath>..\packages\Fanex.Logging.1.0.4\lib\net40\Fanex.Logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Products, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Products.1.0.0.0\lib\net40\Fanex.Products.dll</HintPath>
+    <Reference Include="Fanex.Products, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Products.1.0.0.5\lib\net461\Fanex.Products.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MessagePack, Version=1.7.3.4, Culture=neutral, PublicKeyToken=b4a0369545f0a1be, processorArchitecture=MSIL">
@@ -107,16 +107,12 @@
       <HintPath>..\packages\Fanex.File.1.0.0\lib\net40\IBCFile.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RemotingRef, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RemotingRef.2.0.0.5\lib\net40\RemotingRef.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="SPSRemoting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SPSRemoting.1.0.0\lib\net40\SPSRemoting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.3.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.3.4\lib\net40\Sunplus.Agent.Model.Base.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.4.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.4.1\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.DataAccessLibrary, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
