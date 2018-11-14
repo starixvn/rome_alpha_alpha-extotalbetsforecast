@@ -20,12 +20,18 @@ namespace Fanex.Age.UI.TotalBets
         /// Else render full page
         /// </summary>
         protected bool _fullMode = true;
+#pragma warning disable CS0618 // 'TotalBetsBO' is obsolete: 'Should rename to Sunplus.Agent.Model.TotalBets'
         private TotalBetsBO _totalBetsBO = null;
+#pragma warning restore CS0618 // 'TotalBetsBO' is obsolete: 'Should rename to Sunplus.Agent.Model.TotalBets'
+#pragma warning disable CS0618 // 'TotalBetsBO' is obsolete: 'Should rename to Sunplus.Agent.Model.TotalBets'
         protected TotalBetsBO _TotalBetsBO
+#pragma warning restore CS0618 // 'TotalBetsBO' is obsolete: 'Should rename to Sunplus.Agent.Model.TotalBets'
         {
             get
             {
+#pragma warning disable CS0618 // 'TotalBetsBO' is obsolete: 'Should rename to Sunplus.Agent.Model.TotalBets'
                 if (_totalBetsBO == null) _totalBetsBO = new TotalBetsBO(CurrentUserSession.NetSessionId);
+#pragma warning restore CS0618 // 'TotalBetsBO' is obsolete: 'Should rename to Sunplus.Agent.Model.TotalBets'
                 return _totalBetsBO;
             }
         }
