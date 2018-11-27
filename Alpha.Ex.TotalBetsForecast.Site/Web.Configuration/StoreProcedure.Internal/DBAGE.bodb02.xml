@@ -74,31 +74,7 @@
     <Setting Key="Age_Rpt_CommByFinance_MAg" SpName="Age_Rpt_CommByFinance_MAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Rpt_CommByFinance_SAg" SpName="Age_Rpt_CommByFinance_SAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Rpt_MatchSelResultEntered" SpName="Age_Rpt_MatchSelResultEntered" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_MatchWinLoss_Ag" SpName="Age_Rpt_MatchWinLoss_Ag" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Rpt_MatchWinloss_SelLeagueBySport" SpName="Age_Rpt_MatchWinloss_SelLeagueBySport" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_MatchWinLossDetail_Ag" SpName="Age_Rpt_MatchWinLossDetail_Ag" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_MatchWinLossDetail_MAg" SpName="Age_Rpt_MatchWinLossDetail_MAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_MatchWinLossDetail_SAg" SpName="Age_Rpt_MatchWinLossDetail_SAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLoss_Ag" SpName="Age_Rpt_WinLoss_Ag" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLoss_Ag_bettrans" SpName="Age_Rpt_WinLoss_Ag_bettrans" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLoss_MAg" SpName="Age_Rpt_WinLoss_MAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLoss_MAg_bettrans" SpName="Age_Rpt_WinLoss_MAg_bettrans" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLoss_SAg" SpName="Age_Rpt_WinLoss_SAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLoss_SAg_bettrans" SpName="Age_Rpt_WinLoss_SAg_bettrans" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinlossAnalysis_Ag" SpName="Age_Rpt_WinlossAnalysis_Ag" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinlossAnalysis_MAg" SpName="Age_Rpt_WinlossAnalysis_MAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinlossAnalysis_SAg" SpName="Age_Rpt_WinlossAnalysis_SAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossByBettype_Ag" SpName="Age_Rpt_WinLossByBettype_Ag" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossByBettype_MAg" SpName="Age_Rpt_WinLossByBettype_MAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossByBettype_SAg" SpName="Age_Rpt_WinLossByBettype_SAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossDetail_Ag" SpName="Age_Rpt_WinLossDetail_Ag" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossDetail_Ag_bettrans" SpName="Age_Rpt_WinLossDetail_Ag_bettrans" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossDetail_MAg" SpName="Age_Rpt_WinLossDetail_MAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossDetail_MAg_bettrans" SpName="Age_Rpt_WinLossDetail_MAg_bettrans" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossDetail_MAg_bettrans_New" SpName="Age_Rpt_WinLossDetail_MAg_bettrans_New" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossDetail_MAg_New" SpName="Age_Rpt_WinLossDetail_MAg_New" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossDetail_SAg" SpName="Age_Rpt_WinLossDetail_SAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Rpt_WinLossDetail_SAg_bettrans" SpName="Age_Rpt_WinLossDetail_SAg_bettrans" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_SelBalanceUpDay" SpName="Age_SelBalanceUpDay" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Statement_Mem_BetSummary" SpName="Age_Statement_Mem_BetSummary" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Statement_Mem" SpName="Age_Statement_Mem" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
@@ -149,12 +125,10 @@
   </Function>
   
   <Function Name="Transfer">
-    <Setting Key="Age_Transfer_SelBalance" SpName="Age_Transfer_SelBalance" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Transfer_SelList_Ag" SpName="Age_Transfer_SelList_Ag" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Transfer_SelList_MAg" SpName="Age_Transfer_SelList_MAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Transfer_SelList_SAg" SpName="Age_Transfer_SelList_SAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Transfer_SelMemberInfo_Yesterday" SpName="Age_Transfer_SelMemberInfo_Yesterday" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_Transfer_SelOutstanding" SpName="Age_Transfer_SelOutstanding" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Transfer_CheckExisting" SpName="Age_Transfer_CheckExisting" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_Transfer_CheckTotalBalanceTransfer" SpName="Age_Transfer_CheckTotalBalanceTransfer" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
   </Function>
@@ -165,7 +139,6 @@
     <Setting Key="Age_CustomerSelBalance_SAg" SpName="Age_CustomerSelBalance_SAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_CustomerSelCheckBelonging_ByUsername" SpName="Age_CustomerSelCheckBelonging_ByUsername" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_CustomerSelCheckBelonging_MultiCust" SpName="Age_CustomerSelCheckBelonging_MultiCust" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
-    <Setting Key="Age_CustomerSelCheckPermission" SpName="Age_CustomerSelCheckPermission" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_CustomerSelCreditBalanceList_Ag" SpName="Age_CustomerSelCreditBalanceList_Ag" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_CustomerSelCreditBalanceList_Mag" SpName="Age_CustomerSelCreditBalanceList_MAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_CustomerSelCreditBalanceList_Sag" SpName="Age_CustomerSelCreditBalanceList_SAg" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
