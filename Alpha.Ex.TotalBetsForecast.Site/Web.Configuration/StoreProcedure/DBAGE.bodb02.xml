@@ -83,7 +83,6 @@
     <Setting Key="Age_Statement_Rpt_SAg" SpName="Age_Statement_Rpt_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Rpt_ConsolidatedGroup" SpName="Age_Rpt_ConsolidatedGroup" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Rpt_ConsolidatedGroupSelCurrency" SpName="Age_Rpt_ConsolidatedGroupSelCurrency" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_Rpt_DailyWLFoobet" SpName="Age_Rpt_DailyWLFoobet" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Rpt_ConsolidatedGroupProductSel" SpName="Age_Rpt_ConsolidatedGroupProductSel" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
   </Function>
   <Function Name="Last bet monitoring">
@@ -118,11 +117,7 @@
       <Mapping DataField="race" ObjectProperty="race" />
       <Mapping DataField="showtime" ObjectProperty="showtime" />
     </Setting>
-  </Function>
-  
-  <Function Name="General info">
-    <Setting Key="Acc_CustomerUpdUserSearch" SpName="Acc_CustomerUpdUserSearch" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-  </Function>
+  </Function> 
   
   <Function Name="Transfer">
     <Setting Key="Age_Transfer_SelList_Ag" SpName="Age_Transfer_SelList_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />

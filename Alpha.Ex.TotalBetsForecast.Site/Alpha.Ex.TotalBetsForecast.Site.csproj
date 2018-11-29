@@ -615,6 +615,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Configuration\StoreProcedure.pro\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DB053_DB054.bodb_AGE.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb_AGE.xml" />
