@@ -13,7 +13,9 @@ using System.Web.UI.HtmlControls;
 public partial class Error : System.Web.UI.Page
 {
     protected string ErrorMessage = null;
+#pragma warning disable CS0618 // 'AppSettings' is obsolete: 'Should rename to Sunplus.Agent.Model.Definitions'
     protected string urlBefore = Sunplus.Agent.Model.BL.Definitions.AppSettings.BeforeLoginUrl;
+#pragma warning restore CS0618 // 'AppSettings' is obsolete: 'Should rename to Sunplus.Agent.Model.Definitions'
     public string GetBaseUrl()
     {
         string hostName = Request.Headers["Host"];

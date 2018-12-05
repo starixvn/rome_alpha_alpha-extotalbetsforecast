@@ -54,7 +54,9 @@
                 return "Age_ScoreMap_Result_Ag";
             }
 
+#pragma warning disable CS0162 // Unreachable code detected
             return null;
+#pragma warning restore CS0162 // Unreachable code detected
         }
 
         /// <summary>

@@ -55,7 +55,9 @@
             if (!CheckUnderMainternanceTime())
             {
                 Exception ex = Server.GetLastError();
+#pragma warning disable CS0618 // Type or member is obsolete
                 var currentCustomer = UserSession.Current;
+#pragma warning restore CS0618 // Type or member is obsolete
 
                 ExceptionHandler.Handle(ex,
                     new Dictionary<string, object>
@@ -67,7 +69,9 @@
                     });
             }
 
+#pragma warning disable CS0618 // Type or member is obsolete
             if (!Sunplus.Agent.Model.BL.Definitions.AppSettings.LocalTest)
+#pragma warning restore CS0618 // Type or member is obsolete
             {
                 Server.ClearError();
                 Server.Transfer("~/Error.aspx");
@@ -87,7 +91,9 @@
                 Response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate");
             }
 
+#pragma warning disable CS0618 // Type or member is obsolete
             if (UserSession.Current.CustId == 0)
+#pragma warning restore CS0618 // Type or member is obsolete
             {
                 Response.Redirect(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"), true);
                 return;
@@ -97,15 +103,15 @@
 
             //---Checking closed status---
             IAuthenticationService authencationService = new AuthenticationService(url);
+#pragma warning disable CS0618 // Type or member is obsolete
             if (UserSession.Current.CustId != 0 && !string.IsNullOrWhiteSpace(url) &&
-                !UserSession.Current.IsInternal)
+#pragma warning restore CS0618 // Type or member is obsolete
+#pragma warning disable CS0618 // Type or member is obsolete
+                !UserSession.Current.IsInternal && authencationService.CheckingClosedStatus())
+#pragma warning restore CS0618 // Type or member is obsolete
             {
-                if (authencationService.CheckingClosedStatus())
-                {
-                    Session.Clear();
-                    Response.Redirect(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"), true);
-                    return;
-                }
+                Session.Clear();
+                Response.Redirect(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"), true);
             }
         }
 
@@ -117,9 +123,7 @@
                 url = GetRnGCasinoUri();
             }
 
-            url = url.Remove(0, 1).ToLower();
-
-            return url;
+            return url.Remove(0, 1).ToLowerInvariant();
         }
 
         private string GetRnGCasinoUri()
@@ -127,19 +131,15 @@
             var controller = Request.RequestContext.RouteData.Values["controller"];
             var action = Request.RequestContext.RouteData.Values["action"];
 
-            var uri = string.Format("/{0}/{1}/{2}", rngArea, controller, action);
-
-            return uri;
+            return string.Format("/{0}/{1}/{2}", rngArea, controller, action);
         }
 
         private bool IsRnGCasinoUri
         {
             get
             {
-                var url = Request.Path.ToString();
-                if (url.IndexOf(rngArea, StringComparison.OrdinalIgnoreCase) != -1) { return true; }
-
-                return false;
+                var url = Request.Path;
+                return url.IndexOf(rngArea, StringComparison.OrdinalIgnoreCase) != -1;
             }
         }
 
@@ -148,15 +148,16 @@
             filters.Add(new HandleErrorAttribute());
         }
 
-        private bool CheckUnderMainternanceTime()
+        private static bool CheckUnderMainternanceTime()
         {
             var isUm = false;
             try
             {
                 isUm = Sunplus.Agent.Model.Services.MaintenanceService.IsUnderMaintenance();
             }
-            catch
+            catch (Exception e)
             {
+                ExceptionHandler.Handle(e);
             }
 
             return isUm;
