@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Functions>
-  <Function Name="Profile Pictures">
-    <Setting Key="Age_CustomerSelProfilePicture" SpName="Age_CustomerSelProfilePicture" DbName="DBAGE.bodb_AGE.BODBDownlineNet" />
-    <Setting Key="Age_CustomerUpdProfilePicture" SpName="Age_CustomerUpdProfilePicture" DbName="DBAGE.bodb_AGE.BODBDownlineNet" />
-  </Function>
   <Function Name="Report time range">
     <Setting Key="Age_Rpt_GetTimeRange" SpName="Age_Rpt_GetTimeRange" DbName="DBAGE.bodb_AGE.BODBDownlineNet" />
   </Function>

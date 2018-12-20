@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+  <Function Name="Total bets">
+    <!--Group 7-->
+	  <Setting Key="Age_TotalBets_Sel1378_Ag" SpName="Age_TotalBets_1378_Member" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
+	  <Setting Key="Age_TotalBets_Sel1378_MAg" SpName="Age_TotalBets_1378_Agent" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
+	  <Setting Key="Age_TotalBets_Sel1378_SAg" SpName="Age_TotalBets_1378_Master" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
+	  <!--Group 7-->
+  </Function>
+</Functions>

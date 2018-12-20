@@ -1,14 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Functions>
-  <Function Name="Total bets">
-    <Setting Key="Age_TotalBets_Sel1378_Ag" SpName="Age_TotalBets_Sel1378_Ag" DbName="DBAGE.bodb_AGE.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_TotalBets_Sel1378_MAg" SpName="Age_TotalBets_Sel1378_MAg" DbName="DBAGE.bodb_AGE.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_TotalBets_Sel1378_SAg" SpName="Age_TotalBets_Sel1378_SAg" DbName="DBAGE.bodb_AGE.BODBDownlineNet" Plain="0" />
-  </Function>
-  <Function Name="Profile Pictures">
-    <Setting Key="Age_CustomerSelProfilePicture" SpName="Age_CustomerSelProfilePicture" DbName="DBAGE.bodb_AGE.BODBDownlineNet" />
-    <Setting Key="Age_CustomerUpdProfilePicture" SpName="Age_CustomerUpdProfilePicture" DbName="DBAGE.bodb_AGE.BODBDownlineNet" />
-  </Function>
+<Functions> 
   <Function Name="Report time range">
     <Setting Key="Age_Rpt_GetTimeRange" SpName="Age_Rpt_GetTimeRange" DbName="DBAGE.bodb_AGE.BODBDownlineNet" />
   </Function>
