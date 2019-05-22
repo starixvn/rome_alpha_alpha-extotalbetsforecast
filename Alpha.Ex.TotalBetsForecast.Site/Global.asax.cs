@@ -15,6 +15,7 @@
     using Fanex.Razorbill.Security.Services.Authentication;
     using Fanex.RemotingRef;
     using Sunplus.Agent.Model.Entities;
+    using Web.Filters;
 
     public class Global : System.Web.HttpApplication
     {
@@ -99,6 +100,14 @@
                 return;
             }
 
+            var nicknameChecker = new NicknameCheckerImpl();
+
+            if (nicknameChecker.IsForceLoginByNickname)
+            {
+                Response.Redirect(MicroSites.MainUrl("~/Nickname/Index"), true);
+                return;
+            }
+
             string url = GetRequestPath();
 
             //---Checking closed status---
@@ -146,6 +155,7 @@
         private static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new AfterLoginFlowFilter());
         }
 
         private static bool CheckUnderMainternanceTime()
