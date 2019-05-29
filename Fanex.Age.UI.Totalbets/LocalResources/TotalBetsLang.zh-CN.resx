@@ -178,7 +178,7 @@
     <value>最后得分</value>
   </data>
   <data name="lbl1x2" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>独赢盘</value>
   </data>
   <data name="lblBalance" xml:space="preserve">
     <value>现金</value>
@@ -220,7 +220,7 @@
     <value>输赢</value>
   </data>
   <data name="moneyline" xml:space="preserve">
-    <value>独赢</value>
+    <value>胜负盘</value>
   </data>
   <data name="no" xml:space="preserve">
     <value>#</value>

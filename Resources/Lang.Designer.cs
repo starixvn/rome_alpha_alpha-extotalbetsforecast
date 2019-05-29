@@ -124,7 +124,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2.
+        ///   Looks up a localized string similar to moneyline.
         /// </summary>
         public static string lbl1x2 {
             get {
@@ -259,7 +259,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Money Line.
+        ///   Looks up a localized string similar to moneyline.
         /// </summary>
         public static string moneyline {
             get {

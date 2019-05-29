@@ -124,7 +124,7 @@
     <value>上半場大小盤</value>
   </data>
   <data name="lbl1x2" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>moneyline</value>
   </data>
   <data name="lblDeadball" xml:space="preserve">
     <value>非滾球</value>
@@ -157,7 +157,7 @@
     <value>瀏覽大小盤預測圖</value>
   </data>
   <data name="moneyline" xml:space="preserve">
-    <value>獨贏</value>
+    <value>moneyline</value>
   </data>
   <data name="noInfo" xml:space="preserve">
     <value>沒資料顯示</value>

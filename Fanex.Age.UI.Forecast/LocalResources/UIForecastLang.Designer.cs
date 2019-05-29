@@ -88,7 +88,7 @@ namespace Fanex.Age.UI.Forecast.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2.
+        ///   Looks up a localized string similar to 1X2.
         /// </summary>
         internal static string lbl1x2 {
             get {

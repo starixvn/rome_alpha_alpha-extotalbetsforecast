@@ -190,7 +190,7 @@
     <value>没资料显示</value>
   </data>
   <data name="BetType1x2" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>独赢盘</value>
   </data>
   <data name="ClickToViewScoreMapInfo" xml:space="preserve">
     <value>点击查看盈利预测图资料</value>

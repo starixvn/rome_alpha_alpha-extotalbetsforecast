@@ -124,7 +124,7 @@
     <value>上半场大小盘</value>
   </data>
   <data name="lbl1x2" xml:space="preserve">
-    <value>1 X 2</value>
+    <value>moneyline</value>
   </data>
   <data name="lblDeadball" xml:space="preserve">
     <value>非滚球</value>
@@ -157,7 +157,7 @@
     <value>游览大小盘预测图</value>
   </data>
   <data name="moneyline" xml:space="preserve">
-    <value>独赢</value>
+    <value>moneyline</value>
   </data>
   <data name="noInfo" xml:space="preserve">
     <value>没资料显示</value>
