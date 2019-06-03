@@ -1,5 +1,8 @@
 ﻿namespace Fanex.Razorbill.Module.Forecast.Controllers
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
     using Alpha.Web.Helpers;
     using Fanex.Razorbill.Module.Core.Web.Controllers;
     using Fanex.Razorbill.Module.Forecast.Criteria;
@@ -7,9 +10,6 @@
     using Fanex.Razorbill.Module.Forecast.Services;
     using global::Resources;
     using Sunplus.Agent.Model.Entities;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web.Mvc;
 
     /// <summary>
     /// Forecast Score Map controller.
@@ -39,7 +39,6 @@
         {
             IList<ForecastScoreMap> scoreMaps = null;
             var bettypes = _forecastService.GetScoreMapBetTypes();
-
             // Link from BetList.
             if (!string.IsNullOrEmpty(criteria.MatchIds))
             {

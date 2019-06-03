@@ -15,3 +15,7 @@ BuildWebCompiler.log
 */_Components/*/*.min.css
 *.log
 /Fanex.Age.UI.Forecast/Fanex.Age.UI.Forecast.csproj.user
+.vs/Alpha.Ex.TotalBetsForecast/v15/Server/sqlite3/storage.ide-wal
+.vs/Alpha.Ex.TotalBetsForecast/v15/Server/sqlite3/storage.ide-shm
+.vs/Alpha.Ex.TotalBetsForecast/v15/Server/sqlite3/storage.ide
+.vs/Alpha.Ex.TotalBetsForecast/v15/Server/sqlite3/db.lock
