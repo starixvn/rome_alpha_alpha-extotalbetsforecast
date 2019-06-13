@@ -8,6 +8,7 @@
     using System.Web.Routing;
     using System.Web.SessionState;
     using Alpha.Web;
+    using Alpha.Web.Filters;
     using Alpha.Web.Helpers;
     using Fanex.Data.Configuration;
     using Fanex.Logging.Extensions.Database;
@@ -100,7 +101,7 @@
                 return;
             }
 
-            var nicknameChecker = new NicknameCheckerImpl();
+            var nicknameChecker = new NicknameCheckerImpl(UserSession.Current);
 
             if (nicknameChecker.IsForceLoginByNickname)
             {
