@@ -16,7 +16,6 @@
     using Fanex.Razorbill.Security.Services.Authentication;
     using Fanex.RemotingRef;
     using Sunplus.Agent.Model.Entities;
-    using Web.Filters;
 
     public class Global : System.Web.HttpApplication
     {
@@ -101,7 +100,9 @@
                 return;
             }
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var nicknameChecker = new NicknameCheckerImpl(UserSession.Current);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             if (nicknameChecker.IsForceLoginByNickname)
             {

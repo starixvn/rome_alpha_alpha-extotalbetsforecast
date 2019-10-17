@@ -62,20 +62,19 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             // parameter
             int customerID = CurrentSession.CustId;
-            string language = CurrentSession.LangKey;
 
             // execute
             if (CurrentSession.IsAgent)
             {
-                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_Ag(customerID, language);
+                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_Ag(customerID);
             }
             else if (CurrentSession.IsMaster)
             {
-                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_MAg(customerID, language);
+                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_MAg(customerID);
             }
             else if (CurrentSession.IsSuper)
             {
-                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_SAg(customerID, language);
+                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_SAg(customerID);
             }
             else
             {
