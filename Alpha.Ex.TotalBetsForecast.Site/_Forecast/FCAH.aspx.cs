@@ -127,10 +127,6 @@ namespace Fanex.Age.UI.Forecast
             {
                 forecast += ((decimal)dr["hl"]);
             }
-            else if (forecastScore == 0)
-            {
-                forecast += ((decimal)dr["drawMO"]);
-            }
 
             return forecast;
         }
@@ -160,10 +156,6 @@ namespace Fanex.Age.UI.Forecast
             else if (forecastScore < (decimal)(-0.25))
             {
                 forecast += ((decimal)dr["hl"]);
-            }
-            else if (forecastScore == 0)
-            {
-                forecast += ((decimal)dr["drawMO"]);
             }
 
             return forecast;
