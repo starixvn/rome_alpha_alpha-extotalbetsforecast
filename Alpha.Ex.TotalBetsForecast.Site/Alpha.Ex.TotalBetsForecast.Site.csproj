@@ -46,8 +46,9 @@
     <CodeAnalysisRuleSet>Alpha.Ex.TotalBetsForecast.Site.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Alpha.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Alpha.Logging.1.0.0-LogIntegrate-09\lib\net461\Alpha.Logging.dll</HintPath>
+    <Reference Include="Alpha.Logging, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alpha.Logging.1.0.1.1\lib\net461\Alpha.Logging.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Alpha.SubAccount, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Alpha.SubAccount.1.0.0\lib\net40\Alpha.SubAccount.dll</HintPath>
@@ -547,31 +548,13 @@
     <Content Include="web.backupMNL2.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-    <Content Include="web.backupMNL3.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.backupMNL4.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
     <Content Include="web.backupMNLNap.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
     <Content Include="web.backupMNLNap2.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
-    <Content Include="web.backupMNLNap3.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.backupMNLNap4.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
     <Content Include="Web.AppSettings.local2.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.local3.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.local4.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.napinternal.config">
@@ -580,22 +563,10 @@
     <Content Include="Web.AppSettings.napinternal2.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-    <Content Include="Web.AppSettings.napinternal3.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.napinternal4.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
     <Content Include="Web.AppSettings.pro.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.pro2.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.pro3.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.pro4.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.sit.config">
@@ -604,22 +575,10 @@
     <Content Include="Web.AppSettings.sit2.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
-    <Content Include="Web.AppSettings.sit3.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.sit4.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
     <Content Include="Web.AppSettings.uat.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.AppSettings.uat2.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.uat3.config">
-      <DependentUpon>Web.AppSettings.config</DependentUpon>
-    </Content>
-    <Content Include="Web.AppSettings.uat4.config">
       <DependentUpon>Web.AppSettings.config</DependentUpon>
     </Content>
     <Content Include="Web.config" />
@@ -934,38 +893,6 @@
       <Project>{8831ee6f-7ef9-48f3-9da2-82c6c5eb6e47}</Project>
       <Name>Sunplus.Agent.Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="web.local3.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.local4.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.napinternal3.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.napinternal4.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.pro3.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.pro4.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.SIT3.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.SIT4.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.UAT3.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
-    <Content Include="web.UAT4.config">
-      <DependentUpon>Web.local.config</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Apo\Common\SubTabs.scss" />
