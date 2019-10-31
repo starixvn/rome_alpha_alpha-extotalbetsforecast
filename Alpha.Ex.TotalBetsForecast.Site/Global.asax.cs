@@ -7,6 +7,8 @@
     using System.Web.Mvc;
     using System.Web.Routing;
     using System.Web.SessionState;
+    using Alpha.Ex.TotalBetsForecast.Site.App_Start;
+    using Alpha.Logging;
     using Alpha.Web;
     using Alpha.Web.Filters;
     using Alpha.Web.Helpers;
@@ -16,36 +18,25 @@
     using Fanex.Razorbill.Security.Services.Authentication;
     using Fanex.RemotingRef;
     using Sunplus.Agent.Model.Entities;
-    using Web.Filters;
 
     public class Global : System.Web.HttpApplication
     {
         private readonly string rngArea = "CustomerSetting/Casino";
 
-        public static void RegisterRoutes(RouteCollection routes)
-        {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional });
-        }
-
         protected void Application_Start(object sender, EventArgs e)
         {
             TplCore.TplSettings.UrlVersion = ConfigurationManager.AppSettings["JsVersion"];
+
+            LoggingConfig.Init(getDbExceptionInfo: DatabaseInfoGetters.GetDbExceptionInfo);
 
             DbSettingProviderManager.Current.Start();
             ShareSession.Init();
 
             AreaRegistration.RegisterAllAreas();
-            RegisterRoutes(RouteTable.Routes);
+            RouterConfig.RegisterRoutes(RouteTable.Routes);
             RegisterGlobalFilters(GlobalFilters.Filters);
             MvcHandler.DisableMvcResponseHeader = true;
 
-            var logConfig = new LoggingConfiguration().UseGetDbExceptionInfo(DatabaseInfoGetters.GetDbExceptionInfo);
-            ExceptionHandler.UseConfig(logConfig);
 
             RefDataTypeContainer
                 .ConnectTo(new Uri(ConfigurationManager.AppSettings["RemoteRefURL"]))
@@ -101,7 +92,9 @@
                 return;
             }
 
+#pragma warning disable CS0618 // Type or member is obsolete
             var nicknameChecker = new NicknameCheckerImpl(UserSession.Current);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             if (nicknameChecker.IsForceLoginByNickname)
             {
