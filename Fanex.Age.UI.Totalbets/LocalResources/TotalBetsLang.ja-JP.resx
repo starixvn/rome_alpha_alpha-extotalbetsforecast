@@ -202,7 +202,7 @@
     <value>ライブ!</value>
   </data>
   <data name="lblOddEven" xml:space="preserve">
-    <value>オッド/イーブン</value>
+    <value>奇数/偶数</value>
   </data>
   <data name="lblOE" xml:space="preserve">
     <value>オッド / イーブン</value>
