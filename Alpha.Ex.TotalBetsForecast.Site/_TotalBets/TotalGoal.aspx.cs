@@ -26,6 +26,11 @@ namespace Fanex.Age.UI.TotalBets
             TotalGoal_Template tpl = new TotalGoal_Template();
             tpl.Contents.TotalGoalContent.Clear();
 
+            if (!Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikEnable)
+            {
+                tpl.Piwik.Clear();
+            }
+            
             int counter = 0;
             if (totalGoalList.Rows.Count > 0)
             {
