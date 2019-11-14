@@ -3,6 +3,10 @@ var ckiName = null;
 var countDownTimer = null;
 
 function CountDownRefresh_Tick() {
+    if (!document.getElementById('CountDownRefresh')) {
+        return;
+    }
+
     document.getElementById('CountDownRefresh').innerHTML = curCountDown;
     curCountDown--;
     if (countDownTimer != null) clearTimeout(countDownTimer);

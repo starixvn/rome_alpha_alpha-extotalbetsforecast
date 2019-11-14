@@ -62,12 +62,12 @@ namespace Sunplus.Agent.Model.DL.TotalBets
         /// <param name="custId"></param>
         /// <param name="language"></param>
         /// <returns></returns>
-        public DataTable Age_TotalBets_Sel1378_Ag(int custId)
+        public DataTable Age_TotalBets_Sel1378_Member(int custId)
         {
             Hashtable parameters = new Hashtable();
             parameters.Add("custid", custId);
 
-            return ExecSpTable("Age_TotalBets_Sel1378_Ag", parameters);
+            return ExecSpTable("Age_TotalBets_Sel1378_Member", parameters);
         }
 
         /// <summary>
@@ -76,12 +76,12 @@ namespace Sunplus.Agent.Model.DL.TotalBets
         /// <param name="custId"></param>
         /// <param name="language"></param>
         /// <returns></returns>
-        public DataTable Age_TotalBets_Sel1378_MAg(int custId)
+        public DataTable Age_TotalBets_Sel1378_Agent(int custId)
         {
             Hashtable parameters = new Hashtable();
             parameters.Add("custid", custId);
 
-            return ExecSpTable("Age_TotalBets_Sel1378_MAg", parameters);
+            return ExecSpTable("Age_TotalBets_Sel1378_Agent", parameters);
         }
 
         /// <summary>
@@ -90,12 +90,12 @@ namespace Sunplus.Agent.Model.DL.TotalBets
         /// <param name="custId"></param>
         /// <param name="language"></param>
         /// <returns></returns>
-        public DataTable Age_TotalBets_Sel1378_SAg(int custId)
+        public DataTable Age_TotalBets_Sel1378_Master(int custId)
         {
             Hashtable parameters = new Hashtable();
             parameters.Add("custid", custId);
 
-            return ExecSpTable("Age_TotalBets_Sel1378_SAg", parameters);
+            return ExecSpTable("Age_TotalBets_Sel1378_Master", parameters);
         }
         #endregion
 

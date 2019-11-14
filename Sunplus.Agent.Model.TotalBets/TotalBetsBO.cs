@@ -66,15 +66,15 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             // execute
             if (CurrentSession.IsAgent)
             {
-                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_Ag(customerID);
+                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_Member(customerID);
             }
             else if (CurrentSession.IsMaster)
             {
-                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_MAg(customerID);
+                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_Agent(customerID);
             }
             else if (CurrentSession.IsSuper)
             {
-                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_SAg(customerID);
+                hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_Master(customerID);
             }
             else
             {

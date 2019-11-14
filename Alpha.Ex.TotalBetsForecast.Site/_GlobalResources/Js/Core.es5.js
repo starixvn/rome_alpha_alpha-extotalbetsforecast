@@ -771,8 +771,7 @@ function checkPermission() {
         var bolBtnSubmitFooter = checkButtonPermission('btnSubmitFooter');
         var bolBtnCancel = checkButtonPermission('btnCancel');
         var bolBtnReset = checkButtonPermission('btnReset');
-        var bolBtnUpdRacingStatus = checkButtonPermission('btnUpdRacingStatus');
-        if (bolBtnSubmit || bolBtnSubmitFooter || bolBtnCancel || bolBtnReset || bolBtnUpdRacingStatus) {
+        if (bolBtnSubmit || bolBtnSubmitFooter || bolBtnCancel || bolBtnReset) {
             // Check Type Input
             var ids = document.getElementsByTagName("input");
             for (var i = 0; i < ids.length; i++) {

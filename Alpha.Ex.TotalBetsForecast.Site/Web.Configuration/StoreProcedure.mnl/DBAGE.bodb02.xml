@@ -168,9 +168,6 @@
       <Mapping ObjectProperty="AwayId" DataField="awayid" />
     </Setting>
   </Function>
-  <Function Name="Colossus Bets">
-    <Setting Key="BetList_ColossusBets_BetDetails" SpName="Acc_BetListCB_Details" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-  </Function>
   <Function Name="Casino">
     <Setting Key="WinLossByBettype_Details" SpName="Age_Rpt_WinLossByBettype_Details" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
   </Function>
