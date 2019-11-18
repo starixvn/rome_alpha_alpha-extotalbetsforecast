@@ -167,8 +167,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ForecastBO.cs" />
-    <Compile Include="ForecastDAO.cs" />
+    <Compile Include="ForecastBO.cs">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </Compile>
+    <Compile Include="ForecastDAO.cs">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
