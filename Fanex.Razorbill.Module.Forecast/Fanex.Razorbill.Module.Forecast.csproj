@@ -170,7 +170,9 @@
     <Compile Include="Criteria\GetScoreMapMatchByLeagueCriteria.cs" />
     <Compile Include="Criteria\GetScoreMapRunningLeagueCriteria.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Models\BetTypeModel.cs" />
+    <Compile Include="Models\BetTypeModel.cs">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </Compile>
     <Compile Include="Models\ScoreMapBetType.cs" />
     <Compile Include="Models\ForecastScoreMap.cs" />
     <Compile Include="Models\ScoreMapBetTypeInfo.cs" />
@@ -187,7 +189,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ForecastLang.resx</DependentUpon>
     </Compile>
-    <Compile Include="Services\ForecastService.cs" />
+    <Compile Include="Services\ForecastService.cs">
+      <SonarQubeExclude>true</SonarQubeExclude>
+    </Compile>
     <Compile Include="Services\IForecastService.cs" />
   </ItemGroup>
   <ItemGroup>
