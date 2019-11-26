@@ -139,7 +139,7 @@
     <value>ライブ!</value>
   </data>
   <data name="lblOddEven" xml:space="preserve">
-    <value>オッド/イーブン</value>
+    <value>奇数/偶数</value>
   </data>
   <data name="lblOverUnder" xml:space="preserve">
     <value>オーバー・アンダー</value>
