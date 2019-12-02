@@ -127,7 +127,7 @@
     <value>AH</value>
   </data>
   <data name="away" xml:space="preserve">
-    <value>Away</value>
+    <value>Đội Khách</value>
   </data>
   <data name="da" xml:space="preserve">
     <value>DA</value>
@@ -154,10 +154,10 @@
     <value>Bàn thắng đầu tiên</value>
   </data>
   <data name="forecastaway" xml:space="preserve">
-    <value>Dự đoán cho Away</value>
+    <value>Dự đoán cho Đội Khách</value>
   </data>
   <data name="forecasthome" xml:space="preserve">
-    <value>Dự đoán cho Home</value>
+    <value>Dự đoán cho Đội Nhà</value>
   </data>
   <data name="fulltime" xml:space="preserve">
     <value>Toàn trận</value>
@@ -172,13 +172,13 @@
     <value>HH</value>
   </data>
   <data name="highlow" xml:space="preserve">
-    <value>High/Low</value>
+    <value>Cao/Thấp</value>
   </data>
   <data name="home" xml:space="preserve">
-    <value>Home</value>
+    <value>Đội Nhà</value>
   </data>
   <data name="homeaway" xml:space="preserve">
-    <value>Home /Away</value>
+    <value>Đội Nhà/Đội Khách</value>
   </data>
   <data name="htft" xml:space="preserve">
     <value>H1/Cả Trận</value>
@@ -199,7 +199,7 @@
     <value>1 X 2</value>
   </data>
   <data name="lblAwayNoBet" xml:space="preserve">
-    <value>Away No Bet</value>
+    <value>Khách Không Tính</value>
   </data>
   <data name="lblBalance" xml:space="preserve">
     <value>Số dư tài khoản</value>
@@ -208,31 +208,31 @@
     <value>Hòa</value>
   </data>
   <data name="lblDrawNoBet" xml:space="preserve">
-    <value>Draw No Bet</value>
+    <value>Hòa Không Tính</value>
   </data>
   <data name="lblForecast" xml:space="preserve">
     <value>Dự đoán </value>
   </data>
   <data name="lblFTOddEven" xml:space="preserve">
-    <value>Full Time Odd Even</value>
+    <value>Tổng Ba Banh Lẻ/Chẵn</value>
   </data>
   <data name="lblFTOE" xml:space="preserve">
-    <value>FT.O/E</value>
+    <value>Tổng Ba Banh Lẻ/Chẵn</value>
   </data>
   <data name="lblHandicapFC" xml:space="preserve">
     <value>Cược Chấp</value>
   </data>
   <data name="lblHomeDrawAwayNoBet" xml:space="preserve">
-    <value>Home/Draw/Away No Bet</value>
+    <value>Nhà/Hòa/Khách Không Tính</value>
   </data>
   <data name="lblHomeNoBet" xml:space="preserve">
-    <value>Home No Bet</value>
+    <value>Nhà Không Tính</value>
   </data>
   <data name="lblHOUL" xml:space="preserve">
-    <value>Cược chấp/Tài Xỉu/Trực tuyến</value>
+    <value>Cược chấp/Tài Xỉu/Trực tiếp</value>
   </data>
   <data name="lblLive" xml:space="preserve">
-    <value>Trực Tuyến</value>
+    <value>Trực Tiếp</value>
   </data>
   <data name="lblNoDraw" xml:space="preserve">
     <value>Không hòa</value>
@@ -241,28 +241,28 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="lblOE" xml:space="preserve">
-    <value>O/E</value>
+    <value>Lẻ/Chẵn</value>
   </data>
   <data name="lblOO" xml:space="preserve">
-    <value>O/O</value>
+    <value>Tài, Lẻ</value>
   </data>
   <data name="lblOU" xml:space="preserve">
-    <value>O/U </value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="lblOutRight" xml:space="preserve">
     <value>Cược Thắng</value>
   </data>
   <data name="lblOvE" xml:space="preserve">
-    <value>O/E</value>
+    <value>Tài, Chẵn</value>
   </data>
   <data name="lblOverEven" xml:space="preserve">
-    <value>Over Even</value>
+    <value>Tài, Chẵn</value>
   </data>
   <data name="lblOverOdd" xml:space="preserve">
-    <value>Over Odd</value>
+    <value>Tài, Lẻ</value>
   </data>
   <data name="lblOverUnder" xml:space="preserve">
-    <value>Over/Under </value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="lblRace" xml:space="preserve">
     <value>Vòng đua</value>
@@ -271,22 +271,22 @@
     <value>Đội</value>
   </data>
   <data name="lblUE" xml:space="preserve">
-    <value>U/E</value>
+    <value>Xỉu, Chẵn</value>
   </data>
   <data name="lblUnderEven" xml:space="preserve">
-    <value>Under Even</value>
+    <value>Xỉu, Chẵn</value>
   </data>
   <data name="lblUnderOdd" xml:space="preserve">
-    <value>Under Odd</value>
+    <value>Xỉu, Lẻ</value>
   </data>
   <data name="lblUO" xml:space="preserve">
-    <value>U/O</value>
+    <value>Xỉu, Lẻ</value>
   </data>
   <data name="lblWinLoss" xml:space="preserve">
     <value>Thắng thua</value>
   </data>
   <data name="LiveGame" xml:space="preserve">
-    <value>Live Game</value>
+    <value>Trực tiếp</value>
   </data>
   <data name="moneyline" xml:space="preserve">
     <value>Moneyline</value>
@@ -295,7 +295,7 @@
     <value>Banh kế tiếp</value>
   </data>
   <data name="nextcombo" xml:space="preserve">
-    <value>Next Combo</value>
+    <value>Combo kế tiếp</value>
   </data>
   <data name="nextGoal" xml:space="preserve">
     <value>Bàn thắng kế tiếp</value>
@@ -328,7 +328,7 @@
     <value>Place</value>
   </data>
   <data name="PreGame" xml:space="preserve">
-    <value>Pre Game</value>
+    <value>Chưa bắt đầu</value>
   </data>
   <data name="runner" xml:space="preserve">
     <value>Tên</value>
@@ -352,19 +352,19 @@
     <value>4-6</value>
   </data>
   <data name="total4over" xml:space="preserve">
-    <value>4&amp;Over</value>
+    <value>Trên 4</value>
   </data>
   <data name="total7over" xml:space="preserve">
     <value>Trên 7</value>
   </data>
   <data name="totalaway" xml:space="preserve">
-    <value>Tổng cược cho Away</value>
+    <value>Tổng cược cho Đội Khách</value>
   </data>
   <data name="totalgoal" xml:space="preserve">
     <value>Tổng số bàn thắng</value>
   </data>
   <data name="totalhome" xml:space="preserve">
-    <value>Tổng cược cho Home</value>
+    <value>Tổng cược cho Đội Nhà</value>
   </data>
   <data name="tote" xml:space="preserve">
     <value>Tote</value>
@@ -376,16 +376,16 @@
     <value>Doanh thu / Lời lỗ</value>
   </data>
   <data name="warrior" xml:space="preserve">
-    <value>Warrior</value>
+    <value>Chiến Binh</value>
   </data>
   <data name="warrior2ndBall" xml:space="preserve">
-    <value>2nd ball win</value>
+    <value>Banh thứ 2 thắng</value>
   </data>
   <data name="warrior3rdBall" xml:space="preserve">
-    <value>3rd ball win</value>
+    <value>Banh thứ 3 thắng</value>
   </data>
   <data name="WinHR" xml:space="preserve">
-    <value>Win</value>
+    <value>Thắng</value>
   </data>
   <data name="Player" xml:space="preserve">
     <value>Người chơi</value>
