@@ -84,16 +84,24 @@
                 Response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate");
             }
 
+            var userSession = UserSession.Current;
+
 #pragma warning disable CS0618 // Type or member is obsolete
-            if (UserSession.Current.CustId == 0)
+            if (userSession.CustId == 0)
 #pragma warning restore CS0618 // Type or member is obsolete
             {
                 Response.Redirect(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"), true);
                 return;
             }
 
+            if (!userSession.IsInternal && userSession.IsRobot)
+            {
+                Response.Redirect(MicroSites.MainUrl("~/RobotCaptcha/Index"), true);
+                return;
+            }
+
 #pragma warning disable CS0618 // Type or member is obsolete
-            var nicknameChecker = new NicknameCheckerImpl(UserSession.Current);
+            var nicknameChecker = new NicknameCheckerImpl(userSession);
 #pragma warning restore CS0618 // Type or member is obsolete
 
             if (nicknameChecker.IsForceLoginByNickname)
@@ -107,10 +115,10 @@
             //---Checking closed status---
             IAuthenticationService authencationService = new AuthenticationService(url);
 #pragma warning disable CS0618 // Type or member is obsolete
-            if (UserSession.Current.CustId != 0 && !string.IsNullOrWhiteSpace(url) &&
+            if (userSession.CustId != 0 && !string.IsNullOrWhiteSpace(url) &&
 #pragma warning restore CS0618 // Type or member is obsolete
 #pragma warning disable CS0618 // Type or member is obsolete
-                !UserSession.Current.IsInternal && authencationService.CheckingClosedStatus())
+                !userSession.IsInternal && authencationService.CheckingClosedStatus())
 #pragma warning restore CS0618 // Type or member is obsolete
             {
                 Session.Clear();
