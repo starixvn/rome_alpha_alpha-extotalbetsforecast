@@ -139,13 +139,13 @@
     <value>Cược Chấp</value>
   </data>
   <data name="lblHOUL" xml:space="preserve">
-    <value>Cược chấp/Tài Xỉu/Trực tuyến</value>
+    <value>Cược chấp/Tài Xỉu/Trực tiếp</value>
   </data>
   <data name="lblLiveBall" xml:space="preserve">
-    <value>Trực Tuyến</value>
+    <value>Trực Tiếp</value>
   </data>
   <data name="lblOverUnder" xml:space="preserve">
-    <value>Over/Under</value>
+    <value>Tài/Xỉu</value>
   </data>
   <data name="lblScore" xml:space="preserve">
     <value>Tỷ số</value>

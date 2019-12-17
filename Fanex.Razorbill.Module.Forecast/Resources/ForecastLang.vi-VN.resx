@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Away" xml:space="preserve">
-    <value>Away</value>
+    <value>Đội Khách</value>
   </data>
   <data name="BetTypes" xml:space="preserve">
     <value>Loại cược</value>
@@ -127,19 +127,19 @@
     <value>Chưa bắt đầu</value>
   </data>
   <data name="FT" xml:space="preserve">
-    <value>FT</value>
+    <value>Cả trận</value>
   </data>
   <data name="Group" xml:space="preserve">
     <value>Nhóm</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Đội Nhà</value>
   </data>
   <data name="HT" xml:space="preserve">
     <value>Hiệp 1</value>
   </data>
   <data name="Live" xml:space="preserve">
-    <value>Trực Tuyến</value>
+    <value>Trực Tiếp</value>
   </data>
   <data name="Note" xml:space="preserve">
     <value>Lưu ý</value>
@@ -184,7 +184,7 @@
     <value>Tất cả</value>
   </data>
   <data name="LiveBall" xml:space="preserve">
-    <value>Trực Tuyến</value>
+    <value>Trực Tiếp</value>
   </data>
   <data name="NoDataFound" xml:space="preserve">
     <value>Thông tin chưa được cập nhật</value>

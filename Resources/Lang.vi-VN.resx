@@ -133,10 +133,10 @@
     <value>(N)</value>
   </data>
   <data name="lbl1stHdp" xml:space="preserve">
-    <value>Hiệp 1 - Hdp</value>
+    <value>Hiệp 1 - Cược Chấp</value>
   </data>
   <data name="lbl1stOU" xml:space="preserve">
-    <value>Hiệp 1 - OU</value>
+    <value>Hiệp 1 - Tài Xỉu</value>
   </data>
   <data name="lbl1x2" xml:space="preserve">
     <value>1 X 2</value>
@@ -151,10 +151,10 @@
     <value>Cược Chấp</value>
   </data>
   <data name="lblLive" xml:space="preserve">
-    <value>Trực Tuyến</value>
+    <value>Trực Tiếp</value>
   </data>
   <data name="lblLiveBall" xml:space="preserve">
-    <value>Trực Tuyến</value>
+    <value>Trực Tiếp</value>
   </data>
   <data name="lblNoDraw" xml:space="preserve">
     <value>Không hòa</value>
@@ -163,7 +163,7 @@
     <value>Lẻ/Chẵn</value>
   </data>
   <data name="lblOverUnder" xml:space="preserve">
-    <value>Over/Under </value>
+    <value>Tài/Xỉu </value>
   </data>
   <data name="lblScoreMap" xml:space="preserve">
     <value>Score Map</value>

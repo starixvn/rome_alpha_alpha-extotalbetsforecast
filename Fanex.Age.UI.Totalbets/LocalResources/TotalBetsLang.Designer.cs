@@ -19,7 +19,7 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class TotalBetsLang {
@@ -466,7 +466,7 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O/O.
+        ///   Looks up a localized string similar to O,O.
         /// </summary>
         internal static string lblOO {
             get {
@@ -493,7 +493,7 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O/E.
+        ///   Looks up a localized string similar to O,E.
         /// </summary>
         internal static string lblOvE {
             get {
@@ -502,7 +502,7 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Over Even.
+        ///   Looks up a localized string similar to Over, Even.
         /// </summary>
         internal static string lblOverEven {
             get {
@@ -511,7 +511,7 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Over Odd.
+        ///   Looks up a localized string similar to Over, Odd.
         /// </summary>
         internal static string lblOverOdd {
             get {
@@ -547,7 +547,7 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to U/E.
+        ///   Looks up a localized string similar to U,E.
         /// </summary>
         internal static string lblUE {
             get {
@@ -556,7 +556,7 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Under Even.
+        ///   Looks up a localized string similar to Under, Even.
         /// </summary>
         internal static string lblUnderEven {
             get {
@@ -565,7 +565,7 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Under Odd.
+        ///   Looks up a localized string similar to Under, Odd.
         /// </summary>
         internal static string lblUnderOdd {
             get {
@@ -574,7 +574,7 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to U/O.
+        ///   Looks up a localized string similar to U,O.
         /// </summary>
         internal static string lblUO {
             get {

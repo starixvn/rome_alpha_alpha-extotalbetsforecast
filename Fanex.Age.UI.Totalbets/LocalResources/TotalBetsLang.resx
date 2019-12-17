@@ -244,7 +244,7 @@
     <value>O/E</value>
   </data>
   <data name="lblOO" xml:space="preserve">
-    <value>O/O</value>
+    <value>O,O</value>
   </data>
   <data name="lblOU" xml:space="preserve">
     <value>O/U</value>
@@ -253,14 +253,14 @@
     <value>Outright</value>
   </data>
   <data name="lblOvE" xml:space="preserve">
-    <value>O/E</value>
-    <comment>Over Even</comment>
+    <value>O,E</value>
+    <comment>Over, Even</comment>
   </data>
   <data name="lblOverEven" xml:space="preserve">
-    <value>Over Even</value>
+    <value>Over, Even</value>
   </data>
   <data name="lblOverOdd" xml:space="preserve">
-    <value>Over Odd</value>
+    <value>Over, Odd</value>
   </data>
   <data name="lblOverUnder" xml:space="preserve">
     <value>Over/Under</value>
@@ -272,16 +272,16 @@
     <value>Team</value>
   </data>
   <data name="lblUE" xml:space="preserve">
-    <value>U/E</value>
+    <value>U,E</value>
   </data>
   <data name="lblUnderEven" xml:space="preserve">
-    <value>Under Even</value>
+    <value>Under, Even</value>
   </data>
   <data name="lblUnderOdd" xml:space="preserve">
-    <value>Under Odd</value>
+    <value>Under, Odd</value>
   </data>
   <data name="lblUO" xml:space="preserve">
-    <value>U/O</value>
+    <value>U,O</value>
   </data>
   <data name="lblWinLoss" xml:space="preserve">
     <value>Win Loss</value>
