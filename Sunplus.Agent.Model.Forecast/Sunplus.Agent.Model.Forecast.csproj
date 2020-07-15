@@ -114,7 +114,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.5.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.5.1-robot\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.5.1\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.DataAccessLibrary, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.DataAccessLibrary.3.0.0.2\lib\net40\Sunplus.Agent.Model.DataAccessLibrary.dll</HintPath>
