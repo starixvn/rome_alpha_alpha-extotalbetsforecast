@@ -94,12 +94,6 @@
                 return;
             }
 
-            if (!userSession.IsInternal && userSession.IsRobot)
-            {
-                Response.Redirect(MicroSites.MainUrl("~/RobotCaptcha/Index"), true);
-                return;
-            }
-
 #pragma warning disable CS0618 // Type or member is obsolete
             var nicknameChecker = new NicknameCheckerImpl(userSession);
 #pragma warning restore CS0618 // Type or member is obsolete
