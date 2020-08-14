@@ -637,6 +637,15 @@ namespace Fanex.Age.UI.TotalBets.LocalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Next R/B.
+        /// </summary>
+        internal static string nextRB {
+            get {
+                return ResourceManager.GetString("nextRB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to #.
         /// </summary>
         internal static string no {

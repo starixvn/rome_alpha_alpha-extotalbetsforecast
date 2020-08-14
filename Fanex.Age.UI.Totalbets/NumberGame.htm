@@ -21,9 +21,7 @@
                     <td rowspan="2">
                         {static:LocalResources.TotalBetsLang.events}
                     </td>
-                    <td colspan="2">
-                        {static:LocalResources.TotalBetsLang.warrior}
-                    </td>
+                   
                     <td colspan="2">
                         {static:LocalResources.TotalBetsLang.lbl1stBall}
                     </td>
@@ -44,12 +42,7 @@
                     </td>
                 </tr>
                 <tr class="RptHeader02">
-                    <td>
-                        {static:LocalResources.TotalBetsLang.warrior2ndBall}
-                    </td>
-                    <td>
-                        {static:LocalResources.TotalBetsLang.warrior3rdBall}
-                    </td>
+                    
                     <td title="{static:LocalResources.TotalBetsLang.lblOverUnder}">
                         {static:LocalResources.TotalBetsLang.lblOU}
                     </td>
@@ -69,7 +62,7 @@
                         {static:LocalResources.TotalBetsLang.lblOE}
                     </td>
                     <td>
-                        {static:LocalResources.TotalBetsLang.highlow}
+                        {static:LocalResources.TotalBetsLang.nextRB}
                     </td>
                     <td title="{static:LocalResources.TotalBetsLang.lblOverOdd}">
                         {static:LocalResources.TotalBetsLang.lblOO}
@@ -104,12 +97,7 @@
                     <td class="l">
                         {static:LocalResources.TotalBetsLang.numbergameno}&nbsp;{GameNo}
                     </td>
-                    <td>
-                        <a class="fcnum" href="javascript:doViewBetListNewGames({MatchId}, 88, 0,'h')">{Warrior_2ndBall}</a>
-                    </td>
-                    <td>
-                        <a class="fcnum" href="javascript:doViewBetListNewGames({MatchId}, 88, 0,'a')">{Warrior_3rdBall}</a>
-                    </td>
+                    
                     <td>
                         <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 81, 0)">{OverUnderFirstBall}</a>
                     </td>
@@ -129,7 +117,7 @@
                         <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 86, 1)">{OddEvenNext}</a>
                     </td>
                     <td>
-                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 87, 1)">{HighLow}</a>
+                        <a class="fcnum" href="javascript:doViewBetListGame({MatchId}, 87, 1)">{NextRB}</a>
                     </td>
                     <td>
                         <a class="fcnum" href="javascript:doViewBetListNewGames({MatchId}, 89, 1,'1:1')">{NextCombo_OverOdd}</a>
@@ -157,7 +145,7 @@
                 <!--/LeagueContents-->
                 <!--NotFound-->
                 <tr class="bg_white">
-                    <td colspan="18" class="c nobold">
+                    <td colspan="16" class="c nobold">
                         {static:LocalResources.TotalBetsLang.noInfo}
                     </td>
                 </tr>

@@ -133,9 +133,6 @@ namespace Fanex.Age.UI.TotalBets
 
 
             #region get value infomation
-            decimal Warrior_2ndBall = (decimal)dr["Warrior_2ndBall"];
-            decimal Warrior_3rdBall = (decimal)dr["Warrior_3rdBall"];
-
             decimal overUnderFirstBall = ((decimal)dr["over_1stBall"]) - ((decimal)dr["under_1stBall"]);
             decimal oddEvenFirstBall = ((decimal)dr["odd_1stBall"]) - ((decimal)dr["even_1stBall"]);
 
@@ -144,7 +141,7 @@ namespace Fanex.Age.UI.TotalBets
 
             decimal overUnderNext = ((decimal)dr["over_next"]) - ((decimal)dr["under_next"]);
             decimal oddEvenNext = ((decimal)dr["odd_next"]) - ((decimal)dr["even_next"]);
-            decimal highLow = ((decimal)dr["high"]) - ((decimal)dr["low"]);
+            decimal nextRB = ((decimal)dr["NextRB_R"]) - ((decimal)dr["NextRB_B"]);
 
             decimal NextCombo_OverOdd = (decimal)dr["NextCombo_OverOdd"];
             decimal NextCombo_OverEven = (decimal)dr["NextCombo_OverEven"];
@@ -157,9 +154,6 @@ namespace Fanex.Age.UI.TotalBets
             #endregion
 
             #region get betcount infomation
-            int betcountWarrior2ndBall = (int)dr["betcount_Warrior_2ndBall"];
-            int betcountWarrior3rdBall = (int)dr["betcount_Warrior_3rdBall"];
-
             int betCountOU1st = (int)dr["betcount_OU1stBall"];
             int betCountOULast = (int)dr["betcount_OULastBall"];
 
@@ -168,7 +162,7 @@ namespace Fanex.Age.UI.TotalBets
 
             int betCountOUNext = (int)dr["betcount_OUNext"];
             int betCountOENext = (int)dr["betcount_OENext"];
-            int betCountHighLow = (int)dr["betcount_highlow"];
+            int betCountNextRB = (int)dr["betcount_NextRB"];
 
             int betCountNextComboOverOdd = (int)dr["betcount_nextcombo_OverOdd"];
             int betCountNextComboOverEven = (int)dr["betcount_nextcombo_OverEven"];
@@ -181,8 +175,6 @@ namespace Fanex.Age.UI.TotalBets
             #endregion
 
             #region Render template
-            matchBlock.Warrior_2ndBall = betcountWarrior2ndBall != 0 ? NegativeNumberRoundColor(Warrior_2ndBall) : "";
-            matchBlock.Warrior_3rdBall = betcountWarrior3rdBall != 0 ? NegativeNumberRoundColor(Warrior_3rdBall) : "";
 
             matchBlock.OverUnderFirstBall = betCountOU1st != 0 ? NegativeNumberRoundColor(overUnderFirstBall) : "";
             matchBlock.OverUnderLastBall = betCountOULast != 0 ? NegativeNumberRoundColor(overUnderLastBall) : "";     
@@ -193,7 +185,7 @@ namespace Fanex.Age.UI.TotalBets
             matchBlock.OverUnderNext = betCountOUNext != 0 ? NegativeNumberRoundColor(overUnderNext) : "";
             matchBlock.OddEvenNext = betCountOENext != 0 ? NegativeNumberRoundColor(oddEvenNext) : "";
 
-            matchBlock.HighLow = betCountHighLow != 0 ? NegativeNumberRoundColor(highLow) : "";
+            matchBlock.NextRB = betCountNextRB != 0 ? NegativeNumberRoundColor(nextRB) : "";
 
             matchBlock.NextCombo_OverOdd = betCountNextComboOverOdd != 0 ? NegativeNumberRoundColor(NextCombo_OverOdd) : "";
             matchBlock.NextCombo_OverEven = betCountNextComboOverEven != 0 ? NegativeNumberRoundColor(NextCombo_OverEven) : "";

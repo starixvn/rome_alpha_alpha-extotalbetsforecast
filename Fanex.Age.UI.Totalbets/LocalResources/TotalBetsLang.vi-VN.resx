@@ -402,4 +402,7 @@
   <data name="forecast" xml:space="preserve">
     <value>Dự đoán</value>
   </data>
+  <data name="nextRB" xml:space="preserve">
+    <value>Đ/X tiếp theo</value>
+  </data>
 </root>
