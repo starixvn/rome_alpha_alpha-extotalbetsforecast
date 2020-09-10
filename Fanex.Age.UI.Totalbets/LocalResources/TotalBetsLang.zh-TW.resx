@@ -402,4 +402,7 @@
   <data name="forecast" xml:space="preserve">
     <value>預測</value>
   </data>
+  <data name="nextRB" xml:space="preserve">
+    <value>下顆 紅/藍</value>
+  </data>
 </root>

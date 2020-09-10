@@ -402,4 +402,7 @@
   <data name="forecast" xml:space="preserve">
     <value>การทำนายผลล่วงหน้า</value>
   </data>
+  <data name="nextRB" xml:space="preserve">
+    <value>ถัดไป แดง/สีน้ำเงิน</value>
+  </data>
 </root>

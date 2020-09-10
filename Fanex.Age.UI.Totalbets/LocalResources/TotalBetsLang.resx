@@ -403,4 +403,7 @@
   <data name="forecast" xml:space="preserve">
     <value>Forecast</value>
   </data>
+  <data name="nextRB" xml:space="preserve">
+    <value>Next R/B</value>
+  </data>
 </root>
