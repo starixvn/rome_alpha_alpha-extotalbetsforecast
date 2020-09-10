@@ -277,7 +277,7 @@ namespace Fanex.Age.UI.TotalBets
 			public string OddEvenNext = "{OddEvenNext}";
 			protected static string s103 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListGame(";
 			protected string t6_MatchId;
-			protected static string s104 = ", 87, 1)\">";
+			protected static string s104 = ", 91, 1)\">";
 			public string NextRB = "{NextRB}";
 			protected static string s105 = "</a></td><td><a class=\"fcnum\" href=\"javascript:doViewBetListNewGames(";
 			protected string t7_MatchId;
