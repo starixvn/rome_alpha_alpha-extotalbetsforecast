@@ -39,8 +39,8 @@
     <Setting Key="Age_Forecast_SelByLeague_Ag" SpName="Age_Forecast_SelByLeague_Ag" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Forecast_SelByLeague_MAg" SpName="Age_Forecast_SelByLeague_MAg" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Forecast_SelByLeague_SAg" SpName="Age_Forecast_SelByLeague_SAg" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_Forecast_SelHDP" SpName="Age_Forecast_SelHDP" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_Forecast_SelOU" SpName="Age_Forecast_SelOU" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_Forecast_SelHDP" SpName="Age_Forecast_SelHDP_xtest" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_Forecast_SelOU" SpName="Age_Forecast_SelOU_xtest" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Forecast1x2_SelByLeague_Ag" SpName="Age_Forecast1x2_SelByLeague_Ag" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Forecast1x2_SelByLeague_MAg" SpName="Age_Forecast1x2_SelByLeague_MAg" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Forecast1x2_SelByLeague_SAg" SpName="Age_Forecast1x2_SelByLeague_SAg" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
