@@ -112,26 +112,25 @@ namespace Fanex.Age.UI.Forecast
         {
             decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;
             int OddsType = Convert.ToInt16(dr["oddstype"]);
-            if (OddsType != 6)
+            
+            if (forecastScore > 0 && forecastScore < (decimal)(0.5))
             {
-                if (forecastScore > 0 && forecastScore < (decimal)(0.5))
-                {
-                    forecast += ((decimal)dr["al"]) / 2; // win 1/2
-                }
-                else if (forecastScore >= (decimal)(0.5))
-                {
-                    forecast += ((decimal)dr["al"]);
-                }
-                else if (forecastScore < 0 && forecastScore > -(decimal)(0.5))
-                {
-                    forecast += ((decimal)dr["hl"]) / 2;
-                }
-                else if (forecastScore <= (decimal)(-0.5))
-                {
-                    forecast += ((decimal)dr["hl"]);
-                }
+                forecast += ((decimal)dr["al"]) / 2; // win 1/2
             }
-            else
+            else if (forecastScore >= (decimal)(0.5))
+            {
+                forecast += ((decimal)dr["al"]);
+            }
+            else if (forecastScore < 0 && forecastScore > -(decimal)(0.5))
+            {
+                forecast += ((decimal)dr["hl"]) / 2;
+            }
+            else if (forecastScore <= (decimal)(-0.5))
+            {
+                forecast += ((decimal)dr["hl"]);
+            }
+
+            if (OddsType == 6)
             {
                 if (forecastScore == 0 && (decimal)dr["oddsspread"] > 0)
                 {
@@ -157,26 +156,25 @@ namespace Fanex.Age.UI.Forecast
         {
             decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;
             int OddsType = Convert.ToInt16(dr["oddstype"]);
-            if (OddsType != 6)
+           
+            if (forecastScore == (decimal)(0.25))
             {
-                if (forecastScore == (decimal)(0.25))
-                {
-                    forecast += ((decimal)dr["al"]) / 2;
-                }
-                else if (forecastScore > (decimal)(0.25))
-                {
-                    forecast += ((decimal)dr["al"]);
-                }
-                else if (forecastScore == (decimal)(-0.25))
-                {
-                    forecast += ((decimal)dr["hl"]) / 2;
-                }
-                else if (forecastScore < (decimal)(-0.25))
-                {
-                    forecast += ((decimal)dr["hl"]);
-                }
+                forecast += ((decimal)dr["al"]) / 2;
             }
-            else
+            else if (forecastScore > (decimal)(0.25))
+            {
+                forecast += ((decimal)dr["al"]);
+            }
+            else if (forecastScore == (decimal)(-0.25))
+            {
+                forecast += ((decimal)dr["hl"]) / 2;
+            }
+            else if (forecastScore < (decimal)(-0.25))
+            {
+                forecast += ((decimal)dr["hl"]);
+            }
+
+            if (OddsType == 6)
             {
                 if (forecastScore == 0 && (decimal)dr["oddsspread"] > 0)
                 {
