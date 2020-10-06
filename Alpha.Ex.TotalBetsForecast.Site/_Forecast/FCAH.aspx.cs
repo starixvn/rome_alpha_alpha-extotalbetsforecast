@@ -141,21 +141,35 @@ namespace Fanex.Age.UI.Forecast
         private decimal GetFCOUValue(DataRow dr, int currentScore, int scoreOffset, decimal forecast)
         {
             decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;
-            if (forecastScore == (decimal)(0.25))
+            if ((int)dr["oddstype"] == 1)
             {
-                forecast += ((decimal)dr["al"]) / 2;
+                if (forecastScore == (decimal)(0.25))
+                {
+                    forecast += ((decimal)dr["al"]) / 2;
+                }
+                else if (forecastScore > (decimal)(0.25))
+                {
+                    forecast += ((decimal)dr["al"]);
+                }
+                else if (forecastScore == (decimal)(-0.25))
+                {
+                    forecast += ((decimal)dr["hl"]) / 2;
+                }
+                else if (forecastScore < (decimal)(-0.25))
+                {
+                    forecast += ((decimal)dr["hl"]);
+                }
             }
-            else if (forecastScore > (decimal)(0.25))
+            else if ((int)dr["oddstype"] == 6)
             {
-                forecast += ((decimal)dr["al"]);
-            }
-            else if (forecastScore == (decimal)(-0.25))
-            {
-                forecast += ((decimal)dr["hl"]) / 2;
-            }
-            else if (forecastScore < (decimal)(-0.25))
-            {
-                forecast += ((decimal)dr["hl"]);
+                if (forecastScore == 0 && (decimal)dr["oddsspread"] > 0)
+                {
+                    forecast += (decimal)dr["al"] * ((decimal)dr["oddsspread"]) / 100;
+                }
+                else if (forecastScore == 0 && ((decimal)dr["oddsspread"]) < 0)
+                {
+                    forecast += (decimal)dr["hl"] * (-(decimal)dr["oddsspread"]) / 100;
+                }
             }
 
             return forecast;
