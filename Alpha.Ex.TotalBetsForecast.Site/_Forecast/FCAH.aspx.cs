@@ -110,8 +110,7 @@ namespace Fanex.Age.UI.Forecast
         /// <returns></returns>
         private decimal GetFCHDValue(DataRow dr, int currentScore, int scoreOffset, decimal forecast)
         {
-            decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;
-            int OddsType = Convert.ToInt16(dr["oddstype"]);
+            decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;           
             
             if (forecastScore > 0 && forecastScore < (decimal)(0.5))
             {
@@ -129,17 +128,10 @@ namespace Fanex.Age.UI.Forecast
             {
                 forecast += ((decimal)dr["hl"]);
             }
-
-            if (OddsType == 6)
+           
+            if (forecastScore == 0)
             {
-                if (forecastScore == 0 && (decimal)dr["oddsspread"] > 0)
-                {
-                    forecast += (decimal)dr["al"] * ((decimal)dr["oddsspread"]) / 100;
-                }
-                else if (forecastScore == 0 && ((decimal)dr["oddsspread"]) < 0)
-                {
-                    forecast += (decimal)dr["hl"] * (-(decimal)dr["oddsspread"]) / 100;
-                }
+                forecast += (decimal)dr["MYO"];
             }
 
             return forecast;
@@ -155,7 +147,6 @@ namespace Fanex.Age.UI.Forecast
         private decimal GetFCOUValue(DataRow dr, int currentScore, int scoreOffset, decimal forecast)
         {
             decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;
-            int OddsType = Convert.ToInt16(dr["oddstype"]);
            
             if (forecastScore == (decimal)(0.25))
             {
@@ -174,16 +165,9 @@ namespace Fanex.Age.UI.Forecast
                 forecast += ((decimal)dr["hl"]);
             }
 
-            if (OddsType == 6)
+            if (forecastScore == 0)
             {
-                if (forecastScore == 0 && (decimal)dr["oddsspread"] > 0)
-                {
-                    forecast += (decimal)dr["al"] * ((decimal)dr["oddsspread"]) / 100;
-                }
-                else if (forecastScore == 0 && ((decimal)dr["oddsspread"]) < 0)
-                {
-                    forecast += (decimal)dr["hl"] * (-(decimal)dr["oddsspread"]) / 100;
-                }
+                forecast += (decimal)dr["MYO"];
             }
 
             return forecast;
