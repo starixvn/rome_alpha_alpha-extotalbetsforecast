@@ -44,12 +44,12 @@
     <Setting Key="Age_Forecast1x2_SelByLeague_Ag" SpName="Age_Forecast1x2_SelByLeague_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Forecast1x2_SelByLeague_MAg" SpName="Age_Forecast1x2_SelByLeague_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_Forecast1x2_SelByLeague_SAg" SpName="Age_Forecast1x2_SelByLeague_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_ScoreMap_Result_Ag" SpName="Age_ScoreMap_Result_Ag" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_ScoreMap_Result_MAg" SpName="Age_ScoreMap_Result_MAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_ScoreMap_Result_SAg" SpName="Age_ScoreMap_Result_SAg" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_ScoreMap_Result_Ag" SpName="Age_ScoreMap_Result_Ag" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_ScoreMap_Result_MAg" SpName="Age_ScoreMap_Result_MAg" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_ScoreMap_Result_SAg" SpName="Age_ScoreMap_Result_SAg" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
     <Setting Key="Age_ScoreMap_SelBettype" SpName="Age_ScoreMap_SelBettype" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_ScoreMap_SelLeague" SpName="Age_ScoreMap_SelLeague" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
-    <Setting Key="Age_ScoreMap_SelMatch" SpName="Age_ScoreMap_SelMatch" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_ScoreMap_SelLeague" SpName="Age_ScoreMap_SelLeague" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="Age_ScoreMap_SelMatch" SpName="Age_ScoreMap_SelMatch" DbName="DB042.bodb02.BODBDownlineNet" Plain="0" />
   </Function>
   <Function Name="Report">
     <Setting Key="Age_GetCSStatus" SpName="Age_GetCSStatus" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
