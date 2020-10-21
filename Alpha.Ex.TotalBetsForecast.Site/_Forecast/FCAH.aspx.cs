@@ -110,7 +110,8 @@ namespace Fanex.Age.UI.Forecast
         /// <returns></returns>
         private decimal GetFCHDValue(DataRow dr, int currentScore, int scoreOffset, decimal forecast)
         {
-            decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;
+            decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;           
+            
             if (forecastScore > 0 && forecastScore < (decimal)(0.5))
             {
                 forecast += ((decimal)dr["al"]) / 2; // win 1/2
@@ -127,6 +128,11 @@ namespace Fanex.Age.UI.Forecast
             {
                 forecast += ((decimal)dr["hl"]);
             }
+           
+            if (forecastScore == 0)
+            {
+                forecast += (decimal)dr["MYO"];
+            }
 
             return forecast;
         }
@@ -141,6 +147,7 @@ namespace Fanex.Age.UI.Forecast
         private decimal GetFCOUValue(DataRow dr, int currentScore, int scoreOffset, decimal forecast)
         {
             decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;
+           
             if (forecastScore == (decimal)(0.25))
             {
                 forecast += ((decimal)dr["al"]) / 2;
@@ -156,6 +163,11 @@ namespace Fanex.Age.UI.Forecast
             else if (forecastScore < (decimal)(-0.25))
             {
                 forecast += ((decimal)dr["hl"]);
+            }
+
+            if (forecastScore == 0)
+            {
+                forecast += (decimal)dr["MYO"];
             }
 
             return forecast;
