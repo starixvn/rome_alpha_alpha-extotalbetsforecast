@@ -11,12 +11,17 @@ namespace Sunplus.Agent.Model.Services
 {
     using System;
     using Fanex.Logging.Extensions.Web;
+    using ONEbook.UM;
     using ONEbook.UM.Models;
     using ONEbook.UM.Services;
 
     public class MaintenanceService
     {
-        private static readonly IMaintenanceService _maintenanceService = new ONEbook.UM.Services.Impl.MaintenanceService();
+        private static readonly IMaintenanceService _maintenanceService = new ONEbook.UM.Services.MaintenanceService(
+            UMClientManager.RestClient,
+            UMClientManager.CacheService,
+            UMClientManager.UMClientConfigs,
+            UMClientManager.HttpContext);
 
         public static bool IsUnderMaintenance()
         {
