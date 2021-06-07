@@ -7,6 +7,8 @@ namespace Sunplus.Agent.Model.BL.Forecast
     using Fanex.Razorbill.Module.Core.Services.Impl;
     using Sunplus.Agent.Model.DL.Forecast;
     using System.Linq;
+    using Alpha.Web.Helpers;
+    using Alpha.Web.Helpers.Impl;
 
     [Obsolete("Should rename to Sunplus.Agent.Model.Forecast")]
     public class ForecastBO : Sunplus.Agent.Model.BL.Base.BOBase
@@ -16,12 +18,13 @@ namespace Sunplus.Agent.Model.BL.Forecast
         private const string BetTypeScoreMapKey = "BETTYPESCOREMAP";
         private const string BetTypeListScoreMapKey = "BETTYPESLISTCOREMAP";
         private static readonly ForecastDAO ForecastDataAccess = new ForecastDAO();
-
+        private readonly PartialUMService partialUMService;
         #endregion Variable
 
         public ForecastBO(string netSessionId)
             : base(netSessionId)
         {
+            partialUMService = new PartialUMServiceImpl();
         }
 
         #region TopOddsByMatch
@@ -112,14 +115,17 @@ namespace Sunplus.Agent.Model.BL.Forecast
             //// execute
             if (CurrentSession.IsAgent)
             {
+                partialUMService.CheckPartialUM(nameof(ForecastDataAccess.Age_LeagueSelRunning_Ag));
                 runningLeagues = ForecastDataAccess.Age_LeagueSelRunning_Ag(customerId, betType);
             }
             else if (CurrentSession.IsMaster)
             {
+                partialUMService.CheckPartialUM(nameof(ForecastDataAccess.Age_LeagueSelRunning_MAg));
                 runningLeagues = ForecastDataAccess.Age_LeagueSelRunning_MAg(customerId, betType);
             }
             else if (CurrentSession.IsSuper)
             {
+                partialUMService.CheckPartialUM(nameof(ForecastDataAccess.Age_LeagueSelRunning_SAg));
                 runningLeagues = ForecastDataAccess.Age_LeagueSelRunning_SAg(customerId, betType);
             }
             else

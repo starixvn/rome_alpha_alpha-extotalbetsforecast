@@ -4,6 +4,7 @@
     using System.Linq;
     using System.Web.Mvc;
     using Alpha.Web.Helpers;
+    using Alpha.Web.Helpers.Impl;
     using Fanex.Razorbill.Module.Core.Web.Controllers;
     using Fanex.Razorbill.Module.Forecast.Criteria;
     using Fanex.Razorbill.Module.Forecast.Models;
@@ -17,15 +18,19 @@
     public class ForecastScoreMapController : BaseController
     {
         private readonly IForecastService _forecastService;
+        private readonly PartialUMService _partialUMService;
 
         public ForecastScoreMapController()
-            : this(null)
+            : this(null, null)
         {
         }
 
-        public ForecastScoreMapController(IForecastService forecastService)
+        public ForecastScoreMapController(
+            IForecastService forecastService,
+            PartialUMService partialUMService)
         {
             _forecastService = forecastService ?? new ForecastService();
+            _partialUMService = partialUMService ?? new PartialUMServiceImpl();
         }
 
         /// <summary>
@@ -59,7 +64,12 @@
 
         public ActionResult RefreshLeagues()
         {
-            var leagues = _forecastService.GetScoreMapRunningLeagues(new GetScoreMapRunningLeagueCriteria());
+            var criteria = new GetScoreMapRunningLeagueCriteria();
+
+            _partialUMService.CheckPartialUM(criteria.GetSettingKey());
+
+            var leagues = _forecastService.GetScoreMapRunningLeagues(criteria);
+
             return Json(leagues, JsonRequestBehavior.AllowGet);
         }
 
@@ -93,7 +103,11 @@
 
         private void RenderLeagues()
         {
-            var leagues = _forecastService.GetScoreMapRunningLeagues(new GetScoreMapRunningLeagueCriteria());
+            var criteria = new GetScoreMapRunningLeagueCriteria();
+
+            _partialUMService.CheckPartialUM(criteria.GetSettingKey());
+
+            var leagues = _forecastService.GetScoreMapRunningLeagues(criteria);
             ViewBag.Leagues = leagues.Select(s => new SelectListItem { Value = s.Id.ToString(), Text = s.Name }).ToList();
         }
 

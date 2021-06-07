@@ -3,6 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Alpha.Web.Helpers;
+    using Alpha.Web.Helpers.Impl;
     using Core.Services.Impl;
     using Fanex.Caching;
     using Fanex.Razorbill.Module.Forecast.Criteria;
@@ -19,10 +21,14 @@
         private const string BettypeSupportScoreMapKey = "Fanex.Razorbill.Module.Forecast.BettypeSupportScoreMap";
 
         private readonly IForecastRepository _forecastRepository;
+        private readonly PartialUMService _partialUMService;
 
-        public ForecastService(IForecastRepository forecastRepository = null)
+        public ForecastService(
+            IForecastRepository forecastRepository = null,
+            PartialUMService partialUMService = null)
         {
             _forecastRepository = forecastRepository ?? new ForecastRepository();
+            _partialUMService = partialUMService ?? new PartialUMServiceImpl();
         }
 
         public IList<ScoreMapLeague> GetScoreMapRunningLeagues(GetScoreMapRunningLeagueCriteria criteria)
@@ -156,7 +162,11 @@
             var data = cache.Get<IList<RawScoreMapBetType>>(key);
             if (data == null)
             {
-                data = _forecastRepository.GetScoreMapBetTypes(new GetScoreMapBetTypeCriteria());
+                var criteria = new GetScoreMapBetTypeCriteria();
+
+                _partialUMService.CheckPartialUM(criteria.GetSettingKey());
+
+                data = _forecastRepository.GetScoreMapBetTypes(criteria);
 
                 // 2 hours.
                 int cacheInHours = 2;
