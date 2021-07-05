@@ -126,11 +126,16 @@
             if (userSession.CustId != 0 && !string.IsNullOrWhiteSpace(url) &&
 #pragma warning restore CS0618 // Type or member is obsolete
 #pragma warning disable CS0618 // Type or member is obsolete
-                !userSession.IsInternal && authencationService.CheckingClosedStatus())
+                !userSession.IsInternal)
 #pragma warning restore CS0618 // Type or member is obsolete
             {
-                Session.Clear();
-                Response.Redirect(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"), true);
+                var closedOrLockedStatus = authencationService.CheckClosedOrLockedStatus();
+
+                if (closedOrLockedStatus.IsClosed || closedOrLockedStatus.IsLocked)
+                {
+                    Session.Clear();
+                    Response.Redirect(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"), true);
+                }
             }
         }
 
