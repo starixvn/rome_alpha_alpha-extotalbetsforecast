@@ -325,6 +325,17 @@
     }
 
     function initialize() {
+        $.ajaxSetup({
+            error: function (xhr) {
+                if (xhr.status === 500 && xhr.responseText) {
+                    var jsonData = JSON.parse(xhr.responseText);
+                    if (jsonData.UMFrom && jsonData.UMTo) {
+                        location.href = top.alpha.urls.mainRootPath + 'PartialUM/Index?umfrom=' + jsonData.UMFrom + '&umto=' + jsonData.UMTo;
+                    }
+                }
+            }
+        });
+
         cacheDOMElements();
         $('.infoIco').click(function () { viewScoremapInfo(); });
         if (fromBetList) {

@@ -10,6 +10,7 @@
     using Alpha.Ex.TotalBetsForecast.Site.App_Start;
     using Alpha.Logging;
     using Alpha.Web;
+    using Alpha.Web.Exceptions;
     using Alpha.Web.Filters;
     using Alpha.Web.Helpers;
     using Fanex.Data.Configuration;
@@ -48,6 +49,19 @@
             if (!CheckUnderMainternanceTime())
             {
                 Exception ex = Server.GetLastError();
+                
+                var innerException = ex.InnerException;
+                if (innerException != null)
+                {
+                    var partialUMException = innerException as PartialUMException;
+                    if (partialUMException != null)
+                    {
+                        HttpContext.Current.ClearError();
+                        Response.Redirect(MicroSites.MainUrl($"~/PartialUM/Index?umfrom={partialUMException.UMFrom}&umto={partialUMException.UMTo}"));
+                        return;
+                    }
+                }
+
 #pragma warning disable CS0618 // Type or member is obsolete
                 var currentCustomer = UserSession.Current;
 #pragma warning restore CS0618 // Type or member is obsolete
@@ -152,6 +166,7 @@
         {
             filters.Add(new HandleErrorAttribute());
             filters.Add(new AfterLoginFlowFilter());
+            filters.Add(new PartialUMExceptionFilter(true));
         }
 
         private static bool CheckUnderMainternanceTime()
