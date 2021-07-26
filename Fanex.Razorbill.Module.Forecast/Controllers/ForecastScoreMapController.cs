@@ -59,6 +59,10 @@
             }
 
             ViewBag.Bettypes = bettypes;
+
+            var currentSession = UserSession.Current;
+            ViewData["DarkModeName"] = currentSession.DarkModeName;
+
             return View("~/Areas/Forecast/Views/ScoreMap/Index.cshtml", scoreMaps);
         }
 
@@ -97,6 +101,7 @@
 
         public ActionResult BetTypesInfo()
         {
+            ViewData["DarkModeName"] = UserSession.Current.DarkModeName;
             var bettypesInfo = _forecastService.GetScoreMapBetTypeInfo();
             return View("~/Areas/Forecast/Views/BetTypesInfo/Index.cshtml", bettypesInfo);
         }

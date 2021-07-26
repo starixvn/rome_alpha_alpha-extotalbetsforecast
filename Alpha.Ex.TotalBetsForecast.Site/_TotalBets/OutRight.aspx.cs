@@ -6,6 +6,8 @@ using Alpha.Web.Helpers;
 using Fanex.Age.UI.Components;
 using Fanex.Razorbill.Module.Core.Services.Impl;
 using Sunplus.Agent.Utilities;
+using Fanex.Razorbill.Module.Core.Web;
+using Fanex.Razorbill.Module.Core.Utils;
 /*
  * Created 20100507@Jacob - Render OutRight page
  * Revision:
@@ -16,13 +18,26 @@ namespace Fanex.Age.UI.TotalBets
 {
     public partial class OutRight_Page : TotalBets_Page
     {
+        #region Variable
+        private string rowBgOdd = Fanex.Age.UI.Common.RowBgOdd;
+        private string rowBgEven = Fanex.Age.UI.Common.RowBgEven;
+        #endregion
+
         #region Override
 
         public override void RenderContent(HtmlTextWriter writer)
         {
+            var darkModeName = CurrentUserSession.DarkModeName;
+            if (!string.IsNullOrWhiteSpace(darkModeName))
+            {
+                rowBgOdd = DarkModeColor.RowBgOdd;
+                rowBgEven = DarkModeColor.RowBgEven;
+            }
+
             DataTable outRightList = View as DataTable;
 
             OutRight_Template tpl = new OutRight_Template();
+            tpl.DarkModeName = darkModeName;
 
             tpl.Contents.LeagueContents.Clear();
             if (outRightList.Rows.Count > 0)
@@ -120,7 +135,7 @@ namespace Fanex.Age.UI.TotalBets
         private void RenderMatchRow(OutRight_Contents_LeagueContents_MatchContents_Block matchBlock, DataRow dr, int matchIndex, int rowIndex)
         {
             // Render match content
-            matchBlock.ColorClass = (matchIndex % 2) == 0 ? Fanex.Age.UI.Common.RowBgEven : Fanex.Age.UI.Common.RowBgOdd;
+            matchBlock.ColorClass = (matchIndex % 2) == 0 ? rowBgEven : rowBgOdd;
             matchBlock.ColorOver = Fanex.Age.UI.Common.RowBgOver;
 
             matchBlock.NoValue = rowIndex.ToString();

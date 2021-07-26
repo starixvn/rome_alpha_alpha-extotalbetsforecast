@@ -1,0 +1,225 @@
+﻿/*******************************************/
+/* Common */
+/*******************************************/
+$font-size: 13px;
+$font-family: Roboto, Arial, Tahoma,helvetica,sans-serif;
+$text-color: #cbcbcb;
+$text-red-color: #ff4f50;
+$text-red-color-light: #FF4F50;
+$link-color: #56D6FF;
+$link-hover-color: #F60;
+$title-color: #9d1c1c;
+$compopent-height: 30px;
+$height-normal: 28px;
+$border-color: #dfdfdf;
+$border-color-dark: #cecece;
+$bg-color: #F4F4F4;
+$roboto-fonts: "/assets/styles/base/roboto-fonts.css";
+$icon-alpha-fonts: "/assets/styles/base/icon-fonts.css";
+
+/*******************************************/
+/* Themes */
+/*******************************************/
+$theme-super-bg-light: #f0e6e7;
+$theme-super-bg: #67151b;
+$theme-super-bg-dark: #5c1218;
+$theme-super-color: #97141e;
+$theme-super-link-color-hover: #97141e;
+$theme-super-tab-focused-color: $theme-super-color;
+$theme-super-tab-focused-border: $theme-super-bg;
+
+$theme-master-bg-light: #e8edea;
+$theme-master-bg: #276443;
+$theme-master-bg-dark: #1c5334;
+$theme-master-color: #209656;
+$theme-master-link-color-hover: #209656;
+$theme-master-tab-focused-color: $theme-master-color;
+$theme-master-tab-focused-border: $theme-master-bg;
+
+$theme-agent-bg-light: #e5e9ec;
+$theme-agent-bg: #516e8f;
+$theme-agent-bg-dark: #37587d;
+$theme-agent-color: #2267b6;
+$theme-agent-link-color-hover: #2267b6;
+$theme-agent-tab-focused-color: $theme-agent-color;
+$theme-agent-tab-focused-border: $theme-agent-bg;
+
+/*******************************************/
+/* Buttons */
+/*******************************************/
+$btn-bg: #e1e1e1;
+$btn-color: #212121;
+$btn-bg-hover: #e1e1e1;
+$btn-color-hover: #212121;
+$btn-bg-hover: darken($btn-bg, 5%);
+
+$btn-submit-bg: #0b599c;
+$btn-submit-color: #fff;
+$btn-submit-bg-hover: darken($btn-submit-bg, 5%);
+$btn-submit-color-hover: #fff;
+
+$btn-reset-bg: #F6731B;
+$btn-reset-color: #fff;
+$btn-reset-bg-hover: darken($btn-reset-bg, 5%);
+$btn-reset-color-hover: #fff;
+
+$btn-cancel-bg: #909090;
+$btn-cancel-color: #fff;
+$btn-cancel-bg-hover: darken($btn-cancel-bg, 5%);
+$btn-cancel-color-hover: #fff;
+
+$btn-refresh-bg: #1bac69;
+$btn-refresh-color: #fff;
+$btn-refresh-bg-hover: darken($btn-refresh-bg, 5%);
+$btn-refresh-color-hover: #fff;
+
+
+
+/*******************************************/
+/* Icons */
+/*******************************************/
+$icon-color: #888;
+$icon-color-dark: #333;
+$icon-hover-color: #e38514;
+$icon-disable-color: lighten($icon-color, 20%);
+$icon-version: 4l5hbw;
+
+/*******************************************/
+/* Table */
+/*******************************************/
+$table-red-color: #B50000;
+$table-td-hover-color: #3c3c3c;
+$table-border-color: #3E3F41;
+$table-header-bg-color: #4D4D4D;
+$table-header-border-color: #767A85;
+$table-header-color: #fff;
+$table-subheader-bg-color: #3f3f3f;
+$table-subheader-color: #fff;
+$table-compopent-height: 22px;
+$table-compopent-height-large: 28px;
+$table-even-bg: #212223;
+$table-odd-bg: #262829;
+$table-footer-bg: #7f3d1d;
+$table-footer-color: #fff;
+$table-league-bg: #56533C;
+$table-live-bg: #f9ceae;
+
+$component-bg-color: #2B2B2B;
+$component-color: #E7E7E7;
+$component-border-color: #474747;
+
+
+/*******************************************/
+/* Popup */
+/*******************************************/
+$popup-bg: #fff;
+$popup-border: $border-color;
+
+
+/*******************************************/
+/* Tooltip */
+/*******************************************/
+
+
+/*******************************************/
+/* Tab */
+/*******************************************/
+
+$tab-color: #333;
+$tab-line-color: #cecece;
+
+
+/*******************************************/
+/* Dropdown */
+/*******************************************/
+$dropdown-color: $text-color;
+$dropdown-color-disable: #888;
+$dropdown-bg: $component-bg-color;
+$dropdown-bg-hover:#3c3c3c ;
+$dropdown-border: $component-border-color;
+
+/*******************************************/
+/* Message */
+/*******************************************/
+
+$msg-private: #18910b;
+$msg-special: $text-red-color;
+$msg-public: $text-color;
+
+$msg-warning-bg: #faf8dd;
+$msg-warning-color: #7e3d00;
+$msg-warning-border: #bcba7d;
+$msg-warning-icon-color: #f08708;
+
+$msg-error-bg: #fadddd;
+$msg-error-color: #fe0000;
+$msg-error-border: #ef2d2d;
+
+$msg-success-bg: #eefbe9;
+$msg-success-color: #52a220;
+$msg-success-border: #1db51a;
+
+$msg-info-bg: #e3f5fa;
+$msg-info-color: #326cb4;
+$msg-info-border: #3475c7;
+
+/*******************************************/
+/* Note */
+/*******************************************/
+$note-color: #666;
+
+/*******************************************/
+/* PT setting */
+/*******************************************/
+$pt-col-height: 30px;
+$pt-col-height-has-padding: 24px; // padding top/bottom: 2px
+$pt-col-height-large: 34px;
+$pt-col-height-has-padding-large: 28px;
+$pt-component-height: 22px;
+$pt-component-height-large: 24px;
+$pt-col-highlight-bg: #fae7d3;
+$pt-icon-edit-color: #fff;
+$pt-icon-edit-color-active: #67b4fb;
+$pt-icon-copy-color: #fff;
+$pt-icon-copy-color-active: #67b4fb;
+$pt-icon-copy-color-active-dark: #368ad8;
+$pt-bg: #f8f0e5;
+$pt-border-color: $border-color-dark;
+
+/*******************************************/
+/* Paging */
+/*******************************************/
+$paging-bg: #fff;
+$paging-btn-bg: #979797;
+$paging-btn-color: #fff;
+$paging-btn-bg-hover: #676767;
+$paging-border: #666;
+
+/*******************************************/
+/* Customer List */
+/*******************************************/
+$customer-icon-edit-multi: #fff;
+$customer-icon-edit-multi-hover: #e38514;
+$customer-icon-arrow: #333;
+$customer-icon-arrow-hover: #e38514;
+$customer-icon-view: #333;
+$customer-icon-view-hover: #055ad1;
+$customer-icon-other: #333;
+$customer-icon-other-hover: #e38514;
+
+/*******************************************/
+/* Status */
+/*******************************************/
+$status-closed: #ccc7ba;
+$status-suspended: #f8ded7;
+$status-disabled: #A0A97A;
+$status-live: #ffddcc;
+
+/*******************************************/
+/* hint tooltip */
+/*******************************************/
+$hint-warning-bg: #FFFFCC;
+$hint-warning-color: #333;
+$hint-warning-border-color: #CC9933;
+$hint-warning-border-radius: 2px;
+

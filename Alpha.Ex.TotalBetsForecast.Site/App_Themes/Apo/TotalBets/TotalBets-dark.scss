@@ -1,0 +1,241 @@
+﻿@import '../Common/_Variables-dark.scss';
+@import '../Common/_Mixins.scss';
+@import url($icon-alpha-fonts);
+@include keyframes-ripple;
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+/*******************************************/
+/* Total goal */
+/*******************************************/
+.fcnum {
+	font-weight: bold;
+}
+.nobold {
+	font-weight: normal;
+}
+
+.round_color {
+	color: $table-red-color;
+}
+
+/*******************************************/
+/* Handicap over under */
+/*******************************************/
+
+.btnInfo {
+	display: inline-block;
+	margin-left: 3px;
+	margin-right: 3px;
+    text-decoration: none;
+    @include ripple-effect-icon($margin-left: -6px);
+
+    &:before {
+        font:{
+            family: Iconalpha;
+            size: 16px;
+        }
+        float: left;
+        content: '\e930';
+        color: #2a9cde;
+    }
+}
+
+a.fcnum {
+	text-decoration: none;
+}
+
+.hide {
+	display: none;
+}
+.negative_color {
+	color: #eb6003;
+}
+.blue {
+	color: #2673CE;
+}
+
+.raceNo {
+	font-size: 14px;
+}
+
+.header_tb04 {
+	background: url("../Images/bg_head05.jpg") repeat-x scroll 0 0 transparent;
+	color: #990000;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: right;
+}
+
+/*******************************************/
+/* Table */
+/*******************************************/
+.tblRpt {
+    tbody {
+        tr.league, .league {
+            background: $table-league-bg;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: left;
+            color: $text-color;
+        }
+    }	
+
+	&.tbl-totalGoal {
+		.col-homeAway {
+			width: 150px;
+		}
+
+		.col-total {
+			width: 80px;
+		}
+	}
+
+	&.tbl-outRight {
+		width: 600px;
+
+		.col-team {
+			width: 45%;
+		}
+
+		.col-balance, .col-forecast {
+			width: 25%;
+		}
+	}
+
+	&.tbl-HTFT {
+		.col-homeAway {
+			width: 200px;
+		}
+
+		.width-50 {
+			width: 50px;
+		}
+	}
+
+	&.tbl-FGLG {
+		.col-time {
+			width: 120px;
+		}
+
+		.col-homeaway {
+			width: 150px;
+		}
+
+		.col-fulltime, .col-half {
+			width: 80px;
+		}
+
+		.col-goal {
+			width: 100px;
+		}
+	}
+
+	&.tbl-nobet {
+		.col-events {
+			width: 366px;
+		}
+
+		.col-nobet {
+			width: 100px;
+		}
+
+		.col-value {
+			width: 86px;
+		}
+	}
+	
+	&.tbl-financial {
+		width: 80%;
+
+		.col-timerange {
+			width: 16%;
+		}
+
+		.col-value {
+			width: 11%;
+		}
+	}
+
+	&.tbl-nextgoal {
+		width: 100%;
+
+		.col-time {
+			width: 80px;
+		}
+
+		.col-novalue {
+			width: 20px;
+		}
+
+		.col-betScores {
+			border-right: solid 1px #ddd;
+			width: 20%;
+		}
+
+		.col-homeaway, .col-lastScore {
+			height: 21px;
+		}
+
+		.col-info {
+			width: 20px;
+		}
+
+		.tbl-betScoreContent {
+			width: 100%;
+			font-weight: bold;
+			white-space: nowrap;
+			text-align: center;
+		}
+
+		.tbl-lastScore {
+			font-weight: bold;
+			width: 100%;
+		}
+	}
+
+	.col-number {
+		width: 20px;
+	}
+
+	.col-time {
+		width: 110px;
+	}
+
+	.col-league {
+		padding-left: 12px;
+	}
+
+	.col-hadicapTotal {
+		width: 90px;
+	}
+
+	.fcbtn
+	{
+		text-align: center;
+		width: 16px;
+	}
+
+	.col-overUnder, .col-firstHalf {
+		width: 90px;
+	}
+
+	.lbl-totalBetsLang {
+		width: 100px;
+	}
+
+	.col-oneXTwo {
+		width: 70px;
+	}
+
+	.col-DND {
+		width: 86px;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width : 1024px) 
+{
+}

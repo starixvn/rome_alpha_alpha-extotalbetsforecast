@@ -11,40 +11,42 @@ namespace Fanex.Age.UI.TotalBets
 	//{
 		public class OddEven1X2_Template : Template
 		{
-			protected static string s0 = "<!DOCTYPE html><html><head><title>TotalBets</title><link href=\"";
-			protected static string s1{get{return AbsoluteUrl("App_Themes/Apo/Common/Agent.min.css", TplSettings.Question);}}
-			protected static string s2 = "\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"";
-			protected static string s3{get{return AbsoluteUrl("App_Themes/Apo/TotalBets/TotalBets.min.css", TplSettings.Question);}}
-			protected static string s4 = "\" rel=\"stylesheet\" type=\"text/css\" /></head><body><div id=\"page_main\"><div id=\"header_main\">";
-			protected static string s5{get{return LocalResources.TotalBetsLang.lblOddEven;}}
+			protected static string s0 = "<!DOCTYPE html><html><head><title>TotalBets</title><link href='../App_Themes/Apo/Common/Agent";
+			public string DarkModeName = "{DarkModeName}";
+			protected static string s1 = ".min.css' rel=\"stylesheet\" type=\"text/css\" /><link href='../App_Themes/Apo/TotalBets/TotalBets";
+			protected string t0_DarkModeName;
+			protected static string s2 = ".min.css' rel=\"stylesheet\" type=\"text/css\" /></head><body><div id=\"page_main\"><div id=\"header_main\">";
+			protected static string s3{get{return LocalResources.TotalBetsLang.lblOddEven;}}
+			protected static string s4 = " + ";
+			protected static string s5{get{return LocalResources.TotalBetsLang.lbl1x2;}}
 			protected static string s6 = " + ";
-			protected static string s7{get{return LocalResources.TotalBetsLang.lbl1x2;}}
-			protected static string s8 = " + ";
-			protected static string s9{get{return LocalResources.TotalBetsLang.lblDraw;}}
-			protected static string s10 = "/";
-			protected static string s11{get{return LocalResources.TotalBetsLang.lblNoDraw;}}
-			protected static string s12 = "</div>";
+			protected static string s7{get{return LocalResources.TotalBetsLang.lblDraw;}}
+			protected static string s8 = "/";
+			protected static string s9{get{return LocalResources.TotalBetsLang.lblNoDraw;}}
+			protected static string s10 = "</div>";
 			public Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown{get {return _RefreshCountDown != null ? _RefreshCountDown : _RefreshCountDown =  new Fanex.Age.UI.Components.RefreshCountDown_Control(this,15,"OddEvent1X2");}}
 			protected Fanex.Age.UI.Components.RefreshCountDown_Control _RefreshCountDown;
-			protected static string s13 = "<div id=\"sContent\">";
+			protected static string s11 = "<div id=\"sContent\">";
 			public OddEven1X2_Contents_Block Contents = new OddEven1X2_Contents_Block();
-			protected static string s14 = "</div></div><script src=\"";
-			protected static string s15{get{return AbsoluteUrl("_GlobalResources/Js/Core.js", TplSettings.Question);}}
+			protected static string s12 = "</div></div><script src=\"";
+			protected static string s13{get{return AbsoluteUrl("_GlobalResources/Js/Core.js", TplSettings.Question);}}
+			protected static string s14 = "\" type=\"text/javascript\"></script><script src=\"";
+			protected static string s15{get{return AbsoluteUrl("Resources/TotalBets.js", TplSettings.Question);}}
 			protected static string s16 = "\" type=\"text/javascript\"></script><script src=\"";
-			protected static string s17{get{return AbsoluteUrl("Resources/TotalBets.js", TplSettings.Question);}}
-			protected static string s18 = "\" type=\"text/javascript\"></script><script src=\"";
-			protected static string s19{get{return AbsoluteUrl("_Components/AGEWnd/AGEWnd.js", TplSettings.Question);}}
-			protected static string s20 = "\" type=\"text/javascript\"></script>";
+			protected static string s17{get{return AbsoluteUrl("_Components/AGEWnd/AGEWnd.js", TplSettings.Question);}}
+			protected static string s18 = "\" type=\"text/javascript\"></script>";
 			public OddEven1X2_Piwik_Block Piwik = new OddEven1X2_Piwik_Block();
 			public OddEven1X2_BetListsUrl_Block BetListsUrl = new OddEven1X2_BetListsUrl_Block();
-			protected static string s21 = "</body></html>";
+			protected static string s19 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
 					bd.Append(s0);
+					bd.Append(DarkModeName);
 					bd.Append(s1);
+					bd.Append(DarkModeName);
 					bd.Append(s2);
 					bd.Append(s3);
 					bd.Append(s4);
@@ -54,21 +56,19 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s8);
 					bd.Append(s9);
 					bd.Append(s10);
-					bd.Append(s11);
-					bd.Append(s12);
 					bd.Append(RefreshCountDown);
-					bd.Append(s13);
+					bd.Append(s11);
 					if(null != Contents) Contents.ToString(ref bd);
+					bd.Append(s12);
+					bd.Append(s13);
 					bd.Append(s14);
 					bd.Append(s15);
 					bd.Append(s16);
 					bd.Append(s17);
 					bd.Append(s18);
-					bd.Append(s19);
-					bd.Append(s20);
 					if(null != Piwik) Piwik.ToString(ref bd);
 					if(null != BetListsUrl) BetListsUrl.ToString(ref bd);
-					bd.Append(s21);
+					bd.Append(s19);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -83,35 +83,37 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_Block: Block
 		{
-			protected static string s22 = "<table class=\"tblRpt c\"><tr class=\"RptHeader\"><td rowspan=\"2\" class=\"col-number\">#</td><td rowspan=\"2\" class=\"col-time\">";
-			protected static string s23{get{return LocalResources.TotalBetsLang.time;}}
-			protected static string s24 = "</td><td rowspan=\"2\">";
-			protected static string s25{get{return LocalResources.TotalBetsLang.events;}}
-			protected static string s26 = "</td><td colspan=\"4\">";
-			protected static string s27{get{return LocalResources.TotalBetsLang.fulltime;}}
-			protected static string s28 = "</td><td colspan=\"3\">";
-			protected static string s29{get{return LocalResources.TotalBetsLang.lbl1sthalf;}}
-			protected static string s30 = "</td></tr><tr class=\"RptHeader02\"><td class=\"lbl-totalBetsLang\">";
-			protected static string s31{get{return LocalResources.TotalBetsLang.lblOddEven;}}
-			protected static string s32 = "</td><td colspan=\"2\" class=\"lbl-totalBetsLang\">";
-			protected static string s33{get{return LocalResources.TotalBetsLang.lbl1x2;}}
-			protected static string s34 = "</td><td class=\"lbl-totalBetsLang\">";
-			protected static string s35{get{return LocalResources.TotalBetsLang.lblDraw;}}
-			protected static string s36 = "/";
-			protected static string s37{get{return LocalResources.TotalBetsLang.lblNoDraw;}}
-			protected static string s38 = "</td><td class=\"lbl-totalBetsLang\">";
-			protected static string s39{get{return LocalResources.TotalBetsLang.lblOddEven;}}
-			protected static string s40 = "</td><td colspan=\"2\" class=\"lbl-totalBetsLang\">";
-			protected static string s41{get{return LocalResources.TotalBetsLang.lbl1x2;}}
-			protected static string s42 = "</td></tr>";
+			protected static string s20 = "<table class=\"tblRpt c\"><tr class=\"RptHeader\"><td rowspan=\"2\" class=\"col-number\">#</td><td rowspan=\"2\" class=\"col-time\">";
+			protected static string s21{get{return LocalResources.TotalBetsLang.time;}}
+			protected static string s22 = "</td><td rowspan=\"2\">";
+			protected static string s23{get{return LocalResources.TotalBetsLang.events;}}
+			protected static string s24 = "</td><td colspan=\"4\">";
+			protected static string s25{get{return LocalResources.TotalBetsLang.fulltime;}}
+			protected static string s26 = "</td><td colspan=\"3\">";
+			protected static string s27{get{return LocalResources.TotalBetsLang.lbl1sthalf;}}
+			protected static string s28 = "</td></tr><tr class=\"RptHeader02\"><td class=\"lbl-totalBetsLang\">";
+			protected static string s29{get{return LocalResources.TotalBetsLang.lblOddEven;}}
+			protected static string s30 = "</td><td colspan=\"2\" class=\"lbl-totalBetsLang\">";
+			protected static string s31{get{return LocalResources.TotalBetsLang.lbl1x2;}}
+			protected static string s32 = "</td><td class=\"lbl-totalBetsLang\">";
+			protected static string s33{get{return LocalResources.TotalBetsLang.lblDraw;}}
+			protected static string s34 = "/";
+			protected static string s35{get{return LocalResources.TotalBetsLang.lblNoDraw;}}
+			protected static string s36 = "</td><td class=\"lbl-totalBetsLang\">";
+			protected static string s37{get{return LocalResources.TotalBetsLang.lblOddEven;}}
+			protected static string s38 = "</td><td colspan=\"2\" class=\"lbl-totalBetsLang\">";
+			protected static string s39{get{return LocalResources.TotalBetsLang.lbl1x2;}}
+			protected static string s40 = "</td></tr>";
 			public OddEven1X2_Contents_LeagueContents_Block LeagueContents = new OddEven1X2_Contents_LeagueContents_Block();
 			public OddEven1X2_Contents_NotFoundContent_Block NotFoundContent = new OddEven1X2_Contents_NotFoundContent_Block();
-			protected static string s43 = "</table>";
+			protected static string s41 = "</table>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s20);
+					bd.Append(s21);
 					bd.Append(s22);
 					bd.Append(s23);
 					bd.Append(s24);
@@ -131,11 +133,9 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s38);
 					bd.Append(s39);
 					bd.Append(s40);
-					bd.Append(s41);
-					bd.Append(s42);
 					if(null != LeagueContents) LeagueContents.ToString(ref bd);
 					if(null != NotFoundContent) NotFoundContent.ToString(ref bd);
-					bd.Append(s43);
+					bd.Append(s41);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -143,18 +143,18 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_LeagueContents_Block: Block
 		{
-			protected static string s44 = "<tr class=\"c\"><td colspan=\"10\" class=\"col-league league\">";
+			protected static string s42 = "<tr class=\"c\"><td colspan=\"10\" class=\"col-league league\">";
 			public string LeagueName = "{LeagueName}";
-			protected static string s45 = "</td></tr>";
+			protected static string s43 = "</td></tr>";
 			public OddEven1X2_Contents_LeagueContents_MatchContents_Block MatchContents = new OddEven1X2_Contents_LeagueContents_MatchContents_Block();
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s44);
+					bd.Append(s42);
 					bd.Append(LeagueName);
-					bd.Append(s45);
+					bd.Append(s43);
 					if(null != MatchContents) MatchContents.ToString(ref bd);
 				}
 				if(IsAssigned){bd.Append(Value);}
@@ -163,71 +163,71 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_LeagueContents_MatchContents_Block: Block
 		{
-			protected static string s46 = "<tr class=\"r\" style=\"background-color: ";
+			protected static string s44 = "<tr class=\"r\" style=\"background-color: ";
 			public string ColorClass = "{ColorClass}";
-			protected static string s47 = "\" onmouseover=\"bgColor='";
+			protected static string s45 = "\" onmouseover=\"bgColor='";
 			public string ColorOver = "{ColorOver}";
-			protected static string s48 = "'\" onmouseout=\"bgColor='";
-			protected string t0_ColorClass;
-			protected static string s49 = "'\"><td class=\"w-order\">";
+			protected static string s46 = "'\" onmouseout=\"bgColor='";
+			protected string t1_ColorClass;
+			protected static string s47 = "'\"><td class=\"w-order\">";
 			public string No = "{No}";
-			protected static string s50 = "</td><td class=\"c bl_time\">";
+			protected static string s48 = "</td><td class=\"c bl_time\">";
 			public string TimeValue = "{TimeValue}";
 			public OddEven1X2_Contents_LeagueContents_MatchContents_LiveNotice_Block LiveNotice = new OddEven1X2_Contents_LeagueContents_MatchContents_LiveNotice_Block();
-			protected static string s51 = "</td><td class='l'>";
+			protected static string s49 = "</td><td class='l'>";
 			public string Home = "{Home}";
-			protected static string s52 = " -vs- ";
+			protected static string s50 = " -vs- ";
 			public string Away = "{Away}";
-			protected static string s53 = "</td><td>";
+			protected static string s51 = "</td><td>";
 			public OddEven1X2_Contents_LeagueContents_MatchContents_OddEvenValue_Block OddEvenValue = new OddEven1X2_Contents_LeagueContents_MatchContents_OddEvenValue_Block();
-			protected static string s54 = "</td><td class=\"col-oneXTwo\">";
+			protected static string s52 = "</td><td class=\"col-oneXTwo\">";
 			public OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoValue_Block OneXTwoValue = new OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoValue_Block();
-			protected static string s55 = "</td><td class=\"fcbtn\">";
+			protected static string s53 = "</td><td class=\"fcbtn\">";
 			public OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoButton_Block OneXTwoButton = new OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoButton_Block();
-			protected static string s56 = "</td><td class=\"col-DND\">";
+			protected static string s54 = "</td><td class=\"col-DND\">";
 			public OddEven1X2_Contents_LeagueContents_MatchContents_DNDValue_Block DNDValue = new OddEven1X2_Contents_LeagueContents_MatchContents_DNDValue_Block();
-			protected static string s57 = "</td><td>";
+			protected static string s55 = "</td><td>";
 			public OddEven1X2_Contents_LeagueContents_MatchContents_OddEvenFirstHalfValue_Block OddEvenFirstHalfValue = new OddEven1X2_Contents_LeagueContents_MatchContents_OddEvenFirstHalfValue_Block();
-			protected static string s58 = "</td><td class=\"col-oneXTwo\">";
+			protected static string s56 = "</td><td class=\"col-oneXTwo\">";
 			public OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoFirstHalfValue_Block OneXTwoFirstHalfValue = new OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoFirstHalfValue_Block();
-			protected static string s59 = "</td><td class=\"fcbtn c\">";
+			protected static string s57 = "</td><td class=\"fcbtn c\">";
 			public OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoFirstHalfButton_Block OneXTwoFirstHalfButton = new OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoFirstHalfButton_Block();
-			protected static string s60 = "</td></tr>";
+			protected static string s58 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s44);
+					bd.Append(ColorClass);
+					bd.Append(s45);
+					bd.Append(ColorOver);
 					bd.Append(s46);
 					bd.Append(ColorClass);
 					bd.Append(s47);
-					bd.Append(ColorOver);
-					bd.Append(s48);
-					bd.Append(ColorClass);
-					bd.Append(s49);
 					bd.Append(No);
-					bd.Append(s50);
+					bd.Append(s48);
 					bd.Append(TimeValue);
 					if(null != LiveNotice) LiveNotice.ToString(ref bd);
-					bd.Append(s51);
+					bd.Append(s49);
 					bd.Append(Home);
-					bd.Append(s52);
+					bd.Append(s50);
 					bd.Append(Away);
-					bd.Append(s53);
+					bd.Append(s51);
 					if(null != OddEvenValue) OddEvenValue.ToString(ref bd);
-					bd.Append(s54);
+					bd.Append(s52);
 					if(null != OneXTwoValue) OneXTwoValue.ToString(ref bd);
-					bd.Append(s55);
+					bd.Append(s53);
 					if(null != OneXTwoButton) OneXTwoButton.ToString(ref bd);
-					bd.Append(s56);
+					bd.Append(s54);
 					if(null != DNDValue) DNDValue.ToString(ref bd);
-					bd.Append(s57);
+					bd.Append(s55);
 					if(null != OddEvenFirstHalfValue) OddEvenFirstHalfValue.ToString(ref bd);
-					bd.Append(s58);
+					bd.Append(s56);
 					if(null != OneXTwoFirstHalfValue) OneXTwoFirstHalfValue.ToString(ref bd);
-					bd.Append(s59);
+					bd.Append(s57);
 					if(null != OneXTwoFirstHalfButton) OneXTwoFirstHalfButton.ToString(ref bd);
-					bd.Append(s60);
+					bd.Append(s58);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -235,17 +235,17 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_LeagueContents_MatchContents_LiveNotice_Block: Block
 		{
-			protected static string s61 = "<br /><font color=\"red\"><i>";
-			protected static string s62{get{return LocalResources.TotalBetsLang.lblLive;}}
-			protected static string s63 = "</i></font>";
+			protected static string s59 = "<br /><font color=\"red\"><i>";
+			protected static string s60{get{return LocalResources.TotalBetsLang.lblLive;}}
+			protected static string s61 = "</i></font>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s59);
+					bd.Append(s60);
 					bd.Append(s61);
-					bd.Append(s62);
-					bd.Append(s63);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -253,21 +253,21 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_LeagueContents_MatchContents_OddEvenValue_Block: Block
 		{
-			protected static string s64 = "<a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected static string s62 = "<a class=\"fcnum\" href=\"javascript:doViewBetList(";
 			public string MatchId = "{MatchId}";
-			protected static string s65 = ",2);\">";
+			protected static string s63 = ",2);\">";
 			public string OddEvenValue = "{OddEvenValue}";
-			protected static string s66 = "</a>";
+			protected static string s64 = "</a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s64);
+					bd.Append(s62);
 					bd.Append(MatchId);
-					bd.Append(s65);
+					bd.Append(s63);
 					bd.Append(OddEvenValue);
-					bd.Append(s66);
+					bd.Append(s64);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -275,21 +275,21 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoValue_Block: Block
 		{
-			protected static string s67 = "<a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected static string s65 = "<a class=\"fcnum\" href=\"javascript:doViewBetList(";
 			public string MatchId = "{MatchId}";
-			protected static string s68 = ",5);\">";
+			protected static string s66 = ",5);\">";
 			public string OneXTwoValue = "{OneXTwoValue}";
-			protected static string s69 = "</a>";
+			protected static string s67 = "</a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s67);
+					bd.Append(s65);
 					bd.Append(MatchId);
-					bd.Append(s68);
+					bd.Append(s66);
 					bd.Append(OneXTwoValue);
-					bd.Append(s69);
+					bd.Append(s67);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -297,9 +297,29 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoButton_Block: Block
 		{
-			protected static string s70 = "<a href=\"javascript:openForecast1X2('";
+			protected static string s68 = "<a href=\"javascript:openForecast1X2('";
 			public string MatchId = "{MatchId}";
-			protected static string s71 = "',5)\" class=\"btnInfo\"></a>";
+			protected static string s69 = "',5)\" class=\"btnInfo\"></a>";
+			public override void ToString(ref StringBuilder bd)
+			{
+				if(!Visible) return;
+				if(RenderChild)
+				{
+					bd.Append(s68);
+					bd.Append(MatchId);
+					bd.Append(s69);
+				}
+				if(IsAssigned){bd.Append(Value);}
+			}
+		}
+
+		public class OddEven1X2_Contents_LeagueContents_MatchContents_DNDValue_Block: Block
+		{
+			protected static string s70 = "<a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			public string MatchId = "{MatchId}";
+			protected static string s71 = ",123);\">";
+			public string DNDValue = "{DNDValue}";
+			protected static string s72 = "</a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
@@ -308,28 +328,8 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s70);
 					bd.Append(MatchId);
 					bd.Append(s71);
-				}
-				if(IsAssigned){bd.Append(Value);}
-			}
-		}
-
-		public class OddEven1X2_Contents_LeagueContents_MatchContents_DNDValue_Block: Block
-		{
-			protected static string s72 = "<a class=\"fcnum\" href=\"javascript:doViewBetList(";
-			public string MatchId = "{MatchId}";
-			protected static string s73 = ",123);\">";
-			public string DNDValue = "{DNDValue}";
-			protected static string s74 = "</a>";
-			public override void ToString(ref StringBuilder bd)
-			{
-				if(!Visible) return;
-				if(RenderChild)
-				{
-					bd.Append(s72);
-					bd.Append(MatchId);
-					bd.Append(s73);
 					bd.Append(DNDValue);
-					bd.Append(s74);
+					bd.Append(s72);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -337,21 +337,21 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_LeagueContents_MatchContents_OddEvenFirstHalfValue_Block: Block
 		{
-			protected static string s75 = "<a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected static string s73 = "<a class=\"fcnum\" href=\"javascript:doViewBetList(";
 			public string MatchId = "{MatchId}";
-			protected static string s76 = ",12);\">";
+			protected static string s74 = ",12);\">";
 			public string OddEventFirstHalfValue = "{OddEventFirstHalfValue}";
-			protected static string s77 = "</a>";
+			protected static string s75 = "</a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s75);
+					bd.Append(s73);
 					bd.Append(MatchId);
-					bd.Append(s76);
+					bd.Append(s74);
 					bd.Append(OddEventFirstHalfValue);
-					bd.Append(s77);
+					bd.Append(s75);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -359,21 +359,21 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoFirstHalfValue_Block: Block
 		{
-			protected static string s78 = "<a class=\"fcnum\" href=\"javascript:doViewBetList(";
+			protected static string s76 = "<a class=\"fcnum\" href=\"javascript:doViewBetList(";
 			public string MatchId = "{MatchId}";
-			protected static string s79 = ",15);\">";
+			protected static string s77 = ",15);\">";
 			public string OneXTwoFirstHalfValue = "{OneXTwoFirstHalfValue}";
-			protected static string s80 = "</a>";
+			protected static string s78 = "</a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s78);
+					bd.Append(s76);
 					bd.Append(MatchId);
-					bd.Append(s79);
+					bd.Append(s77);
 					bd.Append(OneXTwoFirstHalfValue);
-					bd.Append(s80);
+					bd.Append(s78);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -381,17 +381,17 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_LeagueContents_MatchContents_OneXTwoFirstHalfButton_Block: Block
 		{
-			protected static string s81 = "<a href=\"javascript:openForecast1X2('";
+			protected static string s79 = "<a href=\"javascript:openForecast1X2('";
 			public string MatchId = "{MatchId}";
-			protected static string s82 = "',15)\" class=\"btnInfo\"></a>";
+			protected static string s80 = "',15)\" class=\"btnInfo\"></a>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s81);
+					bd.Append(s79);
 					bd.Append(MatchId);
-					bd.Append(s82);
+					bd.Append(s80);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -399,17 +399,17 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Contents_NotFoundContent_Block: Block
 		{
-			protected static string s83 = "<tr class=\"bg_white\"><td colspan=\"10\" class=\"c nobold\">";
-			protected static string s84{get{return LocalResources.TotalBetsLang.noInfo;}}
-			protected static string s85 = "</td></tr>";
+			protected static string s81 = "<tr class=\"bg_white\"><td colspan=\"10\" class=\"c nobold\">";
+			protected static string s82{get{return LocalResources.TotalBetsLang.noInfo;}}
+			protected static string s83 = "</td></tr>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s81);
+					bd.Append(s82);
 					bd.Append(s83);
-					bd.Append(s84);
-					bd.Append(s85);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -417,22 +417,24 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_Piwik_Block: Block
 		{
-			protected static string s86 = "<script type=\"text/javascript\">var _pkUrl = '";
-			protected static string s87{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl;}}
-			protected static string s88 = "',_pkScript = '";
-			protected static string s89{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript;}}
-			protected static string s90 = "',_pkSiteId = '";
-			protected static string s91{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId;}}
-			protected static string s92 = "';</script><script src=\"";
-			protected static string s93{get{return AbsoluteUrl("_GlobalResources/Js/piwikLoader.js", TplSettings.Question);}}
-			protected static string s94 = "\" type=\"text/javascript\"></script><noscript><p><img src='";
+			protected static string s84 = "<script type=\"text/javascript\">var _pkUrl = '";
+			protected static string s85{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl;}}
+			protected static string s86 = "',_pkScript = '";
+			protected static string s87{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript;}}
+			protected static string s88 = "',_pkSiteId = '";
+			protected static string s89{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId;}}
+			protected static string s90 = "';</script><script src=\"";
+			protected static string s91{get{return AbsoluteUrl("_GlobalResources/Js/piwikLoader.js", TplSettings.Question);}}
+			protected static string s92 = "\" type=\"text/javascript\"></script><noscript><p><img src='";
 			public string PiwikUrl = "{PiwikUrl}";
-			protected static string s95 = "' style=\"border:0;\" alt=\"\" /></p></noscript>";
+			protected static string s93 = "' style=\"border:0;\" alt=\"\" /></p></noscript>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
+					bd.Append(s84);
+					bd.Append(s85);
 					bd.Append(s86);
 					bd.Append(s87);
 					bd.Append(s88);
@@ -440,10 +442,8 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s90);
 					bd.Append(s91);
 					bd.Append(s92);
-					bd.Append(s93);
-					bd.Append(s94);
 					bd.Append(PiwikUrl);
-					bd.Append(s95);
+					bd.Append(s93);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
@@ -451,17 +451,17 @@ namespace Fanex.Age.UI.TotalBets
 
 		public class OddEven1X2_BetListsUrl_Block: Block
 		{
-			protected static string s96 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			protected static string s94 = "<script type=\"text/javascript\">var _betListsUrl = '";
 			public string BetListsUrl = "{BetListsUrl}";
-			protected static string s97 = "';</script>";
+			protected static string s95 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
-					bd.Append(s96);
+					bd.Append(s94);
 					bd.Append(BetListsUrl);
-					bd.Append(s97);
+					bd.Append(s95);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

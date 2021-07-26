@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>{static:LocalResources.UIForecastLang.lblForecast}</title>
-    <link href="../App_Themes/Apo/Common/Agent.min.css" rel="stylesheet" type="text/css" />
-    <link href="../App_Themes/Apo/Forecast/FC.min.css" rel="stylesheet" type="text/css" />
+    <link href='../App_Themes/Apo/Common/Agent{DarkModeName}.min.css' rel="stylesheet" type="text/css" />
+    <link href='../App_Themes/Apo/Forecast/FC{DarkModeName}.min.css' rel="stylesheet" type="text/css" />
 </head>
 <body>
     {load:Fanex.Age.UI.Components.RefreshCountDown_Control RefreshCountDown = new Fanex.Age.UI.Components.RefreshCountDown_Control(this,15,"FCAH","RefreshFC")}
@@ -31,7 +31,7 @@
         <br />
         <table class="tblRpt width-100per" style="width: 100%;">
             <tr class="even_row c">
-                <td style="background-color: #cccccc">
+                <td class="highlight">
                     <b>{Title}</b>
                 </td>
                 <td colspan="4">

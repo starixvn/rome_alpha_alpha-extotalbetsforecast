@@ -227,6 +227,8 @@ namespace Fanex.Age.UI.Forecast
         private void RenderFCAH(HtmlTextWriter writer)
         {
             FCAH_Template tpl = new FCAH_Template();
+            tpl.DarkModeName = CurrentUserSession.DarkModeName;
+
             Hashtable viewData = View as Hashtable;
 
             DataTable topodds = viewData["OddsData"] as DataTable;

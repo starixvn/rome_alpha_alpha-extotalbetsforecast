@@ -1,0 +1,193 @@
+﻿
+.nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav:before, .nav:after {
+    content: " ";
+    display: table;
+}
+
+.nav:after {
+    clear: both;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #eeeeee;
+}
+
+.nav > li.disabled > a {
+    color: #777777;
+}
+
+.nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
+    color: #777777;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: #eeeeee;
+    border-color: #337ab7;
+}
+
+.nav .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.nav > li > a > img {
+    max-width: none;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #313334;
+}
+
+.nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs > li > a:hover {
+    border-color: #eeeeee #eeeeee #ddd;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #555555;
+    background-color: #171717;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+
+.nav-tabs > li {
+    margin-right: 12px;
+}
+
+.nav-tabs > li > a:hover {
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.nav.nav-tabs > li > a {
+    font-size: 13px;
+    padding: 10px 20px 8px;
+    border: none;
+}
+
+.nav.nav-tabs > li:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    -webkit-transition: width .5s ease, background-color .5s ease;
+    -khtml-transition: width .5s ease, background-color .5s ease;
+    -moz-transition: width .5s ease, background-color .5s ease;
+    -ms-transition: width .5s ease, background-color .5s ease;
+    -o-transition: width .5s ease, background-color .5s ease;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: none;
+    color: #666;
+    background-color: inherit;
+}
+
+.nav.nav-tabs > li.active:after,
+.nav.nav-tabs > li:hover:after {
+    width: 100%;
+    background: #666;
+}
+
+.nav-tabs > li > a {
+    color: #666;
+    font-weight: bold;
+    outline: none;
+}
+
+.page-super {
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus,
+    .nav-tabs > li.active > a:hover, .nav-tabs > li > a:hover {
+        color: #e52c3e;
+    }
+
+    .nav.nav-tabs > li.active:after,
+    .nav.nav-tabs > li:hover:after {
+        background: #e52c3e;
+    }
+
+    .nav-tabs > li > a {
+        color: #999;
+    }
+}
+
+.page-master {
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus,
+    .nav-tabs > li.active > a:hover, .nav-tabs > li > a:hover {
+        color: #4DE590;
+    }
+
+    .nav.nav-tabs > li.active:after,
+    .nav.nav-tabs > li:hover:after {
+        background: #4DE590;
+    }
+
+    .nav-tabs > li > a {
+        color: #999;
+    }
+}
+
+.page-agent {
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus,
+    .nav-tabs > li.active > a:hover, .nav-tabs > li > a:hover {
+        color: #2267b6;
+    }
+
+    .nav.nav-tabs > li.active:after,
+    .nav.nav-tabs > li:hover:after {
+        background: #516e8f;
+    }
+
+    .nav-tabs > li > a {
+        color: #333;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .nav.nav-tabs > li:hover:after {
+        width: 0;
+    }
+
+    .nav.nav-tabs > li.active:after {
+        width: 100%;
+    }
+}

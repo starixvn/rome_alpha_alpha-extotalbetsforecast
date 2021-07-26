@@ -23,17 +23,36 @@ namespace Fanex.Age.UI.TotalBets
     using Sunplus.Agent.Model.BL.Definitions;
     using Sunplus.Agent.Model.BL.TotalBets;
     using Sunplus.Agent.Utilities;
+    using Fanex.Razorbill.Module.Core.Web;
+    using Fanex.Razorbill.Module.Core.Utils;
 
     public partial class HomeDrawAwayNoBet_Page : TotalBets_Page
     {
+        #region Variable
+        private string rowBgOdd = Fanex.Age.UI.Common.RowBgOdd;
+        private string rowBgEven = Fanex.Age.UI.Common.RowBgEven;
+        private string rowBgLive = Fanex.Age.UI.Common.RowBgLive;
+        private string rowBgClosed = Fanex.Age.UI.Common.RowBgClosed;
+        #endregion
+
         #region Override
 
         public override void RenderContent(HtmlTextWriter writer)
         {
+            var darkModeName = CurrentUserSession.DarkModeName;
+            if (!string.IsNullOrWhiteSpace(darkModeName))
+            {
+                rowBgOdd = DarkModeColor.RowBgOdd;
+                rowBgEven = DarkModeColor.RowBgEven;
+                rowBgLive = DarkModeColor.RowBgLive;
+                rowBgClosed = DarkModeColor.RowBgClosed;
+            }
+
             DataTable oddEventOneXTwo = View as DataTable;
 
             HomeDrawAwayNoBet_Template tpl = new HomeDrawAwayNoBet_Template();
-            
+            tpl.DarkModeName = darkModeName;
+
             tpl.Contents.LeagueContents.Clear();
 
             if (oddEventOneXTwo.Rows.Count > 0)
@@ -132,7 +151,7 @@ namespace Fanex.Age.UI.TotalBets
             // Row Color  and time value
             if (Convert.ToInt16(dr["liveindicator"]) == 1)
             {
-                matchBlock.ColorClass = Fanex.Age.UI.Common.RowBgLive;
+                matchBlock.ColorClass = rowBgLive;
                 matchBlock.TimeValue = dr["livehomescore"] + " - " + dr["liveawayscore"];
                 matchBlock.LiveNotice.Show();
             }
@@ -140,11 +159,11 @@ namespace Fanex.Age.UI.TotalBets
             {
                 if (dr.Table.Columns.Contains("closed") && Convert.ToInt32(dr["closed"]) != 0)
                 {
-                    matchBlock.ColorClass = Fanex.Age.UI.Common.RowBgClosed;
+                    matchBlock.ColorClass = rowBgClosed;
                 }
                 else
                 {
-                    matchBlock.ColorClass = (matchIndex % 2) == 0 ? Fanex.Age.UI.Common.RowBgEven : Fanex.Age.UI.Common.RowBgOdd;
+                    matchBlock.ColorClass = (matchIndex % 2) == 0 ? rowBgEven : rowBgOdd;
                 }
 
                 matchBlock.TimeValue = dr["showtime"].ToString();

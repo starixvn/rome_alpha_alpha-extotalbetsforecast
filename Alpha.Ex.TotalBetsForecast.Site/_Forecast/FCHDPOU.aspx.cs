@@ -41,6 +41,7 @@ namespace Fanex.Age.UI.Forecast
         {
             DataTable fcData = (View as Dictionary<String, DataTable>)[FC_DATA];
             FCHDPOU_Template tpl = new FCHDPOU_Template();
+            tpl.DarkModeName = CurrentUserSession.DarkModeName;
 
             // Header name
             RenderLeagueList(tpl.Content);

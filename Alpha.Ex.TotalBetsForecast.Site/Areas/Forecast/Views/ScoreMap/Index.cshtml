@@ -60,6 +60,7 @@
     bool fromBetList = !string.IsNullOrEmpty(matchIds);
     var bettypes = (IList<ScoreMapBetType>[])ViewBag.Bettypes;
     var leagues = (IList<SelectListItem>)ViewBag.Leagues;
+    var darkModeName = ViewData["DarkModeName"];
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -68,9 +69,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ForecastLang.ScoreMap</title>
-    <link href="@Url.Content("~/App_Themes/Apo/Common/Agent.min.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew.min.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/App_Themes/Apo/Forecast/ScoreMap/style.min.css")?v=1" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content(string.Format("~/App_Themes/Apo/Common/Agent{0}.min.css", darkModeName))" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content(string.Format("~/App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew{0}.min.css", darkModeName))" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content(string.Format("~/App_Themes/Apo/Forecast/ScoreMap/style{0}.min.css?v=1", darkModeName))" rel="stylesheet" type="text/css" />
 </head>
 <body class="@(fromBetList ? "from-betlist" : "")">
     <div id="page_main">

@@ -6,6 +6,8 @@ using Alpha.Web.Helpers;
 using Fanex.Age.UI.Components;
 using Fanex.Razorbill.Module.Core.Services.Impl;
 using Sunplus.Agent.Utilities;
+using Fanex.Razorbill.Module.Core.Web;
+using Fanex.Razorbill.Module.Core.Utils;
 /*
  * Created 20100507@Jacob - Render MoneyLine page
  * Revision:
@@ -16,13 +18,28 @@ namespace Fanex.Age.UI.TotalBets
 {
     public partial class MoneyLine_Page : TotalBets_Page
     {
+        #region Variable
+        private string rowBgOdd = Fanex.Age.UI.Common.RowBgOdd;
+        private string rowBgEven = Fanex.Age.UI.Common.RowBgEven;
+        private string rowBgClosed = Fanex.Age.UI.Common.RowBgClosed;
+        #endregion
+
         #region Override
 
         public override void RenderContent(HtmlTextWriter writer)
         {
+            var darkModeName = CurrentUserSession.DarkModeName;
+            if (!string.IsNullOrWhiteSpace(darkModeName))
+            {
+                rowBgOdd = DarkModeColor.RowBgOdd;
+                rowBgEven = DarkModeColor.RowBgEven;
+                rowBgClosed = DarkModeColor.RowBgClosed;
+            }
+
             DataTable moneyLineList = View as DataTable;
 
             MoneyLine_Template tpl = new MoneyLine_Template();
+            tpl.DarkModeName = darkModeName;
             tpl.Contents.LeagueContents.Clear();
 
             if (moneyLineList.Rows.Count > 0)
@@ -122,15 +139,15 @@ namespace Fanex.Age.UI.TotalBets
 
             if (dr.Table.Columns.Contains("closed") && Convert.ToInt32(dr["closed"]) != 0)
             {
-                matchBlock.ColorClass = Fanex.Age.UI.Common.RowBgClosed;
+                matchBlock.ColorClass = rowBgClosed;
             }
             else if (matchIndex % 2 == 0)
             {
-                matchBlock.ColorClass = Fanex.Age.UI.Common.RowBgEven;
+                matchBlock.ColorClass = rowBgEven;
             }
             else
             {
-                matchBlock.ColorClass = Fanex.Age.UI.Common.RowBgOdd;
+                matchBlock.ColorClass = rowBgOdd;
             }
             matchBlock.ColorOver = Fanex.Age.UI.Common.RowBgOver;
             matchBlock.NoValue = rowIndex.ToString();

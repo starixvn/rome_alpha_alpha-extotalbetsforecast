@@ -93,8 +93,8 @@
       <HintPath>..\packages\Fanex.Age.UI.3.0.3.0\lib\net461\Fanex.Age.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Age.UI.Components, Version=3.0.2.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Age.UI.Components.3.0.2.5\lib\net461\Fanex.Age.UI.Components.dll</HintPath>
+    <Reference Include="Fanex.Age.UI.Components, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Age.UI.Components.3.0.2.4-dark06\lib\net461\Fanex.Age.UI.Components.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Caching, Version=1.0.404.95, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Caching.1.0.404.96\lib\net40\Fanex.Caching.dll</HintPath>
@@ -273,8 +273,8 @@
     <Reference Include="Sunplus.Agent.Model.Auth, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.2.1\lib\net461\Sunplus.Agent.Model.Auth.dll</HintPath>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.5.8, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.5.8\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.5.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.5.9-dark01\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Casino, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.Casino.3.0.0.1\lib\net40\Sunplus.Agent.Model.Casino.dll</HintPath>
@@ -424,11 +424,23 @@
     <Content Include="App_Themes\AgencyV2\Images\right_button.jpg" />
     <Content Include="App_Themes\AgencyV2\tabmenu.css" />
     <Content Include="App_Themes\AgencyV2\thickbox.css" />
+    <Content Include="App_Themes\Apo\Common\Agent-dark.css">
+      <DependentUpon>Agent-dark.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Common\Agent-dark.min.css">
+      <DependentUpon>Agent-dark.css</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Apo\Common\Agent.css">
       <DependentUpon>Agent.scss</DependentUpon>
     </Content>
     <Content Include="App_Themes\Apo\Common\Agent.min.css">
       <DependentUpon>Agent.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Common\SubTabs-dark.css">
+      <DependentUpon>SubTabs-dark.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Common\SubTabs-dark.min.css">
+      <DependentUpon>SubTabs-dark.css</DependentUpon>
     </Content>
     <Content Include="App_Themes\Apo\Common\SubTabs.css">
       <DependentUpon>SubTabs.scss</DependentUpon>
@@ -448,11 +460,23 @@
     <Content Include="App_Themes\Apo\Components\AGEWnd\AGEWnd.min.css">
       <DependentUpon>AGEWnd.scss</DependentUpon>
     </Content>
+    <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew-dark.css">
+      <DependentUpon>ErrorMsgNew-dark.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew-dark.min.css">
+      <DependentUpon>ErrorMsgNew-dark.css</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew.css">
       <DependentUpon>ErrorMsgNew.scss</DependentUpon>
     </Content>
     <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew.min.css">
       <DependentUpon>ErrorMsgNew.css</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown-dark.css">
+      <DependentUpon>RefreshCountDown-dark.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown-dark.min.css">
+      <DependentUpon>RefreshCountDown-dark.css</DependentUpon>
     </Content>
     <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.css">
       <DependentUpon>RefreshCountDown.scss</DependentUpon>
@@ -460,11 +484,23 @@
     <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown.min.css">
       <DependentUpon>RefreshCountDown.scss</DependentUpon>
     </Content>
+    <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style-dark.css">
+      <DependentUpon>style-dark.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style-dark.min.css">
+      <DependentUpon>style-dark.css</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style.css">
       <DependentUpon>style.scss</DependentUpon>
     </Content>
     <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style.min.css">
       <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Forecast\FC-dark.css">
+      <DependentUpon>FC-dark.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Forecast\FC-dark.min.css">
+      <DependentUpon>FC-dark.css</DependentUpon>
     </Content>
     <Content Include="App_Themes\Apo\Forecast\FC.css">
       <DependentUpon>FC.scss</DependentUpon>
@@ -495,14 +531,26 @@
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\letter_icoconts.png" />
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\Loading.gif" />
     <Content Include="App_Themes\Apo\Forecast\ScoreMap\Images\Refresh.png" />
-    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style.css" />
-    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style.min.css" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style-dark.css">
+      <DependentUpon>style-dark.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style-dark.min.css">
+      <DependentUpon>style-dark.css</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style.css">
+      <DependentUpon>style.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Apo\Images\1F.gif" />
     <Content Include="App_Themes\Apo\Images\1L.gif" />
     <Content Include="App_Themes\Apo\Images\ajax-loader.gif" />
     <Content Include="App_Themes\Apo\Images\bg-banner.png" />
     <Content Include="App_Themes\Apo\Images\bg_head05.jpg" />
+    <Content Include="App_Themes\Apo\Images\btDown-large-dark.png" />
     <Content Include="App_Themes\Apo\Images\btDown-large.png" />
+    <Content Include="App_Themes\Apo\Images\btRefresh-large-dark.png" />
     <Content Include="App_Themes\Apo\Images\btRefresh-large.png" />
     <Content Include="App_Themes\Apo\Images\buttons.png" />
     <Content Include="App_Themes\Apo\Images\cal.gif" />
@@ -543,6 +591,12 @@
     <Content Include="App_Themes\Apo\Images\tooltip_left.png" />
     <Content Include="App_Themes\Apo\Images\tooltip_right.png" />
     <Content Include="App_Themes\Apo\Images\x5.gif" />
+    <Content Include="App_Themes\Apo\TotalBets\TotalBets-dark.css">
+      <DependentUpon>TotalBets-dark.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Apo\TotalBets\TotalBets-dark.min.css">
+      <DependentUpon>TotalBets-dark.css</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Apo\TotalBets\TotalBets.css">
       <DependentUpon>TotalBets.scss</DependentUpon>
     </Content>
@@ -945,6 +999,21 @@
   <ItemGroup>
     <Content Include="Alpha.Ex.TotalBetsForecast.Site.ruleset" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Apo\Common\_Variables-dark.scss" />
+    <Content Include="App_Themes\Apo\Common\Agent-dark.scss" />
+    <Content Include="App_Themes\Apo\Common\SubTabs-dark.scss" />
+    <Content Include="App_Themes\Apo\TotalBets\TotalBets-dark.scss" />
+    <Content Include="App_Themes\Apo\Components\RefreshCountDown\RefreshCountDown-dark.scss" />
+    <Content Include="App_Themes\Apo\Forecast\FC-dark.scss" />
+    <Content Include="App_Themes\Apo\Forecast\ScoreMap\style-dark.scss" />
+    <Content Include="App_Themes\Apo\Components\ErrorMsg\ErrorMsgNew-dark.scss" />
+    <Content Include="App_Themes\Apo\Forecast\BetTypesInfo\style-dark.scss" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
