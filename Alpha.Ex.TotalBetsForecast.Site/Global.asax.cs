@@ -13,11 +13,19 @@
     using Alpha.Web.Exceptions;
     using Alpha.Web.Filters;
     using Alpha.Web.Helpers;
+    using Fanex.Caching;
     using Fanex.Data.Configuration;
     using Fanex.Logging.Extensions.Database;
     using Fanex.Logging.Extensions.Web;
     using Fanex.Razorbill.Security.Services.Authentication;
     using Fanex.RemotingRef;
+    using ONEbook.UM;
+    using ONEbook.UM.AspNetMVC.Filters;
+    using ONEbook.UM.Configurations;
+    using ONEbook.UM.Helpers;
+    using ONEbook.UM.NETFramework;
+    using ONEbook.UM.Services;
+    using ONEbook.UM.Transport;
     using Sunplus.Agent.Model.Entities;
 
     public class Global : System.Web.HttpApplication
@@ -35,9 +43,15 @@
 
             AreaRegistration.RegisterAllAreas();
             RouterConfig.RegisterRoutes(RouteTable.Routes);
+
+            var umConfig = new UMClientConfiguration().Initialize();
+            UMClientManager
+                .UseConfig(umConfig)
+                .UseCacheService(new UMCacheService(CacheService.CreateInstance(CacheType.MemoryCache)))
+                .UseRestClient(new UMRestClient(umConfig))
+                .UseHttpContext(new HttpContextHelper());
             RegisterGlobalFilters(GlobalFilters.Filters);
             MvcHandler.DisableMvcResponseHeader = true;
-
 
             RefDataTypeContainer
                 .ConnectTo(new Uri(ConfigurationManager.AppSettings["RemoteRefURL"]))
@@ -172,6 +186,8 @@
             filters.Add(new HandleErrorAttribute());
             filters.Add(new AfterLoginFlowFilter());
             filters.Add(new PartialUMExceptionFilter(true));
+            filters.Add(new CheckUMFilterAttribute(
+                new MaintenanceService(UMClientManager.RestClient, UMClientManager.CacheService, UMClientManager.UMClientConfigs, UMClientManager.HttpContext), null));
         }
 
         private static bool CheckUnderMainternanceTime()
