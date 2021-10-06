@@ -39,7 +39,7 @@ body.from-betlist {
         weight: bold;
     }
     cursor: pointer;
-    color: #90979a; 
+    color: #EDEDED; 
 
     &:before {
         content: '\e90d';  
@@ -48,9 +48,11 @@ body.from-betlist {
 
 .refresh {   
     @extend %icon;
-    margin-right: 15px;
-    margin-top: 5px;    
+    margin-right: 25px;  
     @include ripple-effect-icon($top: -2px, $margin-left: -6px);
+}
+#League {
+    margin: 0 12px;
 }
 
 .infoIco {
@@ -352,10 +354,10 @@ div.loading {
     font-weight: bold;
 }
 .vScoreMap {
-    background-color: #212223;
+    background-color: #16191C;
     font-weight: bold
 }
-.csm { background-color: #212223 !important; font-weight: bold}
+.csm { font-weight: bold}
 .even_row { background-color: #faf9ee; }
 .round { 
     background-color: #666;
