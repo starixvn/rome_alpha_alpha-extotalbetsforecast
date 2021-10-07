@@ -19,21 +19,23 @@
 }
 
 %msg {
-    line-height: 20px;
     margin-top: 8px;
     padding: 8px;
     text-align: left;
     vertical-align: middle;
-    position: relative;  
+    position: relative;
+    display: flex;
+    line-height: 1;
+    align-items: center;
     @include border-radius(2px);
     @include box-sizing;
 }
 
 .msgerr, .EnrichErrmsg {
     @extend %msg;
-	background-color: $msg-error-bg;
-    border: 1px solid $msg-error-border;
-    color: $msg-error-color;
+    background-color: #361212;
+    border: 1px solid #CC7070;
+    color: #CC7070;
 
     &:before {
         @extend %icon;
