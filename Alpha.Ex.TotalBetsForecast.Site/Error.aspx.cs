@@ -9,6 +9,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
+using System.Data.Common;
 
 public partial class Error : System.Web.UI.Page
 {
@@ -35,18 +36,24 @@ public partial class Error : System.Web.UI.Page
     {
         string errCode = Request["err"];
 
-        switch (errCode)
+        if (string.IsNullOrWhiteSpace(Request["err"]))
         {
-            case "403":
-                ErrorMessage = Resources.Lang.HttpError_403;
-                break;
-            case "404":
-                ErrorMessage = Resources.Lang.HttpError_404;
-                break;
-            default:
-                ErrorMessage = Resources.Lang.HttpError_Default;
-                break;
+            var ex = Server.GetLastError();
+            if (ex is DbException)
+            {
+                errCode = "5002";
+            }
+            else if (ex is HttpException)
+            {
+                errCode = ((HttpException)ex).GetHttpCode().ToString();
+            }
+            else
+            {
+                errCode = "5000";
+            }
         }
+
+        ErrorMessage = string.Format(Resources.Lang.HttpError_Default, errCode);
 
         base.OnLoad(e);
     }
