@@ -99,6 +99,7 @@
     </Reference>
     <Reference Include="Fanex.Caching, Version=1.0.404.95, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Caching.1.0.404.96\lib\net40\Fanex.Caching.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Common, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Common.1.1.0.1\lib\net40\Fanex.Common.dll</HintPath>
@@ -186,9 +187,8 @@
       <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\ILogger.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
-      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\log4net.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="MessagePack, Version=1.7.3.4, Culture=neutral, PublicKeyToken=b4a0369545f0a1be, processorArchitecture=MSIL">
       <HintPath>..\packages\MessagePack.1.7.3.4\lib\net45\MessagePack.dll</HintPath>
@@ -271,12 +271,11 @@
       <HintPath>..\packages\SPSRemoting.1.0.0\lib\net40\SPSRemoting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Auth, Version=3.0.1.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.1.2\lib\net461\Sunplus.Agent.Model.Auth.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Sunplus.Agent.Model.Auth, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.2.1\lib\net461\Sunplus.Agent.Model.Auth.dll</HintPath>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.5.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.5.1\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.5.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.5.8\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Casino, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.Casino.3.0.0.1\lib\net40\Sunplus.Agent.Model.Casino.dll</HintPath>
@@ -622,36 +621,42 @@
     <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.Internal\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.Internal\DBONUSER.ON_USER.xml" />
     <Content Include="Web.Configuration\StoreProcedure.mnl\DB053_DB054.bodb_AGE.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Configuration\StoreProcedure.mnl\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.mnl\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.mnl\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.mnl\DBONUSER.ON_USER.xml" />
     <Content Include="Web.Configuration\StoreProcedure.pro\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.pro\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.pro\DB053_DB054.bodb_AGE.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Configuration\StoreProcedure.pro\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.pro\DBONUSER.ON_USER.xml" />
     <Content Include="Web.Configuration\StoreProcedure.sit\DB053_DB054.bodb_AGE.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.sit\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.sit\DBONUSER.ON_USER.xml" />
     <Content Include="Web.Configuration\StoreProcedure.uat\DB053_DB054.bodb_AGE.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure.uat\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure.uat\DBONUSER.ON_USER.xml" />
     <Content Include="Web.Configuration\StoreProcedure\DB053_DB054.bodb_AGE.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb02_DB054.bodb02.xml" />
     <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb_AGE.xml" />
+    <Content Include="Web.Configuration\StoreProcedure\DBONUSER.ON_USER.xml" />
     <Content Include="WhoamI.aspx" />
     <Content Include="_Components\AGEWnd\AGEWnd.js" />
     <Content Include="_Components\AGEWnd\AGEWnd.min.js">

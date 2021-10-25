@@ -6,6 +6,7 @@
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
+    using System.Web.Security;
     using System.Web.SessionState;
     using Alpha.Ex.TotalBetsForecast.Site.App_Start;
     using Alpha.Logging;
@@ -19,6 +20,8 @@
     using Fanex.Logging.Extensions.Web;
     using Fanex.Razorbill.Security.Services.Authentication;
     using Fanex.RemotingRef;
+    using Sunplus.Agent.Model.Auth;
+    using Sunplus.Agent.Model.BL.Authorization;
     using ONEbook.UM;
     using ONEbook.UM.AspNetMVC.Filters;
     using ONEbook.UM.Configurations;
@@ -63,7 +66,7 @@
             if (!CheckUnderMainternanceTime())
             {
                 Exception ex = Server.GetLastError();
-                
+
                 var innerException = ex.InnerException;
                 if (innerException != null)
                 {
@@ -147,10 +150,32 @@
 
                 if (closedOrLockedStatus.IsClosed || closedOrLockedStatus.IsLocked)
                 {
-                    Session.Clear();
-                    Response.Redirect(MicroSites.OldMainUrl("~/_Authorization/SignIn.aspx"), true);
+                    TerminateSessionAndSignOut();
+                    return;
                 }
             }
+
+            if (CheckDuplicationLogin(userSession))
+            {
+                return;
+            }
+
+            if (userSession.IsProtectedMode)
+            {
+                TerminateSessionAndSignOut();
+            }
+        }
+
+        private void TerminateSessionAndSignOut()
+        {
+            Session.Clear();
+
+            if (!Session.IsCookieless)
+            {
+                FormsAuthentication.SignOut();
+            }
+
+            Response.Redirect(MicroSites.OldMainUrl(FormsAuthentication.LoginUrl), true);
         }
 
         private string GetRequestPath()
@@ -203,6 +228,53 @@
             }
 
             return isUm;
+        }
+
+        private bool CheckDuplicationLogin(IUserSession userSession)
+        {
+            if (userSession.IsInternal
+                || "1" == ConfigurationManager.AppSettings["DisabledCheckDuplicationLogin"])
+            {
+                return false;
+            }
+
+            var custId = userSession.CustId;
+
+            if (custId <= 0 || custId == 68287 || custId == 68289 || custId == 1373389 || custId == 1373580 || custId == 1374738 || custId == 4317260 || custId == 2)
+            {
+                return false;
+            }
+
+            var kickoutInfo = GetKickoutInfo(userSession);
+
+            if (kickoutInfo != null && kickoutInfo.IsKickedOut)
+            {
+                Response.Redirect(MicroSites.MainUrl("~/default/kickout?reason=" + kickoutInfo.KickOutReasonResourceKey), true);
+                return true;
+            }
+
+            return false;
+        }
+
+        private static KickoutInfo GetKickoutInfo(IUserSession userSession)
+        {
+            ICache cache = CacheService.CreateInstance(CacheType.MemoryCache);
+            var recheckInCacheKey = string.Format(
+                "Alpha.Auth.CustContext.RecheckInCacheKey_{0}_{1}_{2}",
+                userSession.CustId,
+                userSession.SubAccId,
+                userSession.OnUserId);
+            var kickoutInfo = cache.Get<KickoutInfo>(recheckInCacheKey);
+
+            if (kickoutInfo == null)
+            {
+                var bo = new AuthorizationBO(userSession.NetSessionId);
+                kickoutInfo = bo.Recheckin(userSession.OnUserId);
+
+                cache.Set(recheckInCacheKey, kickoutInfo, DateTime.Now.AddSeconds(30));
+            }
+
+            return kickoutInfo;
         }
     }
 }
