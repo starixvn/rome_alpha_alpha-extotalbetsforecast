@@ -759,10 +759,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouterConfig.cs" />
-    <Compile Include="Error.aspx.cs">
+    <Content Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    </Content>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
