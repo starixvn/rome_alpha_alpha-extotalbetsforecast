@@ -181,7 +181,7 @@
     <value>ไม่พบหน้านี้ กรุณาเช็คที่อยู่ใหม่</value>
   </data>
   <data name="HttpError_Default" xml:space="preserve">
-    <value>อุ้ย...คุณอยู่ที่นี่เนื่องจากระบบผิดพลาด กรุณาแจ้งผู้ให้บริการ</value>
+    <value>มีปัญหาที่ไม่คาดคิดเกิดขึ้น โปรดติดต่อฝ่ายสนับสนุนลูกค้าหากท่านต้องการความช่วยเหลือ [{0}]</value>
   </data>
   <data name="refresh" xml:space="preserve">
     <value>รีเฟรช</value>

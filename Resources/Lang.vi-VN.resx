@@ -127,7 +127,7 @@
     <value>Website không tìm thấy, Vui lòng kiểm tra lại địa chỉ</value>
   </data>
   <data name="HttpError_Default" xml:space="preserve">
-    <value>Oh …hệ thống đang bi lỗi,Vui lòng báo với người quản lý</value>
+    <value>Rất tiếc, đã xảy ra lỗi không mong muốn với máy chủ. Vui lòng liên hệ với bộ phận chăm sóc khách hàng của chúng tôi để được hỗ trợ. [{0}]</value>
   </data>
   <data name="IsNeutral" xml:space="preserve">
     <value>(N)</value>
