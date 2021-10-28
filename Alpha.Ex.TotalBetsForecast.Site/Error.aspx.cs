@@ -35,13 +35,19 @@ public partial class Error : System.Web.UI.Page
         if (string.IsNullOrWhiteSpace(Request["err"]))
         {
             var ex = Server.GetLastError();
-            if (ex is DbException)
+            var inner = ex.InnerException;
+
+            if (ex is DbException || inner is DbException)
             {
                 errCode = "5002";
             }
             else if (ex is HttpException)
             {
                 errCode = ((HttpException)ex).GetHttpCode().ToString();
+            }
+            else if (inner is HttpException)
+            {
+                errCode = ((HttpException)inner).GetHttpCode().ToString();
             }
             else
             {
