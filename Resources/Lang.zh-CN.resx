@@ -178,7 +178,7 @@
     <value>此网页不存在，请检查网址</value>
   </data>
   <data name="HttpError_Default" xml:space="preserve">
-    <value>哎哟..因为系统故障所以您会身在此处，请向管理层联系吧</value>
+    <value>很抱歉，服务器发生意外错误，请联系我们的客服协助处理。[{0}]</value>
   </data>
   <data name="IsNeutral" xml:space="preserve">
     <value> (N)</value>

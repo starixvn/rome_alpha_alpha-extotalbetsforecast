@@ -97,7 +97,6 @@
             if (!Sunplus.Agent.Model.BL.Definitions.AppSettings.LocalTest)
 #pragma warning restore CS0618 // Type or member is obsolete
             {
-                Server.ClearError();
                 Server.Transfer("~/Error.aspx");
             }
         }

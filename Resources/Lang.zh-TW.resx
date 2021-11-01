@@ -179,7 +179,7 @@
     <value>此網頁不存在，請檢查網址</value>
   </data>
   <data name="HttpError_Default" xml:space="preserve">
-    <value>哎喲..因為系統故障所以您會身在此處，請向管理層聯繫吧</value>
+    <value>很抱歉，伺服器發生意外錯誤，請聯繫我們的客服協助處理。[{0}]</value>
   </data>
   <data name="IsNeutral" xml:space="preserve">
     <value> (N)</value>
