@@ -1057,9 +1057,9 @@ function AddPopupHeight(h) {
 }
 
 function OpenIPInfo(ip) {
-    top.popupManager.openByRelativeUrl('_IPInfo/IpInfo.aspx?ip=' + ip, '', 400, 300);
+    top.popupManager.openByRelativeUrl('_IPInfo/IpInfo.aspx?ip=' + ip, '', 400, 400);
     if (navigator.userAgent.match(/iPad/i) != null) {
-        top.popupManager.openByRelativeUrl('_IPInfo/IpInfo.aspx?ip=' + ip, '', 400, 300);
+        top.popupManager.openByRelativeUrl('_IPInfo/IpInfo.aspx?ip=' + ip, '', 400, 400);
     }
 } /*End*/
 
