@@ -159,7 +159,7 @@
     <input type="hidden" id="requestBettypesDead" value="@bettypesDead" />
 
     <script type="text/javascript">
-        var rootUrl = '@Url.Content("~")';
+        var rootUrl = '@Response.ApplyAppPathModifier("~/")';
         var scoreMapResources = {
             SelectMatch: '@ForecastLang.SelectMatch',
             HideMatch: '@ForecastLang.HideMatch',
