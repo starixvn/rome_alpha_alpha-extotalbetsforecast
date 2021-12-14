@@ -316,6 +316,8 @@ table {
 .tblRpt {
     background-color: #212223;
     border: 1px solid $table-border-color;
+    border-top: none;
+    border-right: none;
 
     tfoot tr:first-child td {
         border-bottom: 1px solid $table-border-color;
@@ -351,6 +353,7 @@ table {
         color: $table-footer-color;
         font-weight: 700;
     }
+
     .highlight {
         background-color: #4e4e4e;
     }
