@@ -274,7 +274,7 @@
       <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.2.1\lib\net461\Sunplus.Agent.Model.Auth.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.5.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.5.9-dark02\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.5.9-dark03\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Casino, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.Casino.3.0.0.1\lib\net40\Sunplus.Agent.Model.Casino.dll</HintPath>
@@ -966,6 +966,10 @@
     <ProjectReference Include="..\Fanex.Age.UI.Totalbets\Fanex.Age.UI.TotalBets.csproj">
       <Project>{4eeee9b8-03de-47f4-a7fd-b8f9da4cc1ee}</Project>
       <Name>Fanex.Age.UI.TotalBets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fanex.Razorbill.Module.Core\_Core.csproj">
+      <Project>{af2e11aa-2a92-47ac-86fa-4d48b0aeb5d7}</Project>
+      <Name>_Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Fanex.Razorbill.Module.Forecast\Fanex.Razorbill.Module.Forecast.csproj">
       <Project>{198dad45-b04e-4c2c-838e-c0b080ac7b8b}</Project>

@@ -18,6 +18,7 @@ namespace Fanex.Age.UI.Forecast
     using Sunplus.Agent.Model.BL.Forecast;
     using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Utilities;
+    using Fanex.Razorbill.Module.Core.Web;
 
     public partial class FCHDPOU_Page : Fanex.Age.UI.TplPage
     {
@@ -41,7 +42,7 @@ namespace Fanex.Age.UI.Forecast
         {
             DataTable fcData = (View as Dictionary<String, DataTable>)[FC_DATA];
             FCHDPOU_Template tpl = new FCHDPOU_Template();
-            tpl.DarkModeName = CurrentUserSession.DarkModeName;
+            tpl.DarkModeName = DarkModeHelper.GetDarkModeName(CurrentUserSession);
 
             // Header name
             RenderLeagueList(tpl.Content);

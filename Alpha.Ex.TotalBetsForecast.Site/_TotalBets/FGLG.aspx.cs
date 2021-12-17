@@ -31,7 +31,7 @@ namespace Fanex.Age.UI.TotalBets
         #region Override
         public override void RenderContent(HtmlTextWriter writer)
         {
-            var darkModeName = CurrentUserSession.DarkModeName;
+            var darkModeName = DarkModeHelper.GetDarkModeName(CurrentUserSession);
             if (!string.IsNullOrWhiteSpace(darkModeName))
             {
                 rowBgOdd = DarkModeColor.RowBgOdd;
