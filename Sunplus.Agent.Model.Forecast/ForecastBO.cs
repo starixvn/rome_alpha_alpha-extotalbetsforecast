@@ -9,6 +9,8 @@ namespace Sunplus.Agent.Model.BL.Forecast
     using System.Linq;
     using Alpha.Web.Helpers;
     using Alpha.Web.Helpers.Impl;
+    using Fanex.Caching.Memory;
+    using Fanex.Razorbill.Module.Common.Services;
 
     [Obsolete("Should rename to Sunplus.Agent.Model.Forecast")]
     public class ForecastBO : Sunplus.Agent.Model.BL.Base.BOBase
@@ -17,14 +19,14 @@ namespace Sunplus.Agent.Model.BL.Forecast
 
         private const string BetTypeScoreMapKey = "BETTYPESCOREMAP";
         private const string BetTypeListScoreMapKey = "BETTYPESLISTCOREMAP";
-        private static readonly ForecastDAO ForecastDataAccess = new ForecastDAO();
+        private static readonly ForecastDAO ForecastDataAccess = new ForecastDAO();       
         private readonly PartialUMService partialUMService;
         #endregion Variable
 
         public ForecastBO(string netSessionId)
             : base(netSessionId)
         {
-            partialUMService = new PartialUMServiceImpl();
+            partialUMService = new PartialUMServiceImpl();          
         }
 
         #region TopOddsByMatch
@@ -369,14 +371,14 @@ namespace Sunplus.Agent.Model.BL.Forecast
         /// <returns></returns>
         public static DataTable GetBetTypeScoreMap()
         {
-            ICache cache = CacheService.CreateInstance(CacheType.MemoryCache);
-            object oldData = cache.Get<DataTable>(BetTypeScoreMapKey);
+            var cacheService = CacheFactory.MemoryCacheService;
+            object oldData = cacheService.Get<DataTable>(BetTypeScoreMapKey);
             if (oldData == null)
             {
                 DataTable bettypeIds = ForecastDataAccess.Age_ScoreMap_SelBettype();
 
                 // Store in cache
-                cache.Set<DataTable>(BetTypeScoreMapKey, bettypeIds, TimeSpan.FromHours(2));
+                cacheService.Set<DataTable>(BetTypeScoreMapKey, bettypeIds, new CacheItemOptions().SetAbsoluteExpiration(TimeSpan.FromHours(2)));
 
                 return bettypeIds;
             }
@@ -386,8 +388,8 @@ namespace Sunplus.Agent.Model.BL.Forecast
 
         public static List<int> GetListBetTypeScoreMap()
         {
-            ICache cache = CacheService.CreateInstance(CacheType.MemoryCache);
-            object oldData = cache.Get<List<int>>(BetTypeListScoreMapKey);
+            var cacheService = CacheFactory.MemoryCacheService;
+            object oldData = cacheService.Get<List<int>>(BetTypeListScoreMapKey);
             if (oldData == null)
             {
                 string firstId;
@@ -411,7 +413,7 @@ namespace Sunplus.Agent.Model.BL.Forecast
                 }
 
                 // Store in cache
-                cache.Set<List<int>>(BetTypeListScoreMapKey, bettypeIds, TimeSpan.FromHours(2));
+                cacheService.Set<List<int>>(BetTypeListScoreMapKey, bettypeIds, new CacheItemOptions().SetAbsoluteExpiration(TimeSpan.FromHours(2)));
 
                 return bettypeIds;
             }
