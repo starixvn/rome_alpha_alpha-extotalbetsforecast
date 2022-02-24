@@ -245,10 +245,6 @@ div.loading {
     }
 
     tbody {
-        tr:hover td {
-            background-color: #3c3c3c;
-        }
-
         tr td:hover {
             background-color: $table-td-hover-color !important;
         }
