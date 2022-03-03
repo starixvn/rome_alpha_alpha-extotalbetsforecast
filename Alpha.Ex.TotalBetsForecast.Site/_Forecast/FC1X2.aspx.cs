@@ -9,6 +9,9 @@ using Fanex.Age.UI.Components;
 using Fanex.Razorbill.Module.Core.Services.Impl;
 using Sunplus.Agent.Model.BL.Forecast;
 using Sunplus.Agent.Utilities;
+using Fanex.Razorbill.Module.Core.Utils;
+using Fanex.Razorbill.Module.Core.Web;
+
 /*
  * Created 20100529@Jacob - Render FC1X2 page
  * Revision:
@@ -40,9 +43,9 @@ namespace Fanex.Age.UI.Forecast
         /// <param name="writer"></param>
         public override void RenderContent(HtmlTextWriter writer)
         {
-
             DataTable fcData = (View as Dictionary<String, DataTable>)[FC_DATA];
             FC1X2_Template tpl = new FC1X2_Template();
+            tpl.DarkModeName = DarkModeHelper.GetDarkModeName(CurrentUserSession);
 
             RenderLeagueList(tpl.Content);
             //Render row content

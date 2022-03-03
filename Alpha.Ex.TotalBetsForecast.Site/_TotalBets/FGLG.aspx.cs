@@ -11,6 +11,8 @@ using Fanex.Razorbill.Module.Core.Services.Impl;
 using Sunplus.Agent.Model.BL.Definitions;
 using Sunplus.Agent.Model.BL.TotalBets;
 using Sunplus.Agent.Utilities;
+using Fanex.Razorbill.Module.Core.Web;
+using Fanex.Razorbill.Module.Core.Utils;
 /*
  * Created 20100507@Jacob - Render FGLG page
  * Revision:
@@ -21,12 +23,25 @@ namespace Fanex.Age.UI.TotalBets
 {
     public partial class FGLG_Page : TotalBets_Page
     {
+        #region Variable
+        private string rowBgOdd = Fanex.Age.UI.Common.RowBgOdd;
+        private string rowBgEven = Fanex.Age.UI.Common.RowBgEven;
+        #endregion
+
         #region Override
         public override void RenderContent(HtmlTextWriter writer)
         {
+            var darkModeName = DarkModeHelper.GetDarkModeName(CurrentUserSession);
+            if (!string.IsNullOrWhiteSpace(darkModeName))
+            {
+                rowBgOdd = DarkModeColor.RowBgOdd;
+                rowBgEven = DarkModeColor.RowBgEven;
+            }
+
             DataTable FGLGList = View as DataTable;
 
             FGLG_Template tpl = new FGLG_Template();
+            tpl.DarkModeName = darkModeName;
 
             tpl.Contents.LeagueContents.Clear();
             if (FGLGList.Rows.Count > 0)
@@ -123,7 +138,7 @@ namespace Fanex.Age.UI.TotalBets
         private void RenderMatchRow(FGLG_Contents_LeagueContents_MatchContents_Block matchBlock, DataRow dr, int matchIndex, int rowIndex)
         {
             matchBlock.ColorOver = Fanex.Age.UI.Common.RowBgOver;
-            matchBlock.ColorClass = (matchIndex % 2) == 0 ? Fanex.Age.UI.Common.RowBgEven : Fanex.Age.UI.Common.RowBgOdd;
+            matchBlock.ColorClass = (matchIndex % 2) == 0 ? rowBgEven : rowBgOdd;
             matchBlock.NoValue = rowIndex.ToString();
             matchBlock.TimeValue = dr["showtime"].ToString();
             matchBlock.HomeValue = CacheRef.GetTeamName(Convert.ToInt32(dr["homeid"])) + ((bool)dr["isNeutral"] ? Resources.Lang.IsNeutral : string.Empty);

@@ -6,6 +6,8 @@ using Alpha.Web.Helpers;
 using Fanex.Age.UI.Components;
 using Fanex.Razorbill.Module.Core.Services.Impl;
 using Sunplus.Agent.Utilities;
+using Fanex.Razorbill.Module.Core.Web;
+using Fanex.Razorbill.Module.Core.Utils;
 /*
  * Created 20100507@Jacob - Render HTFT page
  * Revision:
@@ -16,13 +18,28 @@ namespace Fanex.Age.UI.TotalBets
 {
     public partial class HTFT_Page : TotalBets_Page
     {
+        #region Variable
+        private string rowBgOdd = Fanex.Age.UI.Common.RowBgOdd;
+        private string rowBgEven = Fanex.Age.UI.Common.RowBgEven;
+        private string rowBgClosed = Fanex.Age.UI.Common.RowBgClosed;
+        #endregion
+
         #region Override
 
         public override void RenderContent(HtmlTextWriter writer)
         {
+            var darkModeName = DarkModeHelper.GetDarkModeName(CurrentUserSession);
+            if (!string.IsNullOrWhiteSpace(darkModeName))
+            {
+                rowBgOdd = DarkModeColor.RowBgOdd;
+                rowBgEven = DarkModeColor.RowBgEven;
+                rowBgClosed = DarkModeColor.RowBgClosed;
+            }
+
             DataTable HTFTList = View as DataTable;
 
             HTFT_Template tpl = new HTFT_Template();
+            tpl.DarkModeName = darkModeName;
 
             tpl.Contents.HTFTContents.Clear();
             if (HTFTList.Rows.Count > 0)
@@ -37,11 +54,11 @@ namespace Fanex.Age.UI.TotalBets
 
                     if (HTFTList.Columns.Contains("closed") && Convert.ToInt32(dr["closed"]) != 0)
                     {
-                        block.ColorClass = Fanex.Age.UI.Common.RowBgClosed;
+                        block.ColorClass = rowBgClosed;
                     }
                     else
                     {
-                        block.ColorClass = (rowIndex % 2) == 0 ? Fanex.Age.UI.Common.RowBgEven : Fanex.Age.UI.Common.RowBgOdd;
+                        block.ColorClass = (rowIndex % 2) == 0 ? rowBgEven : rowBgOdd;
                     }
                     block.ColorOver = Fanex.Age.UI.Common.RowBgOver;
                     block.NoValue = rowIndex.ToString();

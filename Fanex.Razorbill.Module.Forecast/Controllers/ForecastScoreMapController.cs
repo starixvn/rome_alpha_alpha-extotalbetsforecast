@@ -5,6 +5,7 @@
     using System.Web.Mvc;
     using Alpha.Web.Helpers;
     using Alpha.Web.Helpers.Impl;
+    using Fanex.Razorbill.Module.Core.Web;
     using Fanex.Razorbill.Module.Core.Web.Controllers;
     using Fanex.Razorbill.Module.Forecast.Criteria;
     using Fanex.Razorbill.Module.Forecast.Models;
@@ -59,6 +60,9 @@
             }
 
             ViewBag.Bettypes = bettypes;
+
+            ViewData["DarkModeName"] = DarkModeHelper.GetDarkModeName();
+
             return View("~/Areas/Forecast/Views/ScoreMap/Index.cshtml", scoreMaps);
         }
 
@@ -97,6 +101,7 @@
 
         public ActionResult BetTypesInfo()
         {
+            ViewData["DarkModeName"] = DarkModeHelper.GetDarkModeName();
             var bettypesInfo = _forecastService.GetScoreMapBetTypeInfo();
             return View("~/Areas/Forecast/Views/BetTypesInfo/Index.cshtml", bettypesInfo);
         }

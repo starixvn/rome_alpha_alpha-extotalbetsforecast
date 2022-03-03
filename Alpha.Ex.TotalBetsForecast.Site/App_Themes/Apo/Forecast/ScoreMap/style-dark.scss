@@ -1,0 +1,379 @@
+﻿@import "../../Common/_Variables-dark.scss";
+@import "../../Common/_Mixins.scss";
+@import url($icon-alpha-fonts);
+
+@include keyframes-ripple;
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+body.from-betlist {
+    padding: 0;
+}
+
+#page_main {
+    overflow: visible;
+    padding-bottom: 15px;
+}
+
+.header-box {
+    margin-top: 0;
+    padding: 20px 0 8px 0;
+    width: 99%;
+
+    
+    .infoIco:hover:after {
+        top: -2px;
+    }
+}
+
+/**********************************************/
+/* Icons */
+/**********************************************/
+%icon {
+    font:{
+        family: 'Iconalpha';
+        size: 14px;
+        weight: bold;
+    }
+    cursor: pointer;
+    color: #EDEDED; 
+
+    &:before {
+        content: '\e90d';  
+    } 
+}
+
+.refresh {   
+    @extend %icon;
+    margin-right: 25px;  
+    @include ripple-effect-icon($top: -2px, $margin-left: -6px);
+}
+#League {
+    margin: 0 12px;
+}
+
+.infoIco {
+    display: inline-block;
+    margin-bottom: 8px;
+
+    &:before {
+        margin-right: 4px;
+        top: -3px;
+    }
+}
+
+#header_main {
+    .infoIco:hover:after {
+        top: 8px;
+    }
+}
+
+div.loading {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/**********************************************/
+/* Popup */
+/**********************************************/
+ .match-box {
+    background-color: $component-bg-color;
+    border: 1px solid $component-border-color;
+    color: $component-color;
+    position: absolute;
+    left: 0;
+    padding: 0 16px 16px;
+    top: 90px;
+    width: 700px;
+    @include box-shadow(1px, 2px, 6px, rgba(0, 0, 0, 0.2));
+
+    .title {
+        display: table;
+        min-height: 34px;
+        width: 100%;
+        border-bottom: 1px solid $border-color;
+
+        .title-header {
+            font-weight: bold;
+            display: table-cell;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .notification {
+            display: table-cell;
+        }
+
+        .icon-close {
+            cursor: pointer;
+            float: right;
+            margin-top: 10px;
+
+            &:after {                
+                content: '\e92c';
+                font:{
+                    family: 'Iconalpha';
+                    size: 14px;
+                    weight: bold;
+                }
+            }
+
+        }
+
+    }
+
+    .content {
+        padding: 4px 0;
+    }
+
+    .footer {
+        clear: both;
+        padding: 0;
+        text-align: right;
+    }
+
+    .match-list {
+        float: left;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        width: 90%;
+
+        li {
+            float: left;
+            list-style: outside none none;
+            padding: 4px 0;
+            text-align: left;
+            width: 50%;
+
+            input[type="checkbox"] {
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+}
+
+/**********************************************/
+/* Table */
+/**********************************************/
+.tbl-scoremap {
+    margin: 5px;
+}
+
+.tbl-action {
+    border-collapse: collapse;
+    margin-top: 16px;
+
+    #loadingSubmit {
+        padding-left: 15px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .row-action {
+        height: 26px;
+    }
+}
+
+.tbl-nodata {
+    width: 40%;
+}
+
+.tbl-filter {
+    display: inline-block;
+    margin-bottom: 8px;
+
+    .row-league {
+        height: 26px;
+    }
+}
+
+#tblMsgBettype {
+    width: 40%;
+}
+
+#tblMsgMatch {
+    width: 50%;
+}
+
+.tblLiveDead {
+    background-color: #212223;
+    border-collapse: collapse;
+    border: 1px solid #3E3F41;
+    margin: 8px 0 5px;
+    width: 99%;
+    clear: both;
+
+    input[type="checkbox"] {
+        position: relative;
+        top: 2px;
+    }
+
+    td {
+        border: 1px solid #3E3F41;
+        line-height: 24px;
+        padding: 4px;
+
+        &.even_row {
+            background-color: #2E2F30;
+            border-bottom-style: solid;
+            border-right-style: solid;
+        }
+    }
+}
+
+.tblScoreMap {
+    border-collapse: collapse;
+    width: 780px;
+    background-color: #212223;
+
+    td {
+	    color: $text-color;
+	    padding: 4px 8px;
+	    border: solid 1px $table-border-color;
+	    text-align: center;
+        height: $height-normal;
+        @include box-sizing;
+
+        &.red-color {
+            color: $text-red-color-light;
+        }
+    }
+
+    tbody {
+        tr td:hover {
+            background-color: $table-td-hover-color !important;
+        }
+    }
+}
+
+/**********************************************/
+/* Collapse/Expand */
+/**********************************************/
+.button_mid {
+    float: left;
+    font-size: $font-size;
+    height: 32px;
+    min-width: 250px;
+    padding: 8px 0;
+    width: 780px;
+    @include box-sizing;
+
+    .lnkGroup, .lnkGroupClick {
+        color: $text-red-color;
+        cursor: pointer;
+        float: left;
+        font-weight: bold;
+        height: 20px;
+
+        &:before {
+            font-family: 'Iconalpha';
+            font-size: 16px;
+            margin-right: 2px;
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    .lnkGroup:before {        
+        content: '\e928';    
+    }
+
+    .lnkGroupClick:before {        
+        content: '\e929';
+    }
+
+    .lnkRefresh {
+        @extend %icon;
+        float: left;
+        margin: 4px 0 0 12px;
+        @include ripple-effect-icon($top: -1px, $margin-left: -6px);        
+    }
+
+    .lnkRefreshClick {
+        background: url("../../Images/ajax-loader.gif") no-repeat scroll left top transparent;
+        color: #90979a;
+        cursor: pointer;
+        float: right;
+        font-weight: bold;
+        height: 20px;
+        margin-top: 4px;
+        padding-left: 8px;
+        width: 20px;
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+/**********************************************/
+/* Buttons */
+/**********************************************/
+.btn {
+    background-color: $btn-submit-bg;
+    color: $btn-submit-color;
+    margin-right: 0;
+    padding: 0 18px;
+    -webkit-appearance: none;
+
+    &:hover {
+        background-color: $btn-submit-bg-hover;
+        color: $btn-submit-color-hover;
+    }
+}
+
+.clearfix {
+	clear: both;
+	*zoom: 1;
+    &:before, &:after {
+	    content: '';
+	    display: table;
+    }
+    &:after {
+	    clear: both;
+    }
+}
+
+#mainContent { padding-left: 2px; }
+.scoreMap { padding-top: 1px; }
+.vsm td, td.vsm {
+    background-color: #16191C;
+    font-weight: bold;
+}
+.vsmHomeWay td, td.vsmHomeWay {
+    background-color: #2E2F30;
+    font-weight: bold;
+}
+.vScoreMap {
+    background-color: #16191C;
+    font-weight: bold
+}
+.csm { font-weight: bold}
+.even_row { background-color: #faf9ee; }
+.round { 
+    background-color: #666;
+    color: #fff;
+    font-weight: bold;
+    padding-left: 3px;
+    width: 780px;
+    @include box-sizing;
+}
+.haft-time, .full-time {
+    height: $height-normal;
+    line-height: $height-normal;
+    padding-left: 12px;
+}
+.full-time { margin-top: 10px; }
+.paddingTopMatch { margin-top: 10px; }
+.hand { cursor: pointer; }
+.bold { font-weight: bold; }
+.hide { display: none; }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+   
+}

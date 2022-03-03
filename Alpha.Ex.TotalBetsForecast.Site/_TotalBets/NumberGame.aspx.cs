@@ -11,6 +11,8 @@ using Fanex.Razorbill.Module.Core.Services.Impl;
 using Sunplus.Agent.Model.BL.Definitions;
 using Sunplus.Agent.Model.BL.TotalBets;
 using Sunplus.Agent.Utilities;
+using Fanex.Razorbill.Module.Core.Web;
+using Fanex.Razorbill.Module.Core.Utils;
 /*
  * Created 20100507@Jacob - Render TotalGoal page
  * Revision:
@@ -21,13 +23,26 @@ namespace Fanex.Age.UI.TotalBets
 {
     public partial class NumberGame_Page : TotalBets_Page
     {
+        #region Variable
+        private string rowBgOdd = Fanex.Age.UI.Common.RowBgOdd;
+        private string rowBgEven = Fanex.Age.UI.Common.RowBgEven;
+        #endregion
+
         #region Override
 
         public override void RenderContent(HtmlTextWriter writer)
         {
+            var darkModeName = DarkModeHelper.GetDarkModeName(CurrentUserSession);
+            if (!string.IsNullOrWhiteSpace(darkModeName))
+            {
+                rowBgOdd = DarkModeColor.RowBgOdd;
+                rowBgEven = DarkModeColor.RowBgEven;
+            }
+
             DataTable NumberGameList = View as DataTable;
 
             NumberGame_Template tpl = new NumberGame_Template();
+            tpl.DarkModeName = darkModeName;
             tpl.Contents.LeagueContents.Clear();
 
             if (NumberGameList.Rows.Count > 0)
@@ -125,7 +140,7 @@ namespace Fanex.Age.UI.TotalBets
         {
             // Render match content
             matchBlock.ColorOver = Fanex.Age.UI.Common.RowBgOver;
-            matchBlock.ColorClass = (matchIndex % 2) == 0 ? Fanex.Age.UI.Common.RowBgEven : Fanex.Age.UI.Common.RowBgOdd;
+            matchBlock.ColorClass = (matchIndex % 2) == 0 ? rowBgEven : rowBgOdd;
             
             matchBlock.NoValue = rowIndex.ToString();
             matchBlock.GameNo = dr["matchcode"].ToString();

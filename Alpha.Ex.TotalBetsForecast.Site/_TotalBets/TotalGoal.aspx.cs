@@ -6,6 +6,8 @@ using Alpha.Web.Helpers;
 using Fanex.Age.UI.Components;
 using Fanex.Razorbill.Module.Core.Services.Impl;
 using Sunplus.Agent.Utilities;
+using Fanex.Razorbill.Module.Core.Web;
+using Fanex.Razorbill.Module.Core.Utils;
 /*
  * Created 20100507@Jacob - Render TotalGoal page
  * Revision:
@@ -16,14 +18,28 @@ namespace Fanex.Age.UI.TotalBets
 {
     public partial class TotalGoal_Page : TotalBets_Page
     {
+        #region Variable
+        private string rowBgOdd = Fanex.Age.UI.Common.RowBgOdd;
+        private string rowBgEven = Fanex.Age.UI.Common.RowBgEven;
+        private string rowBgClosed = Fanex.Age.UI.Common.RowBgClosed;
+        #endregion
+
         #region Override
 
         public override void RenderContent(HtmlTextWriter writer)
         {
+            var darkModeName = DarkModeHelper.GetDarkModeName(CurrentUserSession);
+            if (!string.IsNullOrWhiteSpace(darkModeName))
+            {
+                rowBgOdd = DarkModeColor.RowBgOdd;
+                rowBgEven = DarkModeColor.RowBgEven;
+                rowBgClosed = DarkModeColor.RowBgClosed;
+            }
 
             DataTable totalGoalList = View as DataTable;
 
             TotalGoal_Template tpl = new TotalGoal_Template();
+            tpl.DarkModeName = darkModeName;
             tpl.Contents.TotalGoalContent.Clear();
 
             if (!Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikEnable)
@@ -44,11 +60,11 @@ namespace Fanex.Age.UI.TotalBets
                     counter++;
                     if (totalGoalList.Columns.Contains("closed") && Convert.ToInt32(dr["closed"]) != 0)
                     {
-                        contentBlock.ColorClass = Fanex.Age.UI.Common.RowBgClosed;
+                        contentBlock.ColorClass = rowBgClosed;
                     }
                     else
                     {
-                        contentBlock.ColorClass = (counter % 2) == 0 ? Fanex.Age.UI.Common.RowBgEven : Fanex.Age.UI.Common.RowBgOdd;
+                        contentBlock.ColorClass = (counter % 2) == 0 ? rowBgEven : rowBgOdd;
                     }
 
                     contentBlock.ColorOver = Fanex.Age.UI.Common.RowBgOver;

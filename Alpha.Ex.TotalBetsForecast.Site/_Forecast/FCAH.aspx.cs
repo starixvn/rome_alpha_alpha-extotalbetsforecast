@@ -17,6 +17,7 @@ namespace Fanex.Age.UI.Forecast
     using Fanex.Razorbill.Module.Core.Services.Impl;
     using Sunplus.Agent.Model.BL.Forecast;
     using Sunplus.Agent.Utilities;
+    using Fanex.Razorbill.Module.Core.Web;
 
     public partial class FCAH_Page : Fanex.Age.UI.TplPage
     {
@@ -227,6 +228,8 @@ namespace Fanex.Age.UI.Forecast
         private void RenderFCAH(HtmlTextWriter writer)
         {
             FCAH_Template tpl = new FCAH_Template();
+            tpl.DarkModeName = DarkModeHelper.GetDarkModeName(CurrentUserSession);
+
             Hashtable viewData = View as Hashtable;
 
             DataTable topodds = viewData["OddsData"] as DataTable;

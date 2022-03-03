@@ -1,0 +1,156 @@
+﻿@import '../Common/_Variables-dark.scss';
+@import '../Common/_Mixins.scss';
+@import url($icon-alpha-fonts);
+
+@include keyframes-ripple;
+
+// To remove the 300-350ms tap delay
+html {
+  touch-action: manipulation;
+}
+
+/*************************************/
+/* Common */
+/*************************************/
+.fl {
+	float: left;
+}
+.b {
+	font-weight: bold;
+}
+.n {
+	font-weight: normal;
+}
+
+select {
+	height: $compopent-height;
+}
+
+.nobold {
+	font-weight: normal;
+}
+
+//.bg_white {
+	//background-color: White;
+//}
+.no_info {
+	text-align: center;
+	background-color: #212223;
+	font-weight: normal;
+}
+
+a.forecast_betlist_link {
+	display: block;
+	float: left;
+}
+a.forecast_toggle_link {
+	display: block;
+	float: right;
+}
+
+/*************************************/
+/* Filter */
+/*************************************/
+
+#page_main {
+	overflow: visible;
+	padding-bottom: 15px;
+}
+
+#box_header
+{
+	margin-bottom: 7px;
+	margin-top: 0;
+	padding: 0;
+    width: 600px;
+
+    .tbl-filter {
+        height: 35px;
+    }
+}
+
+/*************************************/
+/* Icons */
+/*************************************/
+.btnInfo {
+	display: block;
+	margin-left: 3px;
+	margin-right: 3px;
+    text-decoration: none;
+    @include ripple-effect-icon($margin-left: -5px);
+
+    &:before {
+        font:{
+            family: Iconalpha;
+            size: 16px;
+        }
+        float: left;
+        content: '\e930';
+        color: #41A4FF;
+;
+    }
+}
+
+/****************************************/
+/* Table */
+/****************************************/
+
+.tbl-hdpou, .tbl-fc1x2 {
+    .col-time {
+        height: 20px;
+    }
+
+    .col-fulltime, .col-halftime {
+        color: #4288F1;
+        width: 15%;
+    }
+
+    .col-btnInfo {
+        width: 1%;
+    }
+}
+
+.tbl-hdpou {
+    width: 600px;    
+
+    .col-offset, .col-HD, .col-OU, .col-HT {
+        width: 8%;
+    }
+
+    .col-offsetOU, .col-offsetHDP {
+        background-color: rgba(77,46, 24, .8);
+        width: 8%;
+    }
+}
+
+.tbl-fc1x2 {
+
+    .col-x {
+        background-color: rgba(77,46, 24, .8);
+    }
+
+    .col-winlose {
+        width: 8%;
+    }
+}
+
+.league {
+	background-color: $table-league-bg;
+	color: $text-color;
+	font-weight: bold;
+	text-align: left;
+	text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.odd_row {
+	background-color: $table-even-bg;
+}
+.even_row {
+	background-color: $table-odd-bg;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+{
+}
+

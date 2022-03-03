@@ -1,57 +1,78 @@
-[
+﻿[
   {
     "outputFile": "App_Themes/Apo/Common/Agent.css",
-    "inputFile": "App_Themes/Apo/Common/Agent.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/Common/Agent.scss"
   },
   {
     "outputFile": "App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew.css",
-    "inputFile": "App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew.scss"
   },
   {
     "outputFile": "App_Themes/Apo/Components/RefreshCountDown/RefreshCountDown.css",
-    "inputFile": "App_Themes/Apo/Components/RefreshCountDown/RefreshCountDown.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/Components/RefreshCountDown/RefreshCountDown.scss"
   },
   {
     "outputFile": "App_Themes/Apo/TotalBets/TotalBets.css",
-    "inputFile": "App_Themes/Apo/TotalBets/TotalBets.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/TotalBets/TotalBets.scss"
   },
   {
     "outputFile": "App_Themes/Apo/Forecast/FC.css",
-    "inputFile": "App_Themes/Apo/Forecast/FC.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/Forecast/FC.scss"
   },
   {
     "outputFile": "App_Themes/Apo/Forecast/ScoreMap.css",
-    "inputFile": "App_Themes/Apo/Forecast/ScoreMap.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/Forecast/ScoreMap.scss"
   },
   {
     "outputFile": "App_Themes/Apo/Forecast/ScoreMap/style.css",
-    "inputFile": "App_Themes/Apo/Forecast/ScoreMap/style.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/Forecast/ScoreMap/style.scss"
   },
   {
     "outputFile": "App_Themes/Apo/Forecast/BetTypesInfo/style.css",
-    "inputFile": "App_Themes/Apo/Forecast/BetTypesInfo/style.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/Forecast/BetTypesInfo/style.scss"
   },
   {
     "outputFile": "App_Themes/Apo/Components/AGEWnd/AGEWnd.css",
-    "inputFile": "App_Themes/Apo/Components/AGEWnd/AGEWnd.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/Components/AGEWnd/AGEWnd.scss"
   },
   {
     "outputFile": "App_Themes/Apo/Common/Tab.css",
-    "inputFile": "App_Themes/Apo/Common/Tab.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/Common/Tab.scss"
   },
   {
     "outputFile": "App_Themes/Apo/Common/SubTabs.css",
-    "inputFile": "App_Themes/Apo/Common/SubTabs.scss",
-    "sourceMap": false
+    "inputFile": "App_Themes/Apo/Common/SubTabs.scss"
+  },
+  {
+    "outputFile": "App_Themes/Apo/Common/Agent-dark.css",
+    "inputFile": "App_Themes/Apo/Common/Agent-dark.scss"
+  },
+  {
+    "outputFile": "App_Themes/Apo/Common/SubTabs-dark.css",
+    "inputFile": "App_Themes/Apo/Common/SubTabs-dark.scss"
+  },
+  {
+    "outputFile": "App_Themes/Apo/TotalBets/TotalBets-dark.css",
+    "inputFile": "App_Themes/Apo/TotalBets/TotalBets-dark.scss"
+  },
+  {
+    "outputFile": "App_Themes/Apo/Components/RefreshCountDown/RefreshCountDown-dark.css",
+    "inputFile": "App_Themes/Apo/Components/RefreshCountDown/RefreshCountDown-dark.scss"
+  },
+  {
+    "outputFile": "App_Themes/Apo/Forecast/FC-dark.css",
+    "inputFile": "App_Themes/Apo/Forecast/FC-dark.scss"
+  },
+  {
+    "outputFile": "App_Themes/Apo/Forecast/ScoreMap/style-dark.css",
+    "inputFile": "App_Themes/Apo/Forecast/ScoreMap/style-dark.scss"
+  },
+  {
+    "outputFile": "App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew-dark.css",
+    "inputFile": "App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew-dark.scss"
+  },
+  {
+    "outputFile": "App_Themes/Apo/Forecast/BetTypesInfo/style-dark.css",
+    "inputFile": "App_Themes/Apo/Forecast/BetTypesInfo/style-dark.scss"
   }
 ]
