@@ -68,10 +68,10 @@
       <HintPath>..\packages\EasyNetQ.2.3.3\lib\net451\EasyNetQ.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Age.UI, Version=3.0.3.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Age.UI.3.0.3.6-Beta02\lib\net461\Fanex.Age.UI.dll</HintPath>
+      <HintPath>..\packages\Fanex.Age.UI.3.0.3.6\lib\net461\Fanex.Age.UI.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Age.UI.Components, Version=3.0.2.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Age.UI.Components.3.0.2.8-OneRNGDCS01\lib\net461\Fanex.Age.UI.Components.dll</HintPath>
+      <HintPath>..\packages\Fanex.Age.UI.Components.3.0.2.8\lib\net461\Fanex.Age.UI.Components.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Caching, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Caching.2.2.1\lib\net461\Fanex.Caching.dll</HintPath>
@@ -128,7 +128,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Razorbill.Security, Version=3.0.2.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Razorbill.Security.3.0.2.4-Beta02\lib\net461\Fanex.Razorbill.Security.dll</HintPath>
+      <HintPath>..\packages\Fanex.Razorbill.Security.3.0.2.4\lib\net461\Fanex.Razorbill.Security.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.RemotingRef, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.RemotingRef.1.3.0\lib\net461\Fanex.RemotingRef.dll</HintPath>
@@ -216,17 +216,17 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Auth, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.2.3-OneRNGDCS01\lib\net461\Sunplus.Agent.Model.Auth.dll</HintPath>
+      <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.2.3\lib\net461\Sunplus.Agent.Model.Auth.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.5.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.6.2-OneRNGDCS01\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.6.2\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.DataAccessLibrary, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.DataAccessLibrary.3.0.0.2\lib\net40\Sunplus.Agent.Model.DataAccessLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.3.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.3.5-Beta02\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
+      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.3.5\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.IpFormatter, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.IpFormatter.3.0.0.2\lib\net461\Sunplus.Agent.Model.IpFormatter.dll</HintPath>
