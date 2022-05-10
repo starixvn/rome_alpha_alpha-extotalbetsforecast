@@ -1,13 +1,5 @@
 ﻿namespace Alpha.Ex.TotalBetsForecast.Site
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Web;
-    using System.Web.Mvc;
-    using System.Web.Routing;
-    using System.Web.Security;
-    using System.Web.SessionState;
     using Alpha.Ex.TotalBetsForecast.Site.App_Start;
     using Alpha.Logging;
     using Alpha.Web;
@@ -18,10 +10,9 @@
     using Fanex.Data.Configuration;
     using Fanex.Logging.Extensions.Database;
     using Fanex.Logging.Extensions.Web;
+    using Fanex.Razorbill.Module.Common.Services;
     using Fanex.Razorbill.Security.Services.Authentication;
     using Fanex.RemotingRef;
-    using Sunplus.Agent.Model.Auth;
-    using Sunplus.Agent.Model.BL.Authorization;
     using ONEbook.UM;
     using ONEbook.UM.AspNetMVC.Filters;
     using ONEbook.UM.Configurations;
@@ -29,11 +20,20 @@
     using ONEbook.UM.NETFramework;
     using ONEbook.UM.Services;
     using ONEbook.UM.Transport;
+    using Sunplus.Agent.Model.Auth;
+    using Sunplus.Agent.Model.BL.Authorization;
     using Sunplus.Agent.Model.Entities;
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Web;
+    using System.Web.Mvc;
+    using System.Web.Routing;
+    using System.Web.Security;
+    using System.Web.SessionState;
 
     public class Global : System.Web.HttpApplication
-    {
-        private readonly string rngArea = "CustomerSetting/Casino";
+    {      
 
         protected void Application_Start(object sender, EventArgs e)
         {
@@ -50,7 +50,7 @@
             var umConfig = new UMClientConfiguration().Initialize();
             UMClientManager
                 .UseConfig(umConfig)
-                .UseCacheService(new UMCacheService(CacheService.CreateInstance(CacheType.MemoryCache)))
+                .UseCacheService(new UMCacheService(new CacheService()))
                 .UseRestClient(new UMRestClient(umConfig))
                 .UseHttpContext(new HttpContextHelper());
             RegisterGlobalFilters(GlobalFilters.Filters);
@@ -179,31 +179,10 @@
 
         private string GetRequestPath()
         {
-            var url = Request.Path;
-            if (IsRnGCasinoUri)
-            {
-                url = GetRnGCasinoUri();
-            }
+            var url = Request.Path;         
 
             return url.Remove(0, 1).ToLowerInvariant();
-        }
-
-        private string GetRnGCasinoUri()
-        {
-            var controller = Request.RequestContext.RouteData.Values["controller"];
-            var action = Request.RequestContext.RouteData.Values["action"];
-
-            return string.Format("/{0}/{1}/{2}", rngArea, controller, action);
-        }
-
-        private bool IsRnGCasinoUri
-        {
-            get
-            {
-                var url = Request.Path;
-                return url.IndexOf(rngArea, StringComparison.OrdinalIgnoreCase) != -1;
-            }
-        }
+        }      
 
         private static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
@@ -257,20 +236,21 @@
 
         private static KickoutInfo GetKickoutInfo(IUserSession userSession)
         {
-            ICache cache = CacheService.CreateInstance(CacheType.MemoryCache);
+
+            var cacheService = CacheFactory.MemoryCacheService;
             var recheckInCacheKey = string.Format(
                 "Alpha.Auth.CustContext.RecheckInCacheKey_{0}_{1}_{2}",
                 userSession.CustId,
                 userSession.SubAccId,
                 userSession.OnUserId);
-            var kickoutInfo = cache.Get<KickoutInfo>(recheckInCacheKey);
+            var kickoutInfo = cacheService.Get<KickoutInfo>(recheckInCacheKey);
 
             if (kickoutInfo == null)
             {
                 var bo = new AuthorizationBO(userSession.NetSessionId);
                 kickoutInfo = bo.Recheckin(userSession.OnUserId);
 
-                cache.Set(recheckInCacheKey, kickoutInfo, DateTime.Now.AddSeconds(30));
+                cacheService.Set(recheckInCacheKey, kickoutInfo, new CacheItemOptions().SetAbsoluteExpiration(DateTime.Now.AddSeconds(30))); 
             }
 
             return kickoutInfo;

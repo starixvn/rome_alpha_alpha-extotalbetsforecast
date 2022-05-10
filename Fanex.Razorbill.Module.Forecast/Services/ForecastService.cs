@@ -7,6 +7,7 @@
     using Alpha.Web.Helpers.Impl;
     using Core.Services.Impl;
     using Fanex.Caching;
+    using Fanex.Razorbill.Module.Common.Services;
     using Fanex.Razorbill.Module.Forecast.Criteria;
     using Fanex.Razorbill.Module.Forecast.Models;
     using Fanex.Razorbill.Module.Forecast.Repositories;
@@ -117,8 +118,8 @@
         public IDictionary<int, bool> GetBetTypeSupportScoreMap()
         {
             string key = BettypeSupportScoreMapKey;
-            ICache cache = CacheService.CreateInstance(CacheType.MemoryCache);
-            var bettypeHash = cache.Get<IDictionary<int, bool>>(key);
+            var cacheService = CacheFactory.MemoryCacheService;
+            var bettypeHash = cacheService.Get<IDictionary<int, bool>>(key);
             if (bettypeHash == null)
             {
                 int bettypeId;
@@ -137,7 +138,7 @@
                     });                    
                 }
 
-                cache.Set(key, bettypeHash);
+                cacheService.Set(key, bettypeHash);
             }
 
             return bettypeHash;
@@ -158,8 +159,8 @@
         private IList<RawScoreMapBetType> GetRawScoreMapBetTypes()
         {
             string key = BettypeScoreMapKey;
-            ICache cache = CacheService.CreateInstance(CacheType.MemoryCache);
-            var data = cache.Get<IList<RawScoreMapBetType>>(key);
+            var cacheService = CacheFactory.MemoryCacheService;
+            var data = cacheService.Get<IList<RawScoreMapBetType>>(key);
             if (data == null)
             {
                 var criteria = new GetScoreMapBetTypeCriteria();
@@ -170,7 +171,7 @@
 
                 // 2 hours.
                 int cacheInHours = 2;
-                cache.Set(key, data, TimeSpan.FromHours(cacheInHours));
+                cacheService.Set(key, data, new CacheItemOptions().SetAbsoluteExpiration(TimeSpan.FromHours(2)));
             }
 
             return data;
