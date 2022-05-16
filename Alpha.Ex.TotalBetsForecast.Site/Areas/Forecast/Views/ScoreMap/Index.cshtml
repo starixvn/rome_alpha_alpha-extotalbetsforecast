@@ -72,14 +72,16 @@
     <link href="@Url.Content(string.Format("~/App_Themes/Apo/Common/Agent{0}.min.css", darkModeName))" rel="stylesheet" type="text/css" />
     <link href="@Url.Content(string.Format("~/App_Themes/Apo/Components/ErrorMsg/ErrorMsgNew{0}.min.css", darkModeName))" rel="stylesheet" type="text/css" />
     <link href="@Url.Content(string.Format("~/App_Themes/Apo/Forecast/ScoreMap/style{0}.min.css?v=1", darkModeName))" rel="stylesheet" type="text/css" />
+    @Alpha.Web.Helpers.GoogleAnalyticHepler.GtagScript()
 </head>
 <body class="@(fromBetList ? "from-betlist" : "")">
+    @Alpha.Web.Helpers.GoogleAnalyticHepler.GtagNoScript()
     <div id="page_main">
         @if (!fromBetList)
         {
             <div id="header_main">
                 @ForecastLang.ScoreMap
-        
+
                 <div class="pull-right">
                     <a title="@ForecastLang.ClickToViewScoreMapInfo" class="infoIco" href="javascript:;"></a>
                 </div>
@@ -93,7 +95,7 @@
         <div id="sContent">
             <div class="header-box">
                 @if (!fromBetList)
-            {
+                {
                     <table class="tbl-filter">
                         <tr class="row-league">
                             <td>@ForecastLang.League</td>
@@ -129,13 +131,13 @@
             </div>
             <div id="mainContent">
                 @if (fromBetList)
-            {
+                {
                     @Html.Partial("~/Areas/Forecast/Views/ScoreMap/Results.cshtml", Model);
-            }
+                }
             </div>
             <div class="hide" id="tblMsgBettype">
                 <div class="msgerr" id="msgBettypeErr"></div>
-                
+
             </div>
         </div>
     </div>
@@ -172,6 +174,5 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/_Libs/jQuery/jquery-1.8.2.min.js")"></script>
     <script src="@Url.Content("~/Areas/Forecast/Views/ScoreMap/Scripts/scoreMap.js")" type="text/javascript"></script>
 
-    @Alpha.Web.Helpers.GoogleAnalyticHepler.Render()
 </body>
 </html>
