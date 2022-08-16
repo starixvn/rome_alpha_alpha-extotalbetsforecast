@@ -1,9 +1,18 @@
 ﻿namespace Alpha.Ex.TotalBetsForecast.Site
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Web;
+    using System.Web.Mvc;
+    using System.Web.Routing;
+    using System.Web.Security;
+    using System.Web.SessionState;
     using Alpha.Ex.TotalBetsForecast.Site.App_Start;
     using Alpha.Logging;
+    using Alpha.PartialUM.Exceptions;
+    using Alpha.PartialUM.Filters;
     using Alpha.Web;
-    using Alpha.Web.Exceptions;
     using Alpha.Web.Filters;
     using Alpha.Web.Helpers;
     using Fanex.Caching;
@@ -23,14 +32,6 @@
     using Sunplus.Agent.Model.Auth;
     using Sunplus.Agent.Model.BL.Authorization;
     using Sunplus.Agent.Model.Entities;
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Web;
-    using System.Web.Mvc;
-    using System.Web.Routing;
-    using System.Web.Security;
-    using System.Web.SessionState;
 
     public class Global : System.Web.HttpApplication
     {      

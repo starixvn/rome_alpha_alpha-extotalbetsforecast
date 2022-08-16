@@ -2,8 +2,8 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 {
     using System;
     using System.Data;
-    using Alpha.Web.Helpers;
-    using Alpha.Web.Helpers.Impl;
+    using Alpha.PartialUM.Services;
+    using Fanex.Razorbill.Module.Core.DataAccess;
     using Sunplus.Agent.Model.DL.TotalBets;
 
     [Obsolete("Should rename to Sunplus.Agent.Model.TotalBets")]
@@ -11,13 +11,13 @@ namespace Sunplus.Agent.Model.BL.TotalBets
     {
         #region Variable
         private static readonly TotalBetsDAO TotalBetsDataAccess = new TotalBetsDAO();
-        private readonly PartialUMService partialUMService;
+        private readonly IPartialUMService partialUMService;
         #endregion
 
         public TotalBetsBO(string netSessionId)
             : base(netSessionId)
         {
-            partialUMService = new PartialUMServiceImpl();
+            partialUMService = new PartialUMService(new PartialUMTotalBetsForecastDataAccess());
         }
 
         #region TotalGoal
@@ -36,17 +36,17 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             // execute
             if (CurrentSession.IsAgent)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel6_Ag));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel6_Ag));
                 totalGoal = TotalBetsDataAccess.Age_TotalBets_Sel6_Ag(customerID, language);
             }
             else if (CurrentSession.IsMaster)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel6_MAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel6_MAg));
                 totalGoal = TotalBetsDataAccess.Age_TotalBets_Sel6_MAg(customerID, language);
             }
             else if (CurrentSession.IsSuper)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel6_SAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel6_SAg));
                 totalGoal = TotalBetsDataAccess.Age_TotalBets_Sel6_SAg(customerID, language);
             }
             else
@@ -73,17 +73,17 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             // execute
             if (CurrentSession.IsAgent)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel1378_Member));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel1378_Member));
                 hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_Member(customerID);
             }
             else if (CurrentSession.IsMaster)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel1378_Agent));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel1378_Agent));
                 hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_Agent(customerID);
             }
             else if (CurrentSession.IsSuper)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel1378_Master));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel1378_Master));
                 hpdOU = TotalBetsDataAccess.Age_TotalBets_Sel1378_Master(customerID);
             }
             else
@@ -112,17 +112,17 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             // execute
             if (CurrentSession.IsAgent)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel2021_Ag));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel2021_Ag));
                 moneyline = TotalBetsDataAccess.Age_TotalBets_Sel2021_Ag(customerID, language);
             }
             else if (CurrentSession.IsMaster)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel2021_MAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel2021_MAg));
                 moneyline = TotalBetsDataAccess.Age_TotalBets_Sel2021_MAg(customerID, language);
             }
             else if (CurrentSession.IsSuper)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel2021_SAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel2021_SAg));
                 moneyline = TotalBetsDataAccess.Age_TotalBets_Sel2021_SAg(customerID, language);
             }
             else
@@ -151,17 +151,17 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             // execute
             if (CurrentSession.IsAgent)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel25_Ag));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel25_Ag));
                 oddEventOneXTwo = TotalBetsDataAccess.Age_TotalBets_Sel25_Ag(customerID, language);
             }
             else if (CurrentSession.IsMaster)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel25_MAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel25_MAg));
                 oddEventOneXTwo = TotalBetsDataAccess.Age_TotalBets_Sel25_MAg(customerID, language);
             }
             else if (CurrentSession.IsSuper)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel25_SAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel25_SAg));
                 oddEventOneXTwo = TotalBetsDataAccess.Age_TotalBets_Sel25_SAg(customerID, language);
             }
             else
@@ -189,17 +189,17 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             // execute
             if (CurrentSession.IsAgent)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel10_Ag));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel10_Ag));
                 outright = TotalBetsDataAccess.Age_TotalBets_Sel10_Ag(customerID, language);
             }
             else if (CurrentSession.IsMaster)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel10_MAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel10_MAg));
                 outright = TotalBetsDataAccess.Age_TotalBets_Sel10_MAg(customerID, language);
             }
             else if (CurrentSession.IsSuper)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel10_SAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel10_SAg));
                 outright = TotalBetsDataAccess.Age_TotalBets_Sel10_SAg(customerID, language);
             }
             else
@@ -227,17 +227,17 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             // execute
             if (CurrentSession.IsAgent)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel16_Ag));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel16_Ag));
                 haftTimeFullTimeData = TotalBetsDataAccess.Age_TotalBets_Sel16_Ag(customerID, language);
             }
             else if (CurrentSession.IsMaster)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel16_MAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel16_MAg));
                 haftTimeFullTimeData = TotalBetsDataAccess.Age_TotalBets_Sel16_MAg(customerID, language);
             }
             else if (CurrentSession.IsSuper)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel16_SAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel16_SAg));
                 haftTimeFullTimeData = TotalBetsDataAccess.Age_TotalBets_Sel16_SAg(customerID, language);
             }
             else
@@ -265,17 +265,17 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             // execute
             if (CurrentSession.IsAgent)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel14_Ag));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel14_Ag));
                 firstGoalLastGoalData = TotalBetsDataAccess.Age_TotalBets_Sel14_Ag(customerID, language);
             }
             else if (CurrentSession.IsMaster)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel14_MAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel14_MAg));
                 firstGoalLastGoalData = TotalBetsDataAccess.Age_TotalBets_Sel14_MAg(customerID, language);
             }
             else if (CurrentSession.IsSuper)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel14_SAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel14_SAg));
                 firstGoalLastGoalData = TotalBetsDataAccess.Age_TotalBets_Sel14_SAg(customerID, language);
             }
             else
@@ -303,17 +303,17 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             // execute
             if (CurrentSession.IsAgent)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel121_Ag));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel121_Ag));
                 homeDrawAwayNoBet = TotalBetsDataAccess.Age_TotalBets_Sel121_Ag(customerID, language);
             }
             else if (CurrentSession.IsMaster)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel121_MAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel121_MAg));
                 homeDrawAwayNoBet = TotalBetsDataAccess.Age_TotalBets_Sel121_MAg(customerID, language);
             }
             else if (CurrentSession.IsSuper)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel121_SAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel121_SAg));
                 homeDrawAwayNoBet = TotalBetsDataAccess.Age_TotalBets_Sel121_SAg(customerID, language);
             }
             else
@@ -376,17 +376,17 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             // execute
             if (CurrentSession.IsAgent)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel161_Ag));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel161_Ag));
                 numberGame = TotalBetsDataAccess.Age_TotalBets_Sel161_Ag(customerID, language);
             }
             else if (CurrentSession.IsMaster)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel161_MAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel161_MAg));
                 numberGame = TotalBetsDataAccess.Age_TotalBets_Sel161_MAg(customerID, language);
             }
             else if (CurrentSession.IsSuper)
             {
-                partialUMService.CheckPartialUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel161_SAg));
+                partialUMService.ThrowIfUM(nameof(TotalBetsDataAccess.Age_TotalBets_Sel161_SAg));
                 numberGame = TotalBetsDataAccess.Age_TotalBets_Sel161_SAg(customerID, language);
             }
             else

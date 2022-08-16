@@ -3,8 +3,9 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
+    using Alpha.PartialUM.Services;
     using Alpha.Web.Helpers;
-    using Alpha.Web.Helpers.Impl;
+    using Fanex.Razorbill.Module.Core.DataAccess;
     using Fanex.Razorbill.Module.Core.Web;
     using Fanex.Razorbill.Module.Core.Web.Controllers;
     using Fanex.Razorbill.Module.Forecast.Criteria;
@@ -19,7 +20,7 @@
     public class ForecastScoreMapController : BaseController
     {
         private readonly IForecastService _forecastService;
-        private readonly PartialUMService _partialUMService;
+        private readonly IPartialUMService _partialUMService;
 
         public ForecastScoreMapController()
             : this(null, null)
@@ -28,10 +29,10 @@
 
         public ForecastScoreMapController(
             IForecastService forecastService,
-            PartialUMService partialUMService)
+            IPartialUMService partialUMService)
         {
             _forecastService = forecastService ?? new ForecastService();
-            _partialUMService = partialUMService ?? new PartialUMServiceImpl();
+            _partialUMService = partialUMService ?? new PartialUMService(new PartialUMTotalBetsForecastDataAccess());
         }
 
         /// <summary>
@@ -70,7 +71,7 @@
         {
             var criteria = new GetScoreMapRunningLeagueCriteria();
 
-            _partialUMService.CheckPartialUM(criteria.GetSettingKey());
+            _partialUMService.ThrowIfUM(criteria.GetSettingKey());
 
             var leagues = _forecastService.GetScoreMapRunningLeagues(criteria);
 
@@ -110,7 +111,7 @@
         {
             var criteria = new GetScoreMapRunningLeagueCriteria();
 
-            _partialUMService.CheckPartialUM(criteria.GetSettingKey());
+            _partialUMService.ThrowIfUM(criteria.GetSettingKey());
 
             var leagues = _forecastService.GetScoreMapRunningLeagues(criteria);
             ViewBag.Leagues = leagues.Select(s => new SelectListItem { Value = s.Id.ToString(), Text = s.Name }).ToList();
