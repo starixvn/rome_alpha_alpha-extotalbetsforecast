@@ -3,11 +3,11 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Alpha.Web.Helpers;
-    using Alpha.Web.Helpers.Impl;
+    using Alpha.PartialUM.Services;
     using Core.Services.Impl;
     using Fanex.Caching;
     using Fanex.Razorbill.Module.Common.Services;
+    using Fanex.Razorbill.Module.Core.DataAccess;
     using Fanex.Razorbill.Module.Forecast.Criteria;
     using Fanex.Razorbill.Module.Forecast.Models;
     using Fanex.Razorbill.Module.Forecast.Repositories;
@@ -22,14 +22,14 @@
         private const string BettypeSupportScoreMapKey = "Fanex.Razorbill.Module.Forecast.BettypeSupportScoreMap";
 
         private readonly IForecastRepository _forecastRepository;
-        private readonly PartialUMService _partialUMService;
+        private readonly IPartialUMService _partialUMService;
 
         public ForecastService(
             IForecastRepository forecastRepository = null,
-            PartialUMService partialUMService = null)
+            IPartialUMService partialUMService = null)
         {
             _forecastRepository = forecastRepository ?? new ForecastRepository();
-            _partialUMService = partialUMService ?? new PartialUMServiceImpl();
+            _partialUMService = partialUMService ?? new PartialUMService(new PartialUMTotalBetsForecastDataAccess());
         }
 
         public IList<ScoreMapLeague> GetScoreMapRunningLeagues(GetScoreMapRunningLeagueCriteria criteria)
@@ -165,7 +165,7 @@
             {
                 var criteria = new GetScoreMapBetTypeCriteria();
 
-                _partialUMService.CheckPartialUM(criteria.GetSettingKey());
+                _partialUMService.ThrowIfUM(criteria.GetSettingKey());
 
                 data = _forecastRepository.GetScoreMapBetTypes(criteria);
 
