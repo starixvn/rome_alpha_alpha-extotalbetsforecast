@@ -753,6 +753,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BetlistHelper.cs" />
     <Compile Include="App_Start\RouterConfig.cs" />
     <Content Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>

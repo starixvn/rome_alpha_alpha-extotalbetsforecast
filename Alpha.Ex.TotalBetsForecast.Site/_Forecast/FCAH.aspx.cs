@@ -273,7 +273,7 @@ namespace Fanex.Age.UI.Forecast
             RenderFPSArea(tpl);
 
             // Bet List Url
-            tpl.BetListsUrls.BetListsUrl = MicroSites.BetListsUrl();
+            tpl.BetListsUrls.BetListsUrl = BetlistHelper.MapBetlistsDomain();
             tpl.BetListsUrls.BetListsTitle = Resources.Lang.lblBetLists;
 
             if (_fullMode) writer.Write(tpl);

@@ -105,7 +105,7 @@ namespace Fanex.Age.UI.Forecast
             }
 
             // Bet List Url
-            tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
+            tpl.BetListsUrl.BetListsUrl = BetlistHelper.MapBetlistsDomain();
 
             if (_fullMode) writer.Write(tpl);
             else writer.Write(tpl.Content);
