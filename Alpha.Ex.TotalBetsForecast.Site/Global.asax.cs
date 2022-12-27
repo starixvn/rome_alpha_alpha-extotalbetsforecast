@@ -251,7 +251,10 @@
                 var bo = new AuthorizationBO(userSession.NetSessionId);
                 kickoutInfo = bo.Recheckin(userSession.OnUserId);
 
-                cacheService.Set(recheckInCacheKey, kickoutInfo, new CacheItemOptions().SetAbsoluteExpiration(DateTime.Now.AddSeconds(30))); 
+                if (!kickoutInfo.IsKickedOut)
+                {
+                    cacheService.Set(recheckInCacheKey, kickoutInfo, new CacheItemOptions().SetAbsoluteExpiration(DateTime.Now.AddSeconds(30)));
+                }
             }
 
             return kickoutInfo;
