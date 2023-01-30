@@ -205,7 +205,7 @@ namespace Fanex.Age.UI.TotalBets
             if (Convert.ToInt16(dr["betcount_1x2"]) != 0)
             {
                 decimal OneXTwoTotal = (decimal)(dr["odds_1"]) + (decimal)(dr["odds_x"]) + (decimal)(dr["odds_2"]);
-                matchBlock.OneXTwoValue.OneXTwoValue = Formater.DecFormat(OneXTwoTotal, 0);
+                matchBlock.OneXTwoValue.OneXTwoValue = NegativeNumberRoundColor(OneXTwoTotal);
                 matchBlock.OneXTwoValue.MatchId = dr["matchid"].ToString();
                 matchBlock.OneXTwoButton.MatchId = dr["matchid"].ToString();
 
@@ -229,7 +229,7 @@ namespace Fanex.Age.UI.TotalBets
             if (Convert.ToInt16(dr["betcount_DND"]) != 0)
             {
                 decimal DNDTotal = (decimal)(dr["home_odds_DND"]) - (decimal)(dr["away_odds_DND"]);
-                matchBlock.DNDValue.DNDValue = Formater.DecFormat(DNDTotal, 0);
+                matchBlock.DNDValue.DNDValue = NegativeNumberRoundColor(DNDTotal);
                 matchBlock.DNDValue.MatchId = dr["matchid"].ToString();
 
                 matchBlock.DNDValue.Show();
@@ -271,7 +271,7 @@ namespace Fanex.Age.UI.TotalBets
             if (Convert.ToInt16(dr["betcount_1x2_1st"]) != 0)
             {
                 decimal OneXTwoFirstHalf = (decimal)dr["odds_1_1st"] + (decimal)dr["odds_x_1st"] + (decimal)dr["odds_2_1st"];
-                matchBlock.OneXTwoFirstHalfValue.OneXTwoFirstHalfValue = Formater.DecFormat(OneXTwoFirstHalf, 0);
+                matchBlock.OneXTwoFirstHalfValue.OneXTwoFirstHalfValue = NegativeNumberRoundColor(OneXTwoFirstHalf);
                 matchBlock.OneXTwoFirstHalfValue.MatchId = dr["matchid"].ToString();
                 matchBlock.OneXTwoFirstHalfButton.MatchId = dr["matchid"].ToString();
 

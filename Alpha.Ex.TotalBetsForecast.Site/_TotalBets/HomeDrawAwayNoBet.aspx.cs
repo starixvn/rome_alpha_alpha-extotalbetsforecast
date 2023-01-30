@@ -193,7 +193,7 @@ namespace Fanex.Age.UI.TotalBets
             if (Convert.ToInt16(dr["betcount_HNB"]) != 0)
             {
                 decimal HNBTotal = (decimal)(dr["home_odds_HNB"]) - (decimal)(dr["away_odds_HNB"]);
-                matchBlock.HomeNoBetValue.HomeNoBetValue = Formater.DecFormat(HNBTotal, 0);
+                matchBlock.HomeNoBetValue.HomeNoBetValue = NegativeNumberRoundColor(HNBTotal);
                 matchBlock.HomeNoBetValue.MatchId = dr["matchid"].ToString();
 
                 matchBlock.HomeNoBetValue.Show();
@@ -214,7 +214,7 @@ namespace Fanex.Age.UI.TotalBets
             if (Convert.ToInt16(dr["betcount_DNB"]) != 0)
             {
                 decimal DNBTotal = (decimal)(dr["home_odds_DNB"]) - (decimal)(dr["away_odds_DNB"]);
-                matchBlock.DrawNoBetValue.DrawNoBetValue = Formater.DecFormat(DNBTotal, 0);
+                matchBlock.DrawNoBetValue.DrawNoBetValue = NegativeNumberRoundColor(DNBTotal);
                 matchBlock.DrawNoBetValue.MatchId = dr["matchid"].ToString();
 
                 matchBlock.DrawNoBetValue.Show();
@@ -235,7 +235,7 @@ namespace Fanex.Age.UI.TotalBets
             if (Convert.ToInt16(dr["betcount_ANB"]) != 0)
             {
                 decimal ANBTotal = (decimal)(dr["home_odds_ANB"]) - (decimal)(dr["away_odds_ANB"]);
-                matchBlock.AwayNoBetValue.AwayNoBetValue = Formater.DecFormat(ANBTotal, 0);
+                matchBlock.AwayNoBetValue.AwayNoBetValue = NegativeNumberRoundColor(ANBTotal);
                 matchBlock.AwayNoBetValue.MatchId = dr["matchid"].ToString();
 
                 matchBlock.AwayNoBetValue.Show();
