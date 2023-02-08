@@ -10,13 +10,13 @@
 
     public class PartialUMTotalBetsForecastDataAccess : IPartialUMDataAccess
     {
-        public IEnumerable<UMInfo> GetUMInfoList(string market)
+        public IEnumerable<UMInfo> GetUMInfoList(string siteName)
         {
             var inputParams = new Hashtable
             {
-                ["marketname"] = market
+                ["sitename"] = siteName
             };
-
+            
             using (var db = new ObjectDb("Acc_CheckUM_ByReport"))
             {
                 using (var reader = db.ExecuteReader(inputParams))
