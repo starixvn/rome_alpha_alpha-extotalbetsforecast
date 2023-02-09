@@ -154,12 +154,12 @@ namespace Fanex.Age.UI.TotalBets
             matchBlock.TimeValue = dr["showtime"].ToString();
             matchBlock.Home = CacheRef.GetTeamName(Convert.ToInt32(dr["homeid"])) + ((bool)dr["isneutral"] ? Resources.Lang.IsNeutral : string.Empty);
             matchBlock.Away = CacheRef.GetTeamName(Convert.ToInt32(dr["awayid"]));
-            matchBlock.TotalHomeFullTime = Formater.FormatNumber2(dr["home_odds"], CurrentUserSession.Language);
-            matchBlock.TotalAwayFullTime = Formater.FormatNumber2(dr["away_odds"], CurrentUserSession.Language);
+            matchBlock.TotalHomeFullTime = Formater.DecFormat(dr["home_odds"], 0);
+            matchBlock.TotalAwayFullTime = Formater.DecFormat(dr["away_odds"], 0);
             matchBlock.ForecastHomeFullTime = RoundPositiveColor(dr["winlost_home"]);
             matchBlock.ForecastAwayFullTime = RoundPositiveColor(dr["winlost_away"]);
-            matchBlock.TotalHomeHalfTime = Formater.FormatNumber2(dr["home_odds_HT"], CurrentUserSession.Language);
-            matchBlock.TotalAwayHalfTime = Formater.FormatNumber2(dr["away_odds_HT"], CurrentUserSession.Language);
+            matchBlock.TotalHomeHalfTime = Formater.DecFormat(dr["home_odds_HT"], 0);
+            matchBlock.TotalAwayHalfTime = Formater.DecFormat(dr["away_odds_HT"], 0);
             matchBlock.ForecastHomeHalfTime = RoundPositiveColor(dr["winlost_home_HT"]);
             matchBlock.ForecastAwayHalfTime = RoundPositiveColor(dr["winlost_away_HT"]);
             matchBlock.MatchId = dr["matchid"].ToString();
@@ -173,7 +173,7 @@ namespace Fanex.Age.UI.TotalBets
         public string RoundPositiveColor(object number)
         {
             decimal num = Convert.ToDecimal(number);
-            return (num > 0) ? "<span class='text-red'>" + Formater.FormatNumber2(num, CurrentUserSession.Language) + "</span>" : Formater.FormatNumber2(num, CurrentUserSession.Language);
+            return (num > 0) ? "<span class='text-red'>" + Formater.DecFormat(num, 0) + "</span>" : Formater.DecFormat(num, 0);
         }
 
         #endregion

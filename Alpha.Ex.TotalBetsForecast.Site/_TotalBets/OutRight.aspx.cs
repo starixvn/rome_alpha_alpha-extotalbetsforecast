@@ -142,7 +142,7 @@ namespace Fanex.Age.UI.TotalBets
             matchBlock.TeamsValue = CacheRef.GetTeamName(Convert.ToInt32(dr["teamid"]));
 
             matchBlock.ForecastValue = PositiveNumberRoundColor(dr["totalwinlost"]);
-            matchBlock.BalanceValue = Formater.FormatNumber2(dr["balance"], CurrentUserSession.Language);
+            matchBlock.BalanceValue = Formater.DecFormat(dr["balance"], 0);
             matchBlock.MatchId = dr["orid"].ToString();
         }
         /// <summary>
@@ -154,7 +154,7 @@ namespace Fanex.Age.UI.TotalBets
         {
             decimal num = Convert.ToDecimal(number);
 
-            return (num > 0) ? "<span class='text-red'>" + Formater.FormatNumber2(num, CurrentUserSession.Language) + "</span>" : Formater.FormatNumber2(num, CurrentUserSession.Language);
+            return (num > 0) ? "<span class='text-red'>" + Formater.DecFormat(num, 0) + "</span>" : Formater.FormatNumber2(num, CurrentUserSession.Language);
         }
 
 
