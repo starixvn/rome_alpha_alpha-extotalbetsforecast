@@ -97,7 +97,7 @@ namespace Fanex.Age.UI.TotalBets
             }
 
             // Bet List Url
-            tpl.BetListsUrl.BetListsUrl = MicroSites.BetListsUrl();
+            tpl.BetListsUrl.BetListsUrl = BetlistHelper.MapBetlistsDomain();
             tpl.level = LevelName(UserSession.Current.RoleId);
 
             if (_fullMode)

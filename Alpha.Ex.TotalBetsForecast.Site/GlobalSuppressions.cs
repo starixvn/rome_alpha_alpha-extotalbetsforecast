@@ -15,3 +15,7 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Build", "S103:Split this 314 characters long line (which is greater than 200 authorized).", Justification = "<Pending>")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Build", "S2325:Make 'Application_Start' a static method.", Justification = "<Pending>", Scope = "member", Target = "~M:Alpha.Ex.TotalBetsForecast.Site.Global.Application_Start(System.Object,System.EventArgs)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Build", "S2696:Make the enclosing instance method 'static' or remove this set on the 'static' field.", Justification = "<Pending>", Scope = "member", Target = "~M:Alpha.Ex.TotalBetsForecast.Site.Global.Application_Start(System.Object,System.EventArgs)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S1449:Culture should be specified for \"string\" operations", Justification = "<Pending>", Scope = "member", Target = "~P:BetlistHelper.MapBetlistDomain")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S1449:Culture should be specified for \"string\" operations", Justification = "<Pending>", Scope = "member", Target = "~P:BetlistHelper.BetlistDomainUrl")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Major Code Smell", "S3996:URI properties should not be strings", Justification = "<Pending>", Scope = "member", Target = "~P:BetlistHelper.BetlistDomainUrl")]
+
