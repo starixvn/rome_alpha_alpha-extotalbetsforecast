@@ -198,7 +198,7 @@ namespace Fanex.Age.UI.TotalBets
         private string PositiveNumberRoundColor(object number)
         {
             decimal num = Convert.ToDecimal(number);
-            return (num > 0) ? "<span class='text-red'>" + Formater.FormatNumber2(num, CurrentUserSession.Language) + "</span>" : Formater.FormatNumber2(num, CurrentUserSession.Language);
+            return (num > 0) ? "<span class='text-red'>" + Formater.DecFormat(num, 0) + "</span>" : Formater.DecFormat(num, 0);
         }
         #endregion
     }
