@@ -221,15 +221,15 @@
     <Reference Include="Sunplus.Agent.Model.Auth, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.Auth.3.0.2.3\lib\net461\Sunplus.Agent.Model.Auth.dll</HintPath>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.6.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.6.5\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.7.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.7.1\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.DataAccessLibrary, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.DataAccessLibrary.3.0.0.2\lib\net40\Sunplus.Agent.Model.DataAccessLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.3.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.3.5\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
+    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.3.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.3.7\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
     </Reference>
     <Reference Include="Sunplus.Agent.Model.IpFormatter, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sunplus.Agent.Model.IpFormatter.3.0.0.2\lib\net461\Sunplus.Agent.Model.IpFormatter.dll</HintPath>
