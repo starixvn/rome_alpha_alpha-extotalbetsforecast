@@ -15,6 +15,7 @@
     using Alpha.Web;
     using Alpha.Web.Filters;
     using Alpha.Web.Helpers;
+    using AlphaPlus.User.Models;
     using Fanex.Caching;
     using Fanex.Data.Configuration;
     using Fanex.Logging.Extensions.Database;
@@ -30,8 +31,6 @@
     using ONEbook.UM.Services;
     using ONEbook.UM.Transport;
     using Sunplus.Agent.Model.Auth;
-    using Sunplus.Agent.Model.BL.Authorization;
-    using Sunplus.Agent.Model.Entities;
 
     public class Global : System.Web.HttpApplication
     {      
@@ -39,10 +38,11 @@
         protected void Application_Start(object sender, EventArgs e)
         {
             TplCore.TplSettings.UrlVersion = ConfigurationManager.AppSettings["JsVersion"];
-
+            AlphaPlus.Configurations.ConfigurationManager.Init(new ConfigurationHelper());
             LoggingConfig.Init(getDbExceptionInfo: DatabaseInfoGetters.GetDbExceptionInfo);
 
             DbSettingProviderManager.Current.Start();
+            UserSession.Init(new Web.Helpers.HttpContextHelper());
             ShareSession.Init();
 
             AreaRegistration.RegisterAllAreas();
@@ -53,7 +53,7 @@
                 .UseConfig(umConfig)
                 .UseCacheService(new UMCacheService(new CacheService()))
                 .UseRestClient(new UMRestClient(umConfig))
-                .UseHttpContext(new HttpContextHelper());
+                .UseHttpContext(new ONEbook.UM.Helpers.HttpContextHelper());
             RegisterGlobalFilters(GlobalFilters.Filters);
             MvcHandler.DisableMvcResponseHeader = true;
 
@@ -188,7 +188,7 @@
         private static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
-            filters.Add(new AfterLoginFlowFilter());
+            filters.Add(new AfterLoginFlowFilterAttribute());
             filters.Add(new PartialUMExceptionFilter(true));
             filters.Add(new CheckUMFilterAttribute(
                 new MaintenanceService(UMClientManager.RestClient, UMClientManager.CacheService, UMClientManager.UMClientConfigs, UMClientManager.HttpContext), null));
@@ -248,7 +248,7 @@
 
             if (kickoutInfo == null)
             {
-                var bo = new AuthorizationBO(userSession.NetSessionId);
+                var bo = new AuthorizationBO();
                 kickoutInfo = bo.Recheckin(userSession.OnUserId);
 
                 if (!kickoutInfo.IsKickedOut)
