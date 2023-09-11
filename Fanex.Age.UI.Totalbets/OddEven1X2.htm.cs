@@ -35,7 +35,6 @@ namespace Fanex.Age.UI.TotalBets
 			protected static string s16 = "\" type=\"text/javascript\"></script><script src=\"";
 			protected static string s17{get{return AbsoluteUrl("_Components/AGEWnd/AGEWnd.js", TplSettings.Question);}}
 			protected static string s18 = "\" type=\"text/javascript\"></script>";
-			public OddEven1X2_Piwik_Block Piwik = new OddEven1X2_Piwik_Block();
 			public OddEven1X2_BetListsUrl_Block BetListsUrl = new OddEven1X2_BetListsUrl_Block();
 			protected static string s19 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
@@ -66,7 +65,6 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s16);
 					bd.Append(s17);
 					bd.Append(s18);
-					if(null != Piwik) Piwik.ToString(ref bd);
 					if(null != BetListsUrl) BetListsUrl.ToString(ref bd);
 					bd.Append(s19);
 				}
@@ -415,53 +413,19 @@ namespace Fanex.Age.UI.TotalBets
 			}
 		}
 
-		public class OddEven1X2_Piwik_Block: Block
+		public class OddEven1X2_BetListsUrl_Block: Block
 		{
-			protected static string s84 = "<script type=\"text/javascript\">var _pkUrl = '";
-			protected static string s85{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl;}}
-			protected static string s86 = "',_pkScript = '";
-			protected static string s87{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript;}}
-			protected static string s88 = "',_pkSiteId = '";
-			protected static string s89{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId;}}
-			protected static string s90 = "';</script><script src=\"";
-			protected static string s91{get{return AbsoluteUrl("_GlobalResources/Js/piwikLoader.js", TplSettings.Question);}}
-			protected static string s92 = "\" type=\"text/javascript\"></script><noscript><p><img src='";
-			public string PiwikUrl = "{PiwikUrl}";
-			protected static string s93 = "' style=\"border:0;\" alt=\"\" /></p></noscript>";
+			protected static string s84 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			public string BetListsUrl = "{BetListsUrl}";
+			protected static string s85 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
 					bd.Append(s84);
-					bd.Append(s85);
-					bd.Append(s86);
-					bd.Append(s87);
-					bd.Append(s88);
-					bd.Append(s89);
-					bd.Append(s90);
-					bd.Append(s91);
-					bd.Append(s92);
-					bd.Append(PiwikUrl);
-					bd.Append(s93);
-				}
-				if(IsAssigned){bd.Append(Value);}
-			}
-		}
-
-		public class OddEven1X2_BetListsUrl_Block: Block
-		{
-			protected static string s94 = "<script type=\"text/javascript\">var _betListsUrl = '";
-			public string BetListsUrl = "{BetListsUrl}";
-			protected static string s95 = "';</script>";
-			public override void ToString(ref StringBuilder bd)
-			{
-				if(!Visible) return;
-				if(RenderChild)
-				{
-					bd.Append(s94);
 					bd.Append(BetListsUrl);
-					bd.Append(s95);
+					bd.Append(s85);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}
