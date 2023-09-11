@@ -2,25 +2,31 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 {
     using System;
     using System.Data;
-    using Alpha.PartialUM.Services;
+    using Alpha.PartialUM.Helpers;
+    using AlphaPlus.PartialUM.Services;
+    using AlphaPlus.User.Models;
     using Fanex.Razorbill.Module.Core.DataAccess;
     using Sunplus.Agent.Model.DL.TotalBets;
 
     [Obsolete("Should rename to Sunplus.Agent.Model.TotalBets")]
-    public class TotalBetsBO : Sunplus.Agent.Model.BL.Base.BOBase
+    public class TotalBetsBO
     {
         #region Variable
+
         private static readonly TotalBetsDAO TotalBetsDataAccess = new TotalBetsDAO();
         private readonly IPartialUMService partialUMService;
-        #endregion
 
-        public TotalBetsBO(string netSessionId)
-            : base(netSessionId)
+        #endregion Variable
+
+        public TotalBetsBO()
         {
-            partialUMService = new PartialUMService(new PartialUMTotalBetsForecastDataAccess());
+            partialUMService = new PartialUMService(new PartialUMTotalBetsForecastDataAccess(), new PartialUMSectionHelper());
         }
 
+        public static IUserSession CurrentSession => UserSession.Current;
+
         #region TotalGoal
+
         /// <summary>
         /// Get data for total goal page
         /// </summary>
@@ -56,9 +62,11 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return totalGoal;
         }
-        #endregion
+
+        #endregion TotalGoal
 
         #region HDPOU
+
         /// <summary>
         /// Get data for HDPOU page
         /// </summary>
@@ -93,7 +101,8 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return hpdOU;
         }
-        #endregion
+
+        #endregion HDPOU
 
         #region MoneyLine
 
@@ -132,7 +141,8 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return moneyline;
         }
-        #endregion
+
+        #endregion MoneyLine
 
         #region OddEvent_OneXTwo
 
@@ -171,9 +181,11 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return oddEventOneXTwo;
         }
-        #endregion
+
+        #endregion OddEvent_OneXTwo
 
         #region OutRight
+
         /// <summary>
         /// Get data for outright page
         /// </summary>
@@ -209,9 +221,11 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return outright;
         }
-        #endregion
+
+        #endregion OutRight
 
         #region HTFT
+
         /// <summary>
         /// Get data for HTFT page
         /// </summary>
@@ -247,9 +261,11 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return haftTimeFullTimeData;
         }
-        #endregion
+
+        #endregion HTFT
 
         #region FGLG
+
         /// <summary>
         /// Get data for FGLG page
         /// </summary>
@@ -285,9 +301,11 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return firstGoalLastGoalData;
         }
-        #endregion
+
+        #endregion FGLG
 
         #region Home/Draw/AwayNoBet
+
         /// <summary>
         /// Get data for Home/Draw/AwayNoBet page
         /// </summary>
@@ -323,9 +341,11 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return homeDrawAwayNoBet;
         }
-        #endregion
+
+        #endregion Home/Draw/AwayNoBet
 
         #region NextGoal
+
         /// <summary>
         /// Get data for NextGoal page
         /// </summary>
@@ -358,9 +378,11 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return nextGoal;
         }
-        #endregion
+
+        #endregion NextGoal
 
         #region NumberGame
+
         /// <summary>
         /// Get data for number game page
         /// </summary>
@@ -396,9 +418,11 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return numberGame;
         }
-        #endregion
+
+        #endregion NumberGame
 
         #region VirtualSports
+
         /// <summary>
         /// Get data for VirtualSports page
         /// </summary>
@@ -431,9 +455,11 @@ namespace Sunplus.Agent.Model.BL.TotalBets
 
             return virtualSports;
         }
-        #endregion
+
+        #endregion VirtualSports
 
         #region Other bettypes
+
         /// <summary>
         /// Get data for Other bettypes page
         /// </summary>
@@ -467,6 +493,6 @@ namespace Sunplus.Agent.Model.BL.TotalBets
             return otherBettypes;
         }
 
-        #endregion
+        #endregion Other bettypes
     }
 }

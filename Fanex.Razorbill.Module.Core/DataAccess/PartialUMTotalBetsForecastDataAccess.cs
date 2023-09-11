@@ -4,8 +4,8 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.Data;
-    using Alpha.PartialUM.DataAccess;
-    using Alpha.PartialUM.Models;
+    using AlphaPlus.PartialUM.DataAccess;
+    using AlphaPlus.PartialUM.Models;
     using Fanex.Data;
 
     public class PartialUMTotalBetsForecastDataAccess : IPartialUMDataAccess
@@ -16,7 +16,7 @@
             {
                 ["sitename"] = siteName
             };
-            
+
             using (var db = new ObjectDb("Acc_CheckUM_ByReport"))
             {
                 using (var reader = db.ExecuteReader(inputParams))

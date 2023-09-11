@@ -1,10 +1,10 @@
-﻿using Alpha.Web.Helpers;
-using Sunplus.Agent.Model.Entities;
-using Sunplus.Agent.Utilities;
-using System;
+﻿using System;
 using System.Configuration;
 using System.Linq;
 using System.Web;
+using Alpha.Web.Helpers;
+using AlphaPlus.User.Models;
+using Sunplus.Agent.Utilities;
 
 public static class BetlistHelper
 {
@@ -12,7 +12,7 @@ public static class BetlistHelper
     {
         var Current = UserSession.Current;
         var cookieNameCurrentPage = GetCookieNameOfCurrentPage(Current.CustId, Current.SubAccId, Encryption.PearsonEncode);
-        var cookieless = HttpContext.Current.Session.IsCookieless ? 
+        var cookieless = HttpContext.Current.Session.IsCookieless ?
             $"/(S({HttpContext.Current.Request.Cookies[$"DFFKDHFJKLDHFJDH-betlist-{HttpContext.Current.Session.SessionID}"].Value}))" : 
             string.Empty;
 

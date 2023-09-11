@@ -11,11 +11,6 @@
 
 namespace Fanex.Razorbill.Module.Core.Web.Controllers
 {
-    using Fanex.NAP.Core.Service.Interface;
-    using Fanex.NAP.Core.Web;
-    using Fanex.NAP.Core.Web.Context;
-    using Fanex.NAP.Core.Web.Session;
-    using Sunplus.Agent.Model.Entities;
     using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
@@ -24,6 +19,11 @@ namespace Fanex.Razorbill.Module.Core.Web.Controllers
     using System.Threading;
     using System.Web.Mvc;
     using System.Web.Routing;
+    using AlphaPlus.User.Models;
+    using Fanex.NAP.Core.Service.Interface;
+    using Fanex.NAP.Core.Web;
+    using Fanex.NAP.Core.Web.Context;
+    using Fanex.NAP.Core.Web.Session;
 
     [SuppressMessage("Microsoft.StyleCop.CSharp.DocumentationRules", "SA1600:ElementsMustBeDocumented")]
     public class BaseController : Controller
