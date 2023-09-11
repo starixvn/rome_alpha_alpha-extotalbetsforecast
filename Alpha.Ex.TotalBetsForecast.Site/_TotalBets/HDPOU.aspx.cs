@@ -5,8 +5,8 @@ using System.Web.UI;
 using Alpha.Web.Helpers;
 using Fanex.Age.UI.Components;
 using Fanex.Razorbill.Module.Core.Services.Impl;
-using Sunplus.Agent.Model.Entities;
 using Sunplus.Agent.Utilities;
+using AlphaPlus.User.Models;
 using Fanex.Razorbill.Module.Core.Web;
 
 /*

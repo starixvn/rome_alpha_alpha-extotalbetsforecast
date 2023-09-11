@@ -47,7 +47,7 @@ namespace Fanex.Age.UI.Forecast
         public override object InvokeData(System.Collections.Hashtable p)
         {
             Dictionary<String, DataTable> view = new Dictionary<string, DataTable>();
-            ForecastBO bo = new ForecastBO(CurrentUserSession.NetSessionId);
+            ForecastBO bo = new ForecastBO();
 
             DataTable runningLeagues = null;
 

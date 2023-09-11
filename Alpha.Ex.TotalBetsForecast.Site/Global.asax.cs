@@ -9,6 +9,7 @@
     using System.Web.Security;
     using System.Web.SessionState;
     using Alpha.Ex.TotalBetsForecast.Site.App_Start;
+    using Alpha.Ex.TotalBetsForecast.Site.Helpers;
     using Alpha.Logging;
     using Alpha.PartialUM.Filters;
     using Alpha.Web;
@@ -37,6 +38,7 @@
         protected void Application_Start(object sender, EventArgs e)
         {
             TplNetCore.TplSettings.UrlVersion = ConfigurationManager.AppSettings["JsVersion"];
+            TplNetCore.TplSettings.Init(new TplSettingHelper());
             AlphaPlus.Configurations.ConfigurationManager.Init(new ConfigurationHelper());
             LoggingConfig.Init(getDbExceptionInfo: DatabaseInfoGetters.GetDbExceptionInfo);
 
@@ -79,9 +81,7 @@
                     }
                 }
 
-#pragma warning disable CS0618 // Type or member is obsolete
                 var currentCustomer = UserSession.Current;
-#pragma warning restore CS0618 // Type or member is obsolete
 
                 ExceptionHandler.Handle(ex,
                     new Dictionary<string, object>
@@ -93,9 +93,7 @@
                     });
             }
 
-#pragma warning disable CS0618 // Type or member is obsolete
-            if (!Sunplus.Agent.Model.BL.Definitions.AppSettings.LocalTest)
-#pragma warning restore CS0618 // Type or member is obsolete
+            if (ConfigurationManager.AppSettings["LocalTest"] != "1")
             {
                 Server.Transfer("~/Error.aspx");
             }

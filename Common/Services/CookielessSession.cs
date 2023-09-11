@@ -11,7 +11,6 @@
         private const string SUBACCID = "SUBACCID";
         private const string ROLEID = "ROLEID";
 
-        private const string HYPHEN = "_";
         private const string DEFAULTLANGUAGE = "en-US";
 
         public static string Language
@@ -85,7 +84,7 @@
 
         private static object GetSessionValue(string key)
         {
-            return HttpContext.Current.Session[HttpContext.Current.Session.SessionID + HYPHEN + key];
+            return HttpContext.Current.Session[key];
         }
     }
 }

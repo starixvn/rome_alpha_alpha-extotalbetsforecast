@@ -8,7 +8,6 @@ using Alpha.Web.Helpers;
 using Fanex.Age.UI;
 using Fanex.Age.UI.Components;
 using Fanex.Razorbill.Module.Core.Services.Impl;
-using Sunplus.Agent.Model.BL.Definitions;
 using Sunplus.Agent.Model.BL.TotalBets;
 using Sunplus.Agent.Utilities;
 using Fanex.Razorbill.Module.Core.Web;

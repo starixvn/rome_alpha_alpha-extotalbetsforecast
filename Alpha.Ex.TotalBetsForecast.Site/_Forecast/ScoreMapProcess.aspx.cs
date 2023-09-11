@@ -56,7 +56,7 @@ namespace Fanex.Age.UI.Forecast
         public override object InvokeData(System.Collections.Hashtable p)
         {
             Dictionary<String, DataSet> view = new Dictionary<string, DataSet>();
-            ForecastBO bo = new ForecastBO(CurrentUserSession.NetSessionId);
+            ForecastBO bo = new ForecastBO();
 
             DataSet dtScoreMap = null;
             dtScoreMap = bo.GetScoreMapResult(_matchIds, _bettypes_live, _bettypes_dead);

@@ -25,7 +25,7 @@ namespace Sunplus.Agent.Model.BL.Forecast
 
         #endregion Variable
 
-        public ForecastBO(string netSessionId)
+        public ForecastBO()
         {
             partialUMService = new PartialUMService(new PartialUMTotalBetsForecastDataAccess(), new PartialUMSectionHelper());
         }

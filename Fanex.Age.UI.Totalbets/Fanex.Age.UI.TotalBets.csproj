@@ -90,10 +90,6 @@
     <Reference Include="Fanex.Logging.Extensions.Web, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Logging.Extensions.Web.1.0.8\lib\net461\Fanex.Logging.Extensions.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.Products, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Products.1.0.0.5\lib\net461\Fanex.Products.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="IBCFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.File.1.0.0\lib\net40\IBCFile.dll</HintPath>
       <Private>True</Private>
@@ -171,7 +167,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="TplNetCore, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TplNetCore.1.0.1-beta1\lib\netstandard2.0\TplNetCore.dll</HintPath>
+      <HintPath>..\packages\TplNetCore.1.0.1-beta2\lib\netstandard2.0\TplNetCore.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +233,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fanex.Age.UI.TotalBets.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sunplus.Agent.Model.TotalBets\Sunplus.Agent.Model.TotalBets.csproj">
+      <Project>{f75c0d34-f5ca-4825-ba4f-f1048e3f4a1a}</Project>
+      <Name>Sunplus.Agent.Model.TotalBets</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
