@@ -10,11 +10,12 @@
     using System.Web.SessionState;
     using Alpha.Ex.TotalBetsForecast.Site.App_Start;
     using Alpha.Ex.TotalBetsForecast.Site.Helpers;
-    using Alpha.Logging;
     using Alpha.PartialUM.Filters;
     using Alpha.Web;
     using Alpha.Web.Filters;
     using Alpha.Web.Helpers;
+    using AlphaPlus.Logging;
+    using AlphaPlus.Logging.Web;
     using AlphaPlus.PartialUM.Exceptions;
     using AlphaPlus.User.Models;
     using Fanex.Caching;
@@ -40,6 +41,7 @@
             TplNetCore.TplSettings.UrlVersion = ConfigurationManager.AppSettings["JsVersion"];
             TplNetCore.TplSettings.Init(new TplSettingHelper());
             AlphaPlus.Configurations.ConfigurationManager.Init(new ConfigurationHelper());
+            LoggingConfig.ExceptionHandler = new ExceptionHandlerAdapter();
             LoggingConfig.Init(getDbExceptionInfo: DatabaseInfoGetters.GetDbExceptionInfo);
 
             DbSettingProviderManager.Current.Start();
