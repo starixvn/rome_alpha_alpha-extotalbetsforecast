@@ -13,7 +13,7 @@ public static class BetlistHelper
         var Current = UserSession.Current;
         var cookieNameCurrentPage = GetCookieNameOfCurrentPage(Current.CustId, Current.SubAccId, Encryption.PearsonEncode);
         var cookieless = HttpContext.Current.Session.IsCookieless ? 
-            $"/(S({HttpContext.Current.Request.Cookies[$"{cookieNameCurrentPage}-betlist-{HttpContext.Current.Session.SessionID}"].Value}))" : 
+            $"/(S({HttpContext.Current.Request.Cookies[$"DFFKDHFJKLDHFJDH-betlist-{HttpContext.Current.Session.SessionID}"].Value}))" : 
             string.Empty;
 
         return IsStandaloneReport ? $"{BetlistDomainUrl}{cookieless}{appPath?.Replace("~", string.Empty)}" : MicroSites.BetListsUrl(appPath);
