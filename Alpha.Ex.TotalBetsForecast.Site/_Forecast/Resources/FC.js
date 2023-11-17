@@ -1,7 +1,7 @@
 ﻿function openBetListPopup(matchId, betType) {
     top.popupManager.openMultiple(
         _betListsUrl + "BetListByBetTypeAndMatch/Index?matchid=" + matchId + "&bettype=" + betType,
-        _betListsTitle, 1050);
+        _betListsTitle, 1500);
 }
 
 function GetFCAH(matchId, score, bettype) {
