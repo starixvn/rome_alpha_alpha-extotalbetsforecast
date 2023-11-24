@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using TplNetCore;
 
 namespace Alpha.Ex.TotalBetsForecast.Site.Helpers
@@ -11,6 +8,8 @@ namespace Alpha.Ex.TotalBetsForecast.Site.Helpers
         public string PhysicalApplicationPath => HttpContext.Current.Request.PhysicalApplicationPath;
 
         public string ApplicationPath => HttpContext.Current.Request.ApplicationPath;
+
+        public string ApplyAppPathModifier(string virtualPath) => HttpContext.Current.Response.ApplyAppPathModifier(virtualPath);
 
         public T GetSession<T>(string key)
         {
