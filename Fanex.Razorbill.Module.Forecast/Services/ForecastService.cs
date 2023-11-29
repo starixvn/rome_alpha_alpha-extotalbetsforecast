@@ -3,7 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Alpha.PartialUM.Services;
+    using Alpha.PartialUM.Helpers;
+    using AlphaPlus.PartialUM.Services;
     using Core.Services.Impl;
     using Fanex.Caching;
     using Fanex.Razorbill.Module.Common.Services;
@@ -29,7 +30,7 @@
             IPartialUMService partialUMService = null)
         {
             _forecastRepository = forecastRepository ?? new ForecastRepository();
-            _partialUMService = partialUMService ?? new PartialUMService(new PartialUMTotalBetsForecastDataAccess());
+            _partialUMService = partialUMService ?? new PartialUMService(new PartialUMTotalBetsForecastDataAccess(), new PartialUMSectionHelper());
         }
 
         public IList<ScoreMapLeague> GetScoreMapRunningLeagues(GetScoreMapRunningLeagueCriteria criteria)
@@ -93,7 +94,7 @@
                 ScoreMapBetTypeInfo info = new ScoreMapBetTypeInfo
                 {
                     BetType = GetBetTypeName(bettype.TypeId, true),
-                    FollowedBetTypes = bettype.InfoId.Split(new [] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(s => GetBetTypeName(int.Parse(s))).ToList()
+                    FollowedBetTypes = bettype.InfoId.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(s => GetBetTypeName(int.Parse(s))).ToList()
                 };
 
                 if (bettype.EventType == 1)
@@ -135,7 +136,7 @@
                         {
                             bettypeHash.Add(bettypeId, true);
                         }
-                    });                    
+                    });
                 }
 
                 cacheService.Set(key, bettypeHash);
@@ -182,7 +183,7 @@
             // 1 x 2.
             if (fromResource && id == 5)
             {
-                return ForecastLang.BetType1x2;    
+                return ForecastLang.BetType1x2;
             }
 
             return CacheRef.GetBettype(id);

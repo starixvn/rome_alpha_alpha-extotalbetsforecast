@@ -3,8 +3,8 @@
 using System;
 using System.Web;
 using System.Text;
-using TplCore;
-using TplCore.Element;
+using TplNetCore;
+using TplNetCore.Element;
 #pragma warning disable
 namespace Fanex.Age.UI.TotalBets
 {
@@ -27,7 +27,6 @@ namespace Fanex.Age.UI.TotalBets
 			protected static string s8 = "\" type=\"text/javascript\"></script><script src=\"";
 			protected static string s9{get{return AbsoluteUrl("Resources/TotalBets.js", TplSettings.Question);}}
 			protected static string s10 = "\" type=\"text/javascript\"></script>";
-			public OutRight_Piwik_Block Piwik = new OutRight_Piwik_Block();
 			public OutRight_BetListsUrl_Block BetListsUrl = new OutRight_BetListsUrl_Block();
 			protected static string s11 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
@@ -50,7 +49,6 @@ namespace Fanex.Age.UI.TotalBets
 					bd.Append(s8);
 					bd.Append(s9);
 					bd.Append(s10);
-					if(null != Piwik) Piwik.ToString(ref bd);
 					if(null != BetListsUrl) BetListsUrl.ToString(ref bd);
 					bd.Append(s11);
 				}
@@ -181,53 +179,19 @@ namespace Fanex.Age.UI.TotalBets
 			}
 		}
 
-		public class OutRight_Piwik_Block: Block
+		public class OutRight_BetListsUrl_Block: Block
 		{
-			protected static string s34 = "<script type=\"text/javascript\">var _pkUrl = '";
-			protected static string s35{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl;}}
-			protected static string s36 = "',_pkScript = '";
-			protected static string s37{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikScript;}}
-			protected static string s38 = "',_pkSiteId = '";
-			protected static string s39{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId;}}
-			protected static string s40 = "';</script><script src=\"";
-			protected static string s41{get{return AbsoluteUrl("_GlobalResources/Js/piwikLoader.js", TplSettings.Question);}}
-			protected static string s42 = "\" type=\"text/javascript\"></script><noscript><p><img src='";
-			public string PiwikUrl = "{PiwikUrl}";
-			protected static string s43 = "' style=\"border:0;\" alt=\"\" /></p></noscript>";
+			protected static string s34 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			public string BetListsUrl = "{BetListsUrl}";
+			protected static string s35 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
 					bd.Append(s34);
-					bd.Append(s35);
-					bd.Append(s36);
-					bd.Append(s37);
-					bd.Append(s38);
-					bd.Append(s39);
-					bd.Append(s40);
-					bd.Append(s41);
-					bd.Append(s42);
-					bd.Append(PiwikUrl);
-					bd.Append(s43);
-				}
-				if(IsAssigned){bd.Append(Value);}
-			}
-		}
-
-		public class OutRight_BetListsUrl_Block: Block
-		{
-			protected static string s44 = "<script type=\"text/javascript\">var _betListsUrl = '";
-			public string BetListsUrl = "{BetListsUrl}";
-			protected static string s45 = "';</script>";
-			public override void ToString(ref StringBuilder bd)
-			{
-				if(!Visible) return;
-				if(RenderChild)
-				{
-					bd.Append(s44);
 					bd.Append(BetListsUrl);
-					bd.Append(s45);
+					bd.Append(s35);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

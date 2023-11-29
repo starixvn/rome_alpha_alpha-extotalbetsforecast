@@ -4,7 +4,9 @@ namespace Sunplus.Agent.Model.BL.Forecast
     using System.Collections.Generic;
     using System.Data;
     using System.Linq;
-    using Alpha.PartialUM.Services;
+    using Alpha.PartialUM.Helpers;
+    using AlphaPlus.PartialUM.Services;
+    using AlphaPlus.User.Models;
     using Fanex.Caching;
     using Fanex.Razorbill.Module.Common.Services;
     using Fanex.Razorbill.Module.Core.DataAccess;
@@ -12,21 +14,23 @@ namespace Sunplus.Agent.Model.BL.Forecast
     using Sunplus.Agent.Model.DL.Forecast;
 
     [Obsolete("Should rename to Sunplus.Agent.Model.Forecast")]
-    public class ForecastBO : Sunplus.Agent.Model.BL.Base.BOBase
+    public class ForecastBO
     {
         #region Variable
 
         private const string BetTypeScoreMapKey = "BETTYPESCOREMAP";
         private const string BetTypeListScoreMapKey = "BETTYPESLISTCOREMAP";
-        private static readonly ForecastDAO ForecastDataAccess = new ForecastDAO();       
+        private static readonly ForecastDAO ForecastDataAccess = new ForecastDAO();
         private readonly IPartialUMService partialUMService;
+
         #endregion Variable
 
-        public ForecastBO(string netSessionId)
-            : base(netSessionId)
+        public ForecastBO()
         {
-            partialUMService = new PartialUMService(new PartialUMTotalBetsForecastDataAccess());          
+            partialUMService = new PartialUMService(new PartialUMTotalBetsForecastDataAccess(), new PartialUMSectionHelper());
         }
+
+        private static IUserSession CurrentSession => UserSession.Current;
 
         #region TopOddsByMatch
 

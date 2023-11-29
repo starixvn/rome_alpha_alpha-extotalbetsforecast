@@ -8,7 +8,6 @@ using Alpha.Web.Helpers;
 using Fanex.Age.UI;
 using Fanex.Age.UI.Components;
 using Fanex.Razorbill.Module.Core.Services.Impl;
-using Sunplus.Agent.Model.BL.Definitions;
 using Sunplus.Agent.Model.BL.TotalBets;
 using Sunplus.Agent.Utilities;
 using Fanex.Razorbill.Module.Core.Web;
@@ -82,19 +81,6 @@ namespace Fanex.Age.UI.TotalBets
                 }
 
                 if (leagueBlock != null) tpl.Contents.LeagueContents.Append(leagueBlock);
-            }
-
-            // Piwik
-            if (Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikEnable)
-            {
-                tpl.Piwik.PiwikUrl = string.Format(
-                    "{0}?idsite={1}",
-                    Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl,
-                    Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId);
-            }
-            else
-            {
-                tpl.Piwik.Clear();
             }
 
             // Bet List Url

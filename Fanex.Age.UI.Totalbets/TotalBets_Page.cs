@@ -30,7 +30,7 @@ namespace Fanex.Age.UI.TotalBets
             get
             {
 #pragma warning disable CS0618 // 'TotalBetsBO' is obsolete: 'Should rename to Sunplus.Agent.Model.TotalBets'
-                if (_totalBetsBO == null) _totalBetsBO = new TotalBetsBO(CurrentUserSession.NetSessionId);
+                if (_totalBetsBO == null) _totalBetsBO = new TotalBetsBO();
 #pragma warning restore CS0618 // 'TotalBetsBO' is obsolete: 'Should rename to Sunplus.Agent.Model.TotalBets'
                 return _totalBetsBO;
             }

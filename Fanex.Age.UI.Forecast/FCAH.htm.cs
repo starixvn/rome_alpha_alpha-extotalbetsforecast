@@ -3,8 +3,8 @@
 using System;
 using System.Web;
 using System.Text;
-using TplCore;
-using TplCore.Element;
+using TplNetCore;
+using TplNetCore.Element;
 #pragma warning disable
 namespace Fanex.Age.UI.Forecast
 {
@@ -29,7 +29,6 @@ namespace Fanex.Age.UI.Forecast
 			protected static string s10 = "\" type=\"text/javascript\"></script><script src=\"";
 			protected static string s11{get{return AbsoluteUrl("Resources/FC.js", TplSettings.Question);}}
 			protected static string s12 = "\" type=\"text/javascript\"></script>";
-			public FCAH_FPSArea_Block FPSArea = new FCAH_FPSArea_Block();
 			public FCAH_BetListsUrls_Block BetListsUrls = new FCAH_BetListsUrls_Block();
 			protected static string s13 = "</body></html>";
 			public override void ToString(ref StringBuilder bd)
@@ -54,7 +53,6 @@ namespace Fanex.Age.UI.Forecast
 					bd.Append(s10);
 					bd.Append(s11);
 					bd.Append(s12);
-					if(null != FPSArea) FPSArea.ToString(ref bd);
 					if(null != BetListsUrls) BetListsUrls.ToString(ref bd);
 					bd.Append(s13);
 				}
@@ -307,45 +305,23 @@ namespace Fanex.Age.UI.Forecast
 			}
 		}
 
-		public class FCAH_FPSArea_Block: Block
+		public class FCAH_BetListsUrls_Block: Block
 		{
-			protected static string s59 = "<input type=\"hidden\" id=\"userId\" value=\"";
-			public string userId = "{userId}";
-			protected static string s60 = "\" /><script src=\"";
-			protected static string s61{get{return Sunplus.Agent.Model.BL.Definitions.AppSettings.FPSApi;}}
-			protected static string s62 = "\" type=\"text/javascript\"></script>";
+			protected static string s59 = "<script type=\"text/javascript\">var _betListsUrl = '";
+			public string BetListsUrl = "{BetListsUrl}";
+			protected static string s60 = "';var _betListsTitle = '";
+			public string BetListsTitle = "{BetListsTitle}";
+			protected static string s61 = "';</script>";
 			public override void ToString(ref StringBuilder bd)
 			{
 				if(!Visible) return;
 				if(RenderChild)
 				{
 					bd.Append(s59);
-					bd.Append(userId);
-					bd.Append(s60);
-					bd.Append(s61);
-					bd.Append(s62);
-				}
-				if(IsAssigned){bd.Append(Value);}
-			}
-		}
-
-		public class FCAH_BetListsUrls_Block: Block
-		{
-			protected static string s63 = "<script type=\"text/javascript\">var _betListsUrl = '";
-			public string BetListsUrl = "{BetListsUrl}";
-			protected static string s64 = "';var _betListsTitle = '";
-			public string BetListsTitle = "{BetListsTitle}";
-			protected static string s65 = "';</script>";
-			public override void ToString(ref StringBuilder bd)
-			{
-				if(!Visible) return;
-				if(RenderChild)
-				{
-					bd.Append(s63);
 					bd.Append(BetListsUrl);
-					bd.Append(s64);
+					bd.Append(s60);
 					bd.Append(BetListsTitle);
-					bd.Append(s65);
+					bd.Append(s61);
 				}
 				if(IsAssigned){bd.Append(Value);}
 			}

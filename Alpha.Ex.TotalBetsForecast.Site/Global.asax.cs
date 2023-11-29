@@ -9,12 +9,15 @@
     using System.Web.Security;
     using System.Web.SessionState;
     using Alpha.Ex.TotalBetsForecast.Site.App_Start;
-    using Alpha.Logging;
-    using Alpha.PartialUM.Exceptions;
+    using Alpha.Ex.TotalBetsForecast.Site.Helpers;
     using Alpha.PartialUM.Filters;
     using Alpha.Web;
     using Alpha.Web.Filters;
     using Alpha.Web.Helpers;
+    using AlphaPlus.Logging;
+    using AlphaPlus.Logging.Web;
+    using AlphaPlus.PartialUM.Exceptions;
+    using AlphaPlus.User.Models;
     using Fanex.Caching;
     using Fanex.Data.Configuration;
     using Fanex.Logging.Extensions.Database;
@@ -30,19 +33,19 @@
     using ONEbook.UM.Services;
     using ONEbook.UM.Transport;
     using Sunplus.Agent.Model.Auth;
-    using Sunplus.Agent.Model.BL.Authorization;
-    using Sunplus.Agent.Model.Entities;
 
     public class Global : System.Web.HttpApplication
-    {      
-
+    {
         protected void Application_Start(object sender, EventArgs e)
         {
-            TplCore.TplSettings.UrlVersion = ConfigurationManager.AppSettings["JsVersion"];
-
+            TplNetCore.TplSettings.UrlVersion = ConfigurationManager.AppSettings["JsVersion"];
+            TplNetCore.TplSettings.Init(new TplSettingHelper());
+            AlphaPlus.Configurations.ConfigurationManager.Init(new ConfigurationHelper());
+            LoggingConfig.ExceptionHandler = new ExceptionHandlerAdapter();
             LoggingConfig.Init(getDbExceptionInfo: DatabaseInfoGetters.GetDbExceptionInfo);
 
             DbSettingProviderManager.Current.Start();
+            UserSession.Init(new Web.Helpers.HttpContextHelper());
             ShareSession.Init();
 
             AreaRegistration.RegisterAllAreas();
@@ -53,7 +56,7 @@
                 .UseConfig(umConfig)
                 .UseCacheService(new UMCacheService(new CacheService()))
                 .UseRestClient(new UMRestClient(umConfig))
-                .UseHttpContext(new HttpContextHelper());
+                .UseHttpContext(new ONEbook.UM.Helpers.HttpContextHelper());
             RegisterGlobalFilters(GlobalFilters.Filters);
             MvcHandler.DisableMvcResponseHeader = true;
 
@@ -80,9 +83,7 @@
                     }
                 }
 
-#pragma warning disable CS0618 // Type or member is obsolete
                 var currentCustomer = UserSession.Current;
-#pragma warning restore CS0618 // Type or member is obsolete
 
                 ExceptionHandler.Handle(ex,
                     new Dictionary<string, object>
@@ -94,15 +95,13 @@
                     });
             }
 
-#pragma warning disable CS0618 // Type or member is obsolete
-            if (!Sunplus.Agent.Model.BL.Definitions.AppSettings.LocalTest)
-#pragma warning restore CS0618 // Type or member is obsolete
+            if (ConfigurationManager.AppSettings["LocalTest"] != "1")
             {
                 Server.Transfer("~/Error.aspx");
             }
         }
 
-        void Application_AcquireRequestState(object sender, EventArgs e)
+        private void Application_AcquireRequestState(object sender, EventArgs e)
         {
             if (!(HttpContext.Current.Handler is IRequiresSessionState))
             {
@@ -180,10 +179,10 @@
 
         private string GetRequestPath()
         {
-            var url = Request.Path;         
+            var url = Request.Path;
 
             return url.Remove(0, 1).ToLowerInvariant();
-        }      
+        }
 
         private static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
@@ -237,7 +236,6 @@
 
         private static KickoutInfo GetKickoutInfo(IUserSession userSession)
         {
-
             var cacheService = CacheFactory.MemoryCacheService;
             var recheckInCacheKey = string.Format(
                 "Alpha.Auth.CustContext.RecheckInCacheKey_{0}_{1}_{2}",
@@ -248,7 +246,7 @@
 
             if (kickoutInfo == null)
             {
-                var bo = new AuthorizationBO(userSession.NetSessionId);
+                var bo = new AuthorizationBO();
                 kickoutInfo = bo.Recheckin(userSession.OnUserId);
 
                 if (!kickoutInfo.IsKickedOut)

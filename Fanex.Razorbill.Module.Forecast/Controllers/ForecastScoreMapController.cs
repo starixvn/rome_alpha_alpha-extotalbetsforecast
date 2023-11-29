@@ -3,8 +3,10 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
-    using Alpha.PartialUM.Services;
+    using Alpha.PartialUM.Helpers;
     using Alpha.Web.Helpers;
+    using AlphaPlus.PartialUM.Services;
+    using AlphaPlus.User.Models;
     using Fanex.Razorbill.Module.Core.DataAccess;
     using Fanex.Razorbill.Module.Core.Web;
     using Fanex.Razorbill.Module.Core.Web.Controllers;
@@ -12,7 +14,6 @@
     using Fanex.Razorbill.Module.Forecast.Models;
     using Fanex.Razorbill.Module.Forecast.Services;
     using global::Resources;
-    using Sunplus.Agent.Model.Entities;
 
     /// <summary>
     /// Forecast Score Map controller.
@@ -32,7 +33,7 @@
             IPartialUMService partialUMService)
         {
             _forecastService = forecastService ?? new ForecastService();
-            _partialUMService = partialUMService ?? new PartialUMService(new PartialUMTotalBetsForecastDataAccess());
+            _partialUMService = partialUMService ?? new PartialUMService(new PartialUMTotalBetsForecastDataAccess(), new PartialUMSectionHelper());
         }
 
         /// <summary>

@@ -12,7 +12,7 @@ namespace Fanex.Age.UI.Forecast
     using Fanex.Age.UI.Components.MatchByLeague;
     using Sunplus.Agent.Model.BL.Cache;
     using Sunplus.Agent.Model.BL.Forecast;
-    using Sunplus.Agent.Model.Entities;
+    using AlphaPlus.User.Models;
     using Sunplus.Agent.UI.ScoreMap.Factories;
     using System;
     using System.Collections.Generic;
@@ -122,7 +122,7 @@ namespace Fanex.Age.UI.Forecast
         public override object InvokeData(System.Collections.Hashtable p)
         {
             Dictionary<String, DataTable> view = new Dictionary<string, DataTable>();
-            ForecastBO bo = new ForecastBO(CurrentUserSession.NetSessionId);
+            ForecastBO bo = new ForecastBO();
 
             DataTable runningLeagues = null;
             if (_leagueId != -1) // -1: Link from BetList

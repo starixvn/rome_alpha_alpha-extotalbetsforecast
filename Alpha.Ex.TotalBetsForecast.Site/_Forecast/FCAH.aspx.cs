@@ -60,7 +60,7 @@ namespace Fanex.Age.UI.Forecast
         public override object ValidateRequest(System.Collections.Hashtable p)
         {
             if (!CurrentUserSession.SubPageAccess.ViewTotalBets &&
-                !Sunplus.Agent.Model.Entities.UserSession.Current.SubPageAccess.GetPermission(Sunplus.Agent.Model.Entities.PageAccessType.ViewBetLists))
+                !AlphaPlus.User.Models.UserSession.Current.SubPageAccess.GetPermission(AlphaPlus.User.Models.PageAccessType.ViewBetLists))
             {
                 return new ErrorPage_Page(Resources.Lang.strNotAccessPage);
             }
@@ -70,7 +70,7 @@ namespace Fanex.Age.UI.Forecast
 
         public override object InvokeData(System.Collections.Hashtable p)
         {
-            _forecastBO = new ForecastBO(CurrentUserSession.NetSessionId);
+            _forecastBO = new ForecastBO();
             Hashtable viewData = new Hashtable();
             DataTable oddsData = _forecastBO.GetFCTopOddsByMatch(_matchId, _betType);
 
@@ -111,8 +111,8 @@ namespace Fanex.Age.UI.Forecast
         /// <returns></returns>
         private decimal GetFCHDValue(DataRow dr, int currentScore, int scoreOffset, decimal forecast)
         {
-            decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;           
-            
+            decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;
+
             if (forecastScore > 0 && forecastScore < (decimal)(0.5))
             {
                 forecast += ((decimal)dr["al"]) / 2; // win 1/2
@@ -129,7 +129,7 @@ namespace Fanex.Age.UI.Forecast
             {
                 forecast += ((decimal)dr["hl"]);
             }
-           
+
             if (forecastScore == 0)
             {
                 forecast += (decimal)dr["MYO"];
@@ -148,7 +148,7 @@ namespace Fanex.Age.UI.Forecast
         private decimal GetFCOUValue(DataRow dr, int currentScore, int scoreOffset, decimal forecast)
         {
             decimal forecastScore = currentScore - ((decimal)dr["offset"]) + scoreOffset;
-           
+
             if (forecastScore == (decimal)(0.25))
             {
                 forecast += ((decimal)dr["al"]) / 2;
@@ -268,9 +268,6 @@ namespace Fanex.Age.UI.Forecast
             {
                 tpl.Content.ForecastContent.Hide();
             }
-
-            // For FPS.
-            RenderFPSArea(tpl);
 
             // Bet List Url
             tpl.BetListsUrls.BetListsUrl = BetlistHelper.MapBetlistsDomain();
@@ -435,21 +432,6 @@ namespace Fanex.Age.UI.Forecast
         {
             const String boldSpan = "<span style='text-decoration:none;color:#FF0000;font-weight:bold;'>{0}</span>";
             return index == selectedIndex ? String.Format(boldSpan, index) : index.ToString();
-        }
-
-        private void RenderFPSArea(FCAH_Template tpl)
-        {
-            string fpsAPI = Sunplus.Agent.Model.BL.Definitions.AppSettings.FPSApi;
-            if (string.IsNullOrEmpty(fpsAPI))
-            {
-                tpl.FPSArea.Hide();
-                return;
-            }
-
-            int userId = CurrentUserSession.IsInternal
-                ? CurrentUserSession.AdminId
-                : CurrentUserSession.IsSubAcc ? CurrentUserSession.SubAccId : CurrentUserSession.UserId;
-            tpl.FPSArea.userId = userId.ToString();
         }
 
         #endregion

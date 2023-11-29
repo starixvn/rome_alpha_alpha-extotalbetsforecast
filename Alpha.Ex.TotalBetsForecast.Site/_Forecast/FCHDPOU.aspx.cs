@@ -16,7 +16,7 @@ namespace Fanex.Age.UI.Forecast
     using Fanex.Age.UI.Components;
     using Fanex.Razorbill.Module.Core.Services.Impl;
     using Sunplus.Agent.Model.BL.Forecast;
-    using Sunplus.Agent.Model.Entities;
+    using AlphaPlus.User.Models;
     using Sunplus.Agent.Utilities;
     using Fanex.Razorbill.Module.Core.Web;
 
@@ -100,19 +100,6 @@ namespace Fanex.Age.UI.Forecast
                 tpl.Content.NotFoundContent.Hide();
             }
 
-            // Piwik
-            if (Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikEnable)
-            {
-                tpl.Piwik.PiwikUrl = string.Format(
-                    "{0}?idsite={1}",
-                    Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikUrl,
-                    Sunplus.Agent.Model.BL.Definitions.AppSettings.PiwikSiteId);
-            }
-            else
-            {
-                tpl.Piwik.Clear();
-            }
-
             ///  old Main URL
             tpl.BetListsUrl.BetListsUrl = MicroSites.OldMainUrl("~/");
             tpl.level = LevelName(UserSession.Current.RoleId);
@@ -134,7 +121,7 @@ namespace Fanex.Age.UI.Forecast
         public override object ValidateRequest(System.Collections.Hashtable p)
         {
             if (!CurrentUserSession.SubPageAccess.ViewTotalBets &&
-                !Sunplus.Agent.Model.Entities.UserSession.Current.SubPageAccess.GetPermission(Sunplus.Agent.Model.Entities.PageAccessType.ViewBetLists))
+                !AlphaPlus.User.Models.UserSession.Current.SubPageAccess.GetPermission(AlphaPlus.User.Models.PageAccessType.ViewBetLists))
             {
                 return new ErrorPage_Page(Resources.Lang.strNotAccessPage);
             }
@@ -145,7 +132,7 @@ namespace Fanex.Age.UI.Forecast
         public override object InvokeData(System.Collections.Hashtable p)
         {
             Dictionary<String, DataTable> view = new Dictionary<string, DataTable>();
-            ForecastBO bo = new ForecastBO(CurrentUserSession.NetSessionId);
+            ForecastBO bo = new ForecastBO();
 
             DataTable fcData = null;
             DataTable runningLeagues = null;
