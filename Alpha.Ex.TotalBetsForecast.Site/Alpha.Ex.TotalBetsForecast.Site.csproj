@@ -559,6 +559,9 @@
     <Content Include="Scripts\_Libs\jQuery\Styles\images\ui-icons_fcd113_256x240.png" />
     <Content Include="Scripts\_Libs\jQuery\Styles\jquery-ui-1.9.1.custom.css" />
     <Content Include="Scripts\_Libs\jQuery\Styles\jquery-ui-1.9.1.custom.min.css" />
+    <None Include="Web.AppSettings.dr.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </None>
     <Content Include="web.backupMNL.config">
       <DependentUpon>Web.local.config</DependentUpon>
     </Content>
@@ -651,6 +654,9 @@
     <Content Include="Web.Configuration\StoreProcedure\DBAGE.bodb_AGE.xml" />
     <Content Include="Web.Configuration\StoreProcedure\DBCUST.CustDB.xml" />
     <Content Include="Web.Configuration\StoreProcedure\DBONUSER.ON_USER.xml" />
+    <Content Include="web.dr.config">
+      <DependentUpon>web.local.config</DependentUpon>
+    </Content>
     <Content Include="WhoamI.aspx" />
     <Content Include="_Components\AGEWnd\AGEWnd.js" />
     <Content Include="_Components\AGEWnd\AGEWnd.min.js">
