@@ -8,6 +8,7 @@ using Fanex.Razorbill.Module.Core.Services.Impl;
 using Sunplus.Agent.Utilities;
 using Fanex.Razorbill.Module.Core.Web;
 using Fanex.Razorbill.Module.Core.Utils;
+using AlphaPlus.Configurations;
 /*
  * Created 20100507@Jacob - Render MoneyLine page
  * Revision:
@@ -57,6 +58,7 @@ namespace Fanex.Age.UI.TotalBets
                     DataRow dr = moneyLineList.Rows[i];
 
                     int leagueId = Convert.ToInt32(dr["leagueid"]);
+                    int leagueGroupId = Convert.ToInt32(dr["leaguegroupid"]);
 
                     if (i == 0 || currentLeagueId != leagueId)
                     {
@@ -67,7 +69,9 @@ namespace Fanex.Age.UI.TotalBets
                         currentLeagueId = leagueId;
 
                         leagueBlock.MatchContents.Clear();
-                        leagueBlock.LeagueName = CacheRef.GetLeagueName(leagueId);
+                        leagueBlock.LeagueName = AppSettings.IsSiteLabel777 ?
+                            CacheRef.GetLeagueName(leagueId, leagueGroupId) :
+                            CacheRef.GetLeagueName(leagueId);
                     }
                     else
                     {
