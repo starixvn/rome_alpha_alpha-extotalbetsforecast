@@ -32,7 +32,7 @@
                     {
                         while (reader.Read())
                         {
-                            leagues.Add(new ScoreMapLeague(Converter.ToInt(reader["leagueid"]))
+                            leagues.Add(new ScoreMapLeague(Converter.ToInt(reader["leagueid"]), Converter.ToInt(reader["LeagueGroupID"]))
                             {
                                 SportId = Converter.ToInt(reader["sporttype"])
                             });

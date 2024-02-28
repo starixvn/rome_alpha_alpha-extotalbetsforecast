@@ -24,6 +24,7 @@ namespace Fanex.Age.UI.TotalBets
     using Sunplus.Agent.Utilities;
     using Fanex.Razorbill.Module.Core.Web;
     using Fanex.Razorbill.Module.Core.Utils;
+    using AlphaPlus.Configurations;
 
     public partial class HomeDrawAwayNoBet_Page : TotalBets_Page
     {
@@ -77,7 +78,10 @@ namespace Fanex.Age.UI.TotalBets
                         currentLeagueId = leagueId;
 
                         leagueBlock.MatchContents.Clear();
-                        leagueBlock.LeagueName = CacheRef.GetLeagueName(leagueId);
+                        int leagueGroupId = Convert.ToInt32(dr["leaguegroupid"]);
+                        leagueBlock.LeagueName = AppSettings.IsSiteLabel777 ?
+                            CacheRef.GetLeagueName(leagueId, leagueGroupId) :
+                            CacheRef.GetLeagueName(leagueId); CacheRef.GetLeagueName(leagueId);
                     }
                     else
                     {

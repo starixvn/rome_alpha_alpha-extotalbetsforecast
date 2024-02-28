@@ -16,6 +16,9 @@ namespace Fanex.Razorbill.Module.Core.Services.Impl
         public static string GetLeagueName(int leagueId)
             => Instance.GetLeagueName(leagueId.ToString(), LanguageCode);
 
+        public static string GetLeagueName(int leagueId, int leagueGroupId)
+            => Instance.GetLeagueName(leagueId.ToString(), leagueGroupId.ToString(), LanguageCode, string.Empty);
+
         private static IRemotingRefService Instance
                => new RemotingRefService();
 

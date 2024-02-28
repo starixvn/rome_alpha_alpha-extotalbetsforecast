@@ -19,6 +19,7 @@ namespace Fanex.Age.UI.Forecast
     using AlphaPlus.User.Models;
     using Sunplus.Agent.Utilities;
     using Fanex.Razorbill.Module.Core.Web;
+    using AlphaPlus.Configurations;
 
     public partial class FCHDPOU_Page : Fanex.Age.UI.TplPage
     {
@@ -186,7 +187,10 @@ namespace Fanex.Age.UI.Forecast
                 foreach (DataRow dr in leagues.Rows)
                 {
                     int leagueId = Convert.ToInt32(dr["leagueid"]);
-                    String leagueName = CacheRef.GetLeagueName(leagueId);
+                    int leagueGroupId = Convert.ToInt32(dr["leaguegroupid"]);
+                    String leagueName = AppSettings.IsSiteLabel777 ?
+                            CacheRef.GetLeagueName(leagueId, leagueGroupId) :
+                            CacheRef.GetLeagueName(leagueId);
                     if (leagueId == _leagueId)
                     {
                         sb.Append(String.Format("<option value='{0}' selected>{1}</option>", leagueId, leagueName));
