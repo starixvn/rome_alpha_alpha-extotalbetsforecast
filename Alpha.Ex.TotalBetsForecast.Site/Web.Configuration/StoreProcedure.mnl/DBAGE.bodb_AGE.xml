@@ -2,6 +2,6 @@
 <Functions>
 
   <Function Name="Report time range">
-    <Setting Key="Age_Rpt_GetTimeRange" SpName="Age_Rpt_GetTimeRange" DbName="DBAGE.bodb_AGE.BODBDownlineNet" />
+    <Setting Key="Age_Rpt_GetTimeRange" SpName="Age_Rpt_GetTimeRange" DbName="DBAGE.bodb_AGE.wsv_alp" />
   </Function>
 </Functions>
