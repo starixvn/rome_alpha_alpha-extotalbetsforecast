@@ -127,7 +127,7 @@
     <value>ราคาพูล</value>
   </data>
   <data name="lblBetLists" xml:space="preserve">
-    <value>รายการวางเดิมพัน</value>
+    <value>รายการเดิมพัน</value>
   </data>
   <data name="lblDeadball" xml:space="preserve">
     <value>เกมส์ไม่สด</value>
@@ -136,10 +136,10 @@
     <value>การทำนายผลล่วงหน้า</value>
   </data>
   <data name="lblHandicapFC" xml:space="preserve">
-    <value>ราคาต่อรอง</value>
+    <value>แฮนดิแคป</value>
   </data>
   <data name="lblHOUL" xml:space="preserve">
-    <value>ราคาต่อรอง / สูง ต่ำ / เกมส์สด</value>
+    <value>แฮนดิแคป/สูงต่ำ/เกมส์สด</value>
   </data>
   <data name="lblLiveBall" xml:space="preserve">
     <value>บอลสด</value>
@@ -169,10 +169,10 @@
     <value>เลือกคู่แข่งขัน</value>
   </data>
   <data name="submit" xml:space="preserve">
-    <value>ตกลง</value>
+    <value>ส่ง</value>
   </data>
   <data name="totalbets" xml:space="preserve">
-    <value>จำนวนการวางเดิมพันทั้งหมด</value>
+    <value>ยอดเดิมพันทั้งหมด</value>
   </data>
   <data name="forecast" xml:space="preserve">
     <value>การทำนายผลล่วงหน้า</value>

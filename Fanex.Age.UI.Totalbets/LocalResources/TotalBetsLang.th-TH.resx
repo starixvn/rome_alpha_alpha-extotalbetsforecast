@@ -118,25 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="aa" xml:space="preserve">
-    <value>ทีมเยือนนำครึ่งแรก ทีมเยือนชนะครึ่งหลัง</value>
+    <value>ทีมเยือน/ทีมเยือน</value>
   </data>
   <data name="ad" xml:space="preserve">
-    <value>ทีมเยือนนำครึ่งแรก  ครึ่งหลังเสมอกัน</value>
+    <value>ทีมเยือน/เสมอ</value>
   </data>
   <data name="ah" xml:space="preserve">
-    <value>ทีมเยือนนำครึ่งแรก  เจ้าบ้านชนะครึ่งหลัง</value>
+    <value>ทีมเยือน/ทีมเหย้า</value>
   </data>
   <data name="away" xml:space="preserve">
     <value>ทีมเยือน</value>
   </data>
   <data name="da" xml:space="preserve">
-    <value>ครึ่งแรกเสมอ ครึ่งหลังทีมเยือนนำ</value>
+    <value>เสมอ/ทีมเยือน</value>
   </data>
   <data name="dd" xml:space="preserve">
-    <value>ครึ่งแรกเสมอ ครึ่งหลังเสมอ</value>
+    <value>เสมอ/เสมอ</value>
   </data>
   <data name="dh" xml:space="preserve">
-    <value>ครึ่งแรกเสมอ ครึ่งหลังเจ้าบ้านนำ</value>
+    <value>เสมอ/ทีมเหย้า</value>
   </data>
   <data name="events" xml:space="preserve">
     <value>การแข่งขัน</value>
@@ -154,28 +154,28 @@
     <value>ทายผล ทีมเยือน</value>
   </data>
   <data name="forecasthome" xml:space="preserve">
-    <value>ทายผล เจ้าบ้าน</value>
+    <value>ทายผล ทีมเหย้า</value>
   </data>
   <data name="fulltime" xml:space="preserve">
     <value>เต็มเวลา</value>
   </data>
   <data name="ha" xml:space="preserve">
-    <value>เจ้าบ้านนำครึ่งแรก ทีมเยือนชนะครึ่งหลัง</value>
+    <value>ทีมเหย้า/ทีมเยือน</value>
   </data>
   <data name="hd" xml:space="preserve">
-    <value>เจ้าบ้านนำครึ่งแรก ครึ่งหลังเสมอกัน</value>
+    <value>ทีมเหย้า/เสมอ</value>
   </data>
   <data name="hh" xml:space="preserve">
-    <value>เจ้าบ้านนำครึ่งแรก เจ้าบ้านชนะครึ่งหลัง</value>
+    <value>ทีมเหย้า/ทีมเหย้า</value>
   </data>
   <data name="home" xml:space="preserve">
     <value>ทีมเหย้า</value>
   </data>
   <data name="homeaway" xml:space="preserve">
-    <value>เจ้าบ้าน/ ทีมเยือน</value>
+    <value>ทีมเหย้า/ทีมเยือน</value>
   </data>
   <data name="htft" xml:space="preserve">
-    <value>ครึ่งเวลาแรก/ เต็มเวลา</value>
+    <value>ครึ่งแรก/เต็มเวลา</value>
   </data>
   <data name="lastgoal" xml:space="preserve">
     <value>ประตูสุดท้าย</value>
@@ -184,7 +184,7 @@
     <value>ราคาพูล</value>
   </data>
   <data name="lblBalance" xml:space="preserve">
-    <value>ยอดเงิน</value>
+    <value>บัญชีคงเหลือ</value>
   </data>
   <data name="lblDraw" xml:space="preserve">
     <value>เสมอ</value>
@@ -193,16 +193,16 @@
     <value>การทำนายผลล่วงหน้า</value>
   </data>
   <data name="lblHandicapFC" xml:space="preserve">
-    <value>ราคาต่อรอง</value>
+    <value>แฮนดิแคป</value>
   </data>
   <data name="lblHOUL" xml:space="preserve">
-    <value>ราคาต่อรอง / สูง ต่ำ / เกมส์สด</value>
+    <value>แฮนดิแคป/สูงต่ำ/เกมส์สด</value>
   </data>
   <data name="lblLive" xml:space="preserve">
     <value>สด!</value>
   </data>
   <data name="lblOddEven" xml:space="preserve">
-    <value>คู่/คี่</value>
+    <value>คี่/คู่</value>
   </data>
   <data name="lblOE" xml:space="preserve">
     <value>คี่ / คู่</value>
@@ -211,7 +211,7 @@
     <value>สูง / ต่ำ</value>
   </data>
   <data name="lblOutRight" xml:space="preserve">
-    <value>ทายผลผู้ชนะ</value>
+    <value>เอาท์ไรท์</value>
   </data>
   <data name="lblOverUnder" xml:space="preserve">
     <value>สูง/ต่ำ</value>
@@ -229,7 +229,7 @@
     <value>#</value>
   </data>
   <data name="nogoal" xml:space="preserve">
-    <value>ไม่มีการทำประตู</value>
+    <value>ไม่มีประตู</value>
   </data>
   <data name="noInfo" xml:space="preserve">
     <value>ไม่มีข้อมูล</value>
@@ -241,28 +241,28 @@
     <value>ยอดรวม</value>
   </data>
   <data name="total01" xml:space="preserve">
-    <value>ประตูรวมระหว่าง 0 ถึง 1 ประตู</value>
+    <value>0 – 1</value>
   </data>
   <data name="total23" xml:space="preserve">
-    <value>ประตูรวมระหว่าง 2 ถึง 3 ประตู</value>
+    <value>2 – 3</value>
   </data>
   <data name="total46" xml:space="preserve">
-    <value>ประตูรวมระหว่าง 4 ถึง 6 ประตู</value>
+    <value>4 – 6</value>
   </data>
   <data name="total7over" xml:space="preserve">
-    <value>มากกว่า 7 ลูก</value>
+    <value>7+</value>
   </data>
   <data name="totalaway" xml:space="preserve">
-    <value>จำนวนรวมของทีมเยือน</value>
+    <value>ยอดเดิมพันรวม ทีมเยือน</value>
   </data>
   <data name="totalgoal" xml:space="preserve">
     <value>ประตูรวม</value>
   </data>
   <data name="totalhome" xml:space="preserve">
-    <value>จำนวนรวมของทีมเจ้าบ้าน</value>
+    <value>ยอดเดิมพันรวม ทีมเหย้า</value>
   </data>
   <data name="turnover" xml:space="preserve">
-    <value>เงินหมุนเวียน</value>
+    <value>มูลค่าการเดิมพัน</value>
   </data>
   <data name="lbl1sthalf" xml:space="preserve">
     <value>ครึ่งแรก</value>
@@ -289,7 +289,7 @@
     <value>ประตูต่อไป</value>
   </data>
   <data name="turnoverWinlost" xml:space="preserve">
-    <value>ยอดหมุนเวียน/แพ้ชนะ</value>
+    <value>มูลค่าการเดิมพัน/แพ้ชนะ</value>
   </data>
   <data name="timerange" xml:space="preserve">
     <value>เวลา</value>
@@ -364,7 +364,7 @@
     <value>สูง คู่</value>
   </data>
   <data name="lblNoDraw" xml:space="preserve">
-    <value>No Draw</value>
+    <value>ไม่เสมอ</value>
   </data>
   <data name="LiveGame" xml:space="preserve">
     <value>Live Game</value>
@@ -385,7 +385,7 @@
     <value>Home No Bet</value>
   </data>
   <data name="total4over" xml:space="preserve">
-    <value>4&amp;มากกว่า</value>
+    <value>4+</value>
   </data>
   <data name="Player" xml:space="preserve">
     <value>Player</value>
@@ -397,7 +397,7 @@
     <value>Banker</value>
   </data>
   <data name="totalbets" xml:space="preserve">
-    <value>จำนวนการวางเดิมพันทั้งหมด</value>
+    <value>ยอดเดิมพันทั้งหมด</value>
   </data>
   <data name="forecast" xml:space="preserve">
     <value>การทำนายผลล่วงหน้า</value>

@@ -133,13 +133,13 @@
     <value>เสมอ</value>
   </data>
   <data name="lblHandicapFC" xml:space="preserve">
-    <value>ราคาต่อรอง</value>
+    <value>แฮนดิแคป</value>
   </data>
   <data name="lblLive" xml:space="preserve">
     <value>สด!</value>
   </data>
   <data name="lblOddEven" xml:space="preserve">
-    <value>คู่/คี่</value>
+    <value>คี่/คู่</value>
   </data>
   <data name="lblOverUnder" xml:space="preserve">
     <value>สูง/ต่ำ</value>
@@ -151,10 +151,10 @@
     <value>การทำนายผลล่วงหน้า ครึ่งแรก มากกว่า/น้อยกว่า</value>
   </data>
   <data name="lblViewHandicapForecast" xml:space="preserve">
-    <value>การทำนายผลล่วงหน้าของ แฮนดิแคป</value>
+    <value>ดูการทำนายผลล่วงหน้า แฮนดิแคป</value>
   </data>
   <data name="lblViewOverUnderForecast" xml:space="preserve">
-    <value>การทำนายผลล่วงหน้าของ มากกว่า น้อยกว่า</value>
+    <value>ดูการทำนายผลล่วงหน้า สูง/ต่ำ</value>
   </data>
   <data name="moneyline" xml:space="preserve">
     <value>การทายผู้เล่นหรือทีมที่จะชนะ</value>
@@ -205,9 +205,9 @@
     <value>Please choose a match!</value>
   </data>
   <data name="lblNoDraw" xml:space="preserve">
-    <value>No Draw</value>
+    <value>ไม่เสมอ</value>
   </data>
   <data name="lblBetLists" xml:space="preserve">
-    <value>รายการวางเดิมพัน</value>
+    <value>รายการเดิมพัน</value>
   </data>
 </root>
